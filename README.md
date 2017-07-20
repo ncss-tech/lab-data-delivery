@@ -16,10 +16,11 @@ Each table has a folder and associated README.
  
 
 ## Immediate tasks ##
- 1. optimize reshaping queryies as much as possible
- 2. identify the magnitude and nature of "data quality" issues in each table
- 3. make decisions: NULL, truncate to range, etc.
- 4. finalize metadata: ranges, datatypes, column names, etc.
+ * confirm that each sub-query is in fact returning the requested analyte
+ * optimize reshaping query as much as possible: indexing, CTE, temporary tables, reshape-then-filter, etc.
+ * identify the magnitude and nature of "data quality" issues in each table
+ * make decisions: NULL, truncate to range, etc.
+ * finalize metadata: ranges, datatypes, column names, etc.
 
 
 ## Long-term tasks ##
