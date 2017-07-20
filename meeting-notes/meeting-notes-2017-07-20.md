@@ -1,27 +1,26 @@
-# KSSL Subteam Meeting Notes
-2017-07-20
+# 2017-07-20 Meeting Notes
 
-Present
+Members present:
 
  * Kevin Godsey
  * Jason Nemecek
- * Rich Ferguson
+ * Rick Nesser
  * Jay Skovlin
  * Dylan Beaudette
 
 ## Action Items
 
- 1. Rich gets access setup for team members
+ 1. Rick gets access setup for team members
  2. ~~Dylan sends table results (access DB) to those who don't have it~~
  3. ~~Dylan will init a GitHub repository on ncss-tech and invite subteam members~~
  4. Jason / Adolfo write python to export CSV from FGDB
- 5. ~~Dylan will ask Rich about table partitioning and indexing~~
+ 5. ~~Dylan will ask Rick about table partitioning and indexing~~
  6. Everyone: pick a table to work on
  
 ## Topics ##
 
-### Status of the "six tables" (Rich) ###
-Some of the tables are ready to use, others are not due to long run times. Rich is willing to give access to the group (1) so that we can test query optimization strategies. Rich suggests updating vs. re-making the tables each release cycle. Dylan will send out access DB to Jason and Jay (2).
+### Status of the "six tables" (Rick) ###
+Some of the tables are ready to use, others are not due to long run times. Rick is willing to give access to the group (1) so that we can test query optimization strategies. Rick suggests updating vs. re-making the tables each release cycle. Dylan will send out access DB to Jason and Jay (2).
 
 ### Working environment ###
 Sharepoint or GitHub? Going to try GitHub due to the text-based nature of these files and ability to move between revisions (3). Syntax highlighting might also be helpful.
