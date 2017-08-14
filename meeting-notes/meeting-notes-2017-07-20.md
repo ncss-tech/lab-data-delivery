@@ -26,7 +26,7 @@ Some of the tables are ready to use, others are not due to long run times. Rick 
 Sharepoint or GitHub? Going to try GitHub due to the text-based nature of these files and ability to move between revisions (3). Syntax highlighting might also be helpful.
 
 ### Open source version of morphologic tables ###
-Jason and Adolfo will investigate some python code (4) that will help automate the process of creating and filling a companion SQLite database. This will help those users who aren't using or don't have access to ESRI tools. (See issues #1 and #2)
+Jason and Adolfo will investigate some python code (4) that will help automate the process of creating and filling a companion SQLite database. This will help those users who aren't using or don't have access to ESRI tools. (See issues [1](https://github.com/ncss-tech/lab-data-delivery/issues/1) and [2](https://github.com/ncss-tech/lab-data-delivery/issues/2))
 
 ### Table review ###
 The tables are large and the data complex, we need to divy up the work (6). So far:
