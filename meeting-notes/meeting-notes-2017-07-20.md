@@ -10,10 +10,10 @@ Members present:
 
 ## Action Items
 
- 1. Rick gets access setup for team members
+ 1. ~~Rick gets access setup for team members~~
  2. ~~Dylan sends table results (access DB) to those who don't have it~~
  3. ~~Dylan will init a GitHub repository on ncss-tech and invite subteam members~~
- 4. Jason / Adolfo write python to export CSV from FGDB
+ 4. ~~Jason / Adolfo write python to export CSV from FGDB~~
  5. ~~Dylan will ask Rick about table partitioning and indexing~~
  6. Everyone: pick a table to work on
  
