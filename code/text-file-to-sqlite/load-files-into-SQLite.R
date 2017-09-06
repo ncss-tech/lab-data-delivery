@@ -7,6 +7,7 @@
 library(readr)
 library(plyr)
 library(DBI)
+library(RSQLite)
 
 # files to check
 base.path <- 'C:/Users/Dylan.Beaudette/Desktop/NASIS-LIMS-dump/NASIS_Pedons/CSV_files/'
@@ -14,8 +15,8 @@ files <- list.files(path=base.path, pattern='\\\\*.csv')
 
 
 # init DB
-db <- dbConnect(RSQLite::SQLite(), "test.sqlite")
-unlink('schema.sql')
+db <- dbConnect(RSQLite::SQLite(), "NASIS-pedons.sqlite")
+unlink('NASIS-pedons-schema.sql')
 
 
 # iterate over files
