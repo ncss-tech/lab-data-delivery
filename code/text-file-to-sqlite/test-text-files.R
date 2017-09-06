@@ -6,7 +6,7 @@ library(readr)
 library(plyr)
 
 # files to check
-base.path <- 'C:/Users/Dylan.Beaudette/Desktop/NASIS-LIMS-dump/NASIS_Pedons/CSV_files/'
+base.path <- 'C:/Users/Dylan.Beaudette/Desktop/NASIS-LIMS-dump/NCSS_Characterization_Database/CSV_files/'
 files <- list.files(path=base.path, pattern='\\\\*.csv')
 
 # init list to store parsing problems
@@ -22,4 +22,6 @@ for(i in files) {
 # flatten
 d <- ldply(l)
 
-# summarize
+# summarize: not so bad
+table(d$.id)
+
