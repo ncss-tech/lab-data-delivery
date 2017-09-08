@@ -8,7 +8,7 @@ Re-working the LIMS + NASIS data integration process for snapshot and future web
 Each table has a folder and associated README.
 
  * [chemical](https://github.com/ncss-tech/lab-data-delivery/tree/master/tables/chemical) (Dylan)
- * [physical](https://github.com/ncss-tech/lab-data-delivery/tree/master/tables/physical)
+ * [physical](https://github.com/ncss-tech/lab-data-delivery/tree/master/tables/physical) (Kevin)
  * [x-ray and thermal](https://github.com/ncss-tech/lab-data-delivery/tree/master/tables/x-ray_thermal)
  * [mineralogy and glass counts](https://github.com/ncss-tech/lab-data-delivery/tree/master/tables/mineralogy_glass)
  * [elements](https://github.com/ncss-tech/lab-data-delivery/tree/master/tables/elements)
