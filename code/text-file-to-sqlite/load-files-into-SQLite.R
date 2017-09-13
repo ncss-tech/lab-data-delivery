@@ -15,6 +15,9 @@ files <- list.files(path=base.path, pattern='\\\\*.txt')
 
 
 # init DB
+# best to remove old version first
+unlink("KSSL-data.sqlite")
+unlink("KSSL-schema.sql")
 db <- dbConnect(RSQLite::SQLite(), "KSSL-data.sqlite")
 
 
