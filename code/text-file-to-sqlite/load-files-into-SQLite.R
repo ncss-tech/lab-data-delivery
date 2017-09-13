@@ -10,13 +10,12 @@ library(DBI)
 library(RSQLite)
 
 # files to check
-base.path <- 'C:/Users/Dylan.Beaudette/Desktop/NASIS-LIMS-dump/NASIS_Pedons/CSV_files/'
-files <- list.files(path=base.path, pattern='\\\\*.csv')
+base.path <- 'C:/Users/Dylan.Beaudette/Desktop/NASIS-LIMS-dump/NCSS_Characterization_Database/CSV_files/'
+files <- list.files(path=base.path, pattern='\\\\*.txt')
 
 
 # init DB
-db <- dbConnect(RSQLite::SQLite(), "NASIS-pedons.sqlite")
-unlink('NASIS-pedons-schema.sql')
+db <- dbConnect(RSQLite::SQLite(), "KSSL-data.sqlite")
 
 
 # iterate over files
@@ -32,7 +31,7 @@ for(i in files) {
   dbWriteTable(db, name = this.table, value = x, row.names=FALSE, overwrite=TRUE)
   
   # save schema for review:
-  cat(sqliteBuildTableDefinition(db, this.table, value=x[0,], row.names=FALSE), file = 'schema.sql', append = TRUE, sep = '\n')
+  cat(sqliteBuildTableDefinition(db, this.table, value=x[0,], row.names=FALSE), file = 'KSSL-schema.sql', append = TRUE, sep = '\n')
   
 }
 
