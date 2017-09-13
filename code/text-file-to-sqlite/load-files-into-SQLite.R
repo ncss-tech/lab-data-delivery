@@ -2,6 +2,8 @@
 ##
 ##
 
+# TODO: convert this into a function and run on all 3 databases
+
 # ideas: https://cran.r-project.org/web/packages/RSQLite/vignettes/RSQLite.html
 
 library(readr)
@@ -24,7 +26,7 @@ db <- dbConnect(RSQLite::SQLite(), "KSSL-data.sqlite")
 # iterate over files
 for(i in files) {
   this.file <- paste0(base.path, i)
-  this.table <- gsub(pattern = '.csv', '', i)
+  this.table <- gsub(pattern = '.txt', '', i)
   x <- read_delim(this.file, delim = '|', quote='', na='', comment='', trim_ws = TRUE, guess_max = 1e6)
   
   # # attempt to write schema only: OK
