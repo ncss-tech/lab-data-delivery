@@ -8,6 +8,7 @@ Members present:
  * Jay Skovlin
  * Dylan Beaudette
  * Henry Ferguson
+ * Shawn Salley
 
 ## Agenda
 
