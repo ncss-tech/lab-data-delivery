@@ -12,7 +12,7 @@ Members present:
 
 ## Agenda
 
-1. Regroup since last meeting; access to server in Lincoln
+1. Regroup since [last meeting](https://github.com/ncss-tech/lab-data-delivery/blob/master/meeting-notes/meeting-notes-2017-07-20.md); access to server in Lincoln
    * who has had a chance to tinker, thoughts?
 2. Progress on FGDB -> text files -> SQLite process
    * data issues ([#5](https://github.com/ncss-tech/lab-data-delivery/issues/5), [#6](https://github.com/ncss-tech/lab-data-delivery/issues/6)) we are working on 
@@ -37,7 +37,19 @@ Members present:
 
 ## Discussion
 
+Rick gave some helpful background on the 6 views and agreed to add comments to the queries. Rick also agreed to review all of the analyte codes to ensure that the labels match expected analytes.
 
+Rick described some of the discssion that transpired when the NCSS Lab Layer table was created in NASIS. At that time decisions were made on the basis of "what was most useful for component data population"--affecting the selection of prep codes and grouping of analytes. Negative values, or otherwise "illogical" values were replaced with NULL.
+
+Dylan and Adolfo reported on the FGDB -> SQLite process. Most of the initial bugs have been worked out and files are ready for review.
+
+Kevin and Jay made the observation that we should develop these tools for internal use *first*, then adapt / adjust for the general public. Our MLRA update work and initial mapping efforts depend on easy access to relevant data. Shawn suggested that "internal" use should extend to NCSS cooperators.
+
+Shawn made an excellent point about the relvance of morphologic data, and that this group should ensure that it should be part of the KSSL snapshot.
+
+Adolfo brought up an idea for a AGOL-based WFS to for mapping / distributing pedon data. The group that this would be a nice way to perform QC, but it should be (intitially) limited to internal use only.
+
+Several members of the team emphasised the importance of pedon data review (certification?) as a means to ensure that internal / external users of the pedon data aren't adding noise to their analysis.
 
 
 ## Action Items
