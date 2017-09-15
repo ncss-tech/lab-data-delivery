@@ -41,7 +41,7 @@ Rick gave some helpful background on the 6 views and agreed to add comments to t
 
 Rick described some of the discssion that transpired when the NCSS Lab Layer table was created in NASIS. At that time decisions were made on the basis of "what was most useful for component data population"--affecting the selection of prep codes and grouping of analytes. Negative values, or otherwise "illogical" values were replaced with NULL.
 
-Dylan and Adolfo reported on the FGDB -> SQLite process. Most of the initial bugs have been worked out and files are ready for review.
+Dylan and Adolfo reported on the FGDB -> SQLite process. Most of the [initial bugs](https://github.com/ncss-tech/lab-data-delivery/issues) have been worked out and files are ready for review. Draft version of the code is [here](https://github.com/ncss-tech/lab-data-delivery/tree/master/code/text-file-to-sqlite).
 
 Kevin and Jay made the observation that we should develop these tools for internal use *first*, then adapt / adjust for the general public. Our MLRA update work and initial mapping efforts depend on easy access to relevant data. Shawn suggested that "internal" use should extend to NCSS cooperators.
 
