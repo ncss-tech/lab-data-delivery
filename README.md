@@ -26,4 +26,5 @@ Each table has a folder and associated README.
 ## Long-term tasks ##
  1. harmonization of morphologic data on LIMS side via NASIS data (?)
  2. synchronization of source data, "six tables", NASIS, etc.
+ 3. make snapshots viable for NASIS calculations (e.g. particle size estimator)--include Cathy Seybold in the next conf. call
  
