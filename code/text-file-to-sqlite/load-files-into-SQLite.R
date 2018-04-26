@@ -11,35 +11,57 @@ library(plyr)
 library(DBI)
 library(RSQLite)
 
-# files to check
-base.path <- 'C:/Users/Dylan.Beaudette/Desktop/NASIS-LIMS-dump/NCSS_Characterization_Database/CSV_files/'
-files <- list.files(path=base.path, pattern='\\\\*.txt')
-
-
-# init DB
-# best to remove old version first
-unlink("KSSL-data.sqlite")
-unlink("KSSL-schema.sql")
-db <- dbConnect(RSQLite::SQLite(), "KSSL-data.sqlite")
-
-
-# iterate over files
-for(i in files) {
-  this.file <- paste0(base.path, i)
-  this.table <- gsub(pattern = '.txt', '', i)
-  x <- read_delim(this.file, delim = '|', quote='', na='', comment='', trim_ws = TRUE, guess_max = 1e6)
+makeSQLiteFromCSV <- function(type, base.path) {
+  # files to check
+  files <- list.files(path=base.path, pattern='\\\\*.txt')
   
-  # # attempt to write schema only: OK
-  # dbWriteTable(db, name = this.table, value = x[0, ], row.names=FALSE, overwrite=TRUE)
+  # output files
+  db.file <- sprintf("%s-data.sqlite", type)
+  db.schema <- sprintf("%s-schema.sql", type)
   
-  # attemp to write all rows: OK
-  dbWriteTable(db, name = this.table, value = x, row.names=FALSE, overwrite=TRUE)
+  # init DB
+  # best to remove old version first
+  unlink(db.file)
+  unlink(db.schema)
+  db <- dbConnect(RSQLite::SQLite(), db.file)
   
-  # save schema for review:
-  cat(sqliteBuildTableDefinition(db, this.table, value=x[0,], row.names=FALSE), file = 'KSSL-schema.sql', append = TRUE, sep = '\n')
+  # iterate over files
+  for(i in files) {
+    this.file <- paste0(base.path, i)
+    this.table <- gsub(pattern = '.txt', '', i)
+    x <- read_delim(this.file, delim = '|', quote='', na='', comment='', trim_ws = TRUE, guess_max = 1e6)
+    
+    # # attempt to write schema only: OK
+    # dbWriteTable(db, name = this.table, value = x[0, ], row.names=FALSE, overwrite=TRUE)
+    
+    # note this flushes to disk at each iteration
+    # attemp to write all rows: OK
+    dbWriteTable(db, name = this.table, value = x, row.names=FALSE, overwrite=TRUE)
+    
+    # save schema for review:
+    cat(sqliteBuildTableDefinition(db, this.table, value=x[0,], row.names=FALSE), file = db.schema, append = TRUE, sep = '\n')
+    
+  }
+  
+  # dbListTables(db)
+  
+  dbDisconnect(db)
   
 }
 
-dbListTables(db)
 
-dbDisconnect(db)
+## re-process all NASIS pedons
+# about 5 minutes
+type <- 'NASIS'
+base.path <- 'C:/Users/Dylan.Beaudette/Desktop/NASIS-LIMS-dump/All_NASIS_pedons/CSV_files_20180415/'
+makeSQLiteFromCSV(type, base.path)
+
+
+## re-process KSSL snapshot
+# about 1 minute
+type <- 'KSSL'
+base.path <- 'C:/Users/Dylan.Beaudette/Desktop/NASIS-LIMS-dump/NCSS_snapshot/CSV_files/'
+makeSQLiteFromCSV(type, base.path)
+
+
+
