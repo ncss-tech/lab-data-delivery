@@ -39,6 +39,7 @@ makeSQLiteFromCSV <- function(type, base.path) {
     dbWriteTable(db, name = this.table, value = x, row.names=FALSE, overwrite=TRUE)
     
     # save schema for review:
+    ## TODO: switch to sqlCreateTable()
     cat(sqliteBuildTableDefinition(db, this.table, value=x[0,], row.names=FALSE), file = db.schema, append = TRUE, sep = '\n')
     
   }
@@ -60,7 +61,7 @@ makeSQLiteFromCSV(type, base.path)
 ## re-process KSSL snapshot
 # about 1 minute
 type <- 'KSSL'
-base.path <- 'C:/Users/Dylan.Beaudette/Desktop/NASIS-LIMS-dump/NCSS_snapshot/CSV_files/'
+base.path <- 'e:/temp/NCSS_Soil_Characterization_Database_09_14_2018_CSV_files/'
 makeSQLiteFromCSV(type, base.path)
 
 
