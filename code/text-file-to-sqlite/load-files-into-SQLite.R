@@ -54,7 +54,7 @@ makeSQLiteFromCSV <- function(type, base.path) {
 ## re-process all NASIS pedons
 # about 5 minutes
 type <- 'NASIS'
-base.path <- 'C:/Users/Dylan.Beaudette/Desktop/NASIS-LIMS-dump/All_NASIS_pedons/CSV_files_20180415/'
+base.path <- 'e:/temp/NASIS_Pedons_20181023_CSV_files/'
 makeSQLiteFromCSV(type, base.path)
 
 

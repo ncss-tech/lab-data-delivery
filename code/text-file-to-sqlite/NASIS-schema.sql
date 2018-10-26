@@ -851,13 +851,13 @@ CREATE TABLE phdbcompliantcavity
 	`bulkdensitycav_1` TEXT,
 	`bulkdensitycav_2` TEXT,
 	`bulkdensitycav_3` REAL,
-	`bulkdensitycav_4` TEXT,
+	`bulkdensitycav_4` INTEGER,
 	`bulkdensitycav_5` REAL,
-	`bulkdensitycav_6` TEXT,
+	`bulkdensitycav_6` INTEGER,
 	`cavityavedepthpr` TEXT,
 	`cavityavedepthpo` TEXT,
-	`bulkdensitycav_7` TEXT,
-	`bulkdensitycav_8` TEXT,
+	`bulkdensitycav_7` REAL,
+	`bulkdensitycav_8` INTEGER,
 	`recwlupdated` TEXT,
 	`recuseriidref` INTEGER,
 	`phbulkdencavityi` INTEGER 
@@ -1064,33 +1064,33 @@ CREATE TABLE phksatamoozemeter
 	`phksatamoozemete` INTEGER 
 )
 CREATE TABLE phksatring 
-( `phksatsumiidref` INTEGER,
-	`repnum` INTEGER,
+( `phksatsumiidref` TEXT,
+	`repnum` TEXT,
 	`testdate` TEXT,
-	`sathydcondrepmea` REAL,
-	`sathydcondrepstd` REAL,
+	`sathydcondrepmea` TEXT,
+	`sathydcondrepstd` TEXT,
 	`sathydcondclass` TEXT,
 	`ringconfiguratio` TEXT,
-	`ringinsertiondep` REAL,
-	`ringradius` REAL,
-	`waterponddepth` REAL,
-	`mariottebottlera` REAL,
+	`ringinsertiondep` TEXT,
+	`ringradius` TEXT,
+	`waterponddepth` TEXT,
+	`mariottebottlera` TEXT,
 	`texturestructure` TEXT,
 	`notes` TEXT,
 	`recwlupdated` TEXT,
-	`recuseriidref` INTEGER,
-	`phksatringiid` INTEGER 
+	`recuseriidref` TEXT,
+	`phksatringiid` TEXT 
 )
 CREATE TABLE phksatringdata 
-( `peksatringiidref` INTEGER,
-	`ksatreadingnum` INTEGER,
-	`waterdrop` REAL,
-	`deltatime` REAL,
-	`sathydcondmeasur` REAL,
-	`steadystateflag` INTEGER,
+( `peksatringiidref` TEXT,
+	`ksatreadingnum` TEXT,
+	`waterdrop` TEXT,
+	`deltatime` TEXT,
+	`sathydcondmeasur` TEXT,
+	`steadystateflag` TEXT,
 	`recwlupdated` TEXT,
-	`recuseriidref` INTEGER,
-	`peksatringdataii` INTEGER 
+	`recuseriidref` TEXT,
+	`peksatringdataii` TEXT 
 )
 CREATE TABLE phksatsummary 
 ( `phiidref` INTEGER,
