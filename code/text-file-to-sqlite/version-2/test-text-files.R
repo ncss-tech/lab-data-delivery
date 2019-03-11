@@ -3,11 +3,17 @@
 ##
 
 library(readr)
-library(plyr)
+# library(plyr)
 
 # files to check
-base.path <- '~/Desktop/LDM/'
+base.path <- '.'
 files <- list.files(path=base.path, pattern='\\\\*.gz')
+
+
+this.file <- 'EXPORT_Chemical_Properties_20190306.txt.gz'
+x <- read_delim(this.file, delim = '|')
+p <- problems(x)
+x <- as.data.frame(x)
 
 # init list to store parsing problems
 l <- list()
