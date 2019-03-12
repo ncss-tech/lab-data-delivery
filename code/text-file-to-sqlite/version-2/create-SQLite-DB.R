@@ -28,7 +28,7 @@ writeTable <- function(f, table.name) {
 
 
 # note, finds DB handle from global environment
-indexTable <- function(tbl, field = c('labsampnum', 'result_source_key', 'prep_code')) {
+indexTable <- function(tbl, field) {
   index.query <- sprintf("CREATE INDEX IF NOT EXISTS %s_%s_idx ON %s (%s);", tbl, field, tbl, field)
   sapply(index.query, dbExecute, conn=db)
 }
@@ -41,6 +41,8 @@ db.file <- 'E:/NASIS-KSSL-LDM/LDM/LDM-compact.sqlite'
 # best to remove old version first
 unlink(db.file)
 db <- dbConnect(RSQLite::SQLite(), db.file)
+
+layer.p <- writeTable('EXPORT_layer_20190312.txt.gz', table.name = 'layer')
 
 calculations.p <- writeTable('EXPORT_Calculations_Including_Estimates_And_Default_Values_20190306.txt.gz', table.name = 'calculations')
 
@@ -56,36 +58,43 @@ physical.p <- writeTable('EXPORT_Physical_Properties_20190306.txt.gz', table.nam
 
 xray_thermal.p <- writeTable('EXPORT_XRay_And_Thermal_20190306.txt.gz', table.name = 'xray_thermal')
 
+
 # check
 dbListTables(db)
 
-# index all but pedon/site table
+# index standard tables, excluding ncss_site and layer
 # this makes 2 indexes / table
-indexTable('calculations')
-indexTable('chemical')
-indexTable('geochemical')
-indexTable('glass')
-indexTable('physical')
-indexTable('xray_thermal')
+indexTable('calculations', c('labsampnum', 'result_source_key', 'prep_code'))
+indexTable('chemical', c('labsampnum', 'result_source_key', 'prep_code'))
+indexTable('geochemical', c('labsampnum', 'result_source_key', 'prep_code'))
+indexTable('glass', c('labsampnum', 'result_source_key', 'prep_code'))
+indexTable('physical', c('labsampnum', 'result_source_key', 'prep_code'))
+indexTable('xray_thermal', c('labsampnum', 'result_source_key', 'prep_code'))
 
 # site table is indexed differently
-indexTable('ncss_site', 'pedon_key')
-indexTable('ncss_site', 'upedonid')
-indexTable('ncss_site', 'pedlabsampnum')
+indexTable('ncss_site', c('pedon_key', 'upedonid', 'pedlabsampnum'))
+
+# layer table is indexed differently
+indexTable('layer', c('layer_key', 'natural_key', 'pedon_key', 'layer_type'))
+
+# cleanup
+dbExecute(db, 'VACUUM;')
 
 
-## recall linkages: 
-# NCSS site/pedon -> lab: pedon_key -> result_source_key
-# NASIS -> lab: pedlabsampnum + labsampnum 
+
+## TODO document linkages
+
 
 
 # get data
 dbGetQuery(db, "SELECT pedon_key, pedlabsampnum, pedoniid, upedonid, corr_name from ncss_site WHERE upedonid = 'S1999NY061001' ;")
+
+dbGetQuery(db, "SELECT layer_key, natural_key, pedon_key, hzn_top, hzn_bot, hzn_desgn from layer WHERE pedon_key = 1 ;")
+
 dbGetQuery(db, "SELECT result_source_key, prep_code, labsampnum, clay_total, particle_size_method from physical WHERE result_source_key = 1 ;")
+
 dbGetQuery(db, "SELECT result_source_key, prep_code, labsampnum, ca_nh4_ph_7, ca_nh4_ph_7_method from chemical WHERE result_source_key = 1 ;")
 
-# cleanup
-dbExecute(db, 'VACUUM;')
 
 # close file
 dbDisconnect(db)
