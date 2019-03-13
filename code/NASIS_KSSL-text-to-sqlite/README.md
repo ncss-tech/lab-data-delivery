@@ -1,0 +1,1 @@
+This code was used to convert CSV versions of the NASIS morphologic and KSSL snapshot (Access) into paired SQLite databases.
