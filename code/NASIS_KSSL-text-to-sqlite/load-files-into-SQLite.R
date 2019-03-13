@@ -11,44 +11,8 @@ library(plyr)
 library(DBI)
 library(RSQLite)
 
-makeSQLiteFromCSV <- function(type, base.path) {
-  # files to check
-  files <- list.files(path=base.path, pattern='\\\\*.txt')
-  
-  # output files
-  db.file <- sprintf("%s-data.sqlite", type)
-  db.schema <- sprintf("%s-schema.sql", type)
-  
-  # init DB
-  # best to remove old version first
-  unlink(db.file)
-  unlink(db.schema)
-  db <- dbConnect(RSQLite::SQLite(), db.file)
-  
-  # iterate over files
-  for(i in files) {
-    this.file <- paste0(base.path, i)
-    this.table <- gsub(pattern = '.txt', '', i)
-    x <- read_delim(this.file, delim = '|', quote='', na='', comment='', trim_ws = TRUE, guess_max = 1e6)
-    
-    # # attempt to write schema only: OK
-    # dbWriteTable(db, name = this.table, value = x[0, ], row.names=FALSE, overwrite=TRUE)
-    
-    # note this flushes to disk at each iteration
-    # attemp to write all rows: OK
-    dbWriteTable(db, name = this.table, value = x, row.names=FALSE, overwrite=TRUE)
-    
-    # save schema for review:
-    ## TODO: switch to sqlCreateTable()
-    cat(sqliteBuildTableDefinition(db, this.table, value=x[0,], row.names=FALSE), file = db.schema, append = TRUE, sep = '\n')
-    
-  }
-  
-  # dbListTables(db)
-  
-  dbDisconnect(db)
-  
-}
+# function defs
+source('../snapshot-functions.R')
 
 
 ## re-process all NASIS pedons

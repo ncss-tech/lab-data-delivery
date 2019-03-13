@@ -3,7 +3,7 @@ library(digest)
 library(purrr)
 library(DBI)
 
-source('QC-functions.R')
+source('../snapshot-functions.R')
 
 # latest synthesis from Jason
 x <- read_csv('E:/NASIS-KSSL-LDM/LDM/EXPORT_Physical_Properties.txt.gz')
