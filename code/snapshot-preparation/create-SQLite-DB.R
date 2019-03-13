@@ -5,39 +5,45 @@ library(RSQLite)
 # helper functions for making / indexing tables
 source('../snapshot-functions.R')
 
-# base path
+# base path for first-cut of export, based on Jason's new SQL
 base.path <- 'E:/NASIS-KSSL-LDM/LDM' 
 
-# output SQLite DB
+# output SQLite DB file name
 db.file <- file.path(base.path, 'LDM-compact.sqlite')
+
 
 # init DB
 # best to remove old version first
 unlink(db.file)
 db <- dbConnect(RSQLite::SQLite(), db.file)
 
-layer.p <- writeTable(file.path(base.path, 'EXPORT_layer_20190312.txt.gz'), table.name = 'layer')
+writeTable(file.path(base.path, 'EXPORT_layer_20190312.txt.gz'), table.name = 'layer')
 
-calculations.p <- writeTable(file.path(base.path, 'EXPORT_Calculations_Including_Estimates_And_Default_Values_20190306.txt.gz'), table.name = 'calculations')
+writeTable(file.path(base.path, 'EXPORT_Calculations_Including_Estimates_And_Default_Values_20190306.txt.gz'), table.name = 'calculations')
 
-chemical.p <- writeTable(file.path(base.path, 'EXPORT_Chemical_Properties_20190306.txt.gz'), table.name = 'chemical')
+writeTable(file.path(base.path, 'EXPORT_Chemical_Properties_20190306.txt.gz'), table.name = 'chemical')
 
-ncss_site.p <- writeTable(file.path(base.path, 'EXPORT_combine_nasis_ncss_20190306.txt.gz'), table.name = 'ncss_site')
+writeTable(file.path(base.path, 'EXPORT_combine_nasis_ncss_20190306.txt.gz'), table.name = 'ncss_site')
 
-geochemical.p <- writeTable(file.path(base.path, 'EXPORT_Major_And_Trace_Elements_And_Oxides_20190306.txt.gz'), table.name = 'geochemical')
+writeTable(file.path(base.path, 'EXPORT_Major_And_Trace_Elements_And_Oxides_20190306.txt.gz'), table.name = 'geochemical')
 
-glass.p <- writeTable(file.path(base.path, 'EXPORT_Mineralogy_Glass_Count_20190306.txt.gz'), table.name = 'glass')
+writeTable(file.path(base.path, 'EXPORT_Mineralogy_Glass_Count_20190306.txt.gz'), table.name = 'glass')
 
-physical.p <- writeTable(file.path(base.path, 'EXPORT_Physical_Properties_20190306.txt.gz'), table.name = 'physical')
+writeTable(file.path(base.path, 'EXPORT_Physical_Properties_20190306.txt.gz'), table.name = 'physical')
 
-xray_thermal.p <- writeTable(file.path(base.path, 'EXPORT_XRay_And_Thermal_20190306.txt.gz'), table.name = 'xray_thermal')
+writeTable(file.path(base.path, 'EXPORT_XRay_And_Thermal_20190306.txt.gz'), table.name = 'xray_thermal')
 
-rosetta.p <- writeTable(file.path(base.path, 'EXPORT_ROSETTA.txt.gz'), table.name = 'rosetta')
+writeTable(file.path(base.path, 'EXPORT_ROSETTA.txt.gz'), table.name = 'rosetta')
+
+# manually edited CSV, stored in GH repo
+writeTable(file.path('../../metadata/', 'procedures.csv'), table.name = 'procedures', d = ',')
+writeTable(file.path('../../metadata/', 'methods.csv'), table.name = 'methods', d = ',')
 
 
 # check
 dbListTables(db)
-dbListFields(db, 'rosetta')
+dbListFields(db, 'methods')
+dbListFields(db, 'procedures')
 
 
 # index standard tables, excluding ncss_site and layer
@@ -58,9 +64,13 @@ indexTable('layer', c('layer_key', 'natural_key', 'pedon_key', 'layer_type'))
 # layer table is indexed differently
 indexTable('rosetta', c('rosetta_key', 'layer_key'))
 
+# metadata
+indexTable('procedures', 'procedure_key')
+indexTable('methods', c('procedure_key', 'proced_code'))
+
+
 # cleanup
 dbExecute(db, 'VACUUM;')
-
 
 
 ## TODO document linkages
@@ -82,10 +92,10 @@ dbGetQuery(db, "SELECT layer_key, natural_key, pedon_key, hzn_top, hzn_bot, hzn_
 dbGetQuery(db, "SELECT * from rosetta WHERE layer_key = 211388;")
 
 
-
-
 # close file
 dbDisconnect(db)
+
+
 
 
 

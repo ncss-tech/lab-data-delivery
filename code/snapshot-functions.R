@@ -68,13 +68,19 @@ makeSQLiteFromCSV <- function(type, base.path) {
 # finds DB handle from global environment
 # f: full path to pipe-delim text file
 # table.name: new table name
-writeTable <- function(f, table.name) {
+# d: delimeter
+writeTable <- function(f, table.name, d='|') {
   
-  # seems to work well
-  x <- read_delim(f, delim = '|')
+  # scaleable reading from txt
+  # * typically pipe-delim
+  # * ignore '#' as comment, as it occurs in some records
+  # * guess data types by reading in 1 million rows
+  # * follow-up type conversion will be required...
+  x <- suppressWarnings(read_delim(f, delim = d, comment = '', guess_max = 1e6))
   
   # save problems for later review
   p <- as.data.frame(problems(x))
+  write.csv(p, file=file.path('parse-errors', paste0(table.name, '.csv')), row.names = FALSE)
   
   # convert to DF
   x <- as.data.frame(x)
@@ -83,11 +89,9 @@ writeTable <- function(f, table.name) {
   dbWriteTable(db, name = table.name, value = x, row.names=FALSE, overwrite=TRUE)
   
   # write out schema for eval, sub-dir of calling code
-  schema.file <- sprintf("schema/%s-schema.sql", table.name)
+  schema.file <- file.path('schema', paste0(table.name, '.sql'))
   cat(sqliteBuildTableDefinition(db, table.name, value=x[0,], row.names=FALSE), file = schema.file, sep = '\n')
   
-  # problems for review
-  return(p)
 }
 
 
