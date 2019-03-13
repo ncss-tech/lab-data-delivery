@@ -34,7 +34,9 @@ Members present:
 
 ## Action Items
 
-  1. 
+  1. review the latest [KSSL snapshot, SQLite format](https://new.cloudvault.usda.gov/index.php/s/eSoPYbWDBQNX2HP)
+  
+  2. 
  
 
 

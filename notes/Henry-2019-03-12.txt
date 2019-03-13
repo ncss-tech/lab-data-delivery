@@ -1,0 +1,37 @@
+1.  The area table in NASIS, the area table in LIMS, and the area table in the repository are not all the same.  Efforts were made to at least make sure that all areas in the repository were added to NASIS.  There apparently is an additional column in the area table in LIMS that is missing in NASIS.  What confused me the most about them not being the same table was the joins since the iids for each table were different.
+
+
+2. The site and pedon tables.    The site and pedon tables in the repository are abbreviated versions of the site and pedon tables in NASIS.  Having multiple tables with the same names but different columns and contents got confusing.  The one thing that i did do with the help of Jason Nemechek was to institute the use of the NASIS peiid for the most current pedon in NASIS to represent the laboratory data.  The suggestion to do so came from Dr. West.
+
+3.  The use of the peiid from the most current pedon also assisted in selecting the most current classification.
+
+4.  There were multiple sites being copied in NASIS for the same pedon.    There was an attempt to reduce the sites to a single site which also helped in maintaining a single location.
+
+5. There were two columns in LIMS called the natural key.   Those two columns in NASIS were called the pedlabsampnum and the labsampnum.  The first was the pedon laboratory number and the second was the layer or horizon sample number.  I would recommend sticking with the NASIS designations for all laboratory products that are released.  You might want to use the physical name instead of the logical name, but in any case I would not use the natural key designation ever.
+
+6. Nasis has a single column for horizon designation.  If people wanted to assign new horizon designations they had to copy the pedon and update the horizon designations in the new pedon.    LIMS has a single column for horizon designations I believe but I could be mistaken.   The repository has three columns for horizon/non horizon/layer designations.   One is called the horizon designation I believe.  That is where horizon designations are input when the samples come in.   There is another column called the original horizon designation.  That column actually was to hold designations as of a certain date before scripts were run against the horizon designation column to update some of them globally.  The designations are not necessarily the original designations as of when the pedons were described.   There is also another colum called non horizon designation.  That column was used to house various descriptions of the layer that were not really horizon designations.  Meaning that originally terms like yellow streaks, silt lenses, sandy strata… were placed in the horizon designation column and subsequently they have been removed and placed in this new column.
+
+I really did not like the whole mess at all and tried to resolve some of it by creating two columns in the ncsslablayer table for holding the oldest horizon designation and the newest horizon designations.  There are reports that can be run in NASIS to find the lab owned pedon and the field owned pedons.  The assumption is that the laboratory pedons will contain the oldest horizon designations and the file will have updated their copies to the newest horizon designations.  Technically if someone wanted to really store the original horizon designations, they could run some scripts to change the 2’s to II’s… based upon the age of the pedons and what horizon designation conventions were in place at the time the pedon was described.  Therefore I would only update the original horizon designations by hand or using those scripts.  The report might or might not give you the designations on the original 232.  On the other hand, ideally a script to pull the designations from the most current pedons is helpful,and that script uses the pedon lab sample number, the horizon sample number, and the upper and lower depths to pull the horizon designation.  If the depths do not match the designations would need to be updated manually as the sample is not from a single entire horizon.
+
+The biggest continuing issue is that LIMS definition of original horizon designation is not really the original horizon designation and is not populated that way.   I recommend populating the original horizon designations in the NCSS lab layer table with the horizon designation being entered into LIMS now as the samples come in.   In addition, I would recommend populating the current horizon designation with the same information until such time as it might be updated.  That way the two columns will have the least amount of nulls possible.
+
+7.  layer/sample depths.    Just before I left I updated the repository so that the upper and lower depths corresponded to the newest definition of soil depth.      Depths are very confounding for various reasons, all of which will give you fits.
+
+a. Sometimes organic surface horizons were not considered or were correlated out of the pedon
+b.  Older pedons were described in inches rather than centimeters
+c.  Horizons were sometimes subsampled so more than one sample came from the same horizon
+d.  Sometimes horizons were combined into the same sample.  
+e.  Sometimes parts of two or more horizons were combined into a single sample
+
+
+The upper and lower depths for samples has been added to the NASIS sample table.  The depths from the repository could be used to update that table so that they could be used in the future to help identify horizon designation updates.
+
+
+While I am thinking about it, I would like to reiterate the fact that the reason for the metadata being placed in NASIS is so that good documentation of the publically released product can be generated at any time using the metadata reports in NASIS.  There are more tables in the LIMS/repository metadata than will be in the product being released. I would only include the documentation for the tables actually released.  
+
+In addition to that documentation, there were tables in the ACCESS database that Scarlett and Patty worked on that would be very helpful for users of the database.  The one table i am thinking of in particular is the one that has a hyperlink to the page in the KSSL methods manual for each analyte/procedure.   
+
+
+I am sure there are other things that I have forgotten, but the master plan was in a powerpoint that described how we would try to replace the pedon site and layer tables with tables from NASIS that would be maintained in the field.   The goal is for more local control over the descriptions and classifications, and for the laboratory data itself to remain static unless a typo were found or a rerun was done.
+
+Henry
