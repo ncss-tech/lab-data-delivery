@@ -1,0 +1,805 @@
+procedure_key,requested_analyte_name,proced_name,proced_abbrev,proced_desc,proced_code,source_system_key,source_system_name
+1,Aggregate Stability,"Aggregate Stability, 2- to 0.5-mm Aggregates Retained",AGGSTAB,"SSIR No. 42, version 4, page 163",3F1a1a,1,SSL LIMS Version 1.0
+1,Aggregate Stability,"Aggregate Stability, 2- to 0.5-mm Aggregates Retained",AGGSTAB,"SSIR No. 42, version 4, page 163",3F1a1a,2,NSSL CMS
+2,Atterberg Limits,"Atterberg Limits, NSMC Lab",ATTERBERG,"SSIR No. 42, version 4, page 167",3H,1,SSL LIMS Version 1.0
+2,Atterberg Limits,"Atterberg Limits, NSMC Lab",ATTERBERG,"SSIR No. 42, version 4, page 167",3H,21,Virgina Tech
+3,"Bulk Density, Clod","Bulk Density and Water Retention, Pressure-Plate, Clods",DBH2ORET,"SSIR No. 42, version 4, page 104",DbWR1,22,The Ohio State University
+3,"Bulk Density, Clod","Bulk Density and Water Retention, Pressure-Plate, Clods",DBH2ORET,"SSIR No. 42, version 4, page 104",DbWR1,26,University of Minnesota
+3,"Bulk Density, Clod","Bulk Density and Water Retention, Pressure-Plate, Clods",DBH2ORET,"SSIR No. 42, version 4, page 104",DbWR1,36,North Dakota State University
+3,"Bulk Density, Clod","Bulk Density and Water Retention, Pressure-Plate, Clods",DBH2ORET,"SSIR No. 42, version 4, page 104",DbWR1,18,Michigan Technological University
+3,"Bulk Density, Clod","Bulk Density and Water Retention, Pressure-Plate, Clods",DBH2ORET,"SSIR No. 42, version 4, page 104",DbWR1,37,University of Massachusetts 
+3,"Bulk Density, Clod","Bulk Density and Water Retention, Pressure-Plate, Clods",DBH2ORET,"SSIR No. 42, version 4, page 104",DbWR1,1,SSL LIMS Version 1.0
+3,"Bulk Density, Clod","Bulk Density and Water Retention, Pressure-Plate, Clods",DBH2ORET,"SSIR No. 42, version 4, page 104",DbWR1,33,The Pennsylvania State University
+3,"Bulk Density, Clod","Bulk Density and Water Retention, Pressure-Plate, Clods",DBH2ORET,"SSIR No. 42, version 4, page 104",DbWR1,9,Texas A&M University
+3,"Bulk Density, Clod","Bulk Density and Water Retention, Pressure-Plate, Clods",DBH2ORET,"SSIR No. 42, version 4, page 104",DbWR1,30,West Virginia University
+4,"Bulk Density, Soil Core","Bulk Density and Water Retention, Pressure-Plate, Cores",DBH2ORETCO,"SSIR No. 42, version 4, page 104",3B6,25,University of Kentucky
+4,"Bulk Density, Soil Core","Bulk Density and Water Retention, Pressure-Plate, Cores",DBH2ORETCO,"SSIR No. 42, version 4, page 104",3B6,33,The Pennsylvania State University
+4,"Bulk Density, Soil Core","Bulk Density and Water Retention, Pressure-Plate, Cores",DBH2ORETCO,"SSIR No. 42, version 4, page 104",3B6,15,Purdue University
+4,"Bulk Density, Soil Core","Bulk Density and Water Retention, Pressure-Plate, Cores",DBH2ORETCO,"SSIR No. 42, version 4, page 104",3B6,1,SSL LIMS Version 1.0
+4,"Bulk Density, Soil Core","Bulk Density and Water Retention, Pressure-Plate, Cores",DBH2ORETCO,"SSIR No. 42, version 4, page 104",3B6,37,University of Massachusetts 
+4,"Bulk Density, Soil Core","Bulk Density and Water Retention, Pressure-Plate, Cores",DBH2ORETCO,"SSIR No. 42, version 4, page 104",3B6,22,The Ohio State University
+4,"Bulk Density, Soil Core","Bulk Density and Water Retention, Pressure-Plate, Cores",DBH2ORETCO,"SSIR No. 42, version 4, page 104",3B6,21,Virgina Tech
+5,"Bulk Density, Reconstituted","Bulk Density and Water Retention, Reconstituted",DBRECON,"SSIR No. 42, version 4, page 99",3B2,1,SSL LIMS Version 1.0
+6,"Bulk Density, Compliant Cavity ","Bulk Density, Compliant Cavity",DBCOMPCAV,"SSIR No. 42, version 4, page 98",3B3,1,SSL LIMS Version 1.0
+8,"Bulk Density, Clod, Field State","Bulk Density, Field State",DBFLDSTATE,"SSIR No. 42, version 4, page 75",3B1a,1,SSL LIMS Version 1.0
+8,"Bulk Density, Clod, Field State","Bulk Density, Field State",DBFLDSTATE,"SSIR No. 42, version 4, page 75",3B1a,2,NSSL CMS
+8,"Bulk Density, Clod, Field State","Bulk Density, Field State",DBFLDSTATE,"SSIR No. 42, version 4, page 75",4A1a,36,North Dakota State University
+8,"Bulk Density, Clod, Field State","Bulk Density, Field State",DBFLDSTATE,"SSIR No. 42, version 4, page 75",4A1a,18,Michigan Technological University
+9,"Bulk Density, Reconstituted, Moist","Bulk Density, Reconstituted, Moist",DBRECON_M,NULL,DbRec1,1,SSL LIMS Version 1.0
+10,"Bulk Density, Clod, Rewet","Bulk Density, Rewet, Clods",DBREWET,"SSIR No. 42, version 4, page 89",3B1d,1,SSL LIMS Version 1.0
+10,"Bulk Density, Clod, Rewet","Bulk Density, Rewet, Clods",DBREWET,"SSIR No. 42, version 4, page 89",3B1d,2,NSSL CMS
+11,Sample Preparation,Bulk Sample Preparation,BlkSmpPrep,"SSIR No. 42, version 4, page 16",1B,1,SSL LIMS Version 1.0
+12,"Calcium Carbonate Equivalent, <2mm","Calcium Carbonate Equivalent, HCl, <2mm",CACO3,"SSIR No. 42, version 4, page 269",4E1a1a1a1,1,SSL LIMS Version 1.0
+12,"Calcium Carbonate Equivalent, <2mm","Calcium Carbonate Equivalent, HCl, <2mm",CACO3,"SSIR No. 42, version 4, page 269",4E1a1a1a1,2,NSSL CMS
+12,"Calcium Carbonate Equivalent, <2mm","Calcium Carbonate Equivalent, HCl, <2mm",CACO3,"SSIR No. 42, version 4, page 269",6E1h,18,Michigan Technological University
+12,"Calcium Carbonate Equivalent, <2mm","Calcium Carbonate Equivalent, HCl, <2mm",CACO3,"SSIR No. 42, version 4, page 269",4E1a1a1a1,26,University of Minnesota
+12,"Calcium Carbonate Equivalent, <2mm","Calcium Carbonate Equivalent, HCl, <2mm",CACO3,"SSIR No. 42, version 4, page 269",4E1a1a1a1,40,Iowa State University
+13,"Calcium Carbonate Equivalent, 2-20mm","Calcium Carbonate Equivalent, HCl, 2-20mm",CACO3_20,"SSIR No. 42, version 4, page 269",4E1a1a1a2,2,NSSL CMS
+13,"Calcium Carbonate Equivalent, 2-20mm","Calcium Carbonate Equivalent, HCl, 2-20mm",CACO3_20,"SSIR No. 42, version 4, page 269",4E1a1a1a2,1,SSL LIMS Version 1.0
+14,"Carbon, Total","Carbon, Total",TOTC,"SSIR No. 42, version 4, page 473",6A2e,1,SSL LIMS Version 1.0
+14,"Carbon, Total","Carbon, Total",TOTC,"SSIR No. 42, version 4, page 473",6A2e,2,NSSL CMS
+15,Acid Oxalate Extract,"Cations, Acid Oxalate Extractable",OXAL,"SSIR No. 42, version 4, page 312",4G2,1,SSL LIMS Version 1.0
+15,Acid Oxalate Extract,"Cations, Acid Oxalate Extractable",OXAL,"SSIR No. 42, version 4, page 312",4G2,2,NSSL CMS
+16,Dithionite-Citrate Extract,"Cations, Dithionite-Citrate Extractable",DITH,"SSIR No. 42, version 4, page 307",4G1,20,University of California at Davis
+16,Dithionite-Citrate Extract,"Cations, Dithionite-Citrate Extractable",DITH,"SSIR No. 42, version 4, page 307",4G1,1,SSL LIMS Version 1.0
+16,Dithionite-Citrate Extract,"Cations, Dithionite-Citrate Extractable",DITH,"SSIR No. 42, version 4, page 307",4G1,40,Iowa State University
+16,Dithionite-Citrate Extract,"Cations, Dithionite-Citrate Extractable",DITH,"SSIR No. 42, version 4, page 307",4G1,18,Michigan Technological University
+17,KCl Extract,"Cations, Potassium Chloride Extractable",KCL,"SSIR No. 42, version 4, page 197",4B3a1a,18,Michigan Technological University
+17,KCl Extract,"Cations, Potassium Chloride Extractable",KCL,"SSIR No. 42, version 4, page 197",4B3a1a,1,SSL LIMS Version 1.0
+18,Na-Pyrophosphate Extract,"Cations, Pyrophosphate Extractable",PYRO,"SSIR No. 42, version 4, page 317",4G3,1,SSL LIMS Version 1.0
+18,Na-Pyrophosphate Extract,"Cations, Pyrophosphate Extractable",PYRO,"SSIR No. 42, version 4, page 317",4G3,18,Michigan Technological University
+19,"CEC and Cations, Neutral Salts","CEC and Cations, NH4Cl",CECCL,"SSIR No. 42, version 4, page 181",4B1b1a,1,SSL LIMS Version 1.0
+20,"CEC and Cations, Routine","CEC and Cations, NH4OAc",CECNH4,"SSIR No. 42, version 4, page 173",4B1a1,1,SSL LIMS Version 1.0
+20,"CEC and Cations, Routine","CEC and Cations, NH4OAc",CECNH4,"SSIR No. 42, version 4, page 173",4B1a1,20,University of California at Davis
+20,"CEC and Cations, Routine","CEC and Cations, NH4OAc",CECNH4,"SSIR No. 42, version 4, page 173",4B1a1,24,Kansas State University
+20,"CEC and Cations, Routine","CEC and Cations, NH4OAc",CECNH4,"SSIR No. 42, version 4, page 173",4B1a1,19,University of Florida
+20,"CEC and Cations, Routine","CEC and Cations, NH4OAc",CECNH4,"SSIR No. 42, version 4, page 173",4B1a1,33,The Pennsylvania State University
+20,"CEC and Cations, Routine","CEC and Cations, NH4OAc",CECNH4,"SSIR No. 42, version 4, page 173",4B1a1,17,University of Missouri
+20,"CEC and Cations, Routine","CEC and Cations, NH4OAc",CECNH4,"SSIR No. 42, version 4, page 173",4B1a1,18,Michigan Technological University
+20,"CEC and Cations, Routine","CEC and Cations, NH4OAc",CECNH4,"SSIR No. 42, version 4, page 173",4B1a1,36,North Dakota State University
+20,"CEC and Cations, Routine","CEC and Cations, NH4OAc",CECNH4,"SSIR No. 42, version 4, page 173",4B1a1,26,University of Minnesota
+20,"CEC and Cations, Routine","CEC and Cations, NH4OAc",CECNH4,"SSIR No. 42, version 4, page 173",4B1a1,22,The Ohio State University
+20,"CEC and Cations, Routine","CEC and Cations, NH4OAc",CECNH4,"SSIR No. 42, version 4, page 173",4B1a1,35,University of Arkansas
+20,"CEC and Cations, Routine","CEC and Cations, NH4OAc",CECNH4,"SSIR No. 42, version 4, page 173",4B1a1,40,Iowa State University
+21,"Clay Mineralogy, DSC","Differential Scanning Calorimetry, Thermal Analyzer",DSC910S,"SSIR No. 42, version 4, page 410",7A3a,2,NSSL CMS
+21,"Clay Mineralogy, DSC","Differential Scanning Calorimetry, Thermal Analyzer",DSC910S,"SSIR No. 42, version 4, page 410",7A3a,1,SSL LIMS Version 1.0
+22,"Effervescence, 1N HCl","Effervescence, 1N HCl",EFF_1nhcl,"SSIR No. 42, version 4, page 25",1B1b2d2,1,SSL LIMS Version 1.0
+23,"Extractable Acidity, BaCl2-TEA","Extractable Acidity, BaCl2-Triethanolamine, Titration",EXTRACID,"SSIR No. 42, version 4, page 191",4B2a1a1,1,SSL LIMS Version 1.0
+23,"Extractable Acidity, BaCl2-TEA","Extractable Acidity, BaCl2-Triethanolamine, Titration",EXTRACID,"SSIR No. 42, version 4, page 191",4B2a1a1,2,NSSL CMS
+23,"Extractable Acidity, BaCl2-TEA","Extractable Acidity, BaCl2-Triethanolamine, Titration",EXTRACID,"SSIR No. 42, version 4, page 191",4B2a1a1,33,The Pennsylvania State University
+23,"Extractable Acidity, BaCl2-TEA","Extractable Acidity, BaCl2-Triethanolamine, Titration",EXTRACID,"SSIR No. 42, version 4, page 191",4B2a1a1,26,University of Minnesota
+23,"Extractable Acidity, BaCl2-TEA","Extractable Acidity, BaCl2-Triethanolamine, Titration",EXTRACID,"SSIR No. 42, version 4, page 191",6H5b,18,Michigan Technological University
+24,"Gypsum, <2mm","Gypsum, H2O Extraction, Acetone Precipitation, <2mm",GYPSUM,"SSIR No. 42, version 4, page 273",6F1a,36,North Dakota State University
+24,"Gypsum, <2mm","Gypsum, H2O Extraction, Acetone Precipitation, <2mm",GYPSUM,"SSIR No. 42, version 4, page 273",4E2a1a1a1,9,Texas A&M University
+24,"Gypsum, <2mm","Gypsum, H2O Extraction, Acetone Precipitation, <2mm",GYPSUM,"SSIR No. 42, version 4, page 273",4E2a1a1a1,2,NSSL CMS
+24,"Gypsum, <2mm","Gypsum, H2O Extraction, Acetone Precipitation, <2mm",GYPSUM,"SSIR No. 42, version 4, page 273",4E2a1a1a1,1,SSL LIMS Version 1.0
+25,"Gypsum, 2-20mm","Gypsum, H2O Extraction, Acetone Precipitation, 2-20mm",GYP20,"SSIR No. 42, version 4, page 273",4E2a1a1a2,1,SSL LIMS Version 1.0
+25,"Gypsum, 2-20mm","Gypsum, H2O Extraction, Acetone Precipitation, 2-20mm",GYP20,"SSIR No. 42, version 4, page 273",4E2a1a1a2,2,NSSL CMS
+26,Mineral Content,"Mineral Content, Loss on Ignition",MINIGNITE,"SSIR No. 42, version 4, page 368",5A,1,SSL LIMS Version 1.0
+26,Mineral Content,"Mineral Content, Loss on Ignition",MINIGNITE,"SSIR No. 42, version 4, page 368",5A,2,NSSL CMS
+27,"Nitrate, KCl Extractable","Nitrate, 1 M KCl Extractable, FIA",NO3KCL,"SSIR No. 42, version 4, page 260",4D9a1a,1,SSL LIMS Version 1.0
+28,"Nitrogen, Mineralizable","Nitrogen, Mineralizable",MINT,"SSIR No. 42, version 4, page 388",6B2a1a1,1,SSL LIMS Version 1.0
+29,"Nitrogen, Total","Nitrogen, Total",TOTN,"SSIR No. 42, version 4, page 475",6B4a,1,SSL LIMS Version 1.0
+29,"Nitrogen, Total","Nitrogen, Total",TOTN,"SSIR No. 42, version 4, page 475",6B4a,2,NSSL CMS
+29,"Nitrogen, Total","Nitrogen, Total",TOTN,"SSIR No. 42, version 4, page 475",6B4a,20,University of California at Davis
+30,"Optical Analysis, Glass Count","Optical Analysis, Glass Count",OPTICAL_G,"SSIR No. 42, version 4, page 428",7B1a2,2,NSSL CMS
+30,"Optical Analysis, Glass Count","Optical Analysis, Glass Count",OPTICAL_G,"SSIR No. 42, version 4, page 428",7B1a2,1,SSL LIMS Version 1.0
+31,"Optical Analysis, Full Count","Optical Analysis, Full Grain Count",OPTICAL_F,"SSIR No. 42, version 4, page 428",7B1a2,1,SSL LIMS Version 1.0
+31,"Optical Analysis, Full Count","Optical Analysis, Full Grain Count",OPTICAL_F,"SSIR No. 42, version 4, page 428",7B1a2,2,NSSL CMS
+31,"Optical Analysis, Full Count","Optical Analysis, Full Grain Count",OPTICAL_F,"SSIR No. 42, version 4, page 428",7B1a2,21,Virgina Tech
+32,Fiber Analysis,Organic Fiber Analysis,FIBANAL,"SSIR No. 42, version 4, page 371",5C,2,NSSL CMS
+32,Fiber Analysis,Organic Fiber Analysis,FIBANAL,"SSIR No. 42, version 4, page 371",5C,1,SSL LIMS Version 1.0
+33,Particle Density <2mm,Particle density <2 mm,pd_l2,"SSIR No. 42, version 4, page 165",3G1a1,1,SSL LIMS Version 1.0
+34,Particle Density >2mm,Particle density >2 mm,pd_g2,"SSIR No. 42, version 4, page 165",3G1a2,1,SSL LIMS Version 1.0
+34,Particle Density >2mm,Particle density >2 mm,pd_g2,"SSIR No. 42, version 4, page 165",3G1a2,33,The Pennsylvania State University
+35,"pH, KCl","pH, 1N KCl",PHKCL,"SSIR No. 42, version 4, page 215",4C1a2a3,25,University of Kentucky
+35,"pH, KCl","pH, 1N KCl",PHKCL,"SSIR No. 42, version 4, page 215",4C1a2a3,2,NSSL CMS
+35,"pH, KCl","pH, 1N KCl",PHKCL,"SSIR No. 42, version 4, page 215",4C1a2a3,1,SSL LIMS Version 1.0
+36,"pH, NaF","pH, 1N NaF",PHNAF,"SSIR No. 42, version 4, page 205",4C1a1a1,1,SSL LIMS Version 1.0
+36,"pH, NaF","pH, 1N NaF",PHNAF,"SSIR No. 42, version 4, page 205",4C1a1a1,2,NSSL CMS
+36,"pH, NaF","pH, 1N NaF",PHNAF,"SSIR No. 42, version 4, page 205",4C1a1a1,13,University of Idaho
+37,"pH, Oxidized","pH, Oxidized",PHOXID,"SSIR No. 42, version 4, page 209",4C1a1a3,1,SSL LIMS Version 1.0
+38,"pH, Routine","pH, Routine, 1:1 Water and 1:2 0.01M CaCl2",PHROUT,"SSIR No. 42, version 4, page 213",4C1a2a,1,SSL LIMS Version 1.0
+38,"pH, Routine","pH, Routine, 1:1 Water and 1:2 0.01M CaCl2",PHROUT,"SSIR No. 42, version 4, page 213",4C1a2a,30,West Virginia University
+38,"pH, Routine","pH, Routine, 1:1 Water and 1:2 0.01M CaCl2",PHROUT,"SSIR No. 42, version 4, page 213",4C1a2a,2,NSSL CMS
+38,"pH, Routine","pH, Routine, 1:1 Water and 1:2 0.01M CaCl2",PHROUT,"SSIR No. 42, version 4, page 213",4C1a2a,16,Auburn University
+38,"pH, Routine","pH, Routine, 1:1 Water and 1:2 0.01M CaCl2",PHROUT,"SSIR No. 42, version 4, page 213",4C1a2a,15,Purdue University
+38,"pH, Routine","pH, Routine, 1:1 Water and 1:2 0.01M CaCl2",PHROUT,"SSIR No. 42, version 4, page 213",4C1a2a,26,University of Minnesota
+38,"pH, Routine","pH, Routine, 1:1 Water and 1:2 0.01M CaCl2",PHROUT,"SSIR No. 42, version 4, page 213",4C1a2a,22,The Ohio State University
+38,"pH, Routine","pH, Routine, 1:1 Water and 1:2 0.01M CaCl2",PHROUT,"SSIR No. 42, version 4, page 213",4C1a2a,18,Michigan Technological University
+38,"pH, Routine","pH, Routine, 1:1 Water and 1:2 0.01M CaCl2",PHROUT,"SSIR No. 42, version 4, page 213",4C1a2a,40,Iowa State University
+39,"Phosphate, Water Soluble","Phosphate, Water Soluble",H2OPO4,"SSIR No. 42, version 4, page 226",4D2a1b1,1,SSL LIMS Version 1.0
+40,"Phosphorus, Bray 1","Phosphorus, Bray 1",BRAYP,"SSIR No. 42, version 4, page 231",4D3a1,1,SSL LIMS Version 1.0
+40,"Phosphorus, Bray 1","Phosphorus, Bray 1",BRAYP,"SSIR No. 42, version 4, page 231",4D3a1,13,University of Idaho
+40,"Phosphorus, Bray 1","Phosphorus, Bray 1",BRAYP,"SSIR No. 42, version 4, page 231",4D3,40,Iowa State University
+41,"Phosphorus, Bray 2","Phosphorus, Bray 2",BRAY2P,"SSIR No. 42, version 4, page 239",4D4a1,1,SSL LIMS Version 1.0
+42,"Phosphorus, Citric Acid Extractable","Phosphorus, Citric Acid Extractable",CITACIDP,"SSIR No. 42, version 4, page 253",4D7a1,1,SSL LIMS Version 1.0
+42,"Phosphorus, Citric Acid Extractable","Phosphorus, Citric Acid Extractable",CITACIDP,"SSIR No. 42, version 4, page 253",4D7a1,2,NSSL CMS
+43,New Zealand Phosphorus Retention,"Phosphorus, New Zealand P Retention",NZPRET,"SSIR No. 42, version 4, page 257",4D8a1,1,SSL LIMS Version 1.0
+44,"Phosphorus, Olsen","Phosphorus, Olsen",OLSENP,"SSIR No. 42, version 4, page 242",4D5a1,1,SSL LIMS Version 1.0
+44,"Phosphorus, Olsen","Phosphorus, Olsen",OLSENP,"SSIR No. 42, version 4, page 242",4D5a1,20,University of California at Davis
+44,"Phosphorus, Olsen","Phosphorus, Olsen",OLSENP,"SSIR No. 42, version 4, page 242",4D5a1,21,Virgina Tech
+45,"PSDA, Dith, Pipet","PSDA, Dith, Pipet",PSDADITH,"SSIR No. 42, version 4, page 46",3A1a3a,1,SSL LIMS Version 1.0
+46,"PSDA, Moist, Dith, Pipet","PSDA, Moist, Dith, Pipet",PSDAMDITH,"SSIR No. 42, version 4, page 52",3A1a3b,1,SSL LIMS Version 1.0
+47,"PSDA, Moist, NaOAc, Pipet","PSDA, Moist, NaOAc, Pipet",PSDAMNAOAC,"SSIR No. 42, version 4, page 51",3A1a2b,1,SSL LIMS Version 1.0
+48,"PSDA, Moist, NaOH, Pipet","PSDA, Moist, NaOH, Pipet",PSDAMNAOH,"SSIR No. 42, version 4, page 53",3A1a4b,1,SSL LIMS Version 1.0
+49,"PSDA, Moist, Pipet","PSDA, Moist, Pipet",PSDAMST,"SSIR No. 42, version 4, page 50",3A1a1b,1,SSL LIMS Version 1.0
+49,"PSDA, Moist, Pipet","PSDA, Moist, Pipet",PSDAMST,"SSIR No. 42, version 4, page 50",3A1a1b,2,NSSL CMS
+50,"PSDA, Moist, Ultrasonic, Pipet","PSDA, Moist, Ultrasonic, Pipet",PSDAMULTRA,"SSIR No. 42, version 4, page 53",3A1a5b,1,SSL LIMS Version 1.0
+51,"PSDA, NaOAc, Pipet","PSDA, NaOAc, Pipet",PSDANAOAC,"SSIR No. 42, version 4, page 46",3A1a2a,1,SSL LIMS Version 1.0
+51,"PSDA, NaOAc, Pipet","PSDA, NaOAc, Pipet",PSDANAOAC,"SSIR No. 42, version 4, page 46",3A1a2a,2,NSSL CMS
+52,"PSDA, NaOH, Pipet","PSDA, NaOH, Pipet",PSDANAOH,"SSIR No. 42, version 4, page 47",3A1a4a,2,NSSL CMS
+52,"PSDA, NaOH, Pipet","PSDA, NaOH, Pipet",PSDANAOH,"SSIR No. 42, version 4, page 47",3A1a4a,1,SSL LIMS Version 1.0
+53,"PSDA, Air-dry, <2 mm Particles","PSDA, Routine, Pipet",PSDA,"SSIR No. 42, version 4, page 41",3A1a1a,1,SSL LIMS Version 1.0
+53,"PSDA, Air-dry, <2 mm Particles","PSDA, Routine, Pipet",PSDA,"SSIR No. 42, version 4, page 41",3A1a1a,2,NSSL CMS
+53,"PSDA, Air-dry, <2 mm Particles","PSDA, Routine, Pipet",PSDA,"SSIR No. 42, version 4, page 41",3A1a1a,24,Kansas State University
+53,"PSDA, Air-dry, <2 mm Particles","PSDA, Routine, Pipet",PSDA,"SSIR No. 42, version 4, page 41",3A1a1a,20,University of California at Davis
+53,"PSDA, Air-dry, <2 mm Particles","PSDA, Routine, Pipet",PSDA,"SSIR No. 42, version 4, page 41",3A1a1a,17,University of Missouri
+53,"PSDA, Air-dry, <2 mm Particles","PSDA, Routine, Pipet",PSDA,"SSIR No. 42, version 4, page 41",3A1a1a,13,University of Idaho
+53,"PSDA, Air-dry, <2 mm Particles","PSDA, Routine, Pipet",PSDA,"SSIR No. 42, version 4, page 41",3A1a1a,19,University of Florida
+53,"PSDA, Air-dry, <2 mm Particles","PSDA, Routine, Pipet",PSDA,"SSIR No. 42, version 4, page 41",3A1a1a,30,West Virginia University
+53,"PSDA, Air-dry, <2 mm Particles","PSDA, Routine, Pipet",PSDA,"SSIR No. 42, version 4, page 41",3A1a1a,25,University of Kentucky
+53,"PSDA, Air-dry, <2 mm Particles","PSDA, Routine, Pipet",PSDA,"SSIR No. 42, version 4, page 41",3A1a1a,33,The Pennsylvania State University
+53,"PSDA, Air-dry, <2 mm Particles","PSDA, Routine, Pipet",PSDA,"SSIR No. 42, version 4, page 41",3A1a1a,9,Texas A&M University
+53,"PSDA, Air-dry, <2 mm Particles","PSDA, Routine, Pipet",PSDA,"SSIR No. 42, version 4, page 41",3A1a1a,15,Purdue University
+53,"PSDA, Air-dry, <2 mm Particles","PSDA, Routine, Pipet",PSDA,"SSIR No. 42, version 4, page 41",3A1a1a,16,Auburn University
+53,"PSDA, Air-dry, <2 mm Particles","PSDA, Routine, Pipet",PSDA,"SSIR No. 42, version 4, page 41",3A1a1a,10,University of Illinois
+53,"PSDA, Air-dry, <2 mm Particles","PSDA, Routine, Pipet",PSDA,"SSIR No. 42, version 4, page 41",3A1a1a,35,University of Arkansas
+53,"PSDA, Air-dry, <2 mm Particles","PSDA, Routine, Pipet",PSDA,"SSIR No. 42, version 4, page 41",3A1,22,The Ohio State University
+53,"PSDA, Air-dry, <2 mm Particles","PSDA, Routine, Pipet",PSDA,"SSIR No. 42, version 4, page 41",3A1a1a,26,University of Minnesota
+53,"PSDA, Air-dry, <2 mm Particles","PSDA, Routine, Pipet",PSDA,"SSIR No. 42, version 4, page 41",3A1,18,Michigan Technological University
+53,"PSDA, Air-dry, <2 mm Particles","PSDA, Routine, Pipet",PSDA,"SSIR No. 42, version 4, page 41",3A1,37,University of Massachusetts 
+53,"PSDA, Air-dry, <2 mm Particles","PSDA, Routine, Pipet",PSDA,"SSIR No. 42, version 4, page 41",3A1,36,North Dakota State University
+53,"PSDA, Air-dry, <2 mm Particles","PSDA, Routine, Pipet",PSDA,"SSIR No. 42, version 4, page 41",3A1,40,Iowa State University
+54,"PSDA, Ultrasonic, Pipet","PSDA, Ultrasonic, Pipet",PSDAULTRA,"SSIR No. 42, version 4, page 47",3A1a5a,1,SSL LIMS Version 1.0
+55,"PSDA, Water Dispersible, Air-dry","PSDA, Water Dispersible, Air-dry",H2OPSDAAD,"SSIR No. 42, version 4, page 48",3A1a6a,1,SSL LIMS Version 1.0
+55,"PSDA, Water Dispersible, Air-dry","PSDA, Water Dispersible, Air-dry",H2OPSDAAD,"SSIR No. 42, version 4, page 48",3A1a6a,2,NSSL CMS
+55,"PSDA, Water Dispersible, Air-dry","PSDA, Water Dispersible, Air-dry",H2OPSDAAD,"SSIR No. 42, version 4, page 48",3A1a6a,20,University of California at Davis
+56,"PSDA, Water Dispersible, hydrometer, air-dry","PSDA, Water Dispersible, hydrometer, air-dry",H2OHYDRAD,NULL,PSDAh1,1,SSL LIMS Version 1.0
+57,"PSDA, Water Dispersible, Moist","PSDA, Water Dispersible, Moist",H2OPSDAM,"SSIR No. 42, version 4, page 55",3A1a6b,1,SSL LIMS Version 1.0
+57,"PSDA, Water Dispersible, Moist","PSDA, Water Dispersible, Moist",H2OPSDAM,"SSIR No. 42, version 4, page 55",3A1a6b,2,NSSL CMS
+58,Salt Predict,"Salt Prediction, 1:2 (w/v)",PREDICT,"SSIR No. 42, version 4, page 277",4F1a1a1,1,SSL LIMS Version 1.0
+58,Salt Predict,"Salt Prediction, 1:2 (w/v)",PREDICT,"SSIR No. 42, version 4, page 277",4F1a1a1,2,NSSL CMS
+59,Saturated Paste and Soluble Salts,Saturated Paste and Soluble Salts,SATP,"SSIR No. 42, version 4, page 278",4F2,13,University of Idaho
+59,Saturated Paste and Soluble Salts,Saturated Paste and Soluble Salts,SATP,"SSIR No. 42, version 4, page 278",4F2,1,SSL LIMS Version 1.0
+59,Saturated Paste and Soluble Salts,Saturated Paste and Soluble Salts,SATP,"SSIR No. 42, version 4, page 278",4F2,36,North Dakota State University
+59,Saturated Paste and Soluble Salts,Saturated Paste and Soluble Salts,SATP,"SSIR No. 42, version 4, page 278",4F2,21,Virgina Tech
+60,"Sulfur, Total","Sulfur, Total",TOTS,"CMS, LIMS, elementar NCS SSIR No. 42, version 4, page 528",6R3c,1,SSL LIMS Version 1.0
+60,"Sulfur, Total","Sulfur, Total",TOTS,"CMS, LIMS, elementar NCS SSIR No. 42, version 4, page 528",6R3c,2,NSSL CMS
+61,"Surface Area, EGME","Surface Area, EGME",EGME,"SSIR No. 42, version 4, page 555",7D2,1,SSL LIMS Version 1.0
+62,"Clay Mineralogy, TGA",Thermogravimetric Analysis,TGA51,"SSIR No. 42, version 4, page 415",7A2a,1,SSL LIMS Version 1.0
+62,"Clay Mineralogy, TGA",Thermogravimetric Analysis,TGA51,"SSIR No. 42, version 4, page 415",7A2a,16,Auburn University
+63,"Micromorphology, Thin Section",Thin Section,THINSECT,"SSIR No. 42, version 4, page 140",3E1,1,SSL LIMS Version 1.0
+64,Total Elemental Analysis,"Total Analysis, HF, HNO3, HCl Dissolution",TOTANAL,"SSIR No. 42, version 4, page 341",4H1b,1,SSL LIMS Version 1.0
+65,"Water Retention, 0.06 Bar, Pressure-Plate, <2mm","Water Retention, 0.06 Bar, Pressure-Plate, <2mm",H2O.06Br<2,"SSIR No. 42, version 4, page 106",3C1a1a,1,SSL LIMS Version 1.0
+65,"Water Retention, 0.06 Bar, Pressure-Plate, <2mm","Water Retention, 0.06 Bar, Pressure-Plate, <2mm",H2O.06Br<2,"SSIR No. 42, version 4, page 106",3C1a1a,2,NSSL CMS
+66,"Water Retention, 0.1 Bar, Pressure-Plate, <2mm","Water Retention, 0.1 Bar, Pressure-Plate, <2mm",H2O.1Bar<2,"SSIR No. 42, version 4, page 106",3C1b1a,1,SSL LIMS Version 1.0
+66,"Water Retention, 0.1 Bar, Pressure-Plate, <2mm","Water Retention, 0.1 Bar, Pressure-Plate, <2mm",H2O.1Bar<2,"SSIR No. 42, version 4, page 106",3C1b1a,2,NSSL CMS
+66,"Water Retention, 0.1 Bar, Pressure-Plate, <2mm","Water Retention, 0.1 Bar, Pressure-Plate, <2mm",H2O.1Bar<2,"SSIR No. 42, version 4, page 106",3C1b1a,20,University of California at Davis
+66,"Water Retention, 0.1 Bar, Pressure-Plate, <2mm","Water Retention, 0.1 Bar, Pressure-Plate, <2mm",H2O.1Bar<2,"SSIR No. 42, version 4, page 106",3C1b1a,26,University of Minnesota
+67,"Water Retention, 0.33 Bar, Pressure-Plate, <2mm","Water Retention, 0.33 Bar, Pressure-Plate, <2mm",H2O.33Br<2,"SSIR No. 42, version 4, page 106",3C1c1a,26,University of Minnesota
+67,"Water Retention, 0.33 Bar, Pressure-Plate, <2mm","Water Retention, 0.33 Bar, Pressure-Plate, <2mm",H2O.33Br<2,"SSIR No. 42, version 4, page 106",4B1a,36,North Dakota State University
+67,"Water Retention, 0.33 Bar, Pressure-Plate, <2mm","Water Retention, 0.33 Bar, Pressure-Plate, <2mm",H2O.33Br<2,"SSIR No. 42, version 4, page 106",3C1c1a,20,University of California at Davis
+67,"Water Retention, 0.33 Bar, Pressure-Plate, <2mm","Water Retention, 0.33 Bar, Pressure-Plate, <2mm",H2O.33Br<2,"SSIR No. 42, version 4, page 106",3C1c1a,13,University of Idaho
+67,"Water Retention, 0.33 Bar, Pressure-Plate, <2mm","Water Retention, 0.33 Bar, Pressure-Plate, <2mm",H2O.33Br<2,"SSIR No. 42, version 4, page 106",3C1c1a,9,Texas A&M University
+67,"Water Retention, 0.33 Bar, Pressure-Plate, <2mm","Water Retention, 0.33 Bar, Pressure-Plate, <2mm",H2O.33Br<2,"SSIR No. 42, version 4, page 106",3C1c1a,33,The Pennsylvania State University
+67,"Water Retention, 0.33 Bar, Pressure-Plate, <2mm","Water Retention, 0.33 Bar, Pressure-Plate, <2mm",H2O.33Br<2,"SSIR No. 42, version 4, page 106",3C1c1a,2,NSSL CMS
+67,"Water Retention, 0.33 Bar, Pressure-Plate, <2mm","Water Retention, 0.33 Bar, Pressure-Plate, <2mm",H2O.33Br<2,"SSIR No. 42, version 4, page 106",3C1c1a,1,SSL LIMS Version 1.0
+68,"Water Retention, 1 Bar, Pressure-Plate, <2mm","Water Retention, 1 Bar, Pressure-Plate, <2mm",H2O1Bar<2,"SSIR No. 42, version 4, page 106",3C1d1a,1,SSL LIMS Version 1.0
+68,"Water Retention, 1 Bar, Pressure-Plate, <2mm","Water Retention, 1 Bar, Pressure-Plate, <2mm",H2O1Bar<2,"SSIR No. 42, version 4, page 106",3C1d1a,2,NSSL CMS
+69,"Water Retention, 15 Bar, Pressure-Plate, <2mm","Water Retention, 15 Bar, Pressure-Plate, <2mm",H2O15Bar<2,"SSIR No. 42, version 4, page 106",3C2a1a,10,University of Illinois
+69,"Water Retention, 15 Bar, Pressure-Plate, <2mm","Water Retention, 15 Bar, Pressure-Plate, <2mm",H2O15Bar<2,"SSIR No. 42, version 4, page 106",3C2a1a,33,The Pennsylvania State University
+69,"Water Retention, 15 Bar, Pressure-Plate, <2mm","Water Retention, 15 Bar, Pressure-Plate, <2mm",H2O15Bar<2,"SSIR No. 42, version 4, page 106",3C2a1a,9,Texas A&M University
+69,"Water Retention, 15 Bar, Pressure-Plate, <2mm","Water Retention, 15 Bar, Pressure-Plate, <2mm",H2O15Bar<2,"SSIR No. 42, version 4, page 106",3C2a1a,25,University of Kentucky
+69,"Water Retention, 15 Bar, Pressure-Plate, <2mm","Water Retention, 15 Bar, Pressure-Plate, <2mm",H2O15Bar<2,"SSIR No. 42, version 4, page 106",3C2a1a,30,West Virginia University
+69,"Water Retention, 15 Bar, Pressure-Plate, <2mm","Water Retention, 15 Bar, Pressure-Plate, <2mm",H2O15Bar<2,"SSIR No. 42, version 4, page 106",3C2a1a,13,University of Idaho
+69,"Water Retention, 15 Bar, Pressure-Plate, <2mm","Water Retention, 15 Bar, Pressure-Plate, <2mm",H2O15Bar<2,"SSIR No. 42, version 4, page 106",3C2a1a,20,University of California at Davis
+69,"Water Retention, 15 Bar, Pressure-Plate, <2mm","Water Retention, 15 Bar, Pressure-Plate, <2mm",H2O15Bar<2,"SSIR No. 42, version 4, page 106",3C2a1a,1,SSL LIMS Version 1.0
+69,"Water Retention, 15 Bar, Pressure-Plate, <2mm","Water Retention, 15 Bar, Pressure-Plate, <2mm",H2O15Bar<2,"SSIR No. 42, version 4, page 106",3C2a1a,2,NSSL CMS
+69,"Water Retention, 15 Bar, Pressure-Plate, <2mm","Water Retention, 15 Bar, Pressure-Plate, <2mm",H2O15Bar<2,"SSIR No. 42, version 4, page 106",4B2a,36,North Dakota State University
+69,"Water Retention, 15 Bar, Pressure-Plate, <2mm","Water Retention, 15 Bar, Pressure-Plate, <2mm",H2O15Bar<2,"SSIR No. 42, version 4, page 106",3C2a1a,26,University of Minnesota
+69,"Water Retention, 15 Bar, Pressure-Plate, <2mm","Water Retention, 15 Bar, Pressure-Plate, <2mm",H2O15Bar<2,"SSIR No. 42, version 4, page 106",4B2a,22,The Ohio State University
+69,"Water Retention, 15 Bar, Pressure-Plate, <2mm","Water Retention, 15 Bar, Pressure-Plate, <2mm",H2O15Bar<2,"SSIR No. 42, version 4, page 106",3C2a1a,21,Virgina Tech
+69,"Water Retention, 15 Bar, Pressure-Plate, <2mm","Water Retention, 15 Bar, Pressure-Plate, <2mm",H2O15Bar<2,"SSIR No. 42, version 4, page 106",4B2a,18,Michigan Technological University
+70,"Water Retention, 2 Bar, Pressure-Plate, <2mm","Water Retention, 2 Bar, Pressure-Plate, <2mm",H2O2Bar<2,"SSIR No. 42, version 4, page 106",3C1e1a,1,SSL LIMS Version 1.0
+70,"Water Retention, 2 Bar, Pressure-Plate, <2mm","Water Retention, 2 Bar, Pressure-Plate, <2mm",H2O2Bar<2,"SSIR No. 42, version 4, page 106",3C1e1a,2,NSSL CMS
+71,"Water Retention, ADOD","Water Retention, ADOD",ADOD,"SSIR No. 42, version 4, page 132",3D1,33,The Pennsylvania State University
+71,"Water Retention, ADOD","Water Retention, ADOD",ADOD,"SSIR No. 42, version 4, page 132",3D1,1,SSL LIMS Version 1.0
+71,"Water Retention, ADOD","Water Retention, ADOD",ADOD,"SSIR No. 42, version 4, page 132",3D1,2,NSSL CMS
+72,"Water Retention, Field State","Water Retention, Field State",H2ORETFLD,"SSIR No. 42, version 4, page 131",3C3,1,SSL LIMS Version 1.0
+72,"Water Retention, Field State","Water Retention, Field State",H2ORETFLD,"SSIR No. 42, version 4, page 131",3C3,2,NSSL CMS
+73,"Clay Mineralogy, X-ray Diffraction","X-ray Diffraction, Thin Film on Glass, Resin Pretreatment",XRAY,"SSIR No. 42, version 4, page 399",7A1a1,1,SSL LIMS Version 1.0
+74,"Total Nitrogen, Carbon and Sulfur","Total N, C, S",NCS_Tot,"SSIR No. 42, version 4, page 347",4H2a,1,SSL LIMS Version 1.0
+74,"Total Nitrogen, Carbon and Sulfur","Total N, C, S",NCS_Tot,"SSIR No. 42, version 4, page 347",4H2a,30,West Virginia University
+74,"Total Nitrogen, Carbon and Sulfur","Total N, C, S",NCS_Tot,"SSIR No. 42, version 4, page 347",4H2a,24,Kansas State University
+74,"Total Nitrogen, Carbon and Sulfur","Total N, C, S",NCS_Tot,"SSIR No. 42, version 4, page 347",4H2a,40,Iowa State University
+75,Melanic Index,Melanic Index,Melanic,"SSIR No. 42, version 4, page 374",5D,1,SSL LIMS Version 1.0
+76,"Phosphorus, Mehlich III","Phosphorus, Mehlich III",MEHLICH3P,"SSIR No. 42, version 4, page 246",4D6a1,1,SSL LIMS Version 1.0
+77,Trace Elements,Trace Elements (HNO3 + HCl),TrElem,"SSIR No. 42, version 4, page 324",4H1a,1,SSL LIMS Version 1.0
+77,Trace Elements,Trace Elements (HNO3 + HCl),TrElem,"SSIR No. 42, version 4, page 324",4H1a,30,West Virginia University
+77,Trace Elements,Trace Elements (HNO3 + HCl),TrElem,"SSIR No. 42, version 4, page 324",4H1a,37,University of Massachusetts 
+78,Major Elements,Major Elements (HF+HNO3+HCl),MjElem,"SSIR No. 42, version 4, page 341",4H1b,30,West Virginia University
+78,Major Elements,Major Elements (HF+HNO3+HCl),MjElem,"SSIR No. 42, version 4, page 341",4H1b,1,SSL LIMS Version 1.0
+79,"Nitrogen, Mineralizable (EPA)","Nitrogen, Mineralizable (EPA)",MINTEPA,"SSIR No. 42, version 4, page 265",4D10a1,1,SSL LIMS Version 1.0
+81,Acid Oxalate extraction,"Cations, Acid Oxalate Extractable, Optical Density",OXAL,"CMS, SSIR No. 42, version 3, page ",8J1b,2,NSSL CMS
+82,Acid Oxalate extraction,"Cations, Acid Oxalate Extractable, Optical Density",OXAL,"CMS, SSIR No. 42, version 3, page 279",8J1c,2,NSSL CMS
+90,"Calcium Carbonate Equivalent, <2mm","Calcium Carbonate Equivalent, HCl, <2mm, weight gain (6E1d)",CACO3,"CMS, SSIR No. 42, 1972, page 34",6E1d,2,NSSL CMS
+91,"Calcium Carbonate Equivalent, <2mm","Calcium Carbonate Equivalent, HCl, <2mm, weight loss (6E1c)",CACO3,"CMS, SSIR No. 42, 1972, page 34",6E1c,2,NSSL CMS
+91,"Calcium Carbonate Equivalent, <2mm","Calcium Carbonate Equivalent, HCl, <2mm, weight loss (6E1c)",CACO3,"CMS, SSIR No. 42, 1972, page 34",6E1c,36,North Dakota State University
+92,"Calcium Carbonate Equivalent, <2mm","Calcium Carbonate Equivalent, HCl, <2mm, manometer (6E1b)",CACO3,"CMS, SSIR No. 42, 1972, page 33",6E1b,36,North Dakota State University
+92,"Calcium Carbonate Equivalent, <2mm","Calcium Carbonate Equivalent, HCl, <2mm, manometer (6E1b)",CACO3,"CMS, SSIR No. 42, 1972, page 33",6E1b,2,NSSL CMS
+93,"Calcium Carbonate Equivalent, <2mm","Calcium Carbonate Equivalent, HCl, <2mm, manometer, electronic (6E1g)",CACO3,"CMS, SSIR No. 42, 1984, page 39",6E1g,2,NSSL CMS
+94,"Calcium Carbonate Equivalent, <2mm","Calcium Carbonate Equivalent, HCl, <2mm, manometric (6E1a)",CACO3,"CMS, SSIR No. 42, 1972, page",6E1a,2,NSSL CMS
+96,"CEC and Cations, BaCl2, pH 8.2","CEC, BaCl2, pH 8.2",CECbacl,"CMS, SSIR No. 42, 1972, page 23",5A5,2,NSSL CMS
+98,"CEC and Cations, NaOAc, pH 8.2","CEC, NaOAc, pH 8.2, centrifuge",CECnac,"CMS, SSIR No. 42, 1972, page 23",5A2a,2,NSSL CMS
+98,"CEC and Cations, NaOAc, pH 8.2","CEC, NaOAc, pH 8.2, centrifuge",CECnac,"CMS, SSIR No. 42, 1972, page 23",5A2a,36,North Dakota State University
+99,"CEC and Cations, NH4OAc, pH 7.0","CEC, NH4OAc, pH 7.0, Buchner funnel, direct distillation",CECNH4b,"CMS, SSIR No. 42, 1972, page 22",5A1a,37,University of Massachusetts 
+99,"CEC and Cations, NH4OAc, pH 7.0","CEC, NH4OAc, pH 7.0, Buchner funnel, direct distillation",CECNH4b,"CMS, SSIR No. 42, 1972, page 22",5A1a,22,The Ohio State University
+99,"CEC and Cations, NH4OAc, pH 7.0","CEC, NH4OAc, pH 7.0, Buchner funnel, direct distillation",CECNH4b,"CMS, SSIR No. 42, 1972, page 22",5A1a,2,NSSL CMS
+99,"CEC and Cations, NH4OAc, pH 7.0","CEC, NH4OAc, pH 7.0, Buchner funnel, direct distillation",CECNH4b,"CMS, SSIR No. 42, 1972, page 22",5A1a,10,University of Illinois
+99,"CEC and Cations, NH4OAc, pH 7.0","CEC, NH4OAc, pH 7.0, Buchner funnel, direct distillation",CECNH4b,"CMS, SSIR No. 42, 1972, page 22",5A1a,25,University of Kentucky
+101,"CEC and Cations, NH4OAc, pH 7.0","CEC, NH4OAc, pH 7.0, leaching tube, direct distillation",CECNH4l,"CMS, SSIR No. 42, 1972, page 24",5A6a,2,NSSL CMS
+103,"CEC and Cations, NH4OAc, pH 7.0","CEC, NH4OAc, pH 7.0, automatic extractor, direct distillation",CECNH4aed,"CMS, SSIR No. 42, 1984, page 30",5A8a,2,NSSL CMS
+104,"CEC and Cations, NH4OAc, pH 7.0","CEC, NH4OAc, pH 7.0,  automatic extractor, steam distillation I",CECNH4aes,"CMS, SSIR No. 42, 1984, page 30",5A8b,2,NSSL CMS
+104,"CEC and Cations, NH4OAc, pH 7.0","CEC, NH4OAc, pH 7.0,  automatic extractor, steam distillation I",CECNH4aes,"CMS, SSIR No. 42, 1984, page 30",5A8b,10,University of Illinois
+112,"Extractable Acidity, BaCl2-TEA","Extractable Acidity, BaCl2-Triethanolamine I",EXTRACID,"CMS, SSIR No. 1, 1972, page 38",6H1a,10,University of Illinois
+112,"Extractable Acidity, BaCl2-TEA","Extractable Acidity, BaCl2-Triethanolamine I",EXTRACID,"CMS, SSIR No. 1, 1972, page 38",6H1a,15,Purdue University
+112,"Extractable Acidity, BaCl2-TEA","Extractable Acidity, BaCl2-Triethanolamine I",EXTRACID,"CMS, SSIR No. 1, 1972, page 38",6H1a,25,University of Kentucky
+112,"Extractable Acidity, BaCl2-TEA","Extractable Acidity, BaCl2-Triethanolamine I",EXTRACID,"CMS, SSIR No. 1, 1972, page 38",6H1a,17,University of Missouri
+112,"Extractable Acidity, BaCl2-TEA","Extractable Acidity, BaCl2-Triethanolamine I",EXTRACID,"CMS, SSIR No. 1, 1972, page 38",6H1a,19,University of Florida
+112,"Extractable Acidity, BaCl2-TEA","Extractable Acidity, BaCl2-Triethanolamine I",EXTRACID,"CMS, SSIR No. 1, 1972, page 38",6H1a,2,NSSL CMS
+112,"Extractable Acidity, BaCl2-TEA","Extractable Acidity, BaCl2-Triethanolamine I",EXTRACID,"CMS, SSIR No. 1, 1972, page 38",6H1a,22,The Ohio State University
+112,"Extractable Acidity, BaCl2-TEA","Extractable Acidity, BaCl2-Triethanolamine I",EXTRACID,"CMS, SSIR No. 1, 1972, page 38",6H1a,21,Virgina Tech
+112,"Extractable Acidity, BaCl2-TEA","Extractable Acidity, BaCl2-Triethanolamine I",EXTRACID,"CMS, SSIR No. 1, 1972, page 38",6H1a,35,University of Arkansas
+112,"Extractable Acidity, BaCl2-TEA","Extractable Acidity, BaCl2-Triethanolamine I",EXTRACID,"CMS, SSIR No. 1, 1972, page 38",6H1a,37,University of Massachusetts 
+112,"Extractable Acidity, BaCl2-TEA","Extractable Acidity, BaCl2-Triethanolamine I",EXTRACID,"CMS, SSIR No. 1, 1972, page 38",6H1a,36,North Dakota State University
+112,"Extractable Acidity, BaCl2-TEA","Extractable Acidity, BaCl2-Triethanolamine I",EXTRACID,"CMS, SSIR No. 1, 1972, page 38",6H1a,40,Iowa State University
+113,"Extractable Acidity, BaCl2-TEA","Extractable Acidity, BaCl2-Triethanolamine II",EXTRACID,"CMS, SSIR No. 1, 1972, page 38",6H2b,40,Iowa State University
+113,"Extractable Acidity, BaCl2-TEA","Extractable Acidity, BaCl2-Triethanolamine II",EXTRACID,"CMS, SSIR No. 1, 1972, page 38",6H2b,2,NSSL CMS
+114,"Extractable Acidity, BaCl2-TEA","Extractable Acidity, BaCl2-Triethanolamine III",EXTRACID,"CMS, SSIR No. 1, 1984, page 45",6H4a,2,NSSL CMS
+115,"Extractable Acidity, BaCl2-TEA","Extractable Acidity, BaCl2-Triethanolamine IV, automatic extractor",EXTRACID,"CMS, SSIR No. 1, 1984, page 45",6H5a,2,NSSL CMS
+115,"Extractable Acidity, BaCl2-TEA","Extractable Acidity, BaCl2-Triethanolamine IV, automatic extractor",EXTRACID,"CMS, SSIR No. 1, 1984, page 45",6H5a,30,West Virginia University
+119,"Gypsum, <2mm","Gypsum, weight loss",GYPSUM,"CMS, SSIR No. 42, 1984, page 41",6F2a,2,NSSL CMS
+120,"Gypsum, <2mm","Gypsum, ion chromatograph",GYPSUM,"CMS, SSIR No. 42, 1984, page 41",6F1c,2,NSSL CMS
+127,"KCl Extract, Al","Cations, Potassium Chloride Extractable I (6G1b)",AL_KCL,"CMS, SSIR No. 1, 1972, page 36",6G1b,2,NSSL CMS
+128,"KCl Extract, Al","Cations, Potassium Chloride Extractable II, overnight (6G2a)",AL_KCL,"CMS, SSIR No. 1, 1972, page 37",6G2a,2,NSSL CMS
+128,"KCl Extract, Al","Cations, Potassium Chloride Extractable II, overnight (6G2a)",AL_KCL,"CMS, SSIR No. 1, 1972, page 37",6G2a,21,Virgina Tech
+129,"KCl Extract, Al","Cations, Potassium Chloride Extractable, 1N, automatic extractor, AA (6G9a)",AL_KCL,"CMS, SSIR No. 1, 1984, page 43",6G9a,2,NSSL CMS
+129,"KCl Extract, Al","Cations, Potassium Chloride Extractable, 1N, automatic extractor, AA (6G9a)",AL_KCL,"CMS, SSIR No. 1, 1984, page 43",6G9a,9,Texas A&M University
+129,"KCl Extract, Al","Cations, Potassium Chloride Extractable, 1N, automatic extractor, AA (6G9a)",AL_KCL,"CMS, SSIR No. 1, 1984, page 43",6G9a,19,University of Florida
+131,Organic Carbon,"Organic Carbon, acid dichromate digestion, FeSO4 titration",WBC1,"CMS, SSIR No. 42, 1972, page 26",6A1a,19,University of Florida
+131,Organic Carbon,"Organic Carbon, acid dichromate digestion, FeSO4 titration",WBC1,"CMS, SSIR No. 42, 1972, page 26",6A1a,13,University of Idaho
+131,Organic Carbon,"Organic Carbon, acid dichromate digestion, FeSO4 titration",WBC1,"CMS, SSIR No. 42, 1972, page 26",6A1a,33,The Pennsylvania State University
+131,Organic Carbon,"Organic Carbon, acid dichromate digestion, FeSO4 titration",WBC1,"CMS, SSIR No. 42, 1972, page 26",6A1a,25,University of Kentucky
+131,Organic Carbon,"Organic Carbon, acid dichromate digestion, FeSO4 titration",WBC1,"CMS, SSIR No. 42, 1972, page 26",6A1a,15,Purdue University
+131,Organic Carbon,"Organic Carbon, acid dichromate digestion, FeSO4 titration",WBC1,"CMS, SSIR No. 42, 1972, page 26",6A1a,10,University of Illinois
+131,Organic Carbon,"Organic Carbon, acid dichromate digestion, FeSO4 titration",WBC1,"CMS, SSIR No. 42, 1972, page 26",6A1a,2,NSSL CMS
+131,Organic Carbon,"Organic Carbon, acid dichromate digestion, FeSO4 titration",WBC1,"CMS, SSIR No. 42, 1972, page 26",6A1a,21,Virgina Tech
+131,Organic Carbon,"Organic Carbon, acid dichromate digestion, FeSO4 titration",WBC1,"CMS, SSIR No. 42, 1972, page 26",6A1a,35,University of Arkansas
+131,Organic Carbon,"Organic Carbon, acid dichromate digestion, FeSO4 titration",WBC1,"CMS, SSIR No. 42, 1972, page 26",6A1a,36,North Dakota State University
+131,Organic Carbon,"Organic Carbon, acid dichromate digestion, FeSO4 titration",WBC1,"CMS, SSIR No. 42, 1972, page 26",6A1a,37,University of Massachusetts 
+132,Organic Carbon,"Organic Carbon, acid dichromate digestion, CO2 evolution, gravimetric",ALLI,"CMS, SSIR No. 42, 1972, page 26",6A1b,2,NSSL CMS
+133,Organic Carbon,"Organic Carbon, acid dichromate digestion, FeSO4 titration, automatic titrator",WBC2,"CMS, SSIR No. 42, 1984, page 34",6A1c,2,NSSL CMS
+133,Organic Carbon,"Organic Carbon, acid dichromate digestion, FeSO4 titration, automatic titrator",WBC2,"CMS, SSIR No. 42, 1984, page 34",6A1c,18,Michigan Technological University
+134,Organic Carbon,"Organic Carbon, 6A",unknown,CMS,6A,2,NSSL CMS
+136,"pH, KCl","pH, 1N KCl",unknown,"CMS, SSIR No. 42, 1972, page 59",8C1c,15,Purdue University
+136,"pH, KCl","pH, 1N KCl",unknown,"CMS, SSIR No. 42, 1972, page 59",8C1c,2,NSSL CMS
+136,"pH, KCl","pH, 1N KCl",unknown,"CMS, SSIR No. 42, 1972, page 59",8C1c,33,The Pennsylvania State University
+136,"pH, KCl","pH, 1N KCl",unknown,"CMS, SSIR No. 42, 1972, page 59",8C1c,19,University of Florida
+136,"pH, KCl","pH, 1N KCl",unknown,"CMS, SSIR No. 42, 1972, page 59",8C1c,37,University of Massachusetts 
+137,"pH, H2O","pH, 1:1 Water",pHH2O,"CMS, SSIR No. 42, 1972, page 59",8C1a,37,University of Massachusetts 
+137,"pH, H2O","pH, 1:1 Water",pHH2O,"CMS, SSIR No. 42, 1972, page 59",8C1a,36,North Dakota State University
+137,"pH, H2O","pH, 1:1 Water",pHH2O,"CMS, SSIR No. 42, 1972, page 59",8C1a,35,University of Arkansas
+137,"pH, H2O","pH, 1:1 Water",pHH2O,"CMS, SSIR No. 42, 1972, page 59",8C1a,21,Virgina Tech
+137,"pH, H2O","pH, 1:1 Water",pHH2O,"CMS, SSIR No. 42, 1972, page 59",8C1a,22,The Ohio State University
+137,"pH, H2O","pH, 1:1 Water",pHH2O,"CMS, SSIR No. 42, 1972, page 59",8C1a,19,University of Florida
+137,"pH, H2O","pH, 1:1 Water",pHH2O,"CMS, SSIR No. 42, 1972, page 59",8C1a,24,Kansas State University
+137,"pH, H2O","pH, 1:1 Water",pHH2O,"CMS, SSIR No. 42, 1972, page 59",8C1a,33,The Pennsylvania State University
+137,"pH, H2O","pH, 1:1 Water",pHH2O,"CMS, SSIR No. 42, 1972, page 59",8C1a,9,Texas A&M University
+137,"pH, H2O","pH, 1:1 Water",pHH2O,"CMS, SSIR No. 42, 1972, page 59",8C1a,25,University of Kentucky
+137,"pH, H2O","pH, 1:1 Water",pHH2O,"CMS, SSIR No. 42, 1972, page 59",8C1a,20,University of California at Davis
+137,"pH, H2O","pH, 1:1 Water",pHH2O,"CMS, SSIR No. 42, 1972, page 59",8C1a,2,NSSL CMS
+137,"pH, H2O","pH, 1:1 Water",pHH2O,"CMS, SSIR No. 42, 1972, page 59",8C1a,17,University of Missouri
+137,"pH, H2O","pH, 1:1 Water",pHH2O,"CMS, SSIR No. 42, 1972, page 59",8C1a,10,University of Illinois
+139,"pH, CaCl2","pH,  1:2 0.01M CaCl2",pHcacl,"CMS, SSIR No. 42, 1972, page 60",8C1e,2,NSSL CMS
+139,"pH, CaCl2","pH,  1:2 0.01M CaCl2",pHcacl,"CMS, SSIR No. 42, 1972, page 60",8C1e,20,University of California at Davis
+139,"pH, CaCl2","pH,  1:2 0.01M CaCl2",pHcacl,"CMS, SSIR No. 42, 1972, page 60",8C1e,25,University of Kentucky
+139,"pH, CaCl2","pH,  1:2 0.01M CaCl2",pHcacl,"CMS, SSIR No. 42, 1972, page 60",8C1e,33,The Pennsylvania State University
+139,"pH, CaCl2","pH,  1:2 0.01M CaCl2",pHcacl,"CMS, SSIR No. 42, 1972, page 60",8C1e,17,University of Missouri
+139,"pH, CaCl2","pH,  1:2 0.01M CaCl2",pHcacl,"CMS, SSIR No. 42, 1972, page 60",8C1e,24,Kansas State University
+139,"pH, CaCl2","pH,  1:2 0.01M CaCl2",pHcacl,"CMS, SSIR No. 42, 1972, page 60",8C1e,19,University of Florida
+139,"pH, CaCl2","pH,  1:2 0.01M CaCl2",pHcacl,"CMS, SSIR No. 42, 1972, page 60",8C1e,22,The Ohio State University
+139,"pH, CaCl2","pH,  1:2 0.01M CaCl2",pHcacl,"CMS, SSIR No. 42, 1972, page 60",8C1e,36,North Dakota State University
+139,"pH, CaCl2","pH,  1:2 0.01M CaCl2",pHcacl,"CMS, SSIR No. 42, 1972, page 60",8C1e,37,University of Massachusetts 
+141,"pH, 1:10 H2O","pH, 1:10 Water",pHh2o10,CMS,8C1a,36,North Dakota State University
+141,"pH, 1:10 H2O","pH, 1:10 Water",pHh2o10,CMS,8C1a,2,NSSL CMS
+153,Surface Area,"Surface Area, EGME",EGME,"CMS, SSIR No. 42, version 3, page 393",7D2,2,NSSL CMS
+155,Surface Area,"Surface Area, ethylene glycol",SAEG,"CMS, SSIR No. 42, 1972, page 56",7D1,2,NSSL CMS
+156,"Carbon, Total","Total Carbon, dry combustion, CO2 evolution I, gravimetric",TOTC,"CMS, SSIR No. 42, 1972, page 27",6A2a,9,Texas A&M University
+156,"Carbon, Total","Total Carbon, dry combustion, CO2 evolution I, gravimetric",TOTC,"CMS, SSIR No. 42, 1972, page 27",6A2a,2,NSSL CMS
+156,"Carbon, Total","Total Carbon, dry combustion, CO2 evolution I, gravimetric",TOTC,"CMS, SSIR No. 42, 1972, page 27",6A2a,36,North Dakota State University
+156,"Carbon, Total","Total Carbon, dry combustion, CO2 evolution I, gravimetric",TOTC,"CMS, SSIR No. 42, 1972, page 27",6A2a,22,The Ohio State University
+157,"Carbon, Total","Total Carbon, dry combustion, CO2 evolution II, gravimetric",TOTC,"CMS, SSIR No. 42, 1972, page 27",6A2b,35,University of Arkansas
+157,"Carbon, Total","Total Carbon, dry combustion, CO2 evolution II, gravimetric",TOTC,"CMS, SSIR No. 42, 1972, page 27",6A2b,36,North Dakota State University
+157,"Carbon, Total","Total Carbon, dry combustion, CO2 evolution II, gravimetric",TOTC,"CMS, SSIR No. 42, 1972, page 27",6A2b,2,NSSL CMS
+159,"Carbon, Total","Total Carbon, dry combustion, CO2 evolution IV",TOTC,"CMS, SSIR No. 42, version 1, page 238",6A2d,20,University of California at Davis
+159,"Carbon, Total","Total Carbon, dry combustion, CO2 evolution IV",TOTC,"CMS, SSIR No. 42, version 1, page 238",6A2d,2,NSSL CMS
+160,"Carbon, Total","Total Carbon, dry combustion, CO2 evolution V",TOTC,"CMS, SSIR No. 42, version 3, page 223",6A2e,2,NSSL CMS
+161,"Nitrogen, Total","Total Nitrogen, Kjeldahl digestion, ammonia distillation",TOTN,"CMS, SSIR No. 42, 1972, page 29",6B1a,2,NSSL CMS
+161,"Nitrogen, Total","Total Nitrogen, Kjeldahl digestion, ammonia distillation",TOTN,"CMS, SSIR No. 42, 1972, page 29",6B1a,33,The Pennsylvania State University
+161,"Nitrogen, Total","Total Nitrogen, Kjeldahl digestion, ammonia distillation",TOTN,"CMS, SSIR No. 42, 1972, page 29",6B1a,36,North Dakota State University
+162,"Nitrogen, Total","Total Nitrogen, semimicro Kjeldahl, ammonia distillation",TOTN,"CMS, SSIR No. 42, 1972, page 29",6B2a,36,North Dakota State University
+162,"Nitrogen, Total","Total Nitrogen, semimicro Kjeldahl, ammonia distillation",TOTN,"CMS, SSIR No. 42, 1972, page 29",6B2a,2,NSSL CMS
+163,"Nitrogen, Total","Total Nitrogen, Kjeldahl digestion I, ammonia distillation, automatic titrator",TOTN,"CMS, SSIR No. 42, 1984, page 36",6B1b,2,NSSL CMS
+164,"Nitrogen, Total","Total Nitrogen, Kjeldahl digestion II, ammonia steam distillation, automatic titrator",TOTN,"CMS, SSIR No. 42, 184, page 36",6B3a,2,NSSL CMS
+164,"Nitrogen, Total","Total Nitrogen, Kjeldahl digestion II, ammonia steam distillation, automatic titrator",TOTN,"CMS, SSIR No. 42, 184, page 36",6B3a,18,Michigan Technological University
+165,"Nitrogen, Total","Total Nitrogen, dry combustion, N2 Evolution",TOTN,"CMS, SSIR No. 42, version 3, page 227",6B4a,2,NSSL CMS
+165,"Nitrogen, Total","Total Nitrogen, dry combustion, N2 Evolution",TOTN,"CMS, SSIR No. 42, version 3, page 227",6B4a,20,University of California at Davis
+166,"Nitrogen, Total","Nitrogen, Kjeldahl Digestion III, Ammonia Steam Distillation",TOTN,CMS,6B5a,2,NSSL CMS
+168,"Phosphorus, Total","Total Phosphorus, perchloric acid digestion",TotP,"CMS, SSIR No. 42, 1972, page 49",6S1a,2,NSSL CMS
+168,"Phosphorus, Total","Total Phosphorus, perchloric acid digestion",TotP,"CMS, SSIR No. 42, 1972, page 49",6S1a,19,University of Florida
+169,"Sulfur, Total","Sulfur, Total, SO2 evolution, KIO3 titration",TOTS,"CMS, SSIR No. 42, 1984, page 51",6R3a,2,NSSL CMS
+170,"Sulfur, Total","Sulfur, Total, SO2 evolution, infrared I",TOTS,"CMS, SSIR No. 42, version 1, page 215",6R3b,2,NSSL CMS
+177,"Water Retention, 15 Bar, <2mm, moist","Water Retention, 15 Bar, Pressure-Plate, <2mm, moist",H2O15bm<2,"CMS, SSIR No. 42, 1972, page 17",4B2b,2,NSSL CMS
+184,"Water Retention, 0.33 Bar, clod","Water Retention, clod, 0.06, 0.1, 0.33, or 1 bar, pressure-plate extraction",H2O.33bclod,"CMS, SSIR No. 42, 1984, page 23",4B1c,2,NSSL CMS
+184,"Water Retention, 0.33 Bar, clod","Water Retention, clod, 0.06, 0.1, 0.33, or 1 bar, pressure-plate extraction",H2O.33bclod,"CMS, SSIR No. 42, 1984, page 23",4B1c,10,University of Illinois
+184,"Water Retention, 0.33 Bar, clod","Water Retention, clod, 0.06, 0.1, 0.33, or 1 bar, pressure-plate extraction",H2O.33bclod,"CMS, SSIR No. 42, 1984, page 23",4B1c,36,North Dakota State University
+185,"Water Retention, 0.33 Bar, clod, rewet","Water Retention, 0.33 Bar, Pressure-Plate, clod, rewet",H2O.33bcrw,"CMS, SSIR No. 42, 1984, page 23",4B1e,2,NSSL CMS
+187,"Water Retention, Field State","Water Retention, Field State, clod",H2OFSclod,"CMS, SSIR No. 42, 1972, page 17",4B4,2,NSSL CMS
+187,"Water Retention, Field State","Water Retention, Field State, clod",H2OFSclod,"CMS, SSIR No. 42, 1972, page 17",4B4,18,Michigan Technological University
+189,"Clay Mineralogy, X-ray Diffraction","X-ray Diffraction, Thin Film on Glass, Resin Pretreatment I",XRAY,CMS 7A2b,7A2b,2,NSSL CMS
+190,"Clay Mineralogy, X-ray Diffraction","X-ray Diffraction, Thin Film on Glass, Resin Pretreatment II",XRAY,CMS,7A2i,2,NSSL CMS
+190,"Clay Mineralogy, X-ray Diffraction","X-ray Diffraction, Thin Film on Glass, Resin Pretreatment II",XRAY,CMS,7A2i,30,West Virginia University
+192,Derived,"Ratio, to Total Clay - 8D1",none,CMS,8D1,2,NSSL CMS
+193,Derived,"Ratio, to Total Clay - 8D1b",none,CMS,8D1b,2,NSSL CMS
+194,"Calcium Carbonate Equivalent, 2-20mm","Calcium Carbonate Equivalent, HCl, 2-20mm",CACO3_20,CMS,6E4,2,NSSL CMS
+195,"KCl Extract, Al","Cations, Potassium Chloride Extractable, 1 N, automatic extractor, ICP II (6G9c)",AL_KCL,"CMS, SSIR No. 42, version 3, page 259",6G9c,2,NSSL CMS
+195,"KCl Extract, Al","Cations, Potassium Chloride Extractable, 1 N, automatic extractor, ICP II (6G9c)",AL_KCL,"CMS, SSIR No. 42, version 3, page 259",6G9c,30,West Virginia University
+195,"KCl Extract, Al","Cations, Potassium Chloride Extractable, 1 N, automatic extractor, ICP II (6G9c)",AL_KCL,"CMS, SSIR No. 42, version 3, page 259",6G9c,17,University of Missouri
+196,"KCl Extract, Al","Cations, Potassium Chloride Extractable, 1N, automatic extractor, AA II (6G9d)",AL_KCL,"CMS, SSIR No. 42, version 3, page 265",6G9d,2,NSSL CMS
+197,"KCl Extract, Al","Cations, Potassium Chloride Extractable, 1 N, automatic extractor, ICP I (6G9b)",AL_KCL,"CMS, SSIR No. 42, version 3, page 549",6G9b,2,NSSL CMS
+198,"CEC and Cations, Routine","CEC and Cations, NH4OAc, 2M KCl displacement",CECdNH4,"CMS, duplicate SSIR No. 42, version 4, page 173",4B1a1a,1,SSL LIMS Version 1.0
+198,"CEC and Cations, Routine","CEC and Cations, NH4OAc, 2M KCl displacement",CECdNH4,"CMS, duplicate SSIR No. 42, version 4, page 173",4B1a1a,30,West Virginia University
+203,New Zealand Phosphorus Retention,"Phosphorus, New Zealand P Retention I",NZPRET,CMS,6S4,2,NSSL CMS
+204,New Zealand Phosphorus Retention,"Phosphorus, New Zealand P Retention II",NZPRET,CMS,6S4b,2,NSSL CMS
+205,New Zealand Phosphorus Retention,"Phosphorus, New Zealand P Retention III",NZPRET,CMS,6S4c,2,NSSL CMS
+206,New Zealand Phosphorus Retention,"Phosphorus, New Zealand P Retention IV",NZPRET,CMS,6S4d,2,NSSL CMS
+207,New Zealand Phosphorus Retention,"Phosphorus, New Zealand P Retention V",NZPRET,CMS,6S4e,2,NSSL CMS
+209,"Phosphorus, Bray 1","Phosphorus, Bray 1",BRAYP,CMS,6S3b,2,NSSL CMS
+210,"Phosphorus, Bray 1","Phosphorus, Bray 1",BRAYP,CMS,6S3d,2,NSSL CMS
+211,"Phosphorus, Bray 1","Phosphorus, Bray 1",BRAYP,CMS,6S3e,2,NSSL CMS
+212,"Phosphorus, Bray 1","Phosphorus, Bray 1",BRAYP,CMS,6S3f,2,NSSL CMS
+213,"pH, NaF","pH, 1N NaF, moist",PHNAF,"CMS, moist",8C1i,2,NSSL CMS
+214,"Clay Mineralogy, TGA","Thermogravimetric Analysis, TGA III",TGA51,CMS 7A4c,7A4c,2,NSSL CMS
+216,Organic Carbon,"Organic Carbon, acid dichromate digestion, FeSO4 titration, automatic titrator, moist",WBC2,CMS,6A1d,2,NSSL CMS
+217,"Sulfur, Total","Total Sulfur, SO2 evolution, infrared II",TOTS,"SSIR No. 42, version 3, page 317",6R3c,2,NSSL CMS
+219,"Clay Mineralogy, DSC","Differential Scanning Calorimetry, Thermal Analyzer II",DSC910S,CMS,7A6b,2,NSSL CMS
+220,"Clay Mineralogy, TGA",Thermogravimetric Analysis,TGA51,CMS 7A4b,7A4b,2,NSSL CMS
+227,"Soluble Anions, CO3","Carbonate, Saturated Paste and Soluble Salts, titration",SatAn1,CMS,6I1b,2,NSSL CMS
+228,Soluble Anions,"Chloride, Saturation Extraction, Anion Chromatograph",SatAn2,CMS,6K1c,2,NSSL CMS
+229,Soluble Anions,"Chloride, Saturation Extraction, Anion Chromatograph, Ionic Suppressor",SatAn3,CMS,6K1d,2,NSSL CMS
+230,Soluble Anions,"Chloride, Saturation Extraction, Flow Injection, Automated Ion Analyzer",SatAn4,CMS,6K1e,2,NSSL CMS
+231,Soluble Anions,"Chloride, Saturation Extraction, Anion Chromatograph, Electronic Ion Suppressor",SatAn5,CMS,6K1f,2,NSSL CMS
+233,Saturated Paste and Soluble Salts,"Saturated Paste and Soluble Salts, EC cap rise",SATPEC2,CMS,8A1a,2,NSSL CMS
+233,Saturated Paste and Soluble Salts,"Saturated Paste and Soluble Salts, EC cap rise",SATPEC2,CMS,8A1a,36,North Dakota State University
+233,Saturated Paste and Soluble Salts,"Saturated Paste and Soluble Salts, EC cap rise",SATPEC2,CMS,8A1a,37,University of Massachusetts 
+242,Derived,"derived AL_SAT, 5G1b",none,CMS,5G1b,2,NSSL CMS
+243,Derived,"derived AL_SAT, 5G1",none,CMS,5G1,2,NSSL CMS
+244,Derived,"derived BSECAT, 5C3b",none,CMS,5C3b,2,NSSL CMS
+245,Derived,"derived BSECAT, 5C3",none,CMS,5C3,2,NSSL CMS
+246,Derived,"derived BSESAT, 5C1",none,CMS,5C1,2,NSSL CMS
+247,Derived,"derived CEC_SUM, 5A3c",none,CMS,5A3c,2,NSSL CMS
+248,Derived,"derived CEC_SUM, 5A3a",none,CMS,5A3a,2,NSSL CMS
+249,Derived,"derived COLE, 4D1",none,CMS,4D1,2,NSSL CMS
+250,Derived,"derived ECEC, 5A3d",none,CMS,5A3d,2,NSSL CMS
+251,Derived,"derived ECEC, 5A3b",none,CMS,5A3b,2,NSSL CMS
+252,Derived,"derived est total salts, 8D5",none,CMS,8D5,2,NSSL CMS
+253,Derived,"derived NA_EXCH, 5D2",none,CMS,5D2,2,NSSL CMS
+254,Derived,"derived SAR, 5E",none,CMS,5E,2,NSSL CMS
+255,Derived,"derived WRD, 4C1b",none,CMS,4C1b,2,NSSL CMS
+256,Derived,"derived WRD, 4C1",none,CMS,4C1,2,NSSL CMS
+257,Unknown,Unknown,none,CMS,NK,2,NSSL CMS
+257,Unknown,Unknown,none,CMS,NK,16,Auburn University
+257,Unknown,Unknown,none,CMS,NK,33,The Pennsylvania State University
+257,Unknown,Unknown,none,CMS,NK,9,Texas A&M University
+258,Acid Oxalate extraction,"Cations, Acid Oxalate Extractable, Aluminum",OXAL,CMS,6G12,2,NSSL CMS
+259,Acid Oxalate extraction,"Cations, Acid Oxalate Extractable, Iron",OXAL,CMS,6C9a,2,NSSL CMS
+260,Acid Oxalate extraction,"Cations, Acid Oxalate Extractable, Silica",OXAL,CMS,6V2b,2,NSSL CMS
+261,Acid Oxalate extraction,"Cations, Acid Oxalate Extractable, Aluminum",OXAL,"CMS, SSIR No. 42, version 3, page ",6G12b,2,NSSL CMS
+262,Acid Oxalate extraction,"Cations, Acid Oxalate Extractable, Iron",OXAL,"CMS, SSIR No. 42, version 3, page ",6C9b,2,NSSL CMS
+263,Acid Oxalate extraction,"Cations, Acid Oxalate Extractable, Silica",OXAL,"CMS, SSIR No. 42, version 3, page ",6V2,2,NSSL CMS
+265,Acid Oxalate extraction,"Cations, Acid Oxalate Extractable, Iron",OXAL,"CMS, SSIR No. 42, version 3, page 279",6C9c,2,NSSL CMS
+266,Acid Oxalate extraction,"Cations, Acid Oxalate Extractable, Silica",OXAL,"CMS, SSIR No. 42, version 3, page 279",6V2c,2,NSSL CMS
+267,Acid Oxalate extraction,"Cations, Acid Oxalate Extractable, Manganese",OXAL,"CMS, SSIR No. 42, version 3, page 279",6D5b,20,University of California at Davis
+267,Acid Oxalate extraction,"Cations, Acid Oxalate Extractable, Manganese",OXAL,"CMS, SSIR No. 42, version 3, page 279",6D5b,2,NSSL CMS
+268,Acid Oxalate extraction,"Cations, Acid Oxalate Extractable, Phosphorus",OXAL,"CMS, SSIR No. 42, version 3, page 279",6S8a,2,NSSL CMS
+269,Organic Carbon,"Organic Carbon, 6A1",unknown,CMS,6A1,20,University of California at Davis
+269,Organic Carbon,"Organic Carbon, 6A1",unknown,CMS,6A1,2,NSSL CMS
+269,Organic Carbon,"Organic Carbon, 6A1",unknown,CMS,6A1,36,North Dakota State University
+269,Organic Carbon,"Organic Carbon, 6A1",unknown,CMS,6A1,26,University of Minnesota
+269,Organic Carbon,"Organic Carbon, 6A1",unknown,CMS,6A1,40,Iowa State University
+270,Organic Carbon,"Organic Carbon, Peroxide Digestion, Weight Loss",unknown,"CMS, SSIR No. 1, 1972, page 29",6A3a,2,NSSL CMS
+271,"Bulk Density, <2mm Fraction, Air-dry","Bulk Density, Air-Dry",unknown,"SSIR No. 1, version 1974, page 15",4A1b,2,NSSL CMS
+271,"Bulk Density, <2mm Fraction, Air-dry","Bulk Density, Air-Dry",unknown,"SSIR No. 1, version 1974, page 15",4A1b,20,University of California at Davis
+272,"Bulk Density, <2mm Fraction, 1/3 Bar","Bulk Density, 30-cm Absorption",unknown,"SSIR No. 1, version 1974, page 15",4A1c,2,NSSL CMS
+273,"Bulk Density, <2mm Fraction, 1/3 Bar","Bulk Density, 1/3-Bar Desorption I",unknown,"SSIR No. 42, version 3, page 121",4A1d,2,NSSL CMS
+273,"Bulk Density, <2mm Fraction, 1/3 Bar","Bulk Density, 1/3-Bar Desorption I",unknown,"SSIR No. 42, version 3, page 121",4A1d,36,North Dakota State University
+274,"Bulk Density, <2mm Fraction, 1/3 Bar","Bulk Density, 1/3-Bar Desorption II",unknown,"SSIR No. 1, version 1974, page 15",4A1e,2,NSSL CMS
+274,"Bulk Density, <2mm Fraction, 1/3 Bar","Bulk Density, 1/3-Bar Desorption II",unknown,"SSIR No. 1, version 1974, page 15",4A1e,10,University of Illinois
+275,"Bulk Density, <2mm Fraction, 1/3 Bar","Bulk Density, 1/3-Bar Desorption III",unknown,"SSIR No. 1, version 1974, page 15",4A1f,2,NSSL CMS
+276,"Bulk Density, <2 mm Fraction, 1/10 Bar","Bulk Density, 1/10-Bar Desorption",unknown,"SSIR No. 1, version 1974, page 15",4A1g,2,NSSL CMS
+277,"Bulk Density, <2mm Fraction, Ovendry","Bulk Density, Oven-Dry",unknown,"SSIR No. 42, version 3, page 127",4A1h,2,NSSL CMS
+277,"Bulk Density, <2mm Fraction, Ovendry","Bulk Density, Oven-Dry",unknown,"SSIR No. 42, version 3, page 127",4A1h,10,University of Illinois
+277,"Bulk Density, <2mm Fraction, Ovendry","Bulk Density, Oven-Dry",unknown,"SSIR No. 42, version 3, page 127",4A1h,20,University of California at Davis
+277,"Bulk Density, <2mm Fraction, Ovendry","Bulk Density, Oven-Dry",unknown,"SSIR No. 42, version 3, page 127",4A1h,33,The Pennsylvania State University
+277,"Bulk Density, <2mm Fraction, Ovendry","Bulk Density, Oven-Dry",unknown,"SSIR No. 42, version 3, page 127",4A1h,36,North Dakota State University
+278,"Water Retention, 0.1 or 0.33 bar, soil pieces","Water Retention, 0.1 or 0.33 bar, Soil Pieces",unknown,"SSIR No. 1, version 1974, page 16",4B1b,2,NSSL CMS
+279,"Water Retention, cores, 0.06, 0.1, 0.33, or 1 Bar, pressure-plate extraction","Water Retention, cores, 0.06, 0.1, 0.33, or 1 bar, pressure-plate extraction",unknown,"SSIR No. 1, version 1974, page 17",4B1d,2,NSSL CMS
+279,"Water Retention, cores, 0.06, 0.1, 0.33, or 1 Bar, pressure-plate extraction","Water Retention, cores, 0.06, 0.1, 0.33, or 1 bar, pressure-plate extraction",unknown,"SSIR No. 1, version 1974, page 17",4B1d,25,University of Kentucky
+280,"Water Retention, Water Content <2mm, 1 or 2 Bar, moist","Water Retention, Water Content <2mm, 1 or 2 Bar, moist",unknown,no desc,4B1f,2,NSSL CMS
+281,"Water Retention, Sand-Table Absorption","Water Retention, Sand-Table Absorption",unknown,"SSIR No. 1, version 1974, page 17",4B3,2,NSSL CMS
+282,"Aggregate Stability, moist","Aggregate Stability, Wet Sieving, 1-2 mm, moist",unknown,no desc,4G1b,2,NSSL CMS
+283,Atterberg Limits moist,"Atterberg Limits, NSMC Lab, moist",unknown,no desc,4F1b,2,NSSL CMS
+284,"Calcium Carbonate Equivalent, <2mm","Calcium Carbonate, HCl Treatment",CACO3,"SSIR No. 42, version 3, page 271",6E1,2,NSSL CMS
+285,"Calcium Carbonate Equivalent, <2mm","Calcium Carbonate, Sensitive Qualitative Method, Visual, Gas Bubbles",CACO3,"SSIR No. 1, version 1974, page 35",6E2a,2,NSSL CMS
+286,"Calcium Carbonate Equivalent, <2mm","Calcium Carbonate, HCl Treatment, Titrimetric",CACO3,"SSIR No. 1, version 1974, page 34",6E1e,2,NSSL CMS
+286,"Calcium Carbonate Equivalent, <2mm","Calcium Carbonate, HCl Treatment, Titrimetric",CACO3,"SSIR No. 1, version 1974, page 34",6E1e,24,Kansas State University
+286,"Calcium Carbonate Equivalent, <2mm","Calcium Carbonate, HCl Treatment, Titrimetric",CACO3,"SSIR No. 1, version 1974, page 34",6E1e,19,University of Florida
+286,"Calcium Carbonate Equivalent, <2mm","Calcium Carbonate, HCl Treatment, Titrimetric",CACO3,"SSIR No. 1, version 1974, page 34",6E1e,10,University of Illinois
+286,"Calcium Carbonate Equivalent, <2mm","Calcium Carbonate, HCl Treatment, Titrimetric",CACO3,"SSIR No. 1, version 1974, page 34",6E1e,15,Purdue University
+286,"Calcium Carbonate Equivalent, <2mm","Calcium Carbonate, HCl Treatment, Titrimetric",CACO3,"SSIR No. 1, version 1974, page 34",6E1e,21,Virgina Tech
+286,"Calcium Carbonate Equivalent, <2mm","Calcium Carbonate, HCl Treatment, Titrimetric",CACO3,"SSIR No. 1, version 1974, page 34",6E1e,36,North Dakota State University
+287,"Extractable Acidity, BaCl2-TEA","Extractable Acidity, BaCl2-Triethanolamine II, Back-Titration with HCl",EXTRACID,"CMS, SSIR No. 1, 1972, page 38",6H2a,35,University of Arkansas
+287,"Extractable Acidity, BaCl2-TEA","Extractable Acidity, BaCl2-Triethanolamine II, Back-Titration with HCl",EXTRACID,"CMS, SSIR No. 1, 1972, page 38",6H2a,22,The Ohio State University
+287,"Extractable Acidity, BaCl2-TEA","Extractable Acidity, BaCl2-Triethanolamine II, Back-Titration with HCl",EXTRACID,"CMS, SSIR No. 1, 1972, page 38",6H2a,24,Kansas State University
+287,"Extractable Acidity, BaCl2-TEA","Extractable Acidity, BaCl2-Triethanolamine II, Back-Titration with HCl",EXTRACID,"CMS, SSIR No. 1, 1972, page 38",6H2a,2,NSSL CMS
+288,"Extractable Acidity, BaCl2-TEA","Extractable Acidity, KCl-Triethanolamine II, Back-Titration with NaOH",EXTRACID,"CMS, SSIR No. 1, 1972, page 38",6H3a,2,NSSL CMS
+288,"Extractable Acidity, BaCl2-TEA","Extractable Acidity, KCl-Triethanolamine II, Back-Titration with NaOH",EXTRACID,"CMS, SSIR No. 1, 1972, page 38",6H3a,13,University of Idaho
+289,Total Elemental Analysis,"Total Analysis, Na2CO3 Fusion",TOTANAL,"SSIR No. 42, version 3, page 667",7C1,2,NSSL CMS
+290,Mineral Content,Mineral Content,MINIGNITE,"SSIR No. 42, version 3, page 431",8F,2,NSSL CMS
+291,"pH, KCl","pH, 1:1 1N KCl, moist",PHKCL,"CMS, SSIR No. 42, version 3, page 419, moist",8C1k,2,NSSL CMS
+292,"pH, Routine","pH, Routine, 1:1 Water and 1:2 0.01M CaCl2, moist",PHROUT,"SSIR No. 42, version 3, page 415, moist",8C1j,2,NSSL CMS
+293,"CEC and Cations, NH4OAc, pH 7.0","CEC, NH4OAc, pH 7.0, Buchner funnel, Displacement Distillation",CECNH4b2,"CMS, SSIR No. 42, 1972, page 22",5A1b,2,NSSL CMS
+294,"CEC and Cations, NH4OAc, pH 7.0","CEC, NH4OAc, pH 7.0,  automatic extractor, steam distillation II",CECNH4aes2,"CMS, SSIR No. 42, 1984, page 30",5A8c,2,NSSL CMS
+295,"CEC and Cations, NH4OAc, pH 7.0","CEC, NH4OAc, pH 7.0,  automatic extractor, steam distillation I, moist",CECNH4aesm1,"CMS, SSIR No. 42, 1984, page 30",5A8e,2,NSSL CMS
+296,"Extractable Cations, Ca","Calcium, NH4OAc Extraction",CaExCat1,"CMS, SSIR No. 1, 1972, page 42",6N2,2,NSSL CMS
+296,"Extractable Cations, Ca","Calcium, NH4OAc Extraction",CaExCat1,"CMS, SSIR No. 1, 1972, page 42",6N2,10,University of Illinois
+296,"Extractable Cations, Ca","Calcium, NH4OAc Extraction",CaExCat1,"CMS, SSIR No. 1, 1972, page 42",6N2,19,University of Florida
+296,"Extractable Cations, Ca","Calcium, NH4OAc Extraction",CaExCat1,"CMS, SSIR No. 1, 1972, page 42",6N2,17,University of Missouri
+296,"Extractable Cations, Ca","Calcium, NH4OAc Extraction",CaExCat1,"CMS, SSIR No. 1, 1972, page 42",6N2,25,University of Kentucky
+296,"Extractable Cations, Ca","Calcium, NH4OAc Extraction",CaExCat1,"CMS, SSIR No. 1, 1972, page 42",6N2,35,University of Arkansas
+296,"Extractable Cations, Ca","Calcium, NH4OAc Extraction",CaExCat1,"CMS, SSIR No. 1, 1972, page 42",6N2,36,North Dakota State University
+297,"Extractable Cations, Ca","Calcium, NH4OAc Extraction, EDTA-Alcohol Separation",CaExCat2,"CMS, SSIR No. 1, 1972, page 42",6N2a,21,Virgina Tech
+297,"Extractable Cations, Ca","Calcium, NH4OAc Extraction, EDTA-Alcohol Separation",CaExCat2,"CMS, SSIR No. 1, 1972, page 42",6N2a,22,The Ohio State University
+297,"Extractable Cations, Ca","Calcium, NH4OAc Extraction, EDTA-Alcohol Separation",CaExCat2,"CMS, SSIR No. 1, 1972, page 42",6N2a,25,University of Kentucky
+297,"Extractable Cations, Ca","Calcium, NH4OAc Extraction, EDTA-Alcohol Separation",CaExCat2,"CMS, SSIR No. 1, 1972, page 42",6N2a,2,NSSL CMS
+298,"Extractable Cations, Ca","Calcium, NH4OAc Extraction, Oxalate-Permanganate I",CaExCat3,"CMS, SSIR No. 1, 1972, page 42",6N2b,2,NSSL CMS
+298,"Extractable Cations, Ca","Calcium, NH4OAc Extraction, Oxalate-Permanganate I",CaExCat3,"CMS, SSIR No. 1, 1972, page 42",6N2b,36,North Dakota State University
+299,"Extractable Cations, Ca","Calcium, NH4OAc Extraction, Oxalate-Permanganate II",CaExCat4,"CMS, SSIR No. 1, 1972, page 43",6N2c,2,NSSL CMS
+300,"Extractable Cations, Ca","Calcium, NH4OAc Extraction, Oxalate-Cerate",CaExCat5,"CMS, SSIR No. 1, 1972, page 43",6N2d,2,NSSL CMS
+301,"Extractable Cations, Ca","Calcium, NH4OAc Extraction, Atomic Absorption I",CaExCat6,"CMS, SSIR No. 42, version 3, page 309",6N2e,2,NSSL CMS
+301,"Extractable Cations, Ca","Calcium, NH4OAc Extraction, Atomic Absorption I",CaExCat6,"CMS, SSIR No. 42, version 3, page 309",6N2e,20,University of California at Davis
+301,"Extractable Cations, Ca","Calcium, NH4OAc Extraction, Atomic Absorption I",CaExCat6,"CMS, SSIR No. 42, version 3, page 309",6N2e,9,Texas A&M University
+301,"Extractable Cations, Ca","Calcium, NH4OAc Extraction, Atomic Absorption I",CaExCat6,"CMS, SSIR No. 42, version 3, page 309",6N2e,13,University of Idaho
+301,"Extractable Cations, Ca","Calcium, NH4OAc Extraction, Atomic Absorption I",CaExCat6,"CMS, SSIR No. 42, version 3, page 309",6N2e,15,Purdue University
+301,"Extractable Cations, Ca","Calcium, NH4OAc Extraction, Atomic Absorption I",CaExCat6,"CMS, SSIR No. 42, version 3, page 309",6N2e,16,Auburn University
+301,"Extractable Cations, Ca","Calcium, NH4OAc Extraction, Atomic Absorption I",CaExCat6,"CMS, SSIR No. 42, version 3, page 309",6N2e,37,University of Massachusetts 
+301,"Extractable Cations, Ca","Calcium, NH4OAc Extraction, Atomic Absorption I",CaExCat6,"CMS, SSIR No. 42, version 3, page 309",6N2e,35,University of Arkansas
+302,"Extractable Cations, Ca","Calcium, NH4OAc Extraction, Atomic Absorption II",CaExCat7,"CMS, SSIR No. 42, version 3, page 313",6N2f,2,NSSL CMS
+303,"Extractable Cations, Ca","Calcium, NH4OAc Extraction, Atomic Absorption I, moist",CaExCat8,"CMS, SSIR No. 42, version 3, page 309, moist",6N2g,2,NSSL CMS
+304,"Extractable Cations, Ca","Calcium, NH4OAc Extraction, Atomic Absorption II, moist",CaExCat9,"CMS, SSIR No. 42, version 3, page 313, moist",6N2h,2,NSSL CMS
+305,"Extractable Cations, Ca","Calcium, NH4OAc Extraction, ICP I",CaExCat10,"CMS, SSIR No. 42, version 3, page 313, ICP",6N2i,2,NSSL CMS
+306,"Extractable Cations, Ca","Calcium, NH4OAc Extraction, ICP I, moist",CaExCat11,"CMS, SSIR No. 42, version 3, page 313, ICP, moist",6N2j,2,NSSL CMS
+307,"Soluble Salts, Ca","Calcium, Saturation Extraction, EDTA Titration",CA_SAT1,"CMS, SSIR No. 1, 1972, page 41",6N1a,2,NSSL CMS
+307,"Soluble Salts, Ca","Calcium, Saturation Extraction, EDTA Titration",CA_SAT1,"CMS, SSIR No. 1, 1972, page 41",6N1a,36,North Dakota State University
+308,"Soluble Salts, Ca","Calcium, Saturation Extraction, Atomic Absorption I",CA_SAT2,"CMS, SSIR No. 42, version 3, page 301",6N1b,36,North Dakota State University
+308,"Soluble Salts, Ca","Calcium, Saturation Extraction, Atomic Absorption I",CA_SAT2,"CMS, SSIR No. 42, version 3, page 301",6N1b,2,NSSL CMS
+309,"Soluble Salts, Ca","Calcium, Saturation Extraction, Atomic Absorption II",CA_SAT3,"CMS, SSIR No. 42, version 3, page 305",6N1c,2,NSSL CMS
+310,"Soluble Salts, Ca","Calcium, Saturation Extraction, Atomic Absorption III",CA_SAT4,"CMS, SSIR No. 42, version 3, page 305, PE 300AA",6N1d,2,NSSL CMS
+311,"Cations, Neutral Salts, Ca","Calcium, NH4Cl-EtOH Extraction, EDTA Titration",CA_NH4CL1,"CMS, SSIR No. 1, 1972, page 44",6N3a,2,NSSL CMS
+312,"KCl Extract, Ca","Calcium, KCl-TEA Extraction, Oxalate-Permanganate",CA_KCL1,"CMS, SSIR No. 1, 1972, page 44",6N4a,2,NSSL CMS
+313,"KCl Extract, Ca","Calcium, KCl-TEA Extraction, EDTA Titration",CA_KCL2,"CMS, SSIR No. 1, 1972, page 44",6N4b,2,NSSL CMS
+314,"KCl Extract, Ca","Calcium, KCl-TEA Extraction, Atomic Absorption",CA_KCL3,"CMS, SSIR No. 1, 1972, page 45",6N4c,2,NSSL CMS
+315,"Soluble Salts, Mg","Magnesium, Saturation Extraction, EDTA Titration",MG_SAT1,"CMS, SSIR No. 1, 1972, page 45",6O1a,2,NSSL CMS
+315,"Soluble Salts, Mg","Magnesium, Saturation Extraction, EDTA Titration",MG_SAT1,"CMS, SSIR No. 1, 1972, page 45",6O1a,36,North Dakota State University
+316,"Soluble Salts, Mg","Magnesium, Saturation Extraction, Atomic Absorption I",MG_SAT2,"CMS, SSIR No. 1, 1972, page 45",6O1b,36,North Dakota State University
+316,"Soluble Salts, Mg","Magnesium, Saturation Extraction, Atomic Absorption I",MG_SAT2,"CMS, SSIR No. 1, 1972, page 45",6O1b,2,NSSL CMS
+317,"Soluble Salts, Mg","Magnesium, Saturation Extraction, Atomic Absorption II",MG_SAT3,"CMS, SSIR No. 42, version 3, page 305",6O1c,2,NSSL CMS
+318,"Soluble Salts, Mg","Magnesium, Saturation Extraction, Atomic Absorption III",MG_SAT4,"CMS, SSIR No. 42, version 3, page 305, PE 300AA",6O1d,2,NSSL CMS
+319,"Extractable Cations, Mg","Magnesium, NH4OAc Extraction",MgExCat1,"CMS, SSIR No. 1, 1972, page 45",6O2,2,NSSL CMS
+319,"Extractable Cations, Mg","Magnesium, NH4OAc Extraction",MgExCat1,"CMS, SSIR No. 1, 1972, page 45",6O2,10,University of Illinois
+319,"Extractable Cations, Mg","Magnesium, NH4OAc Extraction",MgExCat1,"CMS, SSIR No. 1, 1972, page 45",6O2,19,University of Florida
+319,"Extractable Cations, Mg","Magnesium, NH4OAc Extraction",MgExCat1,"CMS, SSIR No. 1, 1972, page 45",6O2,17,University of Missouri
+319,"Extractable Cations, Mg","Magnesium, NH4OAc Extraction",MgExCat1,"CMS, SSIR No. 1, 1972, page 45",6O2,25,University of Kentucky
+319,"Extractable Cations, Mg","Magnesium, NH4OAc Extraction",MgExCat1,"CMS, SSIR No. 1, 1972, page 45",6O2,36,North Dakota State University
+320,"Extractable Cations, Mg","Magnesium, NH4OAc Extraction, EDTA-Alcohol Separation",MgExCat2,"CMS, SSIR No. 1, 1972, page 45",6O2a,21,Virgina Tech
+320,"Extractable Cations, Mg","Magnesium, NH4OAc Extraction, EDTA-Alcohol Separation",MgExCat2,"CMS, SSIR No. 1, 1972, page 45",6O2a,22,The Ohio State University
+320,"Extractable Cations, Mg","Magnesium, NH4OAc Extraction, EDTA-Alcohol Separation",MgExCat2,"CMS, SSIR No. 1, 1972, page 45",6O2a,25,University of Kentucky
+320,"Extractable Cations, Mg","Magnesium, NH4OAc Extraction, EDTA-Alcohol Separation",MgExCat2,"CMS, SSIR No. 1, 1972, page 45",6O2a,2,NSSL CMS
+321,"Extractable Cations, Mg","Magnesium, NH4OAc Extraction, Phosphate Titration",MgExCat3,"CMS, SSIR No. 1, 1972, page 46",6O2b,2,NSSL CMS
+321,"Extractable Cations, Mg","Magnesium, NH4OAc Extraction, Phosphate Titration",MgExCat3,"CMS, SSIR No. 1, 1972, page 46",6O2b,36,North Dakota State University
+322,"Extractable Cations, Mg","Magnesium, NH4OAc Extraction, Gravimetric",MgExCat4,"CMS, SSIR No. 1, 1972, page 46",6O2c,2,NSSL CMS
+323,"Extractable Cations, Mg","Magnesium, NH4OAc Extraction, Atomic Absorption I",MgExCat6,"CMS, SSIR No. 42, version 3, page 309",6O2d,2,NSSL CMS
+323,"Extractable Cations, Mg","Magnesium, NH4OAc Extraction, Atomic Absorption I",MgExCat6,"CMS, SSIR No. 42, version 3, page 309",6O2d,20,University of California at Davis
+323,"Extractable Cations, Mg","Magnesium, NH4OAc Extraction, Atomic Absorption I",MgExCat6,"CMS, SSIR No. 42, version 3, page 309",6O2d,9,Texas A&M University
+323,"Extractable Cations, Mg","Magnesium, NH4OAc Extraction, Atomic Absorption I",MgExCat6,"CMS, SSIR No. 42, version 3, page 309",6O2d,13,University of Idaho
+323,"Extractable Cations, Mg","Magnesium, NH4OAc Extraction, Atomic Absorption I",MgExCat6,"CMS, SSIR No. 42, version 3, page 309",6O2d,16,Auburn University
+323,"Extractable Cations, Mg","Magnesium, NH4OAc Extraction, Atomic Absorption I",MgExCat6,"CMS, SSIR No. 42, version 3, page 309",6O2d,15,Purdue University
+323,"Extractable Cations, Mg","Magnesium, NH4OAc Extraction, Atomic Absorption I",MgExCat6,"CMS, SSIR No. 42, version 3, page 309",6O2d,37,University of Massachusetts 
+323,"Extractable Cations, Mg","Magnesium, NH4OAc Extraction, Atomic Absorption I",MgExCat6,"CMS, SSIR No. 42, version 3, page 309",6O2d,35,University of Arkansas
+324,"Extractable Cations, Mg","Magnesium, NH4OAc Extraction, Atomic Absorption II",MgExCat7,"CMS, SSIR No. 42, version 3, page 313",6O2e,2,NSSL CMS
+325,"Extractable Cations, Mg","Magnesium, NH4OAc Extraction, Atomic Absorption II, moist",MgExCat8,"CMS, SSIR No. 42, version 3, page 309, moist",6O2f,2,NSSL CMS
+326,"Extractable Cations, Mg","Magnesium, NH4OAc Extraction, Atomic Absorption I, moist",MgExCat9,"CMS, SSIR No. 42, version 3, page 313, moist",6O2g,2,NSSL CMS
+327,"Extractable Cations, Mg","Magnesium, NH4OAc Extraction, ICP I",MgExCat10,"CMS, SSIR No. 42, version 3, page 313, ICP",6O2h,2,NSSL CMS
+328,"Extractable Cations, Mg","Magnesium, NH4OAc Extraction, ICP I, moist",MgExCat11,"CMS, SSIR No. 42, version 3, page 313, ICP, moist",6O2i,2,NSSL CMS
+329,"Cations, Neutral Salts, Mg","Magnesium, NH4Cl-EtOH Extraction, EDTA Titration",MG_NH4CL1,"CMS, SSIR No. 1, 1972, page 47",6O3a,2,NSSL CMS
+330,"KCl Extract, Mg","Magnesium, KCl-TEA Extraction, Phosphate Titration",MGCA_KCL1,"CMS, SSIR No. 1, 1972, page 47",6O4a,2,NSSL CMS
+331,"KCl Extract, Mg","Magnesium, KCl-TEA Extraction, EDTA Titration",MG_KCL2,"CMS, SSIR No. 1, 1972, page 47",6O4b,2,NSSL CMS
+332,"KCl Extract, Mg","Magnesium, KCl-TEA Extraction, Atomic Absorption",MG_KCL3,"CMS, SSIR No. 1, 1972, page 47",6O4c,2,NSSL CMS
+333,"Soluble Salts, Na","Sodium, Saturation Extraction, Flame Photometry",NA_SAT1,"CMS, SSIR No. 1, 1972, page 47",6P1a,2,NSSL CMS
+333,"Soluble Salts, Na","Sodium, Saturation Extraction, Flame Photometry",NA_SAT1,"CMS, SSIR No. 1, 1972, page 47",6P1a,36,North Dakota State University
+334,"Soluble Salts, Na","Sodium, Saturation Extraction, Atomic Absorption I",NA_SAT2,"CMS, SSIR No. 1, 1972, page 47",6P1b,36,North Dakota State University
+334,"Soluble Salts, Na","Sodium, Saturation Extraction, Atomic Absorption I",NA_SAT2,"CMS, SSIR No. 1, 1972, page 47",6P1b,2,NSSL CMS
+335,"Soluble Salts, Na","Sodium, Saturation Extraction, Atomic Absorption II",NA_SAT3,"CMS, SSIR No. 42, version 3, page 305",6P1c,2,NSSL CMS
+336,"Soluble Salts, Na","Sodium, Saturation Extraction, Atomic Absorption III",NA_SAT4,"CMS, SSIR No. 42, version 3, page 305, PE 300AA",6P1d,2,NSSL CMS
+337,"Extractable Cations, Na","Sodium, NH4OAc Extraction",NaExCat4,"CMS, SSIR No. 1, 1972, page 47",6P2,2,NSSL CMS
+337,"Extractable Cations, Na","Sodium, NH4OAc Extraction",NaExCat4,"CMS, SSIR No. 1, 1972, page 47",6P2,17,University of Missouri
+337,"Extractable Cations, Na","Sodium, NH4OAc Extraction",NaExCat4,"CMS, SSIR No. 1, 1972, page 47",6P2,10,University of Illinois
+337,"Extractable Cations, Na","Sodium, NH4OAc Extraction",NaExCat4,"CMS, SSIR No. 1, 1972, page 47",6P2,19,University of Florida
+337,"Extractable Cations, Na","Sodium, NH4OAc Extraction",NaExCat4,"CMS, SSIR No. 1, 1972, page 47",6P2,25,University of Kentucky
+337,"Extractable Cations, Na","Sodium, NH4OAc Extraction",NaExCat4,"CMS, SSIR No. 1, 1972, page 47",6P2,36,North Dakota State University
+338,"Extractable Cations, Na","Sodium, NHOAc Extraction, Flame Photometry",NaExCat5,"CMS, SSIR No. 1, 1972, page 47",6P2a,36,North Dakota State University
+338,"Extractable Cations, Na","Sodium, NHOAc Extraction, Flame Photometry",NaExCat5,"CMS, SSIR No. 1, 1972, page 47",6P2a,37,University of Massachusetts 
+338,"Extractable Cations, Na","Sodium, NHOAc Extraction, Flame Photometry",NaExCat5,"CMS, SSIR No. 1, 1972, page 47",6P2a,35,University of Arkansas
+338,"Extractable Cations, Na","Sodium, NHOAc Extraction, Flame Photometry",NaExCat5,"CMS, SSIR No. 1, 1972, page 47",6P2a,22,The Ohio State University
+338,"Extractable Cations, Na","Sodium, NHOAc Extraction, Flame Photometry",NaExCat5,"CMS, SSIR No. 1, 1972, page 47",6P2a,25,University of Kentucky
+338,"Extractable Cations, Na","Sodium, NHOAc Extraction, Flame Photometry",NaExCat5,"CMS, SSIR No. 1, 1972, page 47",6P2a,9,Texas A&M University
+338,"Extractable Cations, Na","Sodium, NHOAc Extraction, Flame Photometry",NaExCat5,"CMS, SSIR No. 1, 1972, page 47",6P2a,13,University of Idaho
+338,"Extractable Cations, Na","Sodium, NHOAc Extraction, Flame Photometry",NaExCat5,"CMS, SSIR No. 1, 1972, page 47",6P2a,15,Purdue University
+338,"Extractable Cations, Na","Sodium, NHOAc Extraction, Flame Photometry",NaExCat5,"CMS, SSIR No. 1, 1972, page 47",6P2a,2,NSSL CMS
+339,"Extractable Cations, Na","Sodium, NH4OAc Extraction, Atomic Absorption I",NaExCat6,"CMS, SSIR No. 1, 1972, page 48",6P2b,2,NSSL CMS
+339,"Extractable Cations, Na","Sodium, NH4OAc Extraction, Atomic Absorption I",NaExCat6,"CMS, SSIR No. 1, 1972, page 48",6P2b,16,Auburn University
+339,"Extractable Cations, Na","Sodium, NH4OAc Extraction, Atomic Absorption I",NaExCat6,"CMS, SSIR No. 1, 1972, page 48",6P2b,20,University of California at Davis
+339,"Extractable Cations, Na","Sodium, NH4OAc Extraction, Atomic Absorption I",NaExCat6,"CMS, SSIR No. 1, 1972, page 48",6P2b,35,University of Arkansas
+339,"Extractable Cations, Na","Sodium, NH4OAc Extraction, Atomic Absorption I",NaExCat6,"CMS, SSIR No. 1, 1972, page 48",6P2b,21,Virgina Tech
+340,"Extractable Cations, Na","Sodium, NH4OAc Extraction, Atomic Absorption II",NaExCat7,"CMS, SSIR No. 42, version 3, page 313",6P2c,2,NSSL CMS
+341,"Extractable Cations, Na","Sodium, NH4OAc Extraction, Atomic Absorption II, moist",NaExCat8,"CMS, SSIR No. 42, version 3, page 309, moist",6P2d,2,NSSL CMS
+342,"Extractable Cations, Na","Sodium, NH4OAc Extraction, Atomic Absorption I, moist",NaExCat9,"CMS, SSIR No. 42, version 3, page 313, moist",6P2e,2,NSSL CMS
+343,"Extractable Cations, Na","Sodium, NH4OAc Extraction, ICP I",NaExCat10,"CMS, SSIR No. 42, version 3, page 313, ICP",6P2f,2,NSSL CMS
+344,"Extractable Cations, Na","Sodium, NH4OAc Extraction, ICP I, moist",NaExCat11,"CMS, SSIR No. 42, version 3, page 313, ICP, moist",6P2g,2,NSSL CMS
+345,"Soluble Salts, K","Potassium, Saturation Extraction, Flame Photometry",K_SAT1,"CMS, SSIR No. 1, 1972, page 48",6Q1a,2,NSSL CMS
+345,"Soluble Salts, K","Potassium, Saturation Extraction, Flame Photometry",K_SAT1,"CMS, SSIR No. 1, 1972, page 48",6Q1a,36,North Dakota State University
+346,"Soluble Salts, K","Potassium, Saturation Extraction, Atomic Absorption I",K_SAT2,"CMS, SSIR No. 1, 1972, page 48",6Q1b,36,North Dakota State University
+346,"Soluble Salts, K","Potassium, Saturation Extraction, Atomic Absorption I",K_SAT2,"CMS, SSIR No. 1, 1972, page 48",6Q1b,2,NSSL CMS
+347,"Soluble Salts, K","Potassium, Saturation Extraction, Atomic Absorption II",K_SAT3,"CMS, SSIR No. 42, version 3, page 305",6Q1c,2,NSSL CMS
+348,"Soluble Salts, K","Potassium, Saturation Extraction, Atomic Absorption III",K_SAT4,"CMS, SSIR No. 42, version 3, page 305, PE 300AA",6Q1d,2,NSSL CMS
+349,"Extractable Cations, K","Potassium, NHOAc Extraction",KExCat4,"CMS, SSIR No. 1, 1972, page 48",6Q2,2,NSSL CMS
+349,"Extractable Cations, K","Potassium, NHOAc Extraction",KExCat4,"CMS, SSIR No. 1, 1972, page 48",6Q2,25,University of Kentucky
+349,"Extractable Cations, K","Potassium, NHOAc Extraction",KExCat4,"CMS, SSIR No. 1, 1972, page 48",6Q2,19,University of Florida
+349,"Extractable Cations, K","Potassium, NHOAc Extraction",KExCat4,"CMS, SSIR No. 1, 1972, page 48",6Q2,17,University of Missouri
+349,"Extractable Cations, K","Potassium, NHOAc Extraction",KExCat4,"CMS, SSIR No. 1, 1972, page 48",6Q2,10,University of Illinois
+349,"Extractable Cations, K","Potassium, NHOAc Extraction",KExCat4,"CMS, SSIR No. 1, 1972, page 48",6Q2,36,North Dakota State University
+350,"Extractable Cations, K","Potassium, NHOAc Extraction, Flame Photometry",KExCat5,"CMS, SSIR No. 1, 1972, page 48",6Q2a,36,North Dakota State University
+350,"Extractable Cations, K","Potassium, NHOAc Extraction, Flame Photometry",KExCat5,"CMS, SSIR No. 1, 1972, page 48",6Q2a,37,University of Massachusetts 
+350,"Extractable Cations, K","Potassium, NHOAc Extraction, Flame Photometry",KExCat5,"CMS, SSIR No. 1, 1972, page 48",6Q2a,35,University of Arkansas
+350,"Extractable Cations, K","Potassium, NHOAc Extraction, Flame Photometry",KExCat5,"CMS, SSIR No. 1, 1972, page 48",6Q2a,22,The Ohio State University
+350,"Extractable Cations, K","Potassium, NHOAc Extraction, Flame Photometry",KExCat5,"CMS, SSIR No. 1, 1972, page 48",6Q2a,15,Purdue University
+350,"Extractable Cations, K","Potassium, NHOAc Extraction, Flame Photometry",KExCat5,"CMS, SSIR No. 1, 1972, page 48",6Q2a,13,University of Idaho
+350,"Extractable Cations, K","Potassium, NHOAc Extraction, Flame Photometry",KExCat5,"CMS, SSIR No. 1, 1972, page 48",6Q2a,25,University of Kentucky
+350,"Extractable Cations, K","Potassium, NHOAc Extraction, Flame Photometry",KExCat5,"CMS, SSIR No. 1, 1972, page 48",6Q2a,9,Texas A&M University
+350,"Extractable Cations, K","Potassium, NHOAc Extraction, Flame Photometry",KExCat5,"CMS, SSIR No. 1, 1972, page 48",6Q2a,2,NSSL CMS
+351,"Extractable Cations, K","Potassium, NHOAc Extraction, Atomic Absorption I",KExCat6,"CMS, SSIR No. 1, 1972, page 48",6Q2b,2,NSSL CMS
+351,"Extractable Cations, K","Potassium, NHOAc Extraction, Atomic Absorption I",KExCat6,"CMS, SSIR No. 1, 1972, page 48",6Q2b,20,University of California at Davis
+351,"Extractable Cations, K","Potassium, NHOAc Extraction, Atomic Absorption I",KExCat6,"CMS, SSIR No. 1, 1972, page 48",6Q2b,16,Auburn University
+351,"Extractable Cations, K","Potassium, NHOAc Extraction, Atomic Absorption I",KExCat6,"CMS, SSIR No. 1, 1972, page 48",6Q2b,35,University of Arkansas
+351,"Extractable Cations, K","Potassium, NHOAc Extraction, Atomic Absorption I",KExCat6,"CMS, SSIR No. 1, 1972, page 48",6Q2b,21,Virgina Tech
+352,"Extractable Cations, K","Potassium, NHOAc Extraction, Atomic Absorption II",KExCat7,"CMS, SSIR No. 42, version 3, page 313",6Q2c,2,NSSL CMS
+353,"Extractable Cations, K","Potassium, NHOAc Extraction, Atomic Absorption II, moist",KExCat8,"CMS, SSIR No. 42, version 3, page 309, moist",6Q2d,2,NSSL CMS
+354,"Extractable Cations, K","Potassium, NHOAc Extraction, Atomic Absorption I, moist",KExCat9,"CMS, SSIR No. 42, version 3, page 313, moist",6Q2e,2,NSSL CMS
+355,"Extractable Cations, K","Potassium, NHOAc Extraction, ICP I",KExCat10,"CMS, SSIR No. 42, version 3, page 313, ICP",6Q2f,2,NSSL CMS
+356,"Extractable Cations, K","Potassium, NHOAc Extraction, ICP I, moist",KExCat11,"CMS, SSIR No. 42, version 3, page 313, ICP, moist",6Q2g,2,NSSL CMS
+357,"KCl Extract, Al","Aluminum, 1 N KCl Extractable, Automatic Extractor, ICP II, moist",AL_KCL,"CMS, SSIR No. 42, version 3, page 259, moist",6G9e,2,NSSL CMS
+358,"KCl Extract, Al","Aluminum, KCl Extraction I, 30 min., Fluoride Titration",AL_KCL,"CMS, SSIR No. 1, 1972, page 37",6G1d,2,NSSL CMS
+358,"KCl Extract, Al","Aluminum, KCl Extraction I, 30 min., Fluoride Titration",AL_KCL,"CMS, SSIR No. 1, 1972, page 37",6G1d,25,University of Kentucky
+358,"KCl Extract, Al","Aluminum, KCl Extraction I, 30 min., Fluoride Titration",AL_KCL,"CMS, SSIR No. 1, 1972, page 37",6G1d,33,The Pennsylvania State University
+359,"KCl Extract, Al","Aluminum, KCl Extraction I, 30 min., Aluminon I",AL_KCL,"CMS, SSIR No. 1, 1972, page 36",6G1a,2,NSSL CMS
+360,"KCl Extract, Al","Aluminum, KCl Extraction I, 30 min., Atomic Absorption",AL_KCL,"CMS, SSIR No. 1, 1972, page 37",6G1e,2,NSSL CMS
+361,"KCl Extract, Mn","Manganese, 1 N KCl Extractable, Automatic Extractor, Inductively Coupled Plasma Spectrometry II",MN_KCL,"CMS, SSIR No. 42, version 3, page 259",6D3b,2,NSSL CMS
+361,"KCl Extract, Mn","Manganese, 1 N KCl Extractable, Automatic Extractor, Inductively Coupled Plasma Spectrometry II",MN_KCL,"CMS, SSIR No. 42, version 3, page 259",6D3b,30,West Virginia University
+362,"KCl Extract, Mn","Manganese, 1 N KCl Extractable, Automatic Extractor, Inductively Coupled Plasma Spectrometry I",MN_KCL,"CMS, SSIR No. 42, version 3, page 549",6D3,2,NSSL CMS
+363,"KCl Extract, Mn","Manganese, 1 N KCl Extractable, Automatic Extractor, Inductively Coupled Plasma Spectrometry II, moist",MN_KCL,"CMS, SSIR No. 42, version 3, page 259, moist",6D3d,2,NSSL CMS
+364,"Dithionite Extract, Fe","Iron, Dithionite Extraction, Dichromate Titration",FE_DITH,"CMS, SSIR No. 1, 1972, page 30",6C1a,2,NSSL CMS
+364,"Dithionite Extract, Fe","Iron, Dithionite Extraction, Dichromate Titration",FE_DITH,"CMS, SSIR No. 1, 1972, page 30",6C1a,33,The Pennsylvania State University
+365,"Dithionite Extract, Fe","Iron, Dithionite Extraction, EDTA Titration",FE_DITH,"CMS, SSIR No. 1, 1972, page 30",6C1b,2,NSSL CMS
+366,"Dithionite-Citrate Extract, Fe","Iron, Dithionite-Citrate Extraction, Atomic Absorption I",FE_DITH,"CMS, SSIR No. 1, 1972, page 31",6C2b,2,NSSL CMS
+366,"Dithionite-Citrate Extract, Fe","Iron, Dithionite-Citrate Extraction, Atomic Absorption I",FE_DITH,"CMS, SSIR No. 1, 1972, page 31",6C2b,13,University of Idaho
+366,"Dithionite-Citrate Extract, Fe","Iron, Dithionite-Citrate Extraction, Atomic Absorption I",FE_DITH,"CMS, SSIR No. 1, 1972, page 31",6C2b,20,University of California at Davis
+366,"Dithionite-Citrate Extract, Fe","Iron, Dithionite-Citrate Extraction, Atomic Absorption I",FE_DITH,"CMS, SSIR No. 1, 1972, page 31",6C2b,21,Virgina Tech
+366,"Dithionite-Citrate Extract, Fe","Iron, Dithionite-Citrate Extraction, Atomic Absorption I",FE_DITH,"CMS, SSIR No. 1, 1972, page 31",6C2b,37,University of Massachusetts 
+367,"Dithionite-Citrate Extract, Fe","Iron, Dithionite-Citrate Extraction, Atomic Absorption II",FE_DITH,"CMS, SSIR No. 42, version 3, page 239",6C2c,2,NSSL CMS
+368,"Dithionite-Citrate Extract, Fe","Iron, Dithionite-Citrate Extraction I, Atomic Absorption I, moist",FE_DITH,"CMS, SSIR No. 1, 1972, page 31, moist",6C2d,2,NSSL CMS
+369,"Dithionite-Citrate Extract, Fe","Iron, Dithionite-Citrate Extraction II, Atomic Absorption II",FE_DITH,,6C2f,2,NSSL CMS
+370,"Dithionite-Citrate Extract, Fe","Iron, Dithionite-Citrate Extraction II, Atomic Absorption II, moist",FE_DITH,"CMS, SSIR No. 42, version 3, page 239, moist",6C2g,2,NSSL CMS
+371,"Dithionite-Citrate Extract, Fe","Iron, Dithionite-Citrate Extraction II, Atomic Absorption III",FE_DITH,,6C2h,2,NSSL CMS
+372,"Dithionite-Citrate Extract, Fe","Iron, Dithionite-Citrate Extraction II, Atomic Absorption III, moist",FE_DITH,,6C2i,2,NSSL CMS
+373,"Dithionite-Citrate Extract, Fe","Iron, Dithionite-Citrate-Bicarbonate Extraction",FE_DITH,"CMS, SSIR No. 1, 1972, page 31",6C3,2,NSSL CMS
+373,"Dithionite-Citrate Extract, Fe","Iron, Dithionite-Citrate-Bicarbonate Extraction",FE_DITH,"CMS, SSIR No. 1, 1972, page 31",6C3,20,University of California at Davis
+373,"Dithionite-Citrate Extract, Fe","Iron, Dithionite-Citrate-Bicarbonate Extraction",FE_DITH,"CMS, SSIR No. 1, 1972, page 31",6C3,19,University of Florida
+374,"Dithionite Extract, Mn","Manganese, Dithionite Extraction, Permanganate Colorimetry",MN_DITH,"CMS, SSIR No. 1, 1972, page 33",6D1a,2,NSSL CMS
+375,"Dithionite-Citrate Extract, Mn","Manganese, Dithionite-Citrate Extraction, Atomic Absorption I",MN_DITH,"CMS, SSIR No. 1, 1984, page 38",6D2a,2,NSSL CMS
+375,"Dithionite-Citrate Extract, Mn","Manganese, Dithionite-Citrate Extraction, Atomic Absorption I",MN_DITH,"CMS, SSIR No. 1, 1984, page 38",6D2a,20,University of California at Davis
+375,"Dithionite-Citrate Extract, Mn","Manganese, Dithionite-Citrate Extraction, Atomic Absorption I",MN_DITH,"CMS, SSIR No. 1, 1984, page 38",6D2a,37,University of Massachusetts 
+376,"Dithionite-Citrate Extract, Mn","Manganese, Dithionite-Citrate Extraction I, Atomic Absorption I, moist",MN_DITH,"CMS, SSIR No. 1, 1984, page 38, moist",6D2c,2,NSSL CMS
+377,"Dithionite-Citrate Extract, Mn","Manganese, Dithionite-Citrate Extraction II, Atomic Absorption II",MN_DITH,,6D2e,2,NSSL CMS
+378,"Dithionite-Citrate Extract, Mn","Manganese, Dithionite-Citrate Extraction II, Atomic Absorption II, moist",MN_DITH,,6D2f,2,NSSL CMS
+379,"Dithionite-Citrate Extract, Mn","Manganese, Dithionite-Citrate Extraction II, Atomic Absorption III",MN_DITH,,6D2g,2,NSSL CMS
+380,"Dithionite-Citrate Extract, Mn","Manganese, Dithionite-Citrate Extraction II, Atomic Absorption III, moist",MN_DITH,,6D2h,2,NSSL CMS
+381,"Dithionite-Citrate Extract, Al","Aluminum, Dithionite-Citrate Extraction, Atomic Absorption I",AL_DITH,"CMS, SSIR No. 1, 1972, page 38",6G7a,2,NSSL CMS
+381,"Dithionite-Citrate Extract, Al","Aluminum, Dithionite-Citrate Extraction, Atomic Absorption I",AL_DITH,"CMS, SSIR No. 1, 1972, page 38",6G7a,13,University of Idaho
+381,"Dithionite-Citrate Extract, Al","Aluminum, Dithionite-Citrate Extraction, Atomic Absorption I",AL_DITH,"CMS, SSIR No. 1, 1972, page 38",6G7a,37,University of Massachusetts 
+382,"Dithionite-Citrate Extract, Al","Aluminum, Dithionite-Citrate Extraction, Atomic Absorption II",AL_DITH,"CMS, SSIR No. 42, version 3, page 233",6G7b,2,NSSL CMS
+383,"Dithionite-Citrate Extract, Al","Aluminum, Dithionite-Citrate Extraction I, Atomic Absorption I, moist",AL_DITH,"CMS, SSIR No. 1, 1972, page 38, moist",6G7c,2,NSSL CMS
+384,"Dithionite-Citrate Extract, Al","Aluminum, Dithionite-Citrate Extraction II, Atomic Absorption II",AL_DITH,,6G7e,2,NSSL CMS
+385,"Dithionite-Citrate Extract, Al","Aluminum, Dithionite-Citrate Extraction II, Atomic Absorption II, moist",AL_DITH,"CMS, SSIR No. 42, version 3, page 233, moist",6G7f,2,NSSL CMS
+386,"Dithionite-Citrate Extract, Al","Aluminum, Dithionite-Citrate Extraction II, Atomic Absorption III",AL_DITH,,6G7g,2,NSSL CMS
+387,"Dithionite-Citrate Extract, Al","Aluminum, Dithionite-Citrate Extraction II, Atomic Absorption III, moist",AL_DITH,,6G7h,2,NSSL CMS
+388,Acid Oxalate extraction,"Iron, Ammonium Oxalate Extraction, Atomic Absorption",OXAL,"CMS, SSIR No. 1, 1972, page 33",6C6A,2,NSSL CMS
+388,Acid Oxalate extraction,"Iron, Ammonium Oxalate Extraction, Atomic Absorption",OXAL,"CMS, SSIR No. 1, 1972, page 33",6C6A,20,University of California at Davis
+389,Acid Oxalate extraction,"Aluminum, Ammonium Oxalate Extraction, Atomic Absorption",OXAL,"CMS, SSIR No. 1, 1972, page 37",6G6a,2,NSSL CMS
+390,"Na-Pyrophosphate Extract, Al","Aluminum, Sodium Pyrophosphate Extraction I, Atomic Absorption",PYRO,"CMS, SSIR No. 1, 1972, page 37",6G5a,13,University of Idaho
+390,"Na-Pyrophosphate Extract, Al","Aluminum, Sodium Pyrophosphate Extraction I, Atomic Absorption",PYRO,"CMS, SSIR No. 1, 1972, page 37",6G5a,2,NSSL CMS
+390,"Na-Pyrophosphate Extract, Al","Aluminum, Sodium Pyrophosphate Extraction I, Atomic Absorption",PYRO,"CMS, SSIR No. 1, 1972, page 37",6G5a,37,University of Massachusetts 
+391,"Na-Pyrophosphate Extract, Al","Aluminum, Sodium Pyrophosphate Extraction II",PYRO,"CMS, SSIR No. 1, 1984, page 44",6G10,2,NSSL CMS
+391,"Na-Pyrophosphate Extract, Al","Aluminum, Sodium Pyrophosphate Extraction II",PYRO,"CMS, SSIR No. 1, 1984, page 44",6G10,19,University of Florida
+392,"Na-Pyrophosphate Extract, Al","Aluminum, Sodium Pyrophosphate Extraction II, Atomic Absorption II",PYRO,CMS,6G10c,2,NSSL CMS
+393,"Na-Pyrophosphate Extract, Al","Aluminum, Sodium Pyrophosphate Extraction II, Atomic Absorption II, moist",PYRO,"CMS, moist",6G10d,2,NSSL CMS
+394,"Na-Pyrophosphate Extract, C","Organic Carbon, Sodium Pyrophosphate Extraction II, Atomic Absorption",PYRO,"CMS, SSIR No. 42, version 3, page 247",6A4a,2,NSSL CMS
+394,"Na-Pyrophosphate Extract, C","Organic Carbon, Sodium Pyrophosphate Extraction II, Atomic Absorption",PYRO,"CMS, SSIR No. 42, version 3, page 247",6A4a,19,University of Florida
+395,"Na-Pyrophosphate Extract, Fe","Iron, Sodium Pyrophosphate Extraction I, Atomic Absorption",PYRO,"CMS, SSIR No. 1, 1972, page 32",6C5a,13,University of Idaho
+395,"Na-Pyrophosphate Extract, Fe","Iron, Sodium Pyrophosphate Extraction I, Atomic Absorption",PYRO,"CMS, SSIR No. 1, 1972, page 32",6C5a,2,NSSL CMS
+395,"Na-Pyrophosphate Extract, Fe","Iron, Sodium Pyrophosphate Extraction I, Atomic Absorption",PYRO,"CMS, SSIR No. 1, 1972, page 32",6C5a,37,University of Massachusetts 
+396,"Na-Pyrophosphate Extract, Fe","Iron, Sodium Pyrophosphate Extraction II, Atomic Absorption",PYRO,"CMS, SSIR No. 1, 1984, page 38",6C8a,2,NSSL CMS
+396,"Na-Pyrophosphate Extract, Fe","Iron, Sodium Pyrophosphate Extraction II, Atomic Absorption",PYRO,"CMS, SSIR No. 1, 1984, page 38",6C8a,19,University of Florida
+397,"Na-Pyrophosphate Extract, Fe","Iron, Sodium Pyrophosphate Extraction II, Atomic Absorption II",PYRO,CMS,6C8c,2,NSSL CMS
+398,"Na-Pyrophosphate Extract, Fe","Iron, Sodium Pyrophosphate Extraction II, Atomic Absorption II, moist",PYRO,"CMS, moist",6C8d,2,NSSL CMS
+399,"Soluble Anions, CO2","Carbonate, Saturation Extraction, Acid Titration",SatAn6,"CMS, SSIR No. 1, 1972, page 39",6I1a,2,NSSL CMS
+399,"Soluble Anions, CO2","Carbonate, Saturation Extraction, Acid Titration",SatAn6,"CMS, SSIR No. 1, 1972, page 39",6I1a,36,North Dakota State University
+400,"Soluble Anions, HCO3","Bicarbonate, Saturation Extraction, Acid Titration",SatAn6,"CMS, SSIR No. 1, 1972, page 39",6J1a,36,North Dakota State University
+400,"Soluble Anions, HCO3","Bicarbonate, Saturation Extraction, Acid Titration",SatAn6,"CMS, SSIR No. 1, 1972, page 39",6J1a,2,NSSL CMS
+401,"Soluble Anions, HCO3","Bicarbonate, Saturation Extraction, Acid Titration, Automatic Extractor",SatAn1,"CMS, SSIR No. 42, version 3, page 283",6J1b,2,NSSL CMS
+402,"Soluble Anions, Cl","Chloride, Saturation Extraction, Mohr Titration",SatAn7,"CMS, SSIR No. 1, 1972, page 39",6K1a,2,NSSL CMS
+402,"Soluble Anions, Cl","Chloride, Saturation Extraction, Mohr Titration",SatAn7,"CMS, SSIR No. 1, 1972, page 39",6K1a,36,North Dakota State University
+403,"Soluble Anions, Cl","Chloride, Saturation Extraction, Potentiometric Titration",SatAn8,"CMS, SSIR No. 1, 1972, page 40",6K1b,36,North Dakota State University
+403,"Soluble Anions, Cl","Chloride, Saturation Extraction, Potentiometric Titration",SatAn8,"CMS, SSIR No. 1, 1972, page 40",6K1b,2,NSSL CMS
+404,"Soluble Anions, SO4","Sulfate, Saturation Extraction, Gravimetric, BaSO4",SatAn9,"CMS, SSIR No. 1, 1972, page 40",6L1a,2,NSSL CMS
+405,"Soluble Anions, SO4","Sulfate, Saturation Extraction, EDTA Titration",SatAn10,"CMS, SSIR No. 1, 1972, page 40",6L1b,2,NSSL CMS
+406,"Soluble Anions, SO4","Sulfate, Saturation Extraction, Anion Chromatograph",SatAn2,"CMS, SSIR No. 1, 1984, page 48",6L1c,2,NSSL CMS
+407,"Soluble Anions, SO4","Sulfate, Saturation Extraction, Anion Chromatograph, Ionic Suppressor",SatAn3,"CMS, SSIR No. 42, version 3, page 287",6L1d,2,NSSL CMS
+408,"Soluble Anions, SO4","Sulfate, Saturation Extraction, Flow Injection, Automated Ion Analyzer",SatAn4,"CMS, SSIR No. 42, version 3, page 287, Flow injection",6L1e,2,NSSL CMS
+409,"Soluble Anions, SO4","Sulfate, Saturation Extraction, Anion Chromatograph, Electronic Ion Suppressor",SatAn5,"CMS, SSIR No. 42, version 3, page 287, Anion Chromatography, Electronc Ion Suppressor",6L1f,2,NSSL CMS
+410,"Soluble Anions, NO3","Nitrate, Saturation Extraction, Anion Chromatograph",SatAn2,"CMS, SSIR No. 1, 1984, page 48",6M1c,2,NSSL CMS
+411,"Soluble Anions, NO3","Nitrate, Saturation Extraction, Anion Chromatograph, Ionic Suppressor",SatAn3,"CMS, SSIR No. 42, version 3, page 287",6M1d,2,NSSL CMS
+412,"Soluble Anions, NO3","Nitrate, Saturation Extraction, Flow Injection, Automated Ion Analyzer",SatAn4,"CMS, SSIR No. 42, version 3, page 287, Flow injection",6M1e,2,NSSL CMS
+413,"Soluble Anions, NO3","Nitrate, Saturation Extraction, Anion Chromatograph, Electronic Ion Suppressor",SatAn5,"CMS, SSIR No. 42, version 3, page 287, Anion Chromatography, Electronc Ion Suppressor",6M1f,2,NSSL CMS
+414,"Soluble Anions, Fl","Fluoride, Saturation Extraction, Anion Chromatograph",SatAn2,"CMS, SSIR No. 42, version 3, page 559",6U1a,2,NSSL CMS
+415,"Soluble Anions, Fl","Fluoride, Saturation Extraction, Anion Chromatograph, Ionic Suppressor",SatAn3,"CMS, SSIR No. 42, version 3, page 287",6U1b,2,NSSL CMS
+416,"Soluble Anions, Fl","Fluoride, Saturation Extraction, Flow Injection, Automated Ion Analyzer",SatAn4,"CMS, SSIR No. 42, version 3, page 287, Flow injection",6U1c,2,NSSL CMS
+417,"Soluble Anions, Fl","Fluoride, Saturation Extraction, Anion Chromatograph, Electronic Ion Suppressor",SatAn5,"CMS, SSIR No. 42, version 3, page 287, Anion Chromatography, Electronc Ion Suppressor",6U1d,2,NSSL CMS
+418,"Soluble Anions, NO2","Nitrite, Saturation Extraction, Anion Chromatograph",SatAn2,"CMS, SSIR No. 42, version 3, page 559",6W1a,2,NSSL CMS
+419,"Soluble Anions, NO2","Nitrite, Saturation Extraction, Anion Chromatograph, Ionic Suppressor",SatAn3,"CMS, SSIR No. 42, version 3, page 287",6W1b,2,NSSL CMS
+420,"Soluble Anions, NO2","Nitrite, Saturation Extraction, Flow Injection, Automated Ion Analyzer",SatAn4,"CMS, SSIR No. 42, version 3, page 287, Flow injection",6W1c,2,NSSL CMS
+421,"Soluble Anions, NO2","Nitrite, Saturation Extraction, Anion Chromatograph, Electronic Ion Suppressor",SatAn5,"CMS, SSIR No. 42, version 3, page 287, Anion Chromatography, Electronc Ion Suppressor",6W1d,2,NSSL CMS
+422,"Soluble Anions, Br","Bromide, Saturation Extraction, Anion Chromatograph, Electronic Ion Suppressor",SatAn5,"CMS, SSIR No. 42, version 3, page 287, Anion Chromatography, Electronc Ion Suppressor",6X1a,2,NSSL CMS
+423,"Soluble Anions, OAc","Acetate, Saturation Extraction, Anion Chromatograph, Electronic Ion Suppressor",SatAn5,"CMS, SSIR No. 42, version 3, page 287, Anion Chromatography, Electronc Ion Suppressor",6Y1a,2,NSSL CMS
+424,"Saturated Paste and Soluble Salts, EC","Saturated Paste, Mixed, Saturation Extract, Automatic Extractor Conductivity, Digital Bridge",SATP,"CMS, SSIR No. 42, version 3, page 407",8A3a,2,NSSL CMS
+424,"Saturated Paste and Soluble Salts, EC","Saturated Paste, Mixed, Saturation Extract, Automatic Extractor Conductivity, Digital Bridge",SATP,"CMS, SSIR No. 42, version 3, page 407",8A3a,24,Kansas State University
+425,"Soluble Anions, NO3","Nitrate, Saturation Extraction, Phenyldisulfonic (PDS) Acid Colorimetry",SatAn11,"CMS, SSIR No. 1, 1972, page 41",6M1a,2,NSSL CMS
+425,"Soluble Anions, NO3","Nitrate, Saturation Extraction, Phenyldisulfonic (PDS) Acid Colorimetry",SatAn11,"CMS, SSIR No. 1, 1972, page 41",6M1a,36,North Dakota State University
+426,"Atterberg Limits, LL","Plasticity Index, Liquid Limit",AttBg0,"CMS, SSIR No. 42, version 3, page 193",4F1,36,North Dakota State University
+426,"Atterberg Limits, LL","Plasticity Index, Liquid Limit",AttBg0,"CMS, SSIR No. 42, version 3, page 193",4F1,2,NSSL CMS
+426,"Atterberg Limits, LL","Plasticity Index, Liquid Limit",AttBg0,"CMS, SSIR No. 42, version 3, page 193",4F1,13,University of Idaho
+426,"Atterberg Limits, LL","Plasticity Index, Liquid Limit",AttBg0,"CMS, SSIR No. 42, version 3, page 193",4F1,30,West Virginia University
+427,"Atterberg Limits, PL","Plasticity Index, Plastic Limit",AttBg0,"CMS, SSIR No. 42, version 3, page 193",4F2,13,University of Idaho
+427,"Atterberg Limits, PL","Plasticity Index, Plastic Limit",AttBg0,"CMS, SSIR No. 42, version 3, page 193",4F2,2,NSSL CMS
+427,"Atterberg Limits, PL","Plasticity Index, Plastic Limit",AttBg0,"CMS, SSIR No. 42, version 3, page 193",4F2,36,North Dakota State University
+428,"Saturated Paste and Soluble Salts, H2O","Water Content, Saturated Paste",SATP,"CMS, SSIR No. 42, version 3, page 397",8A,36,North Dakota State University
+428,"Saturated Paste and Soluble Salts, H2O","Water Content, Saturated Paste",SATP,"CMS, SSIR No. 42, version 3, page 397",8A,13,University of Idaho
+428,"Saturated Paste and Soluble Salts, H2O","Water Content, Saturated Paste",SATP,"CMS, SSIR No. 42, version 3, page 397",8A,2,NSSL CMS
+429,"Saturated Paste and Soluble Salts, pH","Reaction (pH), Saturated Paste",SATP,"CMS, SSIR No. 42, version 3, page 411",8C1b,2,NSSL CMS
+429,"Saturated Paste and Soluble Salts, pH","Reaction (pH), Saturated Paste",SATP,"CMS, SSIR No. 42, version 3, page 411",8C1b,13,University of Idaho
+429,"Saturated Paste and Soluble Salts, pH","Reaction (pH), Saturated Paste",SATP,"CMS, SSIR No. 42, version 3, page 411",8C1b,36,North Dakota State University
+430,"Saturated Paste and Soluble Salts, resistivity","Soil Resistivity, Saturated Paste",SATP,"CMS, SSIR No. 42, version 3, page 427",8E1,2,NSSL CMS
+431,"Soluble Anions, PO4","Phosphate, Saturation Extraction, Anion Chromatograph, Electronic Ion Suppressor",SatAn5,"CMS, SSIR No. 42, version 3, page 287, Anion Chromatography, Electronc Ion Suppressor",6S9a,2,NSSL CMS
+433,"Water Retention, Field State","Water Retention, Field State",H2Ofield,"CMS, SSIR No. 42, version 3, page 169",4B4,2,NSSL CMS
+442,"Dithionite-Citrate Extract, Fe","Iron, Dithionite-Citrate Extraction, Orthophenanthroline Colorimetry",FE_DITH,"CMS, SSIR No. 1, 1972, page 31",6C2a,2,NSSL CMS
+442,"Dithionite-Citrate Extract, Fe","Iron, Dithionite-Citrate Extraction, Orthophenanthroline Colorimetry",FE_DITH,"CMS, SSIR No. 1, 1972, page 31",6C2a,13,University of Idaho
+442,"Dithionite-Citrate Extract, Fe","Iron, Dithionite-Citrate Extraction, Orthophenanthroline Colorimetry",FE_DITH,"CMS, SSIR No. 1, 1972, page 31",6C2a,33,The Pennsylvania State University
+443,"Phosphorus, Bray 1","Phosphorus, Bray P-1 Absorbed Phosphorus, Spectrophotometer",BRAYP,"CMS, SSIR No. 42, version 3, page 323",6S3,15,Purdue University
+443,"Phosphorus, Bray 1","Phosphorus, Bray P-1 Absorbed Phosphorus, Spectrophotometer",BRAYP,"CMS, SSIR No. 42, version 3, page 323",6S3,10,University of Illinois
+443,"Phosphorus, Bray 1","Phosphorus, Bray P-1 Absorbed Phosphorus, Spectrophotometer",BRAYP,"CMS, SSIR No. 42, version 3, page 323",6S3,2,NSSL CMS
+443,"Phosphorus, Bray 1","Phosphorus, Bray P-1 Absorbed Phosphorus, Spectrophotometer",BRAYP,"CMS, SSIR No. 42, version 3, page 323",6S3,35,University of Arkansas
+444,"Particles >2 mm, 75 mm Base","Particles >2 mm, Weight Estimates",CFRAG1,"CMS, SSIR No. 42, version 3, page 105",3B1,2,NSSL CMS
+445,Derived,"derived BSESAT, 5C1b",none,"CMS, moist",5C1b,2,NSSL CMS
+446,"Atterberg Limits, PI",derived Plasticity Index,AttBg0,"CMS, SSIR No. 42, version 3, page 193",4F,2,NSSL CMS
+446,"Atterberg Limits, PI",derived Plasticity Index,AttBg0,"CMS, SSIR No. 42, version 3, page 193",4F,30,West Virginia University
+446,"Atterberg Limits, PI",derived Plasticity Index,AttBg0,"CMS, SSIR No. 42, version 3, page 193",4F,13,University of Idaho
+446,"Atterberg Limits, PI",derived Plasticity Index,AttBg0,"CMS, SSIR No. 42, version 3, page 193",4F,21,Virgina Tech
+448,"Calcium Carbonate Equivalent, <20mm","Calcium Carbonate Equivalent, HCl, <20mm- 6E4b (derived)",CACO3_20,"SSIR No. 42, version 3, page 271",6E4b,2,NSSL CMS
+449,"Calcium Carbonate Equivalent, <20mm","Calcium Carbonate Equivalent, HCl, <20mm (derived)",caco3l20,CMS,6E4,2,NSSL CMS
+451,"Clay Mineralogy, X-ray Diffraction","X-ray Diffraction, unspecified",XRAY,CMS,7A2,13,University of Idaho
+451,"Clay Mineralogy, X-ray Diffraction","X-ray Diffraction, unspecified",XRAY,CMS,7A2,19,University of Florida
+451,"Clay Mineralogy, X-ray Diffraction","X-ray Diffraction, unspecified",XRAY,CMS,7A2,25,University of Kentucky
+451,"Clay Mineralogy, X-ray Diffraction","X-ray Diffraction, unspecified",XRAY,CMS,XRAY1,33,The Pennsylvania State University
+451,"Clay Mineralogy, X-ray Diffraction","X-ray Diffraction, unspecified",XRAY,CMS,7A2,10,University of Illinois
+451,"Clay Mineralogy, X-ray Diffraction","X-ray Diffraction, unspecified",XRAY,CMS,XRAY1,16,Auburn University
+451,"Clay Mineralogy, X-ray Diffraction","X-ray Diffraction, unspecified",XRAY,CMS,7A2,2,NSSL CMS
+451,"Clay Mineralogy, X-ray Diffraction","X-ray Diffraction, unspecified",XRAY,CMS,7A2,21,Virgina Tech
+451,"Clay Mineralogy, X-ray Diffraction","X-ray Diffraction, unspecified",XRAY,CMS,XRAY1,22,The Ohio State University
+451,"Clay Mineralogy, X-ray Diffraction","X-ray Diffraction, unspecified",XRAY,CMS,7A2,26,University of Minnesota
+452,"Clay Mineralogy, DTA I",Differential Thermal Analysis I,DTA1,CMS 7A3,7A3,2,NSSL CMS
+453,"Clay Mineralogy, DTA",Differential Thermal Analysis,DTA2,CMS 7A3b,7A3b,2,NSSL CMS
+454,"Total Elemental Analysis, HF Dissolution","Total Analysis, HF Dissolution",TOTANAL,CMS 7C3,7C3,2,NSSL CMS
+456,"Clay Mineralogy, X-ray Diffraction","X-ray Diffraction, thin film on tile resin pretreatment",XRAY,"CMS, 7A2e",7A2e,2,NSSL CMS
+457,Acid Oxalate extraction,"Cations, Acid Oxalate Extractable, Optical Density",OXAL,CMS,8J,2,NSSL CMS
+458,Estimated organic carbon,Estimated Organic Carbon,EOC,,Est,2,NSSL CMS
+460,"Fiber Analysis, pH CaCl2","pH, 0.01M CaCl2, Histosol",ph_hist,"SSIR No. 42, version 3, page 423",8C2a,2,NSSL CMS
+461,"Fiber Analysis, Pyrophosphate color","Color, Pyrophosphate Extract",pyr_col,"SSIR No. 42, version 3, page 437",8H,2,NSSL CMS
+465,"Biomass, Roots, C","Biomass, Roots, C",BIOROOT,"SSIR No. 42, version 4, page 394",6C1,1,SSL LIMS Version 1.0
+466,"Biomass, POM, C","Biomass, POM, C",BIOPOM,"SSIR No. 42, version 4, page 385",6A4,1,SSL LIMS Version 1.0
+467,"Biomass, Microbial, C","Biomass, Microbial, C",BIOMASS,"SSIR No. 42, version 4, page 388",6B1a1,1,SSL LIMS Version 1.0
+468,"Biomass, CO3, C","Biomass, CO3, C",BIOCO3,"SSIR No. 42, version 4, page 381",6A3a,1,SSL LIMS Version 1.0
+469,"Extractable Acidity, BaCl2-TEA","Extractable Acidity, BaCl2-Triethanolamine, Centrifuge",EXTRACIDC,"SSIR No. 42, version 4, page 194",4B2b1a1,1,SSL LIMS Version 1.0
+470,"Biomass, 0.02 M KMnO4 Extractable, C","Biomass, 0.02 M KMnO4 Extractable, C",BIOKMNO4,"SSIR No. 42, version 4, page 379",6A2,1,SSL LIMS Version 1.0
+471,"Phosphorus, Anion Resin Extractable",Anion Resin Extractable Phosphorus,AnResP,"SSIR No. 42, version 4, page 219",4D1a1a1a,1,SSL LIMS Version 1.0
+472,"Electrical Conductivity, 1:20, <2 mm Particles","Electrical Conductivity, 1:20 (w/v)",EC20,NULL,EC20,1,SSL LIMS Version 1.0
+472,"Electrical Conductivity, 1:20, <2 mm Particles","Electrical Conductivity, 1:20 (w/v)",EC20,NULL,EC20,19,University of Florida
+473,"Biomass, Glucose, C","Biomass, Glucose, C",BIOGLUCOSE,"SSIR No. 42, version 4, page 376",6A1,1,SSL LIMS Version 1.0
+474,"Water Retention, 5 Bar, Pressure-Plate, <2mm","Water Retention, 5 Bar, Pressure-Plate, <2mm",H2O5Bar<2,new method,3C2b,1,SSL LIMS Version 1.0
+475,"Phosphorus, Ground/Surface Water","Phosphorus, Ground/Surface Water",WatP,"SSIR No. 42, version 4, page 352",4I,1,SSL LIMS Version 1.0
+476,"Elements, Mehlich III","Elements, Mehlich III",ElMehl3,"SSIR No. 42, version 4, page 249",4D6b,1,SSL LIMS Version 1.0
+477,"Elements, Water Extract","Elements, Water Extract",ElWatExtr,NULL,4D2a2d1-22,1,SSL LIMS Version 1.0
+478,"Salts, Ground/Surface Water","Salts, Ground/Surface Water",WatSalts,"SSIR No. 42, version 4, page 352",4I2,1,SSL LIMS Version 1.0
+479,"Elements, Ground/Surface Water","Elements, Ground/Surface Water",ElWat,"SSIR No. 42, version 4, page 365",4I3,1,SSL LIMS Version 1.0
+480,"Phosphorus, Anion Resin Ground/Surface Water",Anion Resin Water Phosphorus,AnResPW,"SSIR No. 42, version 4, page 219",4D1a1a1a,1,SSL LIMS Version 1.0
+481,Equivalent Gypsum Content,Equivalent Gypsum Content,EGC,NULL,4E2b1a1,1,SSL LIMS Version 1.0
+482,"PSDA, Water Disp, Moist, Ultrasonic, Pipet","PSDA, Water Dispersible, Moist, Ultrasonic, Pipet",H2OPSDAMU,NULL,3A1a7b,1,SSL LIMS Version 1.0
+483,"PSDA, Water Disp, Air-Dry, Ultrasonic, Pipet","PSDA, Water Dispersible, Air-Dry, Ultrasonic, Pipet",H2OPSDAAU,NULL,3A1a7a,1,SSL LIMS Version 1.0
+484,Surface Area N2 Adsorption,Surface Area N2 Adsorption,SA_N2BET,"SSIR No. 42, version 4, page 418",7A5a1,1,SSL LIMS Version 1.0
+485,"PSDA, Air-dry, <2 mm Particles","PSDA, no pretreatment, Pipet",PSDA1,"Soil Characterization in Indiana, page 13 3A1i",3A1i,15,Purdue University
+485,"PSDA, Air-dry, <2 mm Particles","PSDA, no pretreatment, Pipet",PSDA1,"Soil Characterization in Indiana, page 13 3A1i",3A1i,20,University of California at Davis
+486,Organic Carbon,"Organic Carbon, acid dichromate digestion, FeSO4 titration, Mebius",WBC3,"Soil Characterization in Indiana, page 19 6A1e",6A1e,15,Purdue University
+487,Organic Carbon,"Organic Carbon, acid dichromate digestion, FeSO4 titration, Nelson-Sommers",WBC4,"Soil Characterization in Indiana, page 20 6A1f",6A1f,15,Purdue University
+488,"PSDA, Air-dry, <2 mm Particles","PSDA, centrifuge",PSDA2,University of Idaho Laboratory Analysis 3A1j http://soils.ag.uidaho.edu/pedology/Analyses/index.htm,PSDA2,13,University of Idaho
+489,Phosphorus Isotherm,Phosphorus Isotherm,PIsotherm,University of Idaho Laboratory Analysis http://soils.ag.uidaho.edu/pedology/Analyses/index.htm,PIsotherm,13,University of Idaho
+498,1:1 Extract and Soluble Salts,1:1 soil/water Extraction,11SWEX,USDA Handbook 60,SWEX,20,University of California at Davis
+498,1:1 Extract and Soluble Salts,1:1 soil/water Extraction,11SWEX,USDA Handbook 60,SWEX,36,North Dakota State University
+499,"PSDA, hydrometer, Air-dry, <2 mm Particles","PSDA, Hydrometer, sand fractions wet sieved",PSDA_hyd1,"SSSA, Gee and Or, 2002, sand fractions wet sieved",hyd1,20,University of California at Davis
+499,"PSDA, hydrometer, Air-dry, <2 mm Particles","PSDA, Hydrometer, sand fractions wet sieved",PSDA_hyd1,"SSSA, Gee and Or, 2002, sand fractions wet sieved",hyd1,21,Virgina Tech
+499,"PSDA, hydrometer, Air-dry, <2 mm Particles","PSDA, Hydrometer, sand fractions wet sieved",PSDA_hyd1,"SSSA, Gee and Or, 2002, sand fractions wet sieved",hyd1,35,University of Arkansas
+499,"PSDA, hydrometer, Air-dry, <2 mm Particles","PSDA, Hydrometer, sand fractions wet sieved",PSDA_hyd1,"SSSA, Gee and Or, 2002, sand fractions wet sieved",hyd1,36,North Dakota State University
+500,"PSDA, coulter counter, Air-dry, <2 mm Particles","PSDA, coulter counter",PSDA3,University of Idaho Laboratory Analysis http://soils.ag.uidaho.edu/pedology/Analyses/index.htm,PSDA3,13,University of Idaho
+501,"Mineralogy, X-ray Diffraction Powder Mount","X-ray Diffraction, Powder Mount",XRAYPM,NULL,7A1c1,1,SSL LIMS Version 1.0
+502,"P-Nitrophenol, ß-Glucosidase","P-Nitrophenol, ß-Glucosidase",BIOBGLUCO,"SSIR No. 42, version 4, page 640",6A5,1,SSL LIMS Version 1.0
+503,"Biomass, Hyper POM, C","Biomass, Hyper POM, C",BIOHPOM,"SSIR No. 42, version 4, page 385",6A4,1,SSL LIMS Version 1.0
+504,Visible Near Infrared,Visible Near Infrared,VNIR,NULL,7A6,1,SSL LIMS Version 1.0
+505,"PSDA, Ethanol Disp, Air-Dry, Ultrasonic, Pipet","PSDA, Ethanol Disp, Air-Dry, Ultrasonic, Pipet",EthPSDAAU,NULL,3A1a8a,1,SSL LIMS Version 1.0
+506,"Soil Color, 'C' standard light source","Soil Color, C",COLOR_C,University of California at Davis analysis - measurement via CR-410,Color_C,20,University of California at Davis
+507,"Bulk Density, 3D laser scanner","Bulk Density, 3D",DB_3D,University of California at Davis analysis - https://www.soils.org/publications/sssaj/pdfs/72/6/1591,DB_3D,20,University of California at Davis
+508,"Dithionite-Citrate Extract, Al","Aluminum, Dithionite-Citrate-Bicarbonate Extraction",AL_DITH,U of Florida - http://flsoils.ifas.ufl.edu/params/citrate-dithionate.asp,AL_DITH,19,University of Florida
+509,Water Release Curve,Water Release Curve,Wat_Rel_Cur,U of Florida - http://flsoils.ifas.ufl.edu/params/waterrelease.asp,WatRC,19,University of Florida
+510,Mid Infrared,Mid Infrared,MIR,NULL,7A7,1,SSL LIMS Version 1.0
+511,"Dithionite-Citrate Extract, Al","Aluminum, Dithionite-Citrate Extraction, Aluminon I",AL_DITH,University of Idaho,AL_DITH,13,University of Idaho
+512,Organic Carbon,"Organic Carbon, dry combustion, CO2 evolution, gravimetric",OC,"University of Missouri, modified 6A2d",6A2d,17,University of Missouri
+512,Organic Carbon,"Organic Carbon, dry combustion, CO2 evolution, gravimetric",OC,"University of Missouri, modified 6A2d",6A2d,36,North Dakota State University
+513,"Clay Mineralogy, X-ray Diffraction","X-ray Diffraction, Thin Film on Glass, Filter Peel",XRAY2,NULL,7A1b1,1,SSL LIMS Version 1.0
+514,"Elements, Xray Flourescence","Elements, Xray Flourescence",XRAYF,"University of California, Soils were ground overnight in a ball mill, to approximately flour-like consistency.  Ground samples where then placed into sample cups with a polypropylene cover. Samples were then scanned with a Niton portable X-Ray fluorescenc",XRAYF,20,University of California at Davis
+515,"Calcium Carbonate Equivalent, <2mm","Calcium Carbonate Equivalent, HCl, <2mm (23b Salinity Lab)",CACO3,"CaCO3 equivalent, Procedure 23b, USDA Handbook 60, US. Salinity Lab. 1954.",CACO3,25,University of Kentucky
+516,"Phosphorus, Bray 1","Phosphorus, Bray 1",BRAYP,"Phosphorus, Extractable P, Bry No. 1, Soil Sci. 59:39-45, 1945.",BRAYP,25,University of Kentucky
+517,"PSDA, pipette with silt by elutriation, Air-dry, <2 mm","PSDA, pipette with silt by elutriation, Air-dry, <2 mm",PSDA4,"Silt by elutriation, sand by sieving",PSDA4,25,University of Kentucky
+518,"Water Retention, 0 Bar, Pressure-Plate, <2mm","Water Retention, 0 Bar, Pressure-Plate, <2mm",H2O0Bar<2,Water Content at saturation,H2O0Bar,25,University of Kentucky
+520,"CEC and Cations, Routine","CEC and Cations, NH4OAc",CECNH4_TAMU,modified USDA Handbook 60,CECNH4_TAMU,9,Texas A&M University
+521,Saturated Paste and Soluble Salts,Saturated Paste and Soluble Salts,SATP_TAMU,modified USDA Handbook 60,SATP_TAMU,9,Texas A&M University
+522,"Carbonate, Chittick","Carbonate, Chittick gasometric apparatus",CARB_TAMU,Quantitative gasometric determination of calcite and dolomite by using Chittick apparatus (http://www.geotech.ou.edu/ART/research/ChittickProcedure.pdf),CARB_TAMU,9,Texas A&M University
+522,"Carbonate, Chittick","Carbonate, Chittick gasometric apparatus",CARB_TAMU,Quantitative gasometric determination of calcite and dolomite by using Chittick apparatus (http://www.geotech.ou.edu/ART/research/ChittickProcedure.pdf),CARB_TAMU,22,The Ohio State University
+523,OM LOI,Organic Matter by Loss on Ignition,OM_LOI,,OMLOI,36,North Dakota State University
+524,"Extractable Cations, Mg","Magnesium, NH4OAc Extraction, Colorimetric",MgExCat12,"Color was developed by successive additions of hydroxylamine chloride solution, gum Arabic solution, clayton yellow solution and NaOH solution.  Each addition is followed by shaking.  The color of the test solution is compared visually with the colors of ",6O2f,35,University of Arkansas
