@@ -50,7 +50,7 @@ CREATE TABLE calculations
 	`gradiation_uniformity` REAL,
 	`gradation_curvature` REAL,
 	`le_third_ovendry_whole_soi` REAL,
-	`le_third_bar_to_oven_dry_rewet` INTEGER,
+	`le_third_bar_to_oven_dry_rewet` REAL,
 	`le_third_fifteen_whole_soil` REAL,
 	`void_ratio_third_bar_lt_2_mm` REAL,
 	`void_ratio_third_bar_whole_soi` REAL,

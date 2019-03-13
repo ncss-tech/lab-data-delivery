@@ -72,6 +72,11 @@ indexTable('methods', c('procedure_key', 'proced_code'))
 # cleanup
 dbExecute(db, 'VACUUM;')
 
+# ## doesn't work on windows
+# # compress for distribution
+# z <- paste0(file.path(base.path, db.file), '.zip')
+# zip(zipfile = z, files = file.path(base.path, db.file))
+
 
 ## TODO document linkages
 
@@ -96,7 +101,7 @@ dbGetQuery(db, "SELECT * from rosetta WHERE layer_key = 211388;")
 dbDisconnect(db)
 
 
-
+# done
 
 
 
