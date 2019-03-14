@@ -92,5 +92,7 @@ Previous table relationships, c/o Jay.
   * pedon QC process / credit so that we can publish more than "lab" pedons
   * work with Scarlett to fix vs. clean-up errors in LDM
   * unification of IDs: e.g. change `natural_key` &rarr; `llabsampnum` globally, does this make sense?
+  * certification of [DB Browser for SQLite](https://sqlitebrowser.org/) and [ODBC drivers](http://www.ch-werner.de/sqliteodbc/)
+  
 
 
