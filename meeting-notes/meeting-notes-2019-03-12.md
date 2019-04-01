@@ -80,6 +80,8 @@ Previous table relationships, c/o Jay.
   3. basic metadata for incorporation into NASIS data model repository (?), this ensures that bare-bones documentation is automatic and Ft. Collins staff can "make" the required tables for future distribution
   
   4. document **correct** linkages between tables
+  
+  5. Work with Susan M. via "DSR": finalize SQL for making tables and deliver to her. Then we work with Sam by requesting "database only" (?) materialization of tables and make accessible via SDA.
  
  
 ### Long-Term
