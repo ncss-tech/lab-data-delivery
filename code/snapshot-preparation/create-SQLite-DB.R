@@ -17,23 +17,24 @@ db.file <- file.path(base.path, 'LDM-compact.sqlite')
 unlink(db.file)
 db <- dbConnect(RSQLite::SQLite(), db.file)
 
-writeTable(file.path(base.path, 'EXPORT_layer_20190312.txt.gz'), table.name = 'layer')
+writeTable(file.path(base.path, 'layer.txt.gz'), table.name = 'layer')
 
-writeTable(file.path(base.path, 'EXPORT_Calculations_Including_Estimates_And_Default_Values_20190306.txt.gz'), table.name = 'calculations')
+writeTable(file.path(base.path, 'Calculations_Including_Estimates_And_Default_Values.txt.gz'), table.name = 'calculations')
 
-writeTable(file.path(base.path, 'EXPORT_Chemical_Properties_20190306.txt.gz'), table.name = 'chemical')
+writeTable(file.path(base.path, 'Chemical_Properties.txt.gz'), table.name = 'chemical')
 
-writeTable(file.path(base.path, 'EXPORT_combine_nasis_ncss_20190306.txt.gz'), table.name = 'ncss_site')
+writeTable(file.path(base.path, 'combine_nasis_ncss.txt.gz'), table.name = 'ncss_site')
 
-writeTable(file.path(base.path, 'EXPORT_Major_And_Trace_Elements_And_Oxides_20190306.txt.gz'), table.name = 'geochemical')
+writeTable(file.path(base.path, 'Major_And_Trace_Elements_And_Oxides.txt.gz'), table.name = 'geochemical')
 
-writeTable(file.path(base.path, 'EXPORT_Mineralogy_Glass_Count_20190306.txt.gz'), table.name = 'glass')
+writeTable(file.path(base.path, 'Mineralogy_Glass_Count.txt.gz'), table.name = 'glass')
 
-writeTable(file.path(base.path, 'EXPORT_Physical_Properties_20190306.txt.gz'), table.name = 'physical')
+writeTable(file.path(base.path, 'Physical_Properties.txt.gz'), table.name = 'physical')
 
-writeTable(file.path(base.path, 'EXPORT_XRay_And_Thermal_20190306.txt.gz'), table.name = 'xray_thermal')
+writeTable(file.path(base.path, 'XRay_And_Therma.txt.gz'), table.name = 'xray_thermal')
 
-writeTable(file.path(base.path, 'EXPORT_ROSETTA.txt.gz'), table.name = 'rosetta')
+writeTable(file.path(base.path, 'rosetta.txt.gz'), table.name = 'rosetta')
+
 
 # manually edited CSV, stored in GH repo
 writeTable(file.path('../../metadata/', 'procedures.csv'), table.name = 'procedures', d = ',')

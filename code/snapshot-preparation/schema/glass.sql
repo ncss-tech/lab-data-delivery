@@ -169,7 +169,7 @@ CREATE TABLE glass
 	`ZO_Zoisite_Petro_Count` REAL,
 	`AI_Aegirine_Augite_Petro_Count` INTEGER,
 	`AL_Allophane_Petro_Count` INTEGER,
-	`CE_Cobaltite_Petro_Count` INTEGER,
+	`CE_Cobaltite_Petro_Count` REAL,
 	`HA_Halite_Petro_Count` INTEGER,
 	`IL_Illite_Hydromuscovite_Petro_Count` REAL,
 	`LC_Analcime_Petro_Count` REAL,
