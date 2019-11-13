@@ -3,7 +3,7 @@ library(DBI)
 library(RSQLite)
 
 # helper functions for making / indexing tables
-source('../snapshot-functions.R')
+source('snapshot-functions.R')
 
 # base path for first-cut of export, based on Jason's new SQL
 base.path <- 'E:/NASIS-KSSL-LDM/LDM' 
@@ -17,35 +17,44 @@ db.file <- file.path(base.path, 'LDM-compact.sqlite')
 unlink(db.file)
 db <- dbConnect(RSQLite::SQLite(), db.file)
 
-writeTable(file.path(base.path, 'layer.txt.gz'), table.name = 'layer')
+writeTable(file.path(base.path, 'analysis_procedure.txt.gz'), table.name = 'procedure', d = '|')
+writeTable(file.path(base.path, 'analyte.txt.gz'), table.name = 'analyte', d = '|')
+writeTable(file.path(base.path, 'method_code.txt.gz'), table.name = 'method', d = '|')
+writeTable(file.path(base.path, 'preparation.txt.gz'), table.name = 'preparation', d = '|')
 
-writeTable(file.path(base.path, 'Calculations_Including_Estimates_And_Default_Values.txt.gz'), table.name = 'calculations')
+writeTable(file.path(base.path, 'calculations.txt.gz'), table.name = 'calculations', d = '|')
 
-writeTable(file.path(base.path, 'Chemical_Properties.txt.gz'), table.name = 'chemical')
+writeTable(file.path(base.path, 'chemical_properties.txt.gz'), table.name = 'chemical', d = '|')
+writeTable(file.path(base.path, 'physical_properties.txt.gz'), table.name = 'physical', d = '|')
+writeTable(file.path(base.path, 'layer.txt.gz'), table.name = 'layer', d = '|')
 
-writeTable(file.path(base.path, 'combine_nasis_ncss.txt.gz'), table.name = 'ncss_site')
+writeTable(file.path(base.path, 'combine_nasis_ncss.txt.gz'), table.name = 'nasis_ncss', d = '|')
+writeTable(file.path(base.path, 'pedon.txt.gz'), table.name = 'nasis_pedon', d = '|')
+writeTable(file.path(base.path, 'site.txt.gz'), table.name = 'nasis_site', d = '|')
 
-writeTable(file.path(base.path, 'Major_And_Trace_Elements_And_Oxides.txt.gz'), table.name = 'geochemical')
+writeTable(file.path(base.path, 'major_and_trace_elements_and_oxides.txt.gz'), table.name = 'geochemical', d = '|')
+writeTable(file.path(base.path, 'mineralogy_glass_count.txt.gz'), table.name = 'glass', d = '|')
+writeTable(file.path(base.path, 'xray_thermal.txt.gz'), table.name = 'xray_thermal', d = '|')
 
-writeTable(file.path(base.path, 'Mineralogy_Glass_Count.txt.gz'), table.name = 'glass')
+writeTable(file.path(base.path, 'rosetta.txt.gz'), table.name = 'rosetta', d = '|')
 
-writeTable(file.path(base.path, 'Physical_Properties.txt.gz'), table.name = 'physical')
-
-writeTable(file.path(base.path, 'XRay_And_Therma.txt.gz'), table.name = 'xray_thermal')
-
-writeTable(file.path(base.path, 'rosetta.txt.gz'), table.name = 'rosetta')
+writeTable(file.path(base.path, 'webmap.csv.gz'), table.name = 'webmap', d = ',')
 
 
-# manually edited CSV, stored in GH repo
-writeTable(file.path('../../metadata/', 'procedures.csv'), table.name = 'procedures', d = ',')
-writeTable(file.path('../../metadata/', 'methods.csv'), table.name = 'methods', d = ',')
+## 2019-11-13: these are now part of the tables Jason is preparing
+# # manually edited CSV, stored in GH repo
+# writeTable(file.path('../../metadata/', 'procedures.csv'), table.name = 'procedures', d = ',')
+# writeTable(file.path('../../metadata/', 'methods.csv'), table.name = 'methods', d = ',')
 
 
 # check
 dbListTables(db)
-dbListFields(db, 'methods')
-dbListFields(db, 'procedures')
+dbListFields(db, 'method')
+dbListFields(db, 'procedure')
+dbListFields(db, 'webmap')
 
+
+## TODO: finish this
 
 # index standard tables, excluding ncss_site and layer
 # this makes several indexes / table
@@ -78,6 +87,8 @@ dbExecute(db, 'VACUUM;')
 # z <- paste0(file.path(base.path, db.file), '.zip')
 # zip(zipfile = z, files = file.path(base.path, db.file))
 
+
+## TODO: type conversion for numeric columns
 
 ## TODO document linkages
 

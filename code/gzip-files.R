@@ -1,6 +1,10 @@
 library(R.utils)
 
 
-f <- list.files(path='.', pattern = '\\.txt')
+f <- list.files(path='E:/NASIS-KSSL-LDM/LDM/', pattern = '\\.txt|\\.csv', full.names = TRUE)
 
-lapply(f, gzip, remove=TRUE, skip=TRUE)
+for(i in f) {
+  print(i)
+  gzip(i, remove=TRUE, skip=TRUE)
+}
+

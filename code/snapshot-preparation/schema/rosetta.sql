@@ -7,7 +7,7 @@ CREATE TABLE rosetta
 	`npar` REAL,
 	`usedmodel` REAL,
 	`wlupdated` REAL,
-	`Ks` REAL,
-	`Ko` REAL,
-	`Lpar` REAL 
+	`ks` REAL,
+	`ko` REAL,
+	`lpar` REAL 
 )

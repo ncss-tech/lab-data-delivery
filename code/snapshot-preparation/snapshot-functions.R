@@ -85,6 +85,10 @@ writeTable <- function(f, table.name, d='|') {
   # convert to DF
   x <- as.data.frame(x)
   
+  # convert field names to lower case
+  names(x) <- tolower(names(x))
+  
+  
   # write table
   dbWriteTable(db, name = table.name, value = x, row.names=FALSE, overwrite=TRUE)
   
