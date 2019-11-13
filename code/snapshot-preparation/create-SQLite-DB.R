@@ -52,6 +52,7 @@ dbListTables(db)
 dbListFields(db, 'method')
 dbListFields(db, 'procedure')
 dbListFields(db, 'webmap')
+dbListFields(db, 'layer')
 
 
 ## TODO: finish this
