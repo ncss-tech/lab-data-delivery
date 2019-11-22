@@ -1,5 +1,5 @@
 CREATE TABLE rosetta 
-( `rosetta_key` REAL,
+( `result_source_key` REAL,
 	`layer_key` REAL,
 	`theta_r` REAL,
 	`theta_s` REAL,

@@ -2,6 +2,7 @@ library(readr)
 library(DBI)
 library(RSQLite)
 
+
 # helper functions for making / indexing tables
 source('snapshot-functions.R')
 
@@ -53,60 +54,73 @@ dbListFields(db, 'method')
 dbListFields(db, 'procedure')
 dbListFields(db, 'webmap')
 dbListFields(db, 'layer')
+dbListFields(db, 'procedure')
 
 
-## TODO: finish this
-
-# index standard tables, excluding ncss_site and layer
+## index tables
 # this makes several indexes / table
+# [1] "analyte"      "calculations" "chemical"     "geochemical"  "glass"        "layer"        "method"       "nasis_ncss"  
+# [9] "nasis_pedon"  "nasis_site"   "physical"     "preparation"  "procedure"    "rosetta"      "webmap"       "xray_thermal"
+
+indexTable('analyte', c('procedure_key'))
+
 indexTable('calculations', c('labsampnum', 'result_source_key', 'prep_code'))
+
 indexTable('chemical', c('labsampnum', 'result_source_key', 'prep_code'))
+
 indexTable('geochemical', c('labsampnum', 'result_source_key', 'prep_code'))
+
 indexTable('glass', c('labsampnum', 'result_source_key', 'prep_code'))
+
+indexTable('layer', c('layer_key', 'labsampnum', 'pedon_key', 'layer_type'))
+
+indexTable('method', c('procedure_key', 'proced_code'))
+
+indexTable('nasis_ncss', c('pedon_key', 'pedlabsampnum', 'pedoniid'))
+
+indexTable('nasis_pedon', c('pedon_key', 'pedlabsampnum', 'site_key'))
+
+indexTable('nasis_site', c('site_key'))
+
 indexTable('physical', c('labsampnum', 'result_source_key', 'prep_code'))
+
+indexTable('preparation', c('prep_key', 'prep_code'))
+
+indexTable('procedure', c('procedure_key'))
+
+indexTable('rosetta', c('result_source_key', 'layer_key'))
+
+indexTable('webmap', c('pedon_key'))
+
 indexTable('xray_thermal', c('labsampnum', 'result_source_key', 'prep_code'))
 
-# site table is indexed differently
-indexTable('ncss_site', c('pedon_key', 'upedonid', 'pedlabsampnum'))
-
-# layer table is indexed differently
-indexTable('layer', c('layer_key', 'natural_key', 'pedon_key', 'layer_type'))
-
-# layer table is indexed differently
-indexTable('rosetta', c('rosetta_key', 'layer_key'))
-
-# metadata
-indexTable('procedures', 'procedure_key')
-indexTable('methods', c('procedure_key', 'proced_code'))
 
 
-# cleanup
+## cleanup
 dbExecute(db, 'VACUUM;')
 
-# ## doesn't work on windows
-# # compress for distribution
-# z <- paste0(file.path(base.path, db.file), '.zip')
-# zip(zipfile = z, files = file.path(base.path, db.file))
 
 
 ## TODO: type conversion for numeric columns
+## TODO: does SQLite differentiate between integers and REAL?
 
-## TODO document linkages
+
+## TODO document linkages via igraph
 
 
 
 # get data
-dbGetQuery(db, "SELECT pedon_key, pedlabsampnum, pedoniid, upedonid, corr_name from ncss_site WHERE upedonid = 'S1999NY061001' ;")
+dbGetQuery(db, "SELECT * from nasis_site WHERE user_site_id = 'S08NV003003' ;")
 
-dbGetQuery(db, "SELECT layer_key, natural_key, pedon_key, hzn_top, hzn_bot, hzn_desgn from layer WHERE pedon_key = 1 ;")
+dbGetQuery(db, "SELECT layer_key, labsampnum, pedon_key, hzn_top, hzn_bot, hzn_desgn from layer WHERE pedon_key = 1 ;")
 
 dbGetQuery(db, "SELECT result_source_key, prep_code, labsampnum, clay_total, particle_size_method from physical WHERE result_source_key = 1 ;")
 
 dbGetQuery(db, "SELECT * from rosetta LIMIT 10;")
 
 
-dbGetQuery(db, "SELECT pedon_key, pedlabsampnum, pedoniid, upedonid, corr_name from ncss_site WHERE upedonid = 'S08NV003003' ;")
-dbGetQuery(db, "SELECT layer_key, natural_key, pedon_key, hzn_top, hzn_bot, hzn_desgn from layer WHERE pedon_key = 34942 ;")
+
+dbGetQuery(db, "SELECT layer_key, labsampnum, pedon_key, hzn_top, hzn_bot, hzn_desgn from layer WHERE pedon_key = 34942 ;")
 dbGetQuery(db, "SELECT * from rosetta WHERE layer_key = 211388;")
 
 
@@ -114,7 +128,11 @@ dbGetQuery(db, "SELECT * from rosetta WHERE layer_key = 211388;")
 dbDisconnect(db)
 
 
-# done
+
+## compress
+R.utils:: gzip(db.file, remove=FALSE)
+
+
 
 
 

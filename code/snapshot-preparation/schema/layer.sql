@@ -1,6 +1,6 @@
 CREATE TABLE layer 
 ( `layer_key` REAL,
-	`natural_key` TEXT,
+	`labsampnum` TEXT,
 	`project_key` REAL,
 	`site_key` REAL,
 	`pedon_key` REAL,

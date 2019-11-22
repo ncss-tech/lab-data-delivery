@@ -1,6 +1,6 @@
 CREATE TABLE nasis_pedon 
 ( `pedon_key` REAL,
-	`natural_key` TEXT,
+	`pedlabsampnum` TEXT,
 	`observation_date` REAL,
 	`user_pedon_id` TEXT,
 	`pedon_seq_num` REAL,

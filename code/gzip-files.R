@@ -8,3 +8,8 @@ for(i in f) {
   gzip(i, remove=TRUE, skip=TRUE)
 }
 
+# # or, unzip
+# for(i in f) {
+#   print(i)
+#   gunzip(i, remove=TRUE, skip=TRUE)
+# }
