@@ -47,6 +47,14 @@ cat(names(sort(prop.0[prop.0 > 0.35])), sep = '\n')
 
 ## compare values with last Access snapshot
 db.old <- dbConnect(RSQLite::SQLite(), "E:/NASIS-KSSL-LDM/KSSL-data.sqlite")
+
+x.old <- dbGetQuery(db.old, "SELECT Mn_dith FROM Carbon_and_Extractions;")
+Hmisc::describe(x.old$mn_dith)
+table(x.old$mn_dith[x.old$mn_dith < 2])
+
+dotchart(sort(table(x.old$mn_dith[x.old$mn_dith > 0 & x.old$mn_dith < 2])))
+
+
 x.old <- dbGetQuery(db, "SELECT COLEws FROM Bulk_Density_and_Moisture;")
 Hmisc::describe(x$COLEws)
 
