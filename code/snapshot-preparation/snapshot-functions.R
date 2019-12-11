@@ -69,7 +69,7 @@ makeSQLiteFromCSV <- function(type, base.path) {
 # f: full path to pipe-delim text file
 # table.name: new table name
 # d: delimeter
-writeTable <- function(f, table.name, d='|') {
+writeTable <- function(f, table.name, d='|', dd=FALSE) {
   
   # scaleable reading from txt
   # * typically pipe-delim
@@ -96,6 +96,16 @@ writeTable <- function(f, table.name, d='|') {
   schema.file <- file.path('schema', paste0(table.name, '.sql'))
   cat(sqliteBuildTableDefinition(db, table.name, value=x[0,], row.names=FALSE), file = schema.file, sep = '\n')
   
+  # write out summary of columns
+  # save table description for QC
+  if(dd) {
+    message('saving data distribution info')
+    data.dist.file <- paste0('data-distributions/', table.name, '.txt')
+    options(width=160)
+    sink(file=data.dist.file)
+    print(Hmisc::describe(x))
+    sink()
+  }
 }
 
 

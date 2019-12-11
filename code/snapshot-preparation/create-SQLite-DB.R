@@ -1,7 +1,7 @@
 library(readr)
 library(DBI)
 library(RSQLite)
-
+library(Hmisc)
 
 # helper functions for making / indexing tables
 source('snapshot-functions.R')
@@ -23,23 +23,23 @@ writeTable(file.path(base.path, 'analyte.txt.gz'), table.name = 'analyte', d = '
 writeTable(file.path(base.path, 'method_code.txt.gz'), table.name = 'method', d = '|')
 writeTable(file.path(base.path, 'preparation.txt.gz'), table.name = 'preparation', d = '|')
 
-writeTable(file.path(base.path, 'calculations.txt.gz'), table.name = 'calculations', d = '|')
+writeTable(file.path(base.path, 'calculations.txt.gz'), table.name = 'calculations', d = '|', dd=TRUE)
 
-writeTable(file.path(base.path, 'chemical_properties.txt.gz'), table.name = 'chemical', d = '|')
-writeTable(file.path(base.path, 'physical_properties.txt.gz'), table.name = 'physical', d = '|')
-writeTable(file.path(base.path, 'layer.txt.gz'), table.name = 'layer', d = '|')
+writeTable(file.path(base.path, 'chemical_properties.txt.gz'), table.name = 'chemical', d = '|', dd=TRUE)
+writeTable(file.path(base.path, 'physical_properties.txt.gz'), table.name = 'physical', d = '|', dd=TRUE)
+writeTable(file.path(base.path, 'layer.txt.gz'), table.name = 'layer', d = '|', dd=TRUE)
 
-writeTable(file.path(base.path, 'combine_nasis_ncss.txt.gz'), table.name = 'nasis_ncss', d = '|')
-writeTable(file.path(base.path, 'pedon.txt.gz'), table.name = 'nasis_pedon', d = '|')
-writeTable(file.path(base.path, 'site.txt.gz'), table.name = 'nasis_site', d = '|')
+writeTable(file.path(base.path, 'combine_nasis_ncss.txt.gz'), table.name = 'nasis_ncss', d = '|', dd=TRUE)
+writeTable(file.path(base.path, 'pedon.txt.gz'), table.name = 'nasis_pedon', d = '|', dd=TRUE)
+writeTable(file.path(base.path, 'site.txt.gz'), table.name = 'nasis_site', d = '|', dd=TRUE)
 
-writeTable(file.path(base.path, 'major_and_trace_elements_and_oxides.txt.gz'), table.name = 'geochemical', d = '|')
-writeTable(file.path(base.path, 'mineralogy_glass_count.txt.gz'), table.name = 'glass', d = '|')
-writeTable(file.path(base.path, 'xray_thermal.txt.gz'), table.name = 'xray_thermal', d = '|')
+writeTable(file.path(base.path, 'major_and_trace_elements_and_oxides.txt.gz'), table.name = 'geochemical', d = '|', dd=TRUE)
+writeTable(file.path(base.path, 'mineralogy_glass_count.txt.gz'), table.name = 'glass', d = '|', dd=TRUE)
+writeTable(file.path(base.path, 'xray_thermal.txt.gz'), table.name = 'xray_thermal', d = '|', dd=TRUE)
 
-writeTable(file.path(base.path, 'rosetta.txt.gz'), table.name = 'rosetta', d = '|')
+writeTable(file.path(base.path, 'rosetta.txt.gz'), table.name = 'rosetta', d = '|', dd=TRUE)
 
-writeTable(file.path(base.path, 'webmap.csv.gz'), table.name = 'webmap', d = ',')
+writeTable(file.path(base.path, 'webmap.csv.gz'), table.name = 'webmap', d = ',', dd=TRUE)
 
 
 ## 2019-11-13: these are now part of the tables Jason is preparing
@@ -130,7 +130,7 @@ dbDisconnect(db)
 
 
 ## compress
-R.utils:: gzip(db.file, remove=FALSE)
+R.utils::gzip(db.file, remove=FALSE, overwrite=TRUE)
 
 
 

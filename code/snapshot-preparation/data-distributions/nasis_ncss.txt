@@ -1,0 +1,705 @@
+x 
+
+ 80  Variables      65949  Observations
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+pedon_key 
+       n  missing distinct     Info     Mean      Gmd      .05      .10      .25      .50      .75      .90      .95 
+   65949        0    65949        1    35313    24766     3299     6654    16558    34906    52093    68382    71727 
+
+lowest :     1     2     3     4     5, highest: 75052 75053 75054 75055 75056
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+site_key 
+       n  missing distinct     Info     Mean      Gmd      .05      .10      .25      .50      .75      .90      .95 
+   65949        0    65551        1    38302    30758     3299     6654    16556    34690    51365    66530   132485 
+
+lowest :      1      2      3      4      5, highest: 135648 135649 135650 135651 135652
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+pedlabsampnum 
+       n  missing distinct 
+   65949        0    65949 
+
+lowest : 00KS027005 00KS089001 00KS089002 00KS089003 00KS105001, highest: X65926-1-1 X65977     X65C133    X978W-1-1  XT162B    
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+pedoniid 
+       n  missing distinct     Info     Mean      Gmd      .05      .10      .25      .50      .75      .90      .95 
+   64818     1131    64817        1   475237   410512    89096    98430   119823   375184   815789   961778  1083136 
+
+lowest :    9142    9143    9144    9145    9146, highest: 1340166 1340167 1346993 1350392 1354992
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+upedonid 
+       n  missing distinct 
+   65949        0    64903 
+
+lowest : 0              00AL015001-pgm 00AL015002-pgm 00AL015003-pgm 00AL015004-pgm, highest: YYYY-OH173-132 YYYY-OH173-133 YYYY-OH173-134 YYYY-OH173-135 YYYY-OH173-136
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+labdatadescflag 
+       n  missing distinct 
+   64818     1131        2 
+                      
+Value      FALSE  TRUE
+Frequency  60682  4136
+Proportion 0.936 0.064
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+priority 
+       n  missing distinct 
+   64818     1131        2 
+                      
+Value          B     D
+Frequency  22730 42088
+Proportion 0.351 0.649
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+priority2 
+       n  missing distinct 
+   64818     1131        2 
+                      
+Value          A     C
+Frequency   4136 60682
+Proportion 0.064 0.936
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+samp_name 
+       n  missing distinct 
+   57152     8797    16209 
+
+lowest : #3245-a-1      ( transition ) (unknown high) (unknown low)  (unnamed)     , highest: Zundell        Zuni           Zwingle        Zyzyl          Zzyzx         
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+samp_class_type 
+       n  missing distinct 
+   39445    26504       15 
+
+lowest : 1982-09-30 00:00:00 1997-08-19 00:00:00 1999-09-07 00:00:00 1999-12-02 00:00:00 family             
+highest: taxadjunct          Taxadjunct          taxon above family  Taxon above family  variant            
+
+1982-09-30 00:00:00 (1, 0.000), 1997-08-19 00:00:00 (1, 0.000), 1999-09-07 00:00:00 (1, 0.000), 1999-12-02 00:00:00 (1, 0.000), family (618, 0.016), Family
+(52, 0.001), Fine-silty, mixed (1, 0.000), miscellaneous area (197, 0.005), series (34351, 0.871), Series (476, 0.012), taxadjunct (2459, 0.062), Taxadjunct
+(51, 0.001), taxon above family (355, 0.009), Taxon above family (6, 0.000), variant (875, 0.022)
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+samp_classdate 
+       n  missing distinct 
+   49880    16069    10677 
+
+lowest : 1793-07-09 00:00:00                                                        1928-08-01 00:00:00                                                        1928-10-01 00:00:00                                                        1929-09-01 00:00:00                                                        1929-10-01 00:00:00                                                       
+highest: 9999-01-01 00:00:00                                                        Coarse-loamy over sandy or sandy-skeletal, mixed, frigid Typic Haplorthods Fine-loamy, mixed, frigid Typic Eutroboralfs                               Fine, montmorillonitic Aridic Argiustolls                                  Sandy, isotic, frigid Humic Dystroxerept                                  
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+samp_classification_name 
+       n  missing distinct 
+   34636    31313    14452 
+
+lowest : (Fine) Loamy-skeletal, mixed, mesic Ultic Argixeroll Abruptic Durixeralfs                                 Acid                                                 Acid, subgelic Sphagnic Fibristel                    Acrohumox                                           
+highest: Vitrandic dystrocryept                               Vitrandic Glossoboralfs                              Xeric Argicryoll                                     Xeric Haplargid                                      Xeric Haplocalcids                                  
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+samp_taxorder 
+       n  missing distinct 
+   34889    31060       24 
+
+lowest : alfisols  Alfisols  andisols  aridisols boralfs  , highest: Ultisols  ustolls   vertisols Vertisols xerepts  
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+samp_taxsuborder 
+       n  missing distinct 
+   34752    31197      111 
+
+lowest : albolls   Albolls   andepts   anthrepts aqualfs  , highest: xerands   xerepts   xererts   xerolls   xerults  
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+samp_taxgrtgroup 
+       n  missing distinct 
+   34709    31240      466 
+
+lowest : acrohumox     acroperox     acrorthox     acrudox       acrustox     , highest: xerochrepts   xerofluvents  xeropsamments xerorthents   xerumbrepts  
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+samp_taxsubgrp 
+       n  missing distinct 
+   34784    31165     2291 
+
+lowest : abruptic argiaquolls        abruptic argiborolls        abruptic argicryolls        abruptic aridic argixerolls abruptic aridic durixerolls
+highest: xerollic haplocryalfs       xerollic nadurargids        xerollic natrargids         xerollic paleargids         xerollic paleorthids       
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+samp_taxpartsize 
+       n  missing distinct 
+   33278    32671       92 
+
+lowest : ash overburden phase                     ashy                                     ashy-pumiceous                           ashy-skeletal                            ashy-skeletal over loamy-skeletal       
+highest: thixotropic-skeletal                     thixotropic over loamy                   thixotropic over loamy-skeletal          thixotropic over sandy or sandy-skeletal very-fine                               
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+samp_taxpartsizemod 
+       n  missing distinct 
+     156    65793        3 
+                                        
+Value          aniso not aniso  not used
+Frequency          6         1       149
+Proportion     0.038     0.006     0.955
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+samp_taxceactcl 
+       n  missing distinct 
+   10520    55429        5 
+
+lowest : active      not used    semiactive  subactive   superactive, highest: active      not used    semiactive  subactive   superactive
+                                                                      
+Value           active    not used  semiactive   subactive superactive
+Frequency         3052          63        1589         359        5457
+Proportion       0.290       0.006       0.151       0.034       0.519
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+samp_taxreaction 
+       n  missing distinct 
+    2769    63180       11 
+
+lowest : acid          allic         calcareous    dysic         euic         , highest: mesic         nonacid       noncalcareous not used      unclassified 
+                                                                                                                                                      
+Value               acid         allic    calcareous         dysic          euic        frigid         mesic       nonacid noncalcareous      not used
+Frequency            304             2           851           117           286             3             1          1127            17            60
+Proportion         0.110         0.001         0.307         0.042         0.103         0.001         0.000         0.407         0.006         0.022
+                        
+Value       unclassified
+Frequency              1
+Proportion         0.000
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+samp_taxtempcl 
+       n  missing distinct 
+   30300    35649       14 
+
+lowest : aridic (torric) frigid          hypergelic      hyperthermic    isofrigid      
+highest: pergelic        subgelic        thermic         udic            unclassified   
+                                                                                                                                                          
+Value      aridic (torric)          frigid      hypergelic    hyperthermic       isofrigid isohyperthermic        isomesic      isothermic           mesic
+Frequency                1            4888              22            1465              11             826             324             173           16136
+Proportion           0.000           0.161           0.001           0.048           0.000           0.027           0.011           0.006           0.533
+                                                                                          
+Value             pergelic        subgelic         thermic            udic    unclassified
+Frequency               13              54            6385               1               1
+Proportion           0.000           0.002           0.211           0.000           0.000
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+samp_taxmoistscl 
+       n  missing distinct 
+   12225    53724       17 
+
+lowest : aeric           anthraquic      aquic           Aquic           aridic (torric)
+highest: udic            Udic            ustic           Ustic           xeric          
+                                                                                                                                                          
+Value                aeric      anthraquic           aquic           Aquic aridic (torric)          frigid           mesic           mixed        oxyaquic
+Frequency              621               2            1778               7            1051               3               1               1             675
+Proportion           0.051           0.000           0.145           0.001           0.086           0.000           0.000           0.000           0.055
+                                                                                                                                          
+Value             Oxyaquic           typic           Typic            udic            Udic           ustic           Ustic           xeric
+Frequency                1            4799               6            1620              15             986               9             650
+Proportion           0.000           0.393           0.000           0.133           0.001           0.081           0.001           0.053
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+samp_taxtempregime 
+       n  missing distinct 
+   27188    38761       16 
+
+lowest : cryic            frigid           gelic            hypergelic       hyperthermic    
+highest: mixed            montmorillonitic pergelic         subgelic         thermic         
+                                                                                                                                                  
+Value                 cryic           frigid            gelic       hypergelic     hyperthermic        isofrigid  isohyperthermic         isomesic
+Frequency              1701             4725               85                2              722               10              749              222
+Proportion            0.063            0.174            0.003            0.000            0.027            0.000            0.028            0.008
+                                                                                                                                                  
+Value            isothermic           isotic            mesic            mixed montmorillonitic         pergelic         subgelic          thermic
+Frequency               173                1            14419                2                1               22                1             4353
+Proportion            0.006            0.000            0.530            0.000            0.000            0.001            0.000            0.160
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+samp_taxminalogy 
+       n  missing distinct 
+   28090    37859       50 
+
+lowest : amorphic             amorphic,isotic      amorphic,micaceous   amorphic,mixed       calcareous          
+highest: siliceous,kaolinitic siliceous,smectitic  smectitic            smectitic,mixed      vermiculitic        
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+samp_taxother 
+       n  missing distinct 
+     628    65321       10 
+
+lowest : coated           False            micro            not used         ortstein        
+highest: ortstein,shallow shallow          shallow,ortstein sloping          uncoated        
+                                                                                                                                                  
+Value                coated            False            micro         not used         ortstein ortstein,shallow          shallow shallow,ortstein
+Frequency                55                4                6                5               29                1              470                3
+Proportion            0.088            0.006            0.010            0.008            0.046            0.002            0.748            0.005
+                                            
+Value               sloping         uncoated
+Frequency                22               33
+Proportion            0.035            0.053
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+samp_osdtypelocflag 
+       n  missing distinct 
+   41941    24008        3 
+                               
+Value       False Tallac   True
+Frequency   41820      1    120
+Proportion  0.997  0.000  0.003
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+corr_name 
+       n  missing distinct 
+   37950    27999    10068 
+
+lowest : -------                #3245-a-1              (grab sample)          (Sandy Frigid Aquolls) (unnamed)             
+highest: Zundell                Zunhall                Zuni                   Zwingle                Zyzyl                 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+corr_class_type 
+       n  missing distinct 
+   30296    35653       13 
+
+lowest : 2005-10-07 17:55:18 family              Family              miscellaneous area  series             
+highest: taxajunct           taxon above family  Taxon above family  variant             Variant            
+                                                                                                                                                      
+Value      2005-10-07 17:55:18              family              Family  miscellaneous area              series              Series          taxadjunct
+Frequency                    1                 301                   2                  22               21308                  96                7816
+Proportion               0.000               0.010               0.000               0.001               0.703               0.003               0.258
+                                                                                                                                  
+Value               Taxadjunct           taxajunct  taxon above family  Taxon above family             variant             Variant
+Frequency                   49                   7                 326                  12                 351                   5
+Proportion               0.002               0.000               0.011               0.000               0.012               0.000
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+corr_classdate 
+       n  missing distinct 
+   36423    29526     6172 
+
+lowest : 1947-07-07 00:00:00                      1947-07-23 00:00:00                      1947-08-30 00:00:00                      1947-09-14 00:00:00                      1951-06-01 00:00:00                     
+highest: 2019-06-14 00:00:00                      2019-06-21 00:00:00                      2019-06-24 00:00:00                      2019-06-26 00:00:00                      Sandy, mixed, frigid Humic Dystroxerepts
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+corr_classification_name 
+       n  missing distinct 
+   37351    28598    14067 
+
+lowest : .                                               Acid, mesic Aeric Fluvaquents                   Acid, thermic Aquic Quartzipsamments            Acid, thermic Typic Quartzipsamments            Aquic Argiudoll                                
+highest: Very-fine, smectitic, thermic Xeric Epiaquerts  Very-fine, thermic Chromic Epiaquerts           Very-fine, vermiculitic, mesic Vertic Hapludalf Vitrandic Dystrocryepts                         Xeric Torripsamment                            
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+corr_taxorder 
+       n  missing distinct 
+   36925    29024       24 
+
+lowest : alfisols  Alfisols  andisols  aquolls   aridisols, highest: ultisols  Ultisols  vertisols xerepts   xerolls  
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+corr_taxsuborder 
+       n  missing distinct 
+   36930    29019      103 
+
+lowest : albolls Albolls alfic   andepts aqualfs, highest: xerepts xererts xeric   xerolls xerults
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+corr_taxgrtgroup 
+       n  missing distinct 
+   36914    29035      404 
+
+lowest : acraquox      acrohumox     acroperox     acrorthox     acrudox      , highest: xerochrepts   xerofluvents  xeropsamments xerorthents   xerumbrepts  
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+corr_taxsubgrp 
+       n  missing distinct 
+   36831    29118     1980 
+
+lowest : abruptic argiaquolls abruptic argiborolls abruptic argicryolls abruptic argidurids  abruptic argiudolls 
+highest: xerollic haplargids  xerollic nadurargids xerollic natrargids  xerollic paleargids  xerollic paleorthids
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+corr_taxpartsize 
+       n  missing distinct 
+   35888    30061       91 
+
+lowest : acid                                     ashy                                     ashy-pumiceous                           ashy-skeletal                            ashy-skeletal over fragmental or cindery
+highest: thixotropic                              thixotropic-skeletal                     thixotropic over loamy                   very-fine                                very fine                               
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+corr_taxpartsizemod 
+       n  missing distinct 
+      77    65872        2 
+                            
+Value         aniso not used
+Frequency        11       66
+Proportion    0.143    0.857
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+corr_taxceactcl 
+       n  missing distinct 
+   18427    47522        5 
+
+lowest : active      not used    semiactive  subactive   superactive, highest: active      not used    semiactive  subactive   superactive
+                                                                      
+Value           active    not used  semiactive   subactive superactive
+Frequency         4876          18        2246         471       10816
+Proportion       0.265       0.001       0.122       0.026       0.587
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+corr_taxreaction 
+       n  missing distinct 
+    2995    62954       10 
+
+lowest : acid          allic         calcareous    dysic         euic         , highest: frigid        nonacid       noncalcareous not used      superactive  
+                                                                                                                                                      
+Value               acid         allic    calcareous         dysic          euic        frigid       nonacid noncalcareous      not used   superactive
+Frequency            421             3           928            70           261             1          1213            25            66             7
+Proportion         0.141         0.001         0.310         0.023         0.087         0.000         0.405         0.008         0.022         0.002
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+corr_taxtempcl 
+       n  missing distinct 
+   34305    31644       12 
+
+lowest : frigid          hyperthermic    isofrigid       isohyperthermic isomesic       
+highest: pergelic        subgelic        thermic         typic           unclassified   
+                                                                                                                                                          
+Value               frigid    hyperthermic       isofrigid isohyperthermic        isomesic      isothermic           mesic        pergelic        subgelic
+Frequency             4788             809              14             826             248             193           22213              35              26
+Proportion           0.140           0.024           0.000           0.024           0.007           0.006           0.648           0.001           0.001
+                                                          
+Value              thermic           typic    unclassified
+Frequency             5151               1               1
+Proportion           0.150           0.000           0.000
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+corr_taxmoistscl 
+       n  missing distinct 
+   17304    48645       35 
+
+lowest : aeric      Aeric      alfic      anthraquic aquic     , highest: udollic    ultic      ustic      vertic     xeric     
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+corr_taxtempregime 
+       n  missing distinct 
+   31853    34096       12 
+
+lowest : cryic        frigid       gelic        hyperthermic isofrigid   , highest: isothermic   mesic        mixed        pergelic     thermic     
+                                                                                                                                                          
+Value                cryic          frigid           gelic    hyperthermic       isofrigid isohyperthermic        isomesic      isothermic           mesic
+Frequency             1169            4171               9             758              13             825             249             194           19632
+Proportion           0.037           0.131           0.000           0.024           0.000           0.026           0.008           0.006           0.616
+                                                          
+Value                mixed        pergelic         thermic
+Frequency                1              34            4798
+Proportion           0.000           0.001           0.151
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+corr_taxminalogy 
+       n  missing distinct 
+   34611    31338       55 
+
+lowest : allitic             amorphic            amorphic,isotic     amorphic,micaceous  amorphic,mixed     
+highest: siliceous,mixed     siliceous,smectitic smectitic           smectitic,mixed     vermiculitic       
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+corr_taxother 
+       n  missing distinct 
+     881    65068       13 
+
+lowest : coated           cracked          False            micro            not used        
+highest: shallow          shallow,coated   shallow,ortstein sloping          uncoated        
+                                                                                                                                                  
+Value                coated          cracked            False            micro         not used not used,shallow         ortstein ortstein,shallow
+Frequency                76                1                1               14               92                3               23                2
+Proportion            0.086            0.001            0.001            0.016            0.104            0.003            0.026            0.002
+                                                                                               
+Value               shallow   shallow,coated shallow,ortstein          sloping         uncoated
+Frequency               580                1                3               18               67
+Proportion            0.658            0.001            0.003            0.020            0.076
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+corr_osdtypelocflag 
+       n  missing distinct 
+   31764    34185        3 
+                               
+Value       False Karlin   True
+Frequency   31088      1    675
+Proportion  0.979  0.000  0.021
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ssl_name 
+       n  missing distinct 
+   13263    52686     4226 
+
+lowest : (unnamed) Aastad    Abbyville Aberdeen  Abert    , highest: Zipp      Zoe       Zook      Zumwalt   Zunhall  
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ssl_class_type 
+       n  missing distinct 
+    8715    57234        6 
+
+lowest : 2002-07-31 00:00:00 family              series              taxadjunct          taxon above family 
+highest: family              series              taxadjunct          taxon above family  variant            
+                                                                                                                                  
+Value      2002-07-31 00:00:00              family              series          taxadjunct  taxon above family             variant
+Frequency                    1                  72                8470                 146                  15                  11
+Proportion               0.000               0.008               0.972               0.017               0.002               0.001
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ssl_classdate 
+       n  missing distinct 
+   10950    54999      467 
+
+lowest : 1962-06-03 00:00:00                    1962-08-03 00:00:00                    1962-09-03 00:00:00                    1963-04-03 00:00:00                    1963-10-03 00:00:00                   
+highest: 2009-10-10 00:00:00                    2009-10-18 00:00:00                    2012-01-26 00:00:00                    2012-03-10 00:00:00                    Sandy, isotic, frigid Typic Haplorthod
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ssl_classification_name 
+       n  missing distinct 
+   13360    52589     5963 
+
+lowest : Aquic Argiudoll                                 Aquic Haplorthod                                Ashy-pumiceous, glassy Humic Xeric Vitricryand  Ashy-pumiceous, glassy Xeric Vitricryand        Ashy-pumiceous, glassy, frigid Typic Udivitrand
+highest: Very-fine, smectitic, thermic Typic Epiaquert   Very-fine, smectitic, thermic Typic Hapludert   Very-fine, smectitic, thermic Ustic Epiaquert   Very-fine, smectitic, thermic Xeric Epiaquert   Xeric Torripsamment                            
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ssl_taxorder 
+       n  missing distinct 
+   13353    52596       13 
+
+lowest : alfisols  andisols  aridisols entisols  gelisols , highest: orthods   oxisols   spodosols ultisols  vertisols
+                                                                                                                                                          
+Value         alfisols    andisols   aridisols    entisols    gelisols   histosols inceptisols   mollisols     orthods     oxisols   spodosols    ultisols
+Frequency         2656          26        1481        1257          35         120        1708        4045           1         132         545         908
+Proportion       0.199       0.002       0.111       0.094       0.003       0.009       0.128       0.303       0.000       0.010       0.041       0.068
+                      
+Value        vertisols
+Frequency          439
+Proportion       0.033
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ssl_taxsuborder 
+       n  missing distinct 
+   13347    52602       70 
+
+lowest : albolls andepts aqualfs aquents aquepts, highest: xerands xerepts xererts xerolls xerults
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ssl_taxgrtgroup 
+       n  missing distinct 
+   13342    52607      305 
+
+lowest : acraquox      acrohumox     acrorthox     acrudox       acrustox     , highest: xerochrepts   xerofluvents  xeropsamments xerorthents   xerumbrepts  
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ssl_taxsubgrp 
+       n  missing distinct 
+   13102    52847     1420 
+
+lowest : abruptic argiaquolls        abruptic argiborolls        abruptic aridic argixerolls abruptic aridic durixerolls abruptic cryic paleborolls 
+highest: xerollic haplargids         xerollic nadurargids        xerollic natrargids         xerollic paleargids         xerollic paleorthids       
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ssl_taxpartsize 
+       n  missing distinct 
+   12942    53007       62 
+
+lowest : ashy                            ashy-pumiceous                  ashy-skeletal                   ashy over fine-loamy            ashy over loamy                
+highest: thixotropic                     thixotropic-skeletal            thixotropic over loamy          thixotropic over loamy-skeletal very-fine                      
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ssl_taxpartsizemod 
+       n  missing distinct    value 
+       4    65945        1    aniso 
+                
+Value      aniso
+Frequency      4
+Proportion     1
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ssl_taxceactcl 
+       n  missing distinct 
+    1062    64887        4 
+                                                          
+Value           active  semiactive   subactive superactive
+Frequency          294         192          38         538
+Proportion       0.277       0.181       0.036       0.507
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ssl_taxreaction 
+       n  missing distinct 
+    1071    64878        8 
+
+lowest : acid          allic         calcareous    dysic         euic         , highest: dysic         euic          frigid        nonacid       noncalcareous
+                                                                                                                          
+Value               acid         allic    calcareous         dysic          euic        frigid       nonacid noncalcareous
+Frequency             89             1           527            41            69             1           335             8
+Proportion         0.083         0.001         0.492         0.038         0.064         0.001         0.313         0.007
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ssl_taxtempcl 
+       n  missing distinct 
+   12403    53546       11 
+
+lowest : frigid          hypergelic      hyperthermic    isofrigid       isohyperthermic
+highest: isothermic      mesic           pergelic        subgelic        thermic        
+                                                                                                                                                          
+Value               frigid      hypergelic    hyperthermic       isofrigid isohyperthermic        isomesic      isothermic           mesic        pergelic
+Frequency             2449              22             432               2             610              76             119            6189              10
+Proportion           0.197           0.002           0.035           0.000           0.049           0.006           0.010           0.499           0.001
+                                          
+Value             subgelic         thermic
+Frequency                7            2487
+Proportion           0.001           0.201
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ssl_taxmoistscl 
+       n  missing distinct 
+    3344    62605        9 
+
+lowest : aeric           aquic           aridic (torric) frigid          oxyaquic       
+highest: oxyaquic        typic           udic            ustic           xeric          
+                                                                                                                                                          
+Value                aeric           aquic aridic (torric)          frigid        oxyaquic           typic            udic           ustic           xeric
+Frequency              341             784             678               1             115              42             465             563             355
+Proportion           0.102           0.234           0.203           0.000           0.034           0.013           0.139           0.168           0.106
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ssl_taxtempregime 
+       n  missing distinct 
+   13125    52824       12 
+
+lowest : cryic             frigid            hypergelic        hyperthermic      isofrigid        
+highest: isothermic        mesic             pergelic          pergelic(pdpcode) thermic          
+                                                                                                                                                          
+Value                  cryic            frigid        hypergelic      hyperthermic         isofrigid   isohyperthermic          isomesic        isothermic
+Frequency                748              2547                10               415                 2               609                76               119
+Proportion             0.057             0.194             0.001             0.032             0.000             0.046             0.006             0.009
+                                                                                  
+Value                  mesic          pergelic pergelic(pdpcode)           thermic
+Frequency               6145                10                 2              2442
+Proportion             0.468             0.001             0.000             0.186
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ssl_taxminalogy 
+       n  missing distinct 
+   12572    53377       28 
+
+lowest : allitic       amorphic      carbonatic    chloritic     coprogenous  , highest: serpentinitic sesquic       siliceous     smectitic     vermiculitic 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ssl_taxother 
+       n  missing distinct 
+     391    65558        8 
+
+lowest : 795354   coated   cracked  micro    ortstein, highest: micro    ortstein shallow  sloping  uncoated
+                                                                                  
+Value        795354   coated  cracked    micro ortstein  shallow  sloping uncoated
+Frequency         1       24        1        1       13      323       14       14
+Proportion    0.003    0.061    0.003    0.003    0.033    0.826    0.036    0.036
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ssl_osdtypelocflag 
+       n  missing distinct 
+       5    65944        5 
+
+lowest : 111320         116914         64602          795353         S1982MN0073606, highest: 111320         116914         64602          795353         S1982MN0073606
+                                                                                     
+Value              111320         116914          64602         795353 S1982MN0073606
+Frequency               1              1              1              1              1
+Proportion            0.2            0.2            0.2            0.2            0.2
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+siteiid 
+       n  missing distinct 
+   64818     1131    64329 
+
+lowest : 100059         100076         100078         100080         100097        , highest: 99978          99CA693-001    S1982MN0073604 S1999CO087005  U97MI053-2    
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+usiteid 
+       n  missing distinct 
+   65949        0    64137 
+
+lowest : # 16E18S1016 00-DRJ-10    00-DRJ-17    00-DRJ-35    00-DRJ-36   , highest: YYYYOH145013 YYYYOH167W08 YYYYOH167W10 YYYYOH167W34 YYYYOH167W35
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+site_obsdate 
+       n  missing distinct 
+   63614     2335    10832 
+
+lowest : -95.151191699999998 1925-11-01 00:00:00 1928-08-01 00:00:00 1928-10-01 00:00:00 1929-09-01 00:00:00
+highest: 39.0465722          40.214305899999999  46.371757500000001  47.435447699999997  9863-06-01 00:00:00
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+latitude_decimal_degrees 
+       n  missing distinct     Info     Mean      Gmd      .05      .10      .25      .50      .75      .90      .95 
+   53603    12346    47064        1    39.07    6.983    29.73    32.41    36.87    39.15    42.68    46.17    47.56 
+
+lowest : -120.14185 -103.83019  -94.80569  -89.57887  -78.51152, highest:   76.22833   76.22833   76.23372   86.82500  244.00000
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+longitude_decimal_degrees 
+       n  missing distinct     Info     Mean      Gmd      .05      .10      .25      .50      .75      .90      .95 
+   53603    12346    48159        1   -93.67    21.27  -122.33  -119.48  -102.78   -92.45   -87.35   -78.56   -73.07 
+
+lowest : -199.7305 -199.7234 -199.7200 -171.9275 -171.8358, highest:  173.1732  173.1940  173.1980  244.0000 3975.0000
+                                                                      
+Value       -200  -150  -100   -50     0    50   100   150   250  4000
+Frequency      3  1133 49193  2378   223   300   184   184     4     1
+Proportion 0.000 0.021 0.918 0.044 0.004 0.006 0.003 0.003 0.000 0.000
+
+For the frequency table, variable is rounded to the nearest 50
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+country_key 
+       n  missing distinct     Info     Mean      Gmd      .05      .10      .25      .50      .75      .90      .95 
+   65949        0      101     0.08    241.4    6.404      244      244      244      244      244      244      244 
+
+lowest :    3    4    7   12   13, highest: 3951 3952 3974 3975 5617
+                                                                
+Value          0    50   100   150   200   250  3950  4000  5600
+Frequency    152   310   323   283   500 64376     3     1     1
+Proportion 0.002 0.005 0.005 0.004 0.008 0.976 0.000 0.000 0.000
+
+For the frequency table, variable is rounded to the nearest 50
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+state_key 
+       n  missing distinct     Info     Mean      Gmd      .05      .10      .25      .50      .75      .90      .95 
+   65549      400       89    0.996     3969    33.84     3948     3951     3965     3976     3989     4000     4006 
+
+lowest :  271  272  282  290  815, highest: 4457 4550 5557 5617 7628
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+county_key 
+       n  missing distinct     Info     Mean      Gmd      .05      .10      .25      .50      .75      .90      .95 
+   62143     3806     2713        1     5749     1029     4427     4495     5000     5750     6384     7126     7380 
+
+lowest :  4261  4262  4263  4264  4265, highest:  9471 11219 11779 11782 12002
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+mlra_key 
+       n  missing distinct     Info     Mean      Gmd      .05      .10      .25      .50      .75      .90      .95 
+   45644    20305      323    0.999     8031    666.5     7575     7588     7655     7726     7751     7801    11323 
+
+lowest :  7558  7559  7560  7561  7562, highest: 11356 11357 11358 11359 11409
+                                                                                              
+Value       7550  7600  7650  7700  7750  7800  7850  8150  8350  9450 10800 11300 11350 11400
+Frequency   2509  5712  4591  9068 17315  2120   119     1     1     1     1  1941  2231    34
+Proportion 0.055 0.125 0.101 0.199 0.379 0.046 0.003 0.000 0.000 0.000 0.000 0.043 0.049 0.001
+
+For the frequency table, variable is rounded to the nearest 50
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ssa_key 
+       n  missing distinct     Info     Mean      Gmd      .05      .10      .25      .50      .75      .90      .95 
+   50631    15318     2763        1     9528     1187     8003     8141     8612     9499    10502    10866    11173 
+
+lowest :  7836  7837  7838  7839  7840, highest: 11790 11799 12004 12007 12008
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+npark_key 
+       n  missing distinct 
+     402    65547       57 
+
+lowest : 11413                              11430                              11431                              11435                              11438                             
+highest: 11675                              11687                              11871                              11912                              NASIS updated 6/30/2019 8:41:20 PM
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+nforest_key 
+       n  missing distinct 
+    3627    62322      138 
+
+lowest : 11780                              11781                              11786                              11790                              11791                             
+highest: 11990                              NASIS updated 6/30/2019 7:38:05 PM NASIS updated 6/30/2019 7:38:16 PM NASIS updated 6/30/2019 7:39:22 PM NASIS updated 6/30/2019 8:41:20 PM
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+note 
+       n  missing distinct 
+   65944        5     3628 
+
+lowest : NASIS updated 2/27/2015 2:43:31 PM  NASIS updated 2/27/2015 3:28:47 PM  NASIS updated 5/12/2015 10:19:24 AM NASIS updated 5/15/2015 2:13:43 PM  NASIS updated 5/16/2015 7:00:18 PM 
+highest: NCSS dated May 19 2014  1:41PM      NCSS dated May 24 2016  1:40PM      NCSS dated May 26 2018  3:00AM      NCSS dated Nov 22 2016  3:00AM      NCSS dated Nov 29 2018  3:00AM     
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+samp_taxfamhahatmatcl 
+       n  missing distinct    value 
+       8    65941        1   spolic 
+                 
+Value      spolic
+Frequency       8
+Proportion      1
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+corr_taxfamhahatmatcl 
+       n  missing distinct 
+      57    65892        8 
+
+lowest : 2016-10-28 18:05:07 artifactic          ashifactic          combustic           dredgic            
+highest: combustic           dredgic             methanogenic        pauciartifactic     spolic             
+                                                                                                                                                      
+Value      2016-10-28 18:05:07          artifactic          ashifactic           combustic             dredgic        methanogenic     pauciartifactic
+Frequency                    1                   2                   1                   5                   6                   2                   2
+Proportion               0.018               0.035               0.018               0.088               0.105               0.035               0.035
+                              
+Value                   spolic
+Frequency                   38
+Proportion               0.667
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ssl_taxfamhahatmatcl 
+                  n             missing            distinct                Info                Mean                 Gmd 
+                  5               65944                   5                   1 2015-11-06 20:16:11            51923333 
+
+lowest : 2012-12-20 21:29:52 2016-04-22 18:42:46 2016-04-23 23:13:38 2016-10-28 18:22:29 2016-10-28 19:32:12
+highest: 2012-12-20 21:29:52 2016-04-22 18:42:46 2016-04-23 23:13:38 2016-10-28 18:22:29 2016-10-28 19:32:12
+                                                                                                              
+Value      2012-12-20 13:29:52 2016-04-22 11:42:46 2016-04-23 16:13:38 2016-10-28 11:22:29 2016-10-28 12:32:12
+Frequency                    1                   1                   1                   1                   1
+Proportion                 0.2                 0.2                 0.2                 0.2                 0.2
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+pedobjupdate 
+                  n             missing            distinct                Info                Mean                 Gmd                 .05                 .10 
+              64811                1138                5701               0.999 2016-05-14 17:00:23            51283893 2013-06-24 12:23:41 2014-06-12 16:16:11 
+                .25                 .50                 .75                 .90                 .95 
+2016-04-18 17:04:04 2016-04-22 22:33:29 2016-12-12 14:39:19 2018-12-11 16:43:18 2019-02-08 13:38:18 
+
+lowest : 2001-02-13 14:55:59 2001-06-18 15:18:39 2001-09-24 18:30:58 2001-09-24 18:31:06 2001-11-08 16:38:28
+highest: 2019-06-25 12:17:40 2019-06-25 18:46:30 2019-06-25 18:58:20 2019-06-25 19:40:05 2019-06-26 15:52:40
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+siteobjupdate 
+                  n             missing            distinct                Info                Mean                 Gmd                 .05                 .10 
+              64807                1142                4557                   1 2016-01-28 14:01:17            62674549 2013-06-11 21:13:29 2013-08-23 16:40:44 
+                .25                 .50                 .75                 .90                 .95 
+2014-12-18 17:56:21 2016-06-24 19:04:25 2017-01-19 12:58:35 2018-11-02 18:32:49 2019-01-17 14:50:04 
+
+lowest : 2001-02-13 14:55:59 2005-02-08 21:32:34 2008-12-12 16:46:00 2009-06-29 20:13:27 2009-10-22 13:23:59
+highest: 2019-06-21 21:55:12 2019-06-22 03:15:43 2019-06-22 04:58:19 2019-06-25 14:35:09 2019-06-25 18:58:20
+----------------------------------------------------------------------------------------------------------------------------------------------------------------

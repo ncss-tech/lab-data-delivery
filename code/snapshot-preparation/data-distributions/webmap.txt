@@ -1,0 +1,110 @@
+x 
+
+ 16  Variables      53603  Observations
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+wmiid 
+       n  missing distinct     Info     Mean      Gmd      .05      .10      .25      .50      .75      .90      .95 
+   53603        0    53603        1    26802    17868     2681     5361    13402    26802    40203    48243    50923 
+
+lowest :     1     2     3     4     5, highest: 53599 53600 53601 53602 53603
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+series 
+       n  missing distinct 
+   53494      109    12550 
+
+lowest : -------                (grab sample)          (sandy frigid aquolls) (unknown high)         (unknown low)         
+highest: Zunhall                Zuni                   Zwingle                Zyzyl                  Zzyzx                 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+user_pedon_id 
+       n  missing distinct 
+   53603        0    53412 
+
+lowest : 00AL015001-pgm 00AL015002-pgm 00AL015003-pgm 00AL015004-pgm 00AL041001-pgm, highest: YYYY-OH173-132 YYYY-OH173-133 YYYY-OH173-134 YYYY-OH173-135 YYYY-OH173-136
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+pedon_key 
+       n  missing distinct     Info     Mean      Gmd      .05      .10      .25      .50      .75      .90      .95 
+   53603        0    53603        1    35208    24142     2917     6526    16396    37194    51180    66279    71679 
+
+lowest :     1     2     3     4     5, highest: 75051 75052 75053 75054 75055
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+peiid 
+       n  missing distinct 
+   53603        0    53023 
+
+lowest : 10007  100080 100081 100082 100083, highest: 99863  99904  99910  99928  NULL  
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+soil_classification 
+       n  missing distinct 
+   53401      202    18016 
+
+lowest : .                             Abruptic Durixeralfs          Acid                          Acid, mesic Aeric Fluvaquents Acrudoxic Hydrudands         
+highest: Vitrandic Glossoboralfs       Xeric Argicryoll              Xeric Haplargid               Xeric Haplocalcids            Xeric Torripsamment          
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+primary_lab_report 
+       n  missing distinct 
+   53603        0    53603 
+
+lowest : https://ncsslabdatamart.sc.egov.usda.gov/rptExecute.aspx?p=1&r=1&submit1=Get+Report     https://ncsslabdatamart.sc.egov.usda.gov/rptExecute.aspx?p=10&r=1&submit1=Get+Report    https://ncsslabdatamart.sc.egov.usda.gov/rptExecute.aspx?p=100&r=1&submit1=Get+Report   https://ncsslabdatamart.sc.egov.usda.gov/rptExecute.aspx?p=1000&r=1&submit1=Get+Report  https://ncsslabdatamart.sc.egov.usda.gov/rptExecute.aspx?p=10000&r=1&submit1=Get+Report
+highest: https://ncsslabdatamart.sc.egov.usda.gov/rptExecute.aspx?p=9995&r=1&submit1=Get+Report  https://ncsslabdatamart.sc.egov.usda.gov/rptExecute.aspx?p=9996&r=1&submit1=Get+Report  https://ncsslabdatamart.sc.egov.usda.gov/rptExecute.aspx?p=9997&r=1&submit1=Get+Report  https://ncsslabdatamart.sc.egov.usda.gov/rptExecute.aspx?p=9998&r=1&submit1=Get+Report  https://ncsslabdatamart.sc.egov.usda.gov/rptExecute.aspx?p=9999&r=1&submit1=Get+Report 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+taxonomy_report 
+       n  missing distinct 
+   53603        0    53603 
+
+lowest : https://ncsslabdatamart.sc.egov.usda.gov/rptExecute.aspx?p=1&r=3&submit1=Get+Report     https://ncsslabdatamart.sc.egov.usda.gov/rptExecute.aspx?p=10&r=3&submit1=Get+Report    https://ncsslabdatamart.sc.egov.usda.gov/rptExecute.aspx?p=100&r=3&submit1=Get+Report   https://ncsslabdatamart.sc.egov.usda.gov/rptExecute.aspx?p=1000&r=3&submit1=Get+Report  https://ncsslabdatamart.sc.egov.usda.gov/rptExecute.aspx?p=10000&r=3&submit1=Get+Report
+highest: https://ncsslabdatamart.sc.egov.usda.gov/rptExecute.aspx?p=9995&r=3&submit1=Get+Report  https://ncsslabdatamart.sc.egov.usda.gov/rptExecute.aspx?p=9996&r=3&submit1=Get+Report  https://ncsslabdatamart.sc.egov.usda.gov/rptExecute.aspx?p=9997&r=3&submit1=Get+Report  https://ncsslabdatamart.sc.egov.usda.gov/rptExecute.aspx?p=9998&r=3&submit1=Get+Report  https://ncsslabdatamart.sc.egov.usda.gov/rptExecute.aspx?p=9999&r=3&submit1=Get+Report 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+supplementary_lab_report 
+       n  missing distinct 
+   53603        0    53603 
+
+lowest : https://ncsslabdatamart.sc.egov.usda.gov/rptExecute.aspx?p=1&r=2&submit1=Get+Report     https://ncsslabdatamart.sc.egov.usda.gov/rptExecute.aspx?p=10&r=2&submit1=Get+Report    https://ncsslabdatamart.sc.egov.usda.gov/rptExecute.aspx?p=100&r=2&submit1=Get+Report   https://ncsslabdatamart.sc.egov.usda.gov/rptExecute.aspx?p=1000&r=2&submit1=Get+Report  https://ncsslabdatamart.sc.egov.usda.gov/rptExecute.aspx?p=10000&r=2&submit1=Get+Report
+highest: https://ncsslabdatamart.sc.egov.usda.gov/rptExecute.aspx?p=9995&r=2&submit1=Get+Report  https://ncsslabdatamart.sc.egov.usda.gov/rptExecute.aspx?p=9996&r=2&submit1=Get+Report  https://ncsslabdatamart.sc.egov.usda.gov/rptExecute.aspx?p=9997&r=2&submit1=Get+Report  https://ncsslabdatamart.sc.egov.usda.gov/rptExecute.aspx?p=9998&r=2&submit1=Get+Report  https://ncsslabdatamart.sc.egov.usda.gov/rptExecute.aspx?p=9999&r=2&submit1=Get+Report 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+water_retention_report 
+       n  missing distinct 
+   53603        0    53603 
+
+lowest : https://ncsslabdatamart.sc.egov.usda.gov/rptExecute.aspx?p=1&r=6&submit1=Get+Report     https://ncsslabdatamart.sc.egov.usda.gov/rptExecute.aspx?p=10&r=6&submit1=Get+Report    https://ncsslabdatamart.sc.egov.usda.gov/rptExecute.aspx?p=100&r=6&submit1=Get+Report   https://ncsslabdatamart.sc.egov.usda.gov/rptExecute.aspx?p=1000&r=6&submit1=Get+Report  https://ncsslabdatamart.sc.egov.usda.gov/rptExecute.aspx?p=10000&r=6&submit1=Get+Report
+highest: https://ncsslabdatamart.sc.egov.usda.gov/rptExecute.aspx?p=9995&r=6&submit1=Get+Report  https://ncsslabdatamart.sc.egov.usda.gov/rptExecute.aspx?p=9996&r=6&submit1=Get+Report  https://ncsslabdatamart.sc.egov.usda.gov/rptExecute.aspx?p=9997&r=6&submit1=Get+Report  https://ncsslabdatamart.sc.egov.usda.gov/rptExecute.aspx?p=9998&r=6&submit1=Get+Report  https://ncsslabdatamart.sc.egov.usda.gov/rptExecute.aspx?p=9999&r=6&submit1=Get+Report 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+correlation_report 
+       n  missing distinct 
+   53603        0    53603 
+
+lowest : https://ncsslabdatamart.sc.egov.usda.gov/rptExecute.aspx?p=1&r=7&submit1=Get+Report     https://ncsslabdatamart.sc.egov.usda.gov/rptExecute.aspx?p=10&r=7&submit1=Get+Report    https://ncsslabdatamart.sc.egov.usda.gov/rptExecute.aspx?p=100&r=7&submit1=Get+Report   https://ncsslabdatamart.sc.egov.usda.gov/rptExecute.aspx?p=1000&r=7&submit1=Get+Report  https://ncsslabdatamart.sc.egov.usda.gov/rptExecute.aspx?p=10000&r=7&submit1=Get+Report
+highest: https://ncsslabdatamart.sc.egov.usda.gov/rptExecute.aspx?p=9995&r=7&submit1=Get+Report  https://ncsslabdatamart.sc.egov.usda.gov/rptExecute.aspx?p=9996&r=7&submit1=Get+Report  https://ncsslabdatamart.sc.egov.usda.gov/rptExecute.aspx?p=9997&r=7&submit1=Get+Report  https://ncsslabdatamart.sc.egov.usda.gov/rptExecute.aspx?p=9998&r=7&submit1=Get+Report  https://ncsslabdatamart.sc.egov.usda.gov/rptExecute.aspx?p=9999&r=7&submit1=Get+Report 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+pedon_description_report 
+       n  missing distinct 
+   53603        0    53412 
+
+lowest : https://nasis.sc.egov.usda.gov/NasisReportsWebSite/limsreport.aspx?report_name=Pedon_Site_Description_usepedonid&pedon_id=00AL015001-pgm https://nasis.sc.egov.usda.gov/NasisReportsWebSite/limsreport.aspx?report_name=Pedon_Site_Description_usepedonid&pedon_id=00AL015002-pgm https://nasis.sc.egov.usda.gov/NasisReportsWebSite/limsreport.aspx?report_name=Pedon_Site_Description_usepedonid&pedon_id=00AL015003-pgm https://nasis.sc.egov.usda.gov/NasisReportsWebSite/limsreport.aspx?report_name=Pedon_Site_Description_usepedonid&pedon_id=00AL015004-pgm https://nasis.sc.egov.usda.gov/NasisReportsWebSite/limsreport.aspx?report_name=Pedon_Site_Description_usepedonid&pedon_id=00AL041001-pgm
+highest: https://nasis.sc.egov.usda.gov/NasisReportsWebSite/limsreport.aspx?report_name=Pedon_Site_Description_usepedonid&pedon_id=YYYY-OH173-132 https://nasis.sc.egov.usda.gov/NasisReportsWebSite/limsreport.aspx?report_name=Pedon_Site_Description_usepedonid&pedon_id=YYYY-OH173-133 https://nasis.sc.egov.usda.gov/NasisReportsWebSite/limsreport.aspx?report_name=Pedon_Site_Description_usepedonid&pedon_id=YYYY-OH173-134 https://nasis.sc.egov.usda.gov/NasisReportsWebSite/limsreport.aspx?report_name=Pedon_Site_Description_usepedonid&pedon_id=YYYY-OH173-135 https://nasis.sc.egov.usda.gov/NasisReportsWebSite/limsreport.aspx?report_name=Pedon_Site_Description_usepedonid&pedon_id=YYYY-OH173-136
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+soil_profile 
+       n  missing distinct 
+   53603        0    53023 
+
+lowest : https://nasis.sc.egov.usda.gov/NasisReportsWebSite/limsreport.aspx?report_name=WEB-profiles-by-PEIID&pedon_peiid=       https://nasis.sc.egov.usda.gov/NasisReportsWebSite/limsreport.aspx?report_name=WEB-profiles-by-PEIID&pedon_peiid=10007  https://nasis.sc.egov.usda.gov/NasisReportsWebSite/limsreport.aspx?report_name=WEB-profiles-by-PEIID&pedon_peiid=100080 https://nasis.sc.egov.usda.gov/NasisReportsWebSite/limsreport.aspx?report_name=WEB-profiles-by-PEIID&pedon_peiid=100081 https://nasis.sc.egov.usda.gov/NasisReportsWebSite/limsreport.aspx?report_name=WEB-profiles-by-PEIID&pedon_peiid=100082
+highest: https://nasis.sc.egov.usda.gov/NasisReportsWebSite/limsreport.aspx?report_name=WEB-profiles-by-PEIID&pedon_peiid=99862  https://nasis.sc.egov.usda.gov/NasisReportsWebSite/limsreport.aspx?report_name=WEB-profiles-by-PEIID&pedon_peiid=99863  https://nasis.sc.egov.usda.gov/NasisReportsWebSite/limsreport.aspx?report_name=WEB-profiles-by-PEIID&pedon_peiid=99904  https://nasis.sc.egov.usda.gov/NasisReportsWebSite/limsreport.aspx?report_name=WEB-profiles-by-PEIID&pedon_peiid=99910  https://nasis.sc.egov.usda.gov/NasisReportsWebSite/limsreport.aspx?report_name=WEB-profiles-by-PEIID&pedon_peiid=99928 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+soil_web 
+       n  missing distinct 
+   53603        0    49385 
+
+lowest : https://casoilresource.lawr.ucdavis.edu/gmap/?loc=-0.0902778,-78.4167 https://casoilresource.lawr.ucdavis.edu/gmap/?loc=-0.3375,-78.5625    https://casoilresource.lawr.ucdavis.edu/gmap/?loc=-0.416667,-78.0389  https://casoilresource.lawr.ucdavis.edu/gmap/?loc=-0.466667,-78.7111  https://casoilresource.lawr.ucdavis.edu/gmap/?loc=-0.516667,-78.6194 
+highest: https://casoilresource.lawr.ucdavis.edu/gmap/?loc=9.9,-83.6833        https://casoilresource.lawr.ucdavis.edu/gmap/?loc=9.9,78              https://casoilresource.lawr.ucdavis.edu/gmap/?loc=9.91577,-83.8802    https://casoilresource.lawr.ucdavis.edu/gmap/?loc=9.94766,-83.8678    https://casoilresource.lawr.ucdavis.edu/gmap/?loc=9.97329,-83.86     
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+lat 
+       n  missing distinct     Info     Mean      Gmd      .05      .10      .25      .50      .75      .90      .95 
+   53603        0    47064        1    39.07    6.956    29.73    32.41    36.88    39.15    42.68    46.17    47.56 
+
+lowest : -78.51152 -77.84844 -77.84800 -77.57392 -77.54519, highest:  76.22798  76.22833  76.22833  76.23372  86.82500
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+long 
+       n  missing distinct     Info     Mean      Gmd      .05      .10      .25      .50      .75      .90      .95 
+   53603        0    48158        1   -93.77    21.07  -122.33  -119.48  -102.78   -92.45   -87.36   -78.56   -73.07 
+
+lowest : -199.7305 -199.7234 -199.7200 -171.9275 -171.8358, highest:  166.7662  173.1686  173.1732  173.1940  173.1980
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
