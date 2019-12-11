@@ -1,3 +1,11 @@
+# proportion of non-NA records == 0
+propZero <- function(z) {
+  z <- na.omit(z)
+  n <- length(z)
+  zero <- length(which(z == 0))
+  res <- round(zero / n, 3)
+  return(res)
+}
 
 
 
