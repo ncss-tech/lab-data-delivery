@@ -8,26 +8,28 @@ db <- dbConnect(RSQLite::SQLite(), 'E:/NASIS-KSSL-LDM/LDM/LDM-compact.sqlite')
 
 # quick check: tables / fields
 dbListTables(db)
-dbListFields(db, 'chemical')
+dbListFields(db, 'physical')
 
 # get all layer table records
-x <- dbGetQuery(db, "SELECT * from chemical;", stringsAsFactors=FALSE)
+x <- dbGetQuery(db, "SELECT * from physical;", stringsAsFactors=FALSE)
 
 # field types and NA eval
 str(x)
 
+
+## check a couple of records
+getData('physical', '00P00207')
+
+analytes <- dbGetQuery(db, "SELECT * from analyte;")
+
+idx <- grep('cole', analytes$proced_name, ignore.case = TRUE)
+analytes[idx, ]
+
+
+
+
 # close file
 dbDisconnect(db)
-
-# potential problems with values 0-1 truncated at 0.
-vars <- c('caco3_lt_2_mm', 'aluminum_na_pyro_phosphate', 'iron_sodium_pyro_phosphate', 'carbon_sodium_pyro_phospate', 'manganese_ammonium_oxalate', 'fe_ammoniumoxalate_extractable', 'ammoniumoxalate_opticaldensity', 'manganese_dithionite_citrate', 'total_nitrogen_ncs', 'manganese_kcl_extractable', 'aluminum_kcl_extractable', 'k_nh4_ph_7', 'na_nh4_ph_7', 'mg_nh4_ph_7', 'ca_nh4_ph_7')
-
-#
-Hmisc::describe(x[, vars])
-
-
-# check proportion == 0
-sapply(x[, vars], propZero)
 
 
 # non-method code cols
@@ -45,19 +47,14 @@ cat(names(sort(prop.0[prop.0 > 0.35])), sep = '\n')
 
 
 
-
-
-
-getData('PSDA_and_Rock_Fragments', '00P00207')
-
-getData('Bulk_Density_and_Moisture', '00P00207')
-
+## COLE working?
 x[which(x$labsampnum == '00P00207'), grep('cole', names(x), ignore.case = TRUE)]
+x[which(x$labsampnum == '05N02179'), grep('cole', names(x), ignore.case = TRUE)]
+
+# seems to be working.. but there are 3 rows / hz with different prep codes
+x[which(x$labsampnum == '05N02179'), c('labsampnum', 'prep_code', 'cole_whole_soil')]
+
+hist(x$cole_whole_soil[x$cole_whole_soil > 0 & x$cole_whole_soil < 1], breaks = 50)
 
 
-analytes <- dbGetQuery(db, "SELECT * from NCSS_Analyte;")
 
-idx <- grep('COLE', analytes$analyte_name, ignore.case = TRUE)
-analytes[idx, ]
-
-kable(prep.codes, row.names = FALSE)

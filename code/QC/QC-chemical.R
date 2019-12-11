@@ -44,3 +44,13 @@ dotchart(sort(prop.0[prop.0 > 0.35]), cex=0.75, pt.cex=1, pch=16, xlab='Percent 
 cat(names(sort(prop.0[prop.0 > 0.35])), sep = '\n')
 
 
+
+## compare values with last Access snapshot
+db.old <- dbConnect(RSQLite::SQLite(), "E:/NASIS-KSSL-LDM/KSSL-data.sqlite")
+x.old <- dbGetQuery(db, "SELECT COLEws FROM Bulk_Density_and_Moisture;")
+Hmisc::describe(x$COLEws)
+
+
+
+
+
