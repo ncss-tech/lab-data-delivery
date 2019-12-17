@@ -38,10 +38,10 @@ nm <- nm[grep('method', nm, invert = TRUE)]
 prop.0 <- sapply(x[, nm], propZero)
 
 # check just those > 35% non-null == 0
-dotchart(sort(prop.0[prop.0 > 0.35]), cex=0.75, pt.cex=1, pch=16, xlab='Percent Non-NULL Records == 0')
+dotchart(sort(prop.0[prop.0 > 0.35]), cex=0.75, pt.cex=1, pch=16, xlab='Percent Non-NULL Records == 0', main='Chemical Table\n>35% Threshold')
 
 # dump for Jason
-cat(names(sort(prop.0[prop.0 > 0.35])), sep = '\n')
+cat(names(sort(prop.0[prop.0 > 0.35], decreasing = TRUE)), sep = '\n')
 
 
 
@@ -52,11 +52,11 @@ x.old <- dbGetQuery(db.old, "SELECT Mn_dith FROM Carbon_and_Extractions;")
 Hmisc::describe(x.old$mn_dith)
 table(x.old$mn_dith[x.old$mn_dith < 2])
 
-dotchart(sort(table(x.old$mn_dith[x.old$mn_dith > 0 & x.old$mn_dith < 2])))
+dotchart(sort(table(x.old$mn_dith[x.old$mn_dith > 0 & x.old$mn_dith < 2])), main='Chemical Table\n>35% Threshold')
 
 
-x.old <- dbGetQuery(db, "SELECT COLEws FROM Bulk_Density_and_Moisture;")
-Hmisc::describe(x$COLEws)
+x.old <- dbGetQuery(db.old, "SELECT COLEws FROM Bulk_Density_and_Moisture;")
+Hmisc::describe(x.old$COLEws)
 
 
 
