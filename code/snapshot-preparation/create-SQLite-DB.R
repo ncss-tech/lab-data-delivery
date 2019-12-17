@@ -25,7 +25,7 @@ writeTable(file.path(base.path, 'preparation.txt.gz'), table.name = 'preparation
 
 writeTable(file.path(base.path, 'calculations.txt.gz'), table.name = 'calculations', d = '|', dd=TRUE)
 
-writeTable(file.path(base.path, 'chemical_properties.txt.gz'), table.name = 'chemical', d = '|', dd=TRUE)
+writeTable(file.path(base.path, 'chemical.txt.gz'), table.name = 'chemical', d = '|', dd=TRUE)
 writeTable(file.path(base.path, 'physical_properties.txt.gz'), table.name = 'physical', d = '|', dd=TRUE)
 writeTable(file.path(base.path, 'layer.txt.gz'), table.name = 'layer', d = '|', dd=TRUE)
 
@@ -118,10 +118,11 @@ dbGetQuery(db, "SELECT result_source_key, prep_code, labsampnum, clay_total, par
 
 dbGetQuery(db, "SELECT * from rosetta LIMIT 10;")
 
-
-
 dbGetQuery(db, "SELECT layer_key, labsampnum, pedon_key, hzn_top, hzn_bot, hzn_desgn from layer WHERE pedon_key = 34942 ;")
 dbGetQuery(db, "SELECT * from rosetta WHERE layer_key = 211388;")
+
+# check on CBD-Mn
+zz <- dbGetQuery(db, "SELECT manganese_dithionite_citrate FROM chemical;")
 
 
 # close file
