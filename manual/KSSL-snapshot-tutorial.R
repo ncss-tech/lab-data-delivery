@@ -8,7 +8,7 @@ db <- dbConnect(RSQLite::SQLite(), 'E:/NASIS-KSSL-LDM/LDM/LDM-compact.sqlite')
 dbListTables(db)
 
 # list fields
-dbListFields(db, 'nasis_site')
+dbListFields(db, 'nasis_ncss')
 dbListFields(db, 'physical')
 
 
