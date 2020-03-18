@@ -22,6 +22,8 @@ dbGetQuery(db, "SELECT layer_key, natural_key, pedon_key, hzn_top, hzn_bot, hzn_
 
 dbGetQuery(db, "SELECT layer_key, labsampnum, pedon_key, hzn_top, hzn_bot, hzn_desgn from layer WHERE pedon_key = 52931 ;")
 
+dbGetQuery(db, "SELECT * from layer WHERE labsampnum = 'UCD03792' ;")
+
 
 # none in here...
 dbGetQuery(db, "SELECT * from calculations WHERE labsampnum = 'UCD03792' ;")
@@ -39,6 +41,9 @@ x.c[, idx]
 idx <- which(sapply(x.p, f))
 x.p[, idx]
 
+
+
+x.p[, c('labsampnum', 'prep_code', names(x.p)[grep('density', names(x.p))])]
 
 
 # close file
