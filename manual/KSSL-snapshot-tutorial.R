@@ -24,6 +24,9 @@ dbGetQuery(db, "SELECT layer_key, labsampnum, pedon_key, hzn_top, hzn_bot, hzn_d
 
 dbGetQuery(db, "SELECT * from layer WHERE labsampnum = 'UCD03792' ;")
 
+dbGetQuery(db, "SELECT * from layer WHERE labsampnum = 'UCD03792' ;")
+
+
 
 # none in here...
 dbGetQuery(db, "SELECT * from calculations WHERE labsampnum = 'UCD03792' ;")
