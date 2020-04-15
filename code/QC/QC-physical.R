@@ -1,5 +1,6 @@
 library(DBI)
 library(RSQLite)
+library(knitr)
 
 source('../snapshot-preparation/snapshot-functions.R')
 
@@ -15,6 +16,22 @@ x <- dbGetQuery(db, "SELECT * from physical;", stringsAsFactors=FALSE)
 
 # field types and NA eval
 str(x)
+
+## multiple prep code issues
+# apparent duplicate labsampnums
+table(x$prep_code, useNA = 'always')
+
+z <- x[is.na(x$prep_code), ]
+
+## tabulate prep code frequency per record
+tab <- table(x$labsampnum)
+tab <- sort(tab, decreasing = TRUE)
+table(tab)
+
+
+z <- x[which(x$labsampnum == '05N02179'), c('labsampnum', 'prep_code', 'clay_total', 'cole_whole_soil', 'cec7_clay_ratio', 'effective_cec_to_clay_ratio')]
+
+kable(z, row.names = FALSE)
 
 
 ## check a couple of records

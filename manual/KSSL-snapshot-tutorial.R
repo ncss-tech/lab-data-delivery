@@ -27,6 +27,10 @@ dbGetQuery(db, "SELECT * from layer WHERE labsampnum = 'UCD03792' ;")
 dbGetQuery(db, "SELECT * from layer WHERE labsampnum = 'UCD03792' ;")
 
 
+x <- dbGetQuery(db, "SELECT * from physical WHERE labsampnum = '78P00891' ;")
+
+
+
 
 # none in here...
 dbGetQuery(db, "SELECT * from calculations WHERE labsampnum = 'UCD03792' ;")
