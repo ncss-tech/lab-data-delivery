@@ -55,6 +55,7 @@ dbListFields(db, 'procedure')
 dbListFields(db, 'webmap')
 dbListFields(db, 'layer')
 dbListFields(db, 'procedure')
+dbListFields(db, 'rosetta')
 
 
 ## index tables
