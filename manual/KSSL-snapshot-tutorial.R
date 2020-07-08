@@ -53,6 +53,13 @@ x.p[, idx]
 x.p[, c('labsampnum', 'prep_code', names(x.p)[grep('density', names(x.p))])]
 
 
+
+
+x <- dbGetQuery(db, "SELECT * FROM layer LIMIT 10 ;")
+
+
+str(x)
+
 # close file
 dbDisconnect(db)
 
