@@ -63,6 +63,12 @@ dbListFields(db, 'rosetta')
 # [1] "analyte"      "calculations" "chemical"     "geochemical"  "glass"        "layer"        "method"       "nasis_ncss"  
 # [9] "nasis_pedon"  "nasis_site"   "physical"     "preparation"  "procedure"    "rosetta"      "webmap"       "xray_thermal"
 
+
+## consider building-in foreign keys
+## must be added at table creation time
+# https://stackoverflow.com/questions/1884818/how-do-i-add-a-foreign-key-to-an-existing-sqlite-table
+# https://stackoverflow.com/questions/50852820/correct-usage-of-the-foreign-key-function
+
 indexTable('analyte', c('procedure_key'))
 
 indexTable('calculations', c('labsampnum', 'result_source_key', 'prep_code'))
@@ -100,10 +106,6 @@ indexTable('xray_thermal', c('labsampnum', 'result_source_key', 'prep_code'))
 ## cleanup
 dbExecute(db, 'VACUUM;')
 
-
-
-## TODO: type conversion for numeric columns
-## TODO: does SQLite differentiate between integers and REAL?
 
 
 ## TODO document linkages via igraph
