@@ -9,7 +9,7 @@ CREATE TABLE layer
 	`layer_field_label_1` TEXT,
 	`layer_field_label_2` TEXT,
 	`layer_field_label_3` TEXT,
-	`hzn_top` TEXT,
+	`hzn_top` REAL,
 	`hzn_bot` REAL,
 	`hzn_desgn_old` TEXT,
 	`hzn_desgn` TEXT,

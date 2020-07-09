@@ -83,8 +83,9 @@ writeTable <- function(f, table.name, d='|', dd=FALSE) {
   # * typically pipe-delim
   # * ignore '#' as comment, as it occurs in some records
   # * guess data types by reading in 1 million rows
-  # * follow-up type conversion will be required...
-  x <- suppressWarnings(read_delim(f, delim = d, comment = '', guess_max = 1e6))
+  # * backslashes and quotes are not escaped
+  # * follow-up type conversion may be required...
+  x <- suppressWarnings(read_delim(f, delim = d, comment = '', guess_max = 1e6, escape_backslash = FALSE, escape_double = FALSE))
   
   # save problems for later review
   p <- as.data.frame(problems(x))

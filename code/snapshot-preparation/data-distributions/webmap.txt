@@ -12,8 +12,8 @@ series
        n  missing distinct 
    53494      109    12550 
 
-lowest : -------                (grab sample)          (sandy frigid aquolls) (unknown high)         (unknown low)         
-highest: Zunhall                Zuni                   Zwingle                Zyzyl                  Zzyzx                 
+lowest : -------                     "Fort collins ""like"       "Karlin, ""typic"""         "Nunn ""like"""             "Unnamed 1140 slope ""gs"""
+highest: Zunhall                     Zuni                        Zwingle                     Zyzyl                       Zzyzx                      
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 user_pedon_id 
        n  missing distinct 

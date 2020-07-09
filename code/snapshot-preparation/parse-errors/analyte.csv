@@ -1,3 +1,1 @@
-"row","col","expected","actual","file"
-509,"proced_desc","delimiter or quote","T","'E:/NASIS-KSSL-LDM/LDM/analyte.txt.gz'"
-509,"proced_desc","delimiter or quote",".","'E:/NASIS-KSSL-LDM/LDM/analyte.txt.gz'"
+"row","col","expected","actual"

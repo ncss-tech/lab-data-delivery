@@ -1,6 +1,1 @@
-"row","col","expected","actual","file"
-132,"notes","delimiter or quote","R","'E:/NASIS-KSSL-LDM/LDM/analysis_procedure.txt.gz'"
-132,"notes","delimiter or quote","1","'E:/NASIS-KSSL-LDM/LDM/analysis_procedure.txt.gz'"
-132,NA,"10 columns","19 columns","'E:/NASIS-KSSL-LDM/LDM/analysis_procedure.txt.gz'"
-506,"proced_desc","delimiter or quote","T","'E:/NASIS-KSSL-LDM/LDM/analysis_procedure.txt.gz'"
-506,"proced_desc","delimiter or quote",".","'E:/NASIS-KSSL-LDM/LDM/analysis_procedure.txt.gz'"
+"row","col","expected","actual"
