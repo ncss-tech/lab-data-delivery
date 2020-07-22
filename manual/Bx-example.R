@@ -1,8 +1,9 @@
-## Get PSDA (total sand, silt, clay) associated with potential fragic properties ("Bx" horizons)
+## Get PSDA (total sand, silt, clay) associated with potential fragic properties / fragipan
+## using pattern matching on horizon designation, roughly "Bx" horizons
 ## using local copy of the SQLite snapshot and SDA interface to the same data
 ## display on a texture triangle
 ##
-## D.E. Beaudette, P. Drohan, J Nemecek
+## D.E. Beaudette, P. Drohan, J. Nemecek
 ## 2020-07-22
 ##
 
@@ -45,7 +46,7 @@ dbDisconnect(db)
 
 
 ##
-## SDA Interface
+## SDA Interface, this requires a network connection but otherwise it just WORKS!
 ##
 qq <- "
 SELECT
