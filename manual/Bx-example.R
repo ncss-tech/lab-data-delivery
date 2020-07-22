@@ -1,3 +1,11 @@
+## Get PSDA (total sand, silt, clay) associated with potential fragic properties ("Bx" horizons)
+## using local copy of the SQLite snapshot and SDA interface to the same data
+## display on a texture triangle
+##
+## D.E. Beaudette, P. Drohan, J Nemecek
+## 2020-07-22
+##
+
 ## load packages
 library(aqp)
 library(soilDB)
@@ -89,7 +97,7 @@ TT.plot(
   cex.lab=0.75,                 # scaling of label text
   cex.axis=0.75,                # scaling of axis
   cex=0.5,                      # scaling of point symbols
-  col=alpha('royalblue', 0.25),  # color of point symbols, with 25% transparency
+  col=alpha('royalblue', 0.125),  # color of point symbols, with transparency
   frame.bg.col='white',         # background color
   class.lab.col='black',        # color for texture class labels
   lwd.axis=1.5,                    # line thickness for axis
