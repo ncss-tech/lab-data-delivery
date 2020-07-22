@@ -107,10 +107,21 @@ plot(g, vertex.label.family='sans', edge.color = '#4169E166', vertex.label.cex=0
 plot(g, vertex.label.family='sans', edge.color = 'grey', vertex.label.cex=0.85, vertex.color=membership(cl), vertex.label.color='black', vertex.size=sqrt(degree(g)) * 5, edge.label=x$fields, edge.label.cex=0.5, edge.label.family='sans', edge.label.color='black', layout = layout_as_star)
 
 
-svg(filename='relationships.svg', width = 12, height = 12, pointsize = 12, family = 'sans')
+
+
+
+svg(filename='relationships-coded.svg', width = 12, height = 12, pointsize = 14, family = 'sans')
 par(mar=c(0,0,0,0))
 
-plot(g, vertex.label.family='sans', edge.color = '#4169E166', vertex.label.cex=0.85, vertex.color=grey(0.85), vertex.label.color='black', vertex.size=sqrt(degree(g)) * 5, edge.label=x$fields, edge.label.cex=0.65, edge.label.family='sans', edge.label.color='black', layout = layout_as_star)
+plot(g, vertex.label.family='sans', edge.color = 'grey', vertex.label.cex=0.85, vertex.color=membership(cl), vertex.label.color='black', vertex.size=sqrt(degree(g)) * 10, edge.label=x$fields, edge.label.cex=0.5, edge.label.family='sans', edge.label.color='black', layout = layout_as_star)
+
+dev.off()
+
+
+svg(filename='relationships.svg', width = 12, height = 12, pointsize = 14, family = 'sans')
+par(mar=c(0,0,0,0))
+
+plot(g, vertex.label.family='sans', edge.color = '#4169E166', vertex.label.cex=0.85, vertex.color=grey(0.85), vertex.label.color='black', vertex.size=sqrt(degree(g)) * 10, edge.label=x$fields, edge.label.cex=0.65, edge.label.family='sans', edge.label.color='black', layout = layout_as_star)
 
 dev.off()
 
