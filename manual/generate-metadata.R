@@ -7,7 +7,10 @@ library(data.tree)
 
 ## might be simpler from a data.frame generated via SQL joins (denormalized form)
 
-## TODO: what about units of measure?
+## units of measure are in analyte.uom_abbrev 
+
+## why are some column names abbreviated?
+# not SQLite limitation
 
 
 # connect
@@ -25,7 +28,9 @@ dbGetQuery(db, "SELECT particle_size_method from physical limit 10 ;")
 
 dbGetQuery(db, "SELECT * from method where proced_code = '3A1a1a' ;")
 
-dbGetQuery(db, "SELECT * from analyte WHERE procedure_key = '53' ;")
+## !!!
+## this isn't right
+dbGetQuery(db, "SELECT * from analyte WHERE analyte_key = '53' ;")
 
 dbGetQuery(db, "SELECT * from preparation limit 10;")
 

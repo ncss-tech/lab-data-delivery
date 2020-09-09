@@ -3,6 +3,10 @@ library(DBI)
 library(RSQLite)
 library(Hmisc)
 
+## upload LDM-compact.sqlite.gz to
+# https://new.cloudvault.usda.gov/index.php/s/eSoPYbWDBQNX2HP
+
+
 # helper functions for making / indexing tables
 source('snapshot-functions.R')
 
@@ -12,15 +16,38 @@ base.path <- 'E:/NASIS-KSSL-LDM/LDM'
 # output SQLite DB file name
 db.file <- file.path(base.path, 'LDM-compact.sqlite')
 
-
 # init DB
 # best to remove old version first
 unlink(db.file)
 db <- dbConnect(RSQLite::SQLite(), db.file)
 
-writeTable(file.path(base.path, 'analysis_procedure.txt.gz'), table.name = 'procedure', d = '|')
-writeTable(file.path(base.path, 'analyte.txt.gz'), table.name = 'analyte', d = '|')
-writeTable(file.path(base.path, 'method_code.txt.gz'), table.name = 'method', d = '|')
+# table names should match SDA tables
+# SELECT v.name AS SDA_Views
+# FROM sys.views as v 
+# WHERE v.name LIKE 'Lab_%'  ;
+
+# lab_analysis_procedure
+# lab_analyte
+# lab_area
+# lab_calculations_including_estimates_and_default_values
+# lab_chemical_properties
+# lab_combine_nasis_ncss
+# lab_layer
+# lab_major_and_trace_elements_and_oxides
+# lab_method_code
+# lab_mineralogy_glass_count
+# lab_pedon
+# lab_physical_properties
+# lab_preparation
+# lab_rosetta_Key
+# lab_site
+# lab_webmap
+# lab_xray_and_thermal
+
+
+writeTable(file.path(base.path, 'analysis_procedure.csv.gz'), table.name = 'procedure', d = ',')
+writeTable(file.path(base.path, 'analyte.csv.gz'), table.name = 'analyte', d = ',')
+writeTable(file.path(base.path, 'method_code.csv.gz'), table.name = 'method', d = ',')
 writeTable(file.path(base.path, 'preparation.txt.gz'), table.name = 'preparation', d = '|')
 
 writeTable(file.path(base.path, 'calculations.txt.gz'), table.name = 'calculations', d = '|', dd=TRUE)
@@ -42,15 +69,12 @@ writeTable(file.path(base.path, 'rosetta.txt.gz'), table.name = 'rosetta', d = '
 writeTable(file.path(base.path, 'webmap.csv.gz'), table.name = 'webmap', d = ',', dd=TRUE)
 
 
-## 2019-11-13: these are now part of the tables Jason is preparing
-# # manually edited CSV, stored in GH repo
-# writeTable(file.path('../../metadata/', 'procedures.csv'), table.name = 'procedures', d = ',')
-# writeTable(file.path('../../metadata/', 'methods.csv'), table.name = 'methods', d = ',')
 
 
 # check
 dbListTables(db)
 dbListFields(db, 'method')
+dbListFields(db, 'analyte')
 dbListFields(db, 'procedure')
 dbListFields(db, 'webmap')
 dbListFields(db, 'layer')
@@ -69,7 +93,7 @@ dbListFields(db, 'rosetta')
 # https://stackoverflow.com/questions/1884818/how-do-i-add-a-foreign-key-to-an-existing-sqlite-table
 # https://stackoverflow.com/questions/50852820/correct-usage-of-the-foreign-key-function
 
-indexTable('analyte', c('procedure_key'))
+indexTable('analyte', c('analyte_key'))
 
 indexTable('calculations', c('labsampnum', 'result_source_key', 'prep_code'))
 
@@ -107,9 +131,8 @@ indexTable('xray_thermal', c('labsampnum', 'result_source_key', 'prep_code'))
 dbExecute(db, 'VACUUM;')
 
 
-
-## TODO document linkages via igraph
-
+## TODO: data availability table
+# see geochemical-database.R
 
 
 # get data
