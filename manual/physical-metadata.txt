@@ -1,0 +1,290 @@
+                                                                                   levelName
+1   physical                                                                                
+2    ¦--particle_size_method                                                                
+3    ¦   ¦-- PSDA, Air-dry, <2 mm Particles                                                 
+4    ¦   ¦   ¦--PSDA, Routine, Pipet                                                        
+5    ¦   ¦   ¦   ¦--3A1                                                                     
+6    ¦   ¦   ¦   °--3A1a1a                                                                  
+7    ¦   ¦   ¦--PSDA, no pretreatment, Pipet                                                
+8    ¦   ¦   ¦   °--3A1i                                                                    
+9    ¦   ¦   °--PSDA, centrifuge                                                            
+10   ¦   ¦       °--PSDA2                                                                   
+11   ¦   ¦-- PSDA, Moist, Pipet                                                             
+12   ¦   ¦   °--PSDA, Moist, Pipet                                                          
+13   ¦   ¦       °--3A1a1b                                                                  
+14   ¦   ¦-- PSDA, coulter counter, Air-dry, <2 mm Particles                                
+15   ¦   ¦   °--PSDA, coulter counter                                                       
+16   ¦   ¦       °--PSDA3                                                                   
+17   ¦   °-- PSDA, hydrometer, Air-dry, <2 mm Particles                                     
+18   ¦       °--PSDA, Hydrometer, sand fractions wet sieved                                 
+19   ¦           °--hyd1                                                                    
+20   ¦--bulk_density_tenth_bar_method                                                       
+21   ¦   °-- Bulk Density, <2 mm Fraction, 1                                                
+22   ¦       °--10 Bar                                                                      
+23   ¦           °--Bulk Density, 1                                                         
+24   ¦               °--10-Bar Desorption                                                   
+25   ¦                   °--4A1g                                                            
+26   ¦--bulk_density_third_bar_method                                                       
+27   ¦   ¦-- Bulk Density, <2mm Fraction, 1                                                 
+28   ¦   ¦   °--3 Bar                                                                       
+29   ¦   ¦       ¦--Bulk Density, 30-cm Absorption                                          
+30   ¦   ¦       ¦   °--4A1c                                                                
+31   ¦   ¦       °--Bulk Density, 1                                                         
+32   ¦   ¦           ¦--3-Bar Desorption I                                                  
+33   ¦   ¦           ¦   °--4A1d                                                            
+34   ¦   ¦           ¦--3-Bar Desorption II                                                 
+35   ¦   ¦           ¦   °--4A1e                                                            
+36   ¦   ¦           °--3-Bar Desorption III                                                
+37   ¦   ¦               °--4A1f                                                            
+38   ¦   ¦-- Bulk Density, Clod                                                             
+39   ¦   ¦   °--Bulk Density and Water Retention, Pressure-Plate, Clods                     
+40   ¦   ¦       °--DbWR1                                                                   
+41   ¦   °-- Unknown                                                                        
+42   ¦       °--Unknown                                                                     
+43   ¦           °--NK                                                                      
+44   ¦--bulk_density_oven_dry_method                                                        
+45   ¦   ¦-- Bulk Density, <2mm Fraction, Ovendry                                           
+46   ¦   ¦   °--Bulk Density, Oven-Dry                                                      
+47   ¦   ¦       °--4A1h                                                                    
+48   ¦   °-- Bulk Density, Clod                                                             
+49   ¦       °--Bulk Density and Water Retention, Pressure-Plate, Clods                     
+50   ¦           °--DbWR1                                                                   
+51   ¦--bulk_density_air_dry_method                                                         
+52   ¦   °-- Bulk Density, <2mm Fraction, Air-dry                                           
+53   ¦       °--Bulk Density, Air-Dry                                                       
+54   ¦           °--4A1b                                                                    
+55   ¦--bd_thirdbar_reconstituted_method                                                    
+56   ¦   °-- Bulk Density, Reconstituted                                                    
+57   ¦       °--Bulk Density and Water Retention, Reconstituted                             
+58   ¦           °--3B2                                                                     
+59   ¦--bulk_de_odreconstituted_method                                                      
+60   ¦   °-- Bulk Density, Reconstituted                                                    
+61   ¦       °--Bulk Density and Water Retention, Reconstituted                             
+62   ¦           °--3B2                                                                     
+63   ¦--bulk_density_field_moist_metho                                                      
+64   ¦   ¦-- Bulk Density, Clod, Field State                                                
+65   ¦   ¦   °--Bulk Density, Field State                                                   
+66   ¦   ¦       ¦--3B1a                                                                    
+67   ¦   ¦       °--4A1a                                                                    
+68   ¦   ¦-- Bulk Density, Compliant Cavity                                                 
+69   ¦   ¦   °--Bulk Density, Compliant Cavity                                              
+70   ¦   ¦       °--3B3                                                                     
+71   ¦   ¦-- Bulk Density, Soil Core                                                        
+72   ¦   ¦   °--Bulk Density and Water Retention, Pressure-Plate, Cores                     
+73   ¦   ¦       °--3B6                                                                     
+74   ¦   ¦-- Bulk Density, 3D laser scanner                                                 
+75   ¦   ¦   °--Bulk Density, 3D                                                            
+76   ¦   ¦       °--DB_3D                                                                   
+77   ¦   °-- Unknown                                                                        
+78   ¦       °--Unknown                                                                     
+79   ¦           °--NK                                                                      
+80   ¦--particle_density_lt_2mm_method                                                      
+81   ¦   ¦-- Particle Density <2mm                                                          
+82   ¦   ¦   °--Particle density <2 mm                                                      
+83   ¦   ¦       °--3G1a1                                                                   
+84   ¦   °-- Unknown                                                                        
+85   ¦       °--Unknown                                                                     
+86   ¦           °--NK                                                                      
+87   ¦--particle_density_gt_2mm_method                                                      
+88   ¦   ¦-- Particle Density >2mm                                                          
+89   ¦   ¦   °--Particle density >2 mm                                                      
+90   ¦   ¦       °--3G1a2                                                                   
+91   ¦   °-- Unknown                                                                        
+92   ¦       °--Unknown                                                                     
+93   ¦           °--NK                                                                      
+94   ¦--le_third_fifteen_lt2_metho                                                          
+95   ¦   °-- Derived                                                                        
+96   ¦       °--derived COLE, 4D1                                                           
+97   ¦           °--4D1                                                                     
+98   ¦--water_retention_0_bar_method                                                        
+99   ¦   °-- Water Retention, 0 Bar, Pressure-Plate, <2mm                                   
+100  ¦       °--Water Retention, 0 Bar, Pressure-Plate, <2mm                                
+101  ¦           °--H2O0Bar                                                                 
+102  ¦--water_retention_6_hund_method                                                       
+103  ¦   ¦-- Bulk Density, Soil Core                                                        
+104  ¦   ¦   °--Bulk Density and Water Retention, Pressure-Plate, Cores                     
+105  ¦   ¦       °--3B6                                                                     
+106  ¦   ¦-- Water Retention, 0.06 Bar, Pressure-Plate, <2mm                                
+107  ¦   ¦   °--Water Retention, 0.06 Bar, Pressure-Plate, <2mm                             
+108  ¦   ¦       °--3C1a1a                                                                  
+109  ¦   ¦-- Water Retention, 0.33 Bar, clod                                                
+110  ¦   ¦   °--Water Retention, clod, 0.06, 0.1, 0.33, or 1 bar, pressure-plate extraction 
+111  ¦   ¦       °--4B1c                                                                    
+112  ¦   ¦-- Bulk Density, Clod                                                             
+113  ¦   ¦   °--Bulk Density and Water Retention, Pressure-Plate, Clods                     
+114  ¦   ¦       °--DbWR1                                                                   
+115  ¦   °-- Unknown                                                                        
+116  ¦       °--Unknown                                                                     
+117  ¦           °--NK                                                                      
+118  ¦--water_retention_10th_bar_meth                                                       
+119  ¦   ¦-- Bulk Density, Soil Core                                                        
+120  ¦   ¦   °--Bulk Density and Water Retention, Pressure-Plate, Cores                     
+121  ¦   ¦       °--3B6                                                                     
+122  ¦   ¦-- Water Retention, 0.1 Bar, Pressure-Plate, <2mm                                 
+123  ¦   ¦   °--Water Retention, 0.1 Bar, Pressure-Plate, <2mm                              
+124  ¦   ¦       °--3C1b1a                                                                  
+125  ¦   ¦-- Water Retention, 0.1 or 0.33 bar, soil pieces                                  
+126  ¦   ¦   °--Water Retention, 0.1 or 0.33 bar, Soil Pieces                               
+127  ¦   ¦       °--4B1b                                                                    
+128  ¦   ¦-- Water Retention, 0.33 Bar, clod                                                
+129  ¦   ¦   °--Water Retention, clod, 0.06, 0.1, 0.33, or 1 bar, pressure-plate extraction 
+130  ¦   ¦       °--4B1c                                                                    
+131  ¦   ¦-- Water Retention, cores, 0.06, 0.1, 0.33, or 1 Bar, pressure-plate extraction   
+132  ¦   ¦   °--Water Retention, cores, 0.06, 0.1, 0.33, or 1 bar, pressure-plate extraction
+133  ¦   ¦       °--4B1d                                                                    
+134  ¦   ¦-- Water Retention, Sand-Table Absorption                                         
+135  ¦   ¦   °--Water Retention, Sand-Table Absorption                                      
+136  ¦   ¦       °--4B3                                                                     
+137  ¦   °-- Bulk Density, Clod                                                             
+138  ¦       °--Bulk Density and Water Retention, Pressure-Plate, Clods                     
+139  ¦           °--DbWR1                                                                   
+140  ¦--water_retention_thirdbar_metho                                                      
+141  ¦   ¦-- Bulk Density, Reconstituted                                                    
+142  ¦   ¦   °--Bulk Density and Water Retention, Reconstituted                             
+143  ¦   ¦       °--3B2                                                                     
+144  ¦   ¦-- Bulk Density, Soil Core                                                        
+145  ¦   ¦   °--Bulk Density and Water Retention, Pressure-Plate, Cores                     
+146  ¦   ¦       °--3B6                                                                     
+147  ¦   ¦-- Water Retention, 0.33 Bar, Pressure-Plate, <2mm                                
+148  ¦   ¦   °--Water Retention, 0.33 Bar, Pressure-Plate, <2mm                             
+149  ¦   ¦       ¦--3C1c1a                                                                  
+150  ¦   ¦       °--4B1a                                                                    
+151  ¦   ¦-- Water Retention, 0.1 or 0.33 bar, soil pieces                                  
+152  ¦   ¦   °--Water Retention, 0.1 or 0.33 bar, Soil Pieces                               
+153  ¦   ¦       °--4B1b                                                                    
+154  ¦   ¦-- Water Retention, 0.33 Bar, clod                                                
+155  ¦   ¦   °--Water Retention, clod, 0.06, 0.1, 0.33, or 1 bar, pressure-plate extraction 
+156  ¦   ¦       °--4B1c                                                                    
+157  ¦   ¦-- Water Retention, cores, 0.06, 0.1, 0.33, or 1 Bar, pressure-plate extraction   
+158  ¦   ¦   °--Water Retention, cores, 0.06, 0.1, 0.33, or 1 bar, pressure-plate extraction
+159  ¦   ¦       °--4B1d                                                                    
+160  ¦   ¦-- Water Retention, Sand-Table Absorption                                         
+161  ¦   ¦   °--Water Retention, Sand-Table Absorption                                      
+162  ¦   ¦       °--4B3                                                                     
+163  ¦   ¦-- Bulk Density, Clod                                                             
+164  ¦   ¦   °--Bulk Density and Water Retention, Pressure-Plate, Clods                     
+165  ¦   ¦       °--DbWR1                                                                   
+166  ¦   °-- Unknown                                                                        
+167  ¦       °--Unknown                                                                     
+168  ¦           °--NK                                                                      
+169  ¦--water_retention_1_bar_method                                                        
+170  ¦   ¦-- Water Retention, 1 Bar, Pressure-Plate, <2mm                                   
+171  ¦   ¦   °--Water Retention, 1 Bar, Pressure-Plate, <2mm                                
+172  ¦   ¦       °--3C1d1a                                                                  
+173  ¦   ¦-- Water Retention, 0.33 Bar, Pressure-Plate, <2mm                                
+174  ¦   ¦   °--Water Retention, 0.33 Bar, Pressure-Plate, <2mm                             
+175  ¦   ¦       °--4B1a                                                                    
+176  ¦   °-- Water Retention, Water Content <2mm, 1 or 2 Bar, moist                         
+177  ¦       °--Water Retention, Water Content <2mm, 1 or 2 Bar, moist                      
+178  ¦           °--4B1f                                                                    
+179  ¦--water_retention_2_bar_method                                                        
+180  ¦   ¦-- Water Retention, 2 Bar, Pressure-Plate, <2mm                                   
+181  ¦   ¦   °--Water Retention, 2 Bar, Pressure-Plate, <2mm                                
+182  ¦   ¦       °--3C1e1a                                                                  
+183  ¦   °-- Water Retention, Water Content <2mm, 1 or 2 Bar, moist                         
+184  ¦       °--Water Retention, Water Content <2mm, 1 or 2 Bar, moist                      
+185  ¦           °--4B1f                                                                    
+186  ¦--water_retention_5_bar_method                                                        
+187  ¦   °-- Water Retention, 5 Bar, Pressure-Plate, <2mm                                   
+188  ¦       °--Water Retention, 5 Bar, Pressure-Plate, <2mm                                
+189  ¦           °--3C2b                                                                    
+190  ¦--water_retention_15_bar_method                                                       
+191  ¦   ¦-- Water Retention, 15 Bar, Pressure-Plate, <2mm                                  
+192  ¦   ¦   °--Water Retention, 15 Bar, Pressure-Plate, <2mm                               
+193  ¦   ¦       ¦--3C2a1a                                                                  
+194  ¦   ¦       °--4B2a                                                                    
+195  ¦   ¦-- Water Retention, 15 Bar, <2mm, moist                                           
+196  ¦   ¦   °--Water Retention, 15 Bar, Pressure-Plate, <2mm, moist                        
+197  ¦   ¦       °--4B2b                                                                    
+198  ¦   °-- Unknown                                                                        
+199  ¦       °--Unknown                                                                     
+200  ¦           °--NK                                                                      
+201  ¦--water_retention_field_state_me                                                      
+202  ¦   ¦-- Bulk Density, Clod, Field State                                                
+203  ¦   ¦   °--Bulk Density, Field State                                                   
+204  ¦   ¦       °--3B1a                                                                    
+205  ¦   ¦-- Bulk Density, Compliant Cavity                                                 
+206  ¦   ¦   °--Bulk Density, Compliant Cavity                                              
+207  ¦   ¦       °--3B3                                                                     
+208  ¦   ¦-- Bulk Density, Soil Core                                                        
+209  ¦   ¦   °--Bulk Density and Water Retention, Pressure-Plate, Cores                     
+210  ¦   ¦       °--3B6                                                                     
+211  ¦   ¦-- Water Retention, Field State                                                   
+212  ¦   ¦   ¦--Water Retention, Field State                                                
+213  ¦   ¦   ¦   ¦--3C3                                                                     
+214  ¦   ¦   ¦   °--4B4                                                                     
+215  ¦   ¦   °--Water Retention, Field State, clod                                          
+216  ¦   ¦       °--4B4                                                                     
+217  ¦   °-- Unknown                                                                        
+218  ¦       °--Unknown                                                                     
+219  ¦           °--NK                                                                      
+220  ¦--atterberg_liquid_limit_method                                                       
+221  ¦   ¦-- Atterberg Limits                                                               
+222  ¦   ¦   °--Atterberg Limits, NSMC Lab                                                  
+223  ¦   ¦       °--3H                                                                      
+224  ¦   ¦-- Atterberg Limits, LL                                                           
+225  ¦   ¦   °--Plasticity Index, Liquid Limit                                              
+226  ¦   ¦       °--4F1                                                                     
+227  ¦   ¦-- Atterberg Limits moist                                                         
+228  ¦   ¦   °--Atterberg Limits, NSMC Lab, moist                                           
+229  ¦   ¦       °--4F1b                                                                    
+230  ¦   °-- Unknown                                                                        
+231  ¦       °--Unknown                                                                     
+232  ¦           °--NK                                                                      
+233  ¦--plastic_limit_method                                                                
+234  ¦   ¦-- Atterberg Limits                                                               
+235  ¦   ¦   °--Atterberg Limits, NSMC Lab                                                  
+236  ¦   ¦       °--3H                                                                      
+237  ¦   ¦-- Saturated Paste and Soluble Salts                                              
+238  ¦   ¦   °--Saturated Paste and Soluble Salts                                           
+239  ¦   ¦       °--4F2                                                                     
+240  ¦   °-- Atterberg Limits, PL                                                           
+241  ¦       °--Plasticity Index, Plastic Limit                                             
+242  ¦           °--4F2                                                                     
+243  ¦--aggregate_stability_05_2_metho                                                      
+244  ¦   ¦-- Aggregate Stability                                                            
+245  ¦   ¦   °--Aggregate Stability, 2- to 0.5-mm Aggregates Retained                       
+246  ¦   ¦       °--3F1a1a                                                                  
+247  ¦   °-- Aggregate Stability, moist                                                     
+248  ¦       °--Aggregate Stability, Wet Sieving, 1-2 mm, moist                             
+249  ¦           °--4G1b                                                                    
+250  ¦--psda_ethanol_dispersion_method                                                      
+251  ¦   °-- PSDA, Ethanol Disp, Air-Dry, Ultrasonic, Pipet                                 
+252  ¦       °--PSDA, Ethanol Disp, Air-Dry, Ultrasonic, Pipet                              
+253  ¦           °--3A1a8a                                                                  
+254  ¦--water_dispersible_fraction_method                                                   
+255  ¦   ¦-- PSDA, Water Dispersible, Air-dry                                               
+256  ¦   ¦   °--PSDA, Water Dispersible, Air-dry                                            
+257  ¦   ¦       °--3A1a6a                                                                  
+258  ¦   °-- PSDA, Water Dispersible, Moist                                                 
+259  ¦       °--PSDA, Water Dispersible, Moist                                              
+260  ¦           °--3A1a6b                                                                  
+261  ¦--color_pyrophosphate_method                                                          
+262  ¦   ¦-- Fiber Analysis                                                                 
+263  ¦   ¦   °--Organic Fiber Analysis                                                      
+264  ¦   ¦       °--5C                                                                      
+265  ¦   °-- Fiber Analysis, Pyrophosphate color                                            
+266  ¦       °--Color, Pyrophosphate Extract                                                
+267  ¦           °--8H                                                                      
+268  ¦--bd_before_rewet_organic_method                                                      
+269  ¦   °-- Bulk Density, Clod, Rewet                                                      
+270  ¦       °--Bulk Density, Rewet, Clods                                                  
+271  ¦           °--3B1d                                                                    
+272  ¦--bd_third_rewet_organic_method                                                       
+273  ¦   °-- Bulk Density, Clod, Rewet                                                      
+274  ¦       °--Bulk Density, Rewet, Clods                                                  
+275  ¦           °--3B1d                                                                    
+276  ¦--bulk_den_rewet_oven_dry_method                                                      
+277  ¦   °-- Bulk Density, Clod, Rewet                                                      
+278  ¦       °--Bulk Density, Rewet, Clods                                                  
+279  ¦           °--3B1d                                                                    
+280  ¦--mineral_content_loi_method                                                          
+281  ¦   °-- Mineral Content                                                                
+282  ¦       ¦--Mineral Content, Loss on Ignition                                           
+283  ¦       ¦   °--5A                                                                      
+284  ¦       °--Mineral Content                                                             
+285  ¦           °--8F                                                                      
+286  °--fiber_analysis_method                                                               
+287      °-- Fiber Analysis                                                                 
+288          °--Organic Fiber Analysis                                                      
+289              °--5C                                                                      

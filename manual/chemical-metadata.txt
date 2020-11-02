@@ -1,0 +1,960 @@
+                                                                                                             levelName
+1   chemical                                                                                                          
+2    ¦--ca_nh4_ph_7_method                                                                                            
+3    ¦   ¦-- CEC and Cations, Routine                                                                                 
+4    ¦   ¦   ¦--CEC and Cations, NH4OAc                                                                               
+5    ¦   ¦   ¦   °--4B1a1                                                                                             
+6    ¦   ¦   °--CEC and Cations, NH4OAc, 2M KCl displacement                                                          
+7    ¦   ¦       °--4B1a1a                                                                                            
+8    ¦   ¦-- Extractable Cations, Ca                                                                                  
+9    ¦   ¦   ¦--Calcium, NH4OAc Extraction                                                                            
+10   ¦   ¦   ¦   °--6N2                                                                                               
+11   ¦   ¦   ¦--Calcium, NH4OAc Extraction, EDTA-Alcohol Separation                                                   
+12   ¦   ¦   ¦   °--6N2a                                                                                              
+13   ¦   ¦   ¦--Calcium, NH4OAc Extraction, Oxalate-Permanganate I                                                    
+14   ¦   ¦   ¦   °--6N2b                                                                                              
+15   ¦   ¦   ¦--Calcium, NH4OAc Extraction, Oxalate-Permanganate II                                                   
+16   ¦   ¦   ¦   °--6N2c                                                                                              
+17   ¦   ¦   ¦--Calcium, NH4OAc Extraction, Oxalate-Cerate                                                            
+18   ¦   ¦   ¦   °--6N2d                                                                                              
+19   ¦   ¦   ¦--Calcium, NH4OAc Extraction, Atomic Absorption I                                                       
+20   ¦   ¦   ¦   °--6N2e                                                                                              
+21   ¦   ¦   ¦--Calcium, NH4OAc Extraction, Atomic Absorption II                                                      
+22   ¦   ¦   ¦   °--6N2f                                                                                              
+23   ¦   ¦   ¦--Calcium, NH4OAc Extraction, Atomic Absorption I, moist                                                
+24   ¦   ¦   ¦   °--6N2g                                                                                              
+25   ¦   ¦   ¦--Calcium, NH4OAc Extraction, Atomic Absorption II, moist                                               
+26   ¦   ¦   ¦   °--6N2h                                                                                              
+27   ¦   ¦   ¦--Calcium, NH4OAc Extraction, ICP I                                                                     
+28   ¦   ¦   ¦   °--6N2i                                                                                              
+29   ¦   ¦   °--Calcium, NH4OAc Extraction, ICP I, moist                                                              
+30   ¦   ¦       °--6N2j                                                                                              
+31   ¦   ¦-- Cations, Neutral Salts, Ca                                                                               
+32   ¦   ¦   °--Calcium, NH4Cl-EtOH Extraction, EDTA Titration                                                        
+33   ¦   ¦       °--6N3a                                                                                              
+34   ¦   ¦-- Extractable Cations, Mg                                                                                  
+35   ¦   ¦   °--Magnesium, NH4OAc Extraction, EDTA-Alcohol Separation                                                 
+36   ¦   ¦       °--6O2a                                                                                              
+37   ¦   °-- Unknown                                                                                                  
+38   ¦       °--Unknown                                                                                               
+39   ¦           °--NK                                                                                                
+40   ¦--mg_nh4_ph_7_method                                                                                            
+41   ¦   ¦-- CEC and Cations, Routine                                                                                 
+42   ¦   ¦   ¦--CEC and Cations, NH4OAc                                                                               
+43   ¦   ¦   ¦   °--4B1a1                                                                                             
+44   ¦   ¦   °--CEC and Cations, NH4OAc, 2M KCl displacement                                                          
+45   ¦   ¦       °--4B1a1a                                                                                            
+46   ¦   ¦-- Extractable Cations, Mg                                                                                  
+47   ¦   ¦   ¦--Magnesium, NH4OAc Extraction                                                                          
+48   ¦   ¦   ¦   °--6O2                                                                                               
+49   ¦   ¦   ¦--Magnesium, NH4OAc Extraction, EDTA-Alcohol Separation                                                 
+50   ¦   ¦   ¦   °--6O2a                                                                                              
+51   ¦   ¦   ¦--Magnesium, NH4OAc Extraction, Phosphate Titration                                                     
+52   ¦   ¦   ¦   °--6O2b                                                                                              
+53   ¦   ¦   ¦--Magnesium, NH4OAc Extraction, Gravimetric                                                             
+54   ¦   ¦   ¦   °--6O2c                                                                                              
+55   ¦   ¦   ¦--Magnesium, NH4OAc Extraction, Atomic Absorption I                                                     
+56   ¦   ¦   ¦   °--6O2d                                                                                              
+57   ¦   ¦   ¦--Magnesium, NH4OAc Extraction, Atomic Absorption II                                                    
+58   ¦   ¦   ¦   °--6O2e                                                                                              
+59   ¦   ¦   ¦--Magnesium, NH4OAc Extraction, Atomic Absorption II, moist                                             
+60   ¦   ¦   ¦   °--6O2f                                                                                              
+61   ¦   ¦   ¦--Magnesium, NH4OAc Extraction, Colorimetric                                                            
+62   ¦   ¦   ¦   °--6O2f                                                                                              
+63   ¦   ¦   ¦--Magnesium, NH4OAc Extraction, Atomic Absorption I, moist                                              
+64   ¦   ¦   ¦   °--6O2g                                                                                              
+65   ¦   ¦   ¦--Magnesium, NH4OAc Extraction, ICP I                                                                   
+66   ¦   ¦   ¦   °--6O2h                                                                                              
+67   ¦   ¦   °--Magnesium, NH4OAc Extraction, ICP I, moist                                                            
+68   ¦   ¦       °--6O2i                                                                                              
+69   ¦   ¦-- Cations, Neutral Salts, Mg                                                                               
+70   ¦   ¦   °--Magnesium, NH4Cl-EtOH Extraction, EDTA Titration                                                      
+71   ¦   ¦       °--6O3a                                                                                              
+72   ¦   ¦-- Extractable Cations, K                                                                                   
+73   ¦   ¦   °--Potassium, NHOAc Extraction, Flame Photometry                                                         
+74   ¦   ¦       °--6Q2a                                                                                              
+75   ¦   °-- Unknown                                                                                                  
+76   ¦       °--Unknown                                                                                               
+77   ¦           °--NK                                                                                                
+78   ¦--na_nh4_ph_7_method                                                                                            
+79   ¦   ¦-- CEC and Cations, Routine                                                                                 
+80   ¦   ¦   ¦--CEC and Cations, NH4OAc                                                                               
+81   ¦   ¦   ¦   °--4B1a1                                                                                             
+82   ¦   ¦   °--CEC and Cations, NH4OAc, 2M KCl displacement                                                          
+83   ¦   ¦       °--4B1a1a                                                                                            
+84   ¦   ¦-- Extractable Cations, Na                                                                                  
+85   ¦   ¦   ¦--Sodium, NH4OAc Extraction                                                                             
+86   ¦   ¦   ¦   °--6P2                                                                                               
+87   ¦   ¦   ¦--Sodium, NHOAc Extraction, Flame Photometry                                                            
+88   ¦   ¦   ¦   °--6P2a                                                                                              
+89   ¦   ¦   ¦--Sodium, NH4OAc Extraction, Atomic Absorption I                                                        
+90   ¦   ¦   ¦   °--6P2b                                                                                              
+91   ¦   ¦   ¦--Sodium, NH4OAc Extraction, Atomic Absorption II                                                       
+92   ¦   ¦   ¦   °--6P2c                                                                                              
+93   ¦   ¦   ¦--Sodium, NH4OAc Extraction, Atomic Absorption II, moist                                                
+94   ¦   ¦   ¦   °--6P2d                                                                                              
+95   ¦   ¦   ¦--Sodium, NH4OAc Extraction, Atomic Absorption I, moist                                                 
+96   ¦   ¦   ¦   °--6P2e                                                                                              
+97   ¦   ¦   ¦--Sodium, NH4OAc Extraction, ICP I                                                                      
+98   ¦   ¦   ¦   °--6P2f                                                                                              
+99   ¦   ¦   °--Sodium, NH4OAc Extraction, ICP I, moist                                                               
+100  ¦   ¦       °--6P2g                                                                                              
+101  ¦   °-- Unknown                                                                                                  
+102  ¦       °--Unknown                                                                                               
+103  ¦           °--NK                                                                                                
+104  ¦--k_nh4_ph_7_method                                                                                             
+105  ¦   ¦-- CEC and Cations, Routine                                                                                 
+106  ¦   ¦   ¦--CEC and Cations, NH4OAc                                                                               
+107  ¦   ¦   ¦   °--4B1a1                                                                                             
+108  ¦   ¦   °--CEC and Cations, NH4OAc, 2M KCl displacement                                                          
+109  ¦   ¦       °--4B1a1a                                                                                            
+110  ¦   ¦-- Extractable Cations, Na                                                                                  
+111  ¦   ¦   °--Sodium, NHOAc Extraction, Flame Photometry                                                            
+112  ¦   ¦       °--6P2a                                                                                              
+113  ¦   ¦-- Extractable Cations, K                                                                                   
+114  ¦   ¦   ¦--Potassium, NHOAc Extraction                                                                           
+115  ¦   ¦   ¦   °--6Q2                                                                                               
+116  ¦   ¦   ¦--Potassium, NHOAc Extraction, Flame Photometry                                                         
+117  ¦   ¦   ¦   °--6Q2a                                                                                              
+118  ¦   ¦   ¦--Potassium, NHOAc Extraction, Atomic Absorption I                                                      
+119  ¦   ¦   ¦   °--6Q2b                                                                                              
+120  ¦   ¦   ¦--Potassium, NHOAc Extraction, Atomic Absorption II                                                     
+121  ¦   ¦   ¦   °--6Q2c                                                                                              
+122  ¦   ¦   ¦--Potassium, NHOAc Extraction, Atomic Absorption II, moist                                              
+123  ¦   ¦   ¦   °--6Q2d                                                                                              
+124  ¦   ¦   ¦--Potassium, NHOAc Extraction, Atomic Absorption I, moist                                               
+125  ¦   ¦   ¦   °--6Q2e                                                                                              
+126  ¦   ¦   ¦--Potassium, NHOAc Extraction, ICP I                                                                    
+127  ¦   ¦   ¦   °--6Q2f                                                                                              
+128  ¦   ¦   °--Potassium, NHOAc Extraction, ICP I, moist                                                             
+129  ¦   ¦       °--6Q2g                                                                                              
+130  ¦   °-- Unknown                                                                                                  
+131  ¦       °--Unknown                                                                                               
+132  ¦           °--NK                                                                                                
+133  ¦--acidity_bacl2_tea_ph_82_method                                                                                
+134  ¦   ¦-- Extractable Acidity, BaCl2-TEA                                                                           
+135  ¦   ¦   ¦--Extractable Acidity, BaCl2-Triethanolamine, Titration                                                 
+136  ¦   ¦   ¦   ¦--4B2a1a1                                                                                           
+137  ¦   ¦   ¦   °--6H5b                                                                                              
+138  ¦   ¦   ¦--Extractable Acidity, BaCl2-Triethanolamine, Centrifuge                                                
+139  ¦   ¦   ¦   °--4B2b1a1                                                                                           
+140  ¦   ¦   ¦--Extractable Acidity, BaCl2-Triethanolamine I                                                          
+141  ¦   ¦   ¦   °--6H1a                                                                                              
+142  ¦   ¦   ¦--Extractable Acidity, BaCl2-Triethanolamine II, Back-Titration with HCl                                
+143  ¦   ¦   ¦   °--6H2a                                                                                              
+144  ¦   ¦   ¦--Extractable Acidity, BaCl2-Triethanolamine II                                                         
+145  ¦   ¦   ¦   °--6H2b                                                                                              
+146  ¦   ¦   ¦--Extractable Acidity, KCl-Triethanolamine II, Back-Titration with NaOH                                 
+147  ¦   ¦   ¦   °--6H3a                                                                                              
+148  ¦   ¦   ¦--Extractable Acidity, BaCl2-Triethanolamine III                                                        
+149  ¦   ¦   ¦   °--6H4a                                                                                              
+150  ¦   ¦   °--Extractable Acidity, BaCl2-Triethanolamine IV, automatic extractor                                    
+151  ¦   ¦       °--6H5a                                                                                              
+152  ¦   °-- Unknown                                                                                                  
+153  ¦       °--Unknown                                                                                               
+154  ¦           °--NK                                                                                                
+155  ¦--aluminum_kcl_extract_method                                                                                   
+156  ¦   ¦-- KCl Extract                                                                                              
+157  ¦   ¦   °--Cations, Potassium Chloride Extractable                                                               
+158  ¦   ¦       °--4B3a1a                                                                                            
+159  ¦   ¦-- KCl Extract, Al                                                                                          
+160  ¦   ¦   ¦--Aluminum, KCl Extraction I, 30 min., Aluminon I                                                       
+161  ¦   ¦   ¦   °--6G1a                                                                                              
+162  ¦   ¦   ¦--Cations, Potassium Chloride Extractable I (6G1b)                                                      
+163  ¦   ¦   ¦   °--6G1b                                                                                              
+164  ¦   ¦   ¦--Aluminum, KCl Extraction I, 30 min., Fluoride Titration                                               
+165  ¦   ¦   ¦   °--6G1d                                                                                              
+166  ¦   ¦   ¦--Aluminum, KCl Extraction I, 30 min., Atomic Absorption                                                
+167  ¦   ¦   ¦   °--6G1e                                                                                              
+168  ¦   ¦   ¦--Cations, Potassium Chloride Extractable II, overnight (6G2a)                                          
+169  ¦   ¦   ¦   °--6G2a                                                                                              
+170  ¦   ¦   ¦--Cations, Potassium Chloride Extractable, 1N, automatic extractor, AA (6G9a)                           
+171  ¦   ¦   ¦   °--6G9a                                                                                              
+172  ¦   ¦   ¦--Cations, Potassium Chloride Extractable, 1 N, automatic extractor, ICP I (6G9b)                       
+173  ¦   ¦   ¦   °--6G9b                                                                                              
+174  ¦   ¦   ¦--Cations, Potassium Chloride Extractable, 1 N, automatic extractor, ICP II (6G9c)                      
+175  ¦   ¦   ¦   °--6G9c                                                                                              
+176  ¦   ¦   ¦--Cations, Potassium Chloride Extractable, 1N, automatic extractor, AA II (6G9d)                        
+177  ¦   ¦   ¦   °--6G9d                                                                                              
+178  ¦   ¦   °--Aluminum, 1 N KCl Extractable, Automatic Extractor, ICP II, moist                                     
+179  ¦   ¦       °--6G9e                                                                                              
+180  ¦   °-- Unknown                                                                                                  
+181  ¦       °--Unknown                                                                                               
+182  ¦           °--NK                                                                                                
+183  ¦--manganese_kcl_extract_method                                                                                  
+184  ¦   ¦-- KCl Extract                                                                                              
+185  ¦   ¦   °--Cations, Potassium Chloride Extractable                                                               
+186  ¦   ¦       °--4B3a1a                                                                                            
+187  ¦   °-- KCl Extract, Mn                                                                                          
+188  ¦       ¦--Manganese, 1 N KCl Extractable, Automatic Extractor, Inductively Coupled Plasma Spectrometry I        
+189  ¦       ¦   °--6D3                                                                                               
+190  ¦       ¦--Manganese, 1 N KCl Extractable, Automatic Extractor, Inductively Coupled Plasma Spectrometry II       
+191  ¦       ¦   °--6D3b                                                                                              
+192  ¦       °--Manganese, 1 N KCl Extractable, Automatic Extractor, Inductively Coupled Plasma Spectrometry II, moist
+193  ¦           °--6D3d                                                                                              
+194  ¦--iron_kcl_extractable_method                                                                                   
+195  ¦   °-- KCl Extract                                                                                              
+196  ¦       °--Cations, Potassium Chloride Extractable                                                               
+197  ¦           °--4B3a1a                                                                                            
+198  ¦--cec_nh4_ph_7_method                                                                                           
+199  ¦   ¦-- CEC and Cations, Routine                                                                                 
+200  ¦   ¦   ¦--CEC and Cations, NH4OAc                                                                               
+201  ¦   ¦   ¦   ¦--4B1a1                                                                                             
+202  ¦   ¦   ¦   °--CECNH4_TAMU                                                                                       
+203  ¦   ¦   °--CEC and Cations, NH4OAc, 2M KCl displacement                                                          
+204  ¦   ¦       °--4B1a1a                                                                                            
+205  ¦   ¦-- CEC and Cations, NH4OAc, pH 7.0                                                                          
+206  ¦   ¦   ¦--CEC, NH4OAc, pH 7.0, Buchner funnel, direct distillation                                              
+207  ¦   ¦   ¦   °--5A1a                                                                                              
+208  ¦   ¦   ¦--CEC, NH4OAc, pH 7.0, Buchner funnel, Displacement Distillation                                        
+209  ¦   ¦   ¦   °--5A1b                                                                                              
+210  ¦   ¦   ¦--CEC, NH4OAc, pH 7.0, leaching tube, direct distillation                                               
+211  ¦   ¦   ¦   °--5A6a                                                                                              
+212  ¦   ¦   ¦--CEC, NH4OAc, pH 7.0, automatic extractor, direct distillation                                         
+213  ¦   ¦   ¦   °--5A8a                                                                                              
+214  ¦   ¦   ¦--CEC, NH4OAc, pH 7.0,  automatic extractor, steam distillation I                                       
+215  ¦   ¦   ¦   °--5A8b                                                                                              
+216  ¦   ¦   ¦--CEC, NH4OAc, pH 7.0,  automatic extractor, steam distillation II                                      
+217  ¦   ¦   ¦   °--5A8c                                                                                              
+218  ¦   ¦   °--CEC, NH4OAc, pH 7.0,  automatic extractor, steam distillation I, moist                                
+219  ¦   ¦       °--5A8e                                                                                              
+220  ¦   °-- Unknown                                                                                                  
+221  ¦       °--Unknown                                                                                               
+222  ¦           °--NK                                                                                                
+223  ¦--total_carbon_ncs_method                                                                                       
+224  ¦   ¦-- Total Nitrogen, Carbon and Sulfur                                                                        
+225  ¦   ¦   °--Total N, C, S                                                                                         
+226  ¦   ¦       °--4H2a                                                                                              
+227  ¦   ¦-- Carbon, Total                                                                                            
+228  ¦   ¦   ¦--Total Carbon, dry combustion, CO2 evolution I, gravimetric                                            
+229  ¦   ¦   ¦   °--6A2a                                                                                              
+230  ¦   ¦   ¦--Total Carbon, dry combustion, CO2 evolution II, gravimetric                                           
+231  ¦   ¦   ¦   °--6A2b                                                                                              
+232  ¦   ¦   ¦--Total Carbon, dry combustion, CO2 evolution IV                                                        
+233  ¦   ¦   ¦   °--6A2d                                                                                              
+234  ¦   ¦   ¦--Carbon, Total                                                                                         
+235  ¦   ¦   ¦   °--6A2e                                                                                              
+236  ¦   ¦   °--Total Carbon, dry combustion, CO2 evolution V                                                         
+237  ¦   ¦       °--6A2e                                                                                              
+238  ¦   °-- Organic Carbon                                                                                           
+239  ¦       °--Organic Carbon, dry combustion, CO2 evolution, gravimetric                                            
+240  ¦           °--6A2d                                                                                              
+241  ¦--total_nitrogen_ncs_method                                                                                     
+242  ¦   ¦-- Total Nitrogen, Carbon and Sulfur                                                                        
+243  ¦   ¦   °--Total N, C, S                                                                                         
+244  ¦   ¦       °--4H2a                                                                                              
+245  ¦   ¦-- Nitrogen, Total                                                                                          
+246  ¦   ¦   ¦--Total Nitrogen, Kjeldahl digestion, ammonia distillation                                              
+247  ¦   ¦   ¦   °--6B1a                                                                                              
+248  ¦   ¦   ¦--Total Nitrogen, Kjeldahl digestion I, ammonia distillation, automatic titrator                        
+249  ¦   ¦   ¦   °--6B1b                                                                                              
+250  ¦   ¦   ¦--Total Nitrogen, semimicro Kjeldahl, ammonia distillation                                              
+251  ¦   ¦   ¦   °--6B2a                                                                                              
+252  ¦   ¦   ¦--Total Nitrogen, Kjeldahl digestion II, ammonia steam distillation, automatic titrator                 
+253  ¦   ¦   ¦   °--6B3a                                                                                              
+254  ¦   ¦   ¦--Nitrogen, Total                                                                                       
+255  ¦   ¦   ¦   °--6B4a                                                                                              
+256  ¦   ¦   ¦--Total Nitrogen, dry combustion, N2 Evolution                                                          
+257  ¦   ¦   ¦   °--6B4a                                                                                              
+258  ¦   ¦   °--Nitrogen, Kjeldahl Digestion III, Ammonia Steam Distillation                                          
+259  ¦   ¦       °--6B5a                                                                                              
+260  ¦   °-- Unknown                                                                                                  
+261  ¦       °--Unknown                                                                                               
+262  ¦           °--NK                                                                                                
+263  ¦--total_sulfur_ncs_method                                                                                       
+264  ¦   ¦-- Total Nitrogen, Carbon and Sulfur                                                                        
+265  ¦   ¦   °--Total N, C, S                                                                                         
+266  ¦   ¦       °--4H2a                                                                                              
+267  ¦   ¦-- Sulfur, Total                                                                                            
+268  ¦   ¦   ¦--Sulfur, Total, SO2 evolution, KIO3 titration                                                          
+269  ¦   ¦   ¦   °--6R3a                                                                                              
+270  ¦   ¦   ¦--Sulfur, Total, SO2 evolution, infrared I                                                              
+271  ¦   ¦   ¦   °--6R3b                                                                                              
+272  ¦   ¦   ¦--Sulfur, Total                                                                                         
+273  ¦   ¦   ¦   °--6R3c                                                                                              
+274  ¦   ¦   °--Total Sulfur, SO2 evolution, infrared II                                                              
+275  ¦   ¦       °--6R3c                                                                                              
+276  ¦   ¦-- Total Elemental Analysis, HF Dissolution                                                                 
+277  ¦   ¦   °--Total Analysis, HF Dissolution                                                                        
+278  ¦   ¦       °--7C3                                                                                               
+279  ¦   °-- Unknown                                                                                                  
+280  ¦       °--Unknown                                                                                               
+281  ¦           °--NK                                                                                                
+282  ¦--oc_walkley_black_method                                                                                       
+283  ¦   ¦-- Organic Carbon                                                                                           
+284  ¦   ¦   ¦--Organic Carbon, 6A                                                                                    
+285  ¦   ¦   ¦   °--6A                                                                                                
+286  ¦   ¦   ¦--Organic Carbon, 6A1                                                                                   
+287  ¦   ¦   ¦   °--6A1                                                                                               
+288  ¦   ¦   ¦--Organic Carbon, acid dichromate digestion, FeSO4 titration                                            
+289  ¦   ¦   ¦   °--6A1a                                                                                              
+290  ¦   ¦   ¦--Organic Carbon, acid dichromate digestion, CO2 evolution, gravimetric                                 
+291  ¦   ¦   ¦   °--6A1b                                                                                              
+292  ¦   ¦   ¦--Organic Carbon, acid dichromate digestion, FeSO4 titration, automatic titrator                        
+293  ¦   ¦   ¦   °--6A1c                                                                                              
+294  ¦   ¦   ¦--Organic Carbon, acid dichromate digestion, FeSO4 titration, automatic titrator, moist                 
+295  ¦   ¦   ¦   °--6A1d                                                                                              
+296  ¦   ¦   ¦--Organic Carbon, acid dichromate digestion, FeSO4 titration, Mebius                                    
+297  ¦   ¦   ¦   °--6A1e                                                                                              
+298  ¦   ¦   ¦--Organic Carbon, dry combustion, CO2 evolution, gravimetric                                            
+299  ¦   ¦   ¦   °--6A2d                                                                                              
+300  ¦   ¦   °--Organic Carbon, Peroxide Digestion, Weight Loss                                                       
+301  ¦   ¦       °--6A3a                                                                                              
+302  ¦   ¦-- Biomass, Glucose, C                                                                                      
+303  ¦   ¦   °--Biomass, Glucose, C                                                                                   
+304  ¦   ¦       °--6A1                                                                                               
+305  ¦   ¦-- Carbon, Total                                                                                            
+306  ¦   ¦   °--Total Carbon, dry combustion, CO2 evolution IV                                                        
+307  ¦   ¦       °--6A2d                                                                                              
+308  ¦   ¦-- Biomass, CO3, C                                                                                          
+309  ¦   ¦   °--Biomass, CO3, C                                                                                       
+310  ¦   ¦       °--6A3a                                                                                              
+311  ¦   °-- Unknown                                                                                                  
+312  ¦       °--Unknown                                                                                               
+313  ¦           °--NK                                                                                                
+314  ¦--iron_dc_extract_method                                                                                        
+315  ¦   ¦-- Dithionite-Citrate Extract                                                                               
+316  ¦   ¦   °--Cations, Dithionite-Citrate Extractable                                                               
+317  ¦   ¦       °--4G1                                                                                               
+318  ¦   ¦-- Dithionite Extract, Fe                                                                                   
+319  ¦   ¦   ¦--Iron, Dithionite Extraction, Dichromate Titration                                                     
+320  ¦   ¦   ¦   °--6C1a                                                                                              
+321  ¦   ¦   °--Iron, Dithionite Extraction, EDTA Titration                                                           
+322  ¦   ¦       °--6C1b                                                                                              
+323  ¦   ¦-- Dithionite-Citrate Extract, Fe                                                                           
+324  ¦   ¦   ¦--Iron, Dithionite-Citrate Extraction, Orthophenanthroline Colorimetry                                  
+325  ¦   ¦   ¦   °--6C2a                                                                                              
+326  ¦   ¦   ¦--Iron, Dithionite-Citrate Extraction, Atomic Absorption I                                              
+327  ¦   ¦   ¦   °--6C2b                                                                                              
+328  ¦   ¦   ¦--Iron, Dithionite-Citrate Extraction, Atomic Absorption II                                             
+329  ¦   ¦   ¦   °--6C2c                                                                                              
+330  ¦   ¦   ¦--Iron, Dithionite-Citrate Extraction I, Atomic Absorption I, moist                                     
+331  ¦   ¦   ¦   °--6C2d                                                                                              
+332  ¦   ¦   ¦--Iron, Dithionite-Citrate Extraction II, Atomic Absorption II                                          
+333  ¦   ¦   ¦   °--6C2f                                                                                              
+334  ¦   ¦   ¦--Iron, Dithionite-Citrate Extraction II, Atomic Absorption II, moist                                   
+335  ¦   ¦   ¦   °--6C2g                                                                                              
+336  ¦   ¦   ¦--Iron, Dithionite-Citrate Extraction II, Atomic Absorption III                                         
+337  ¦   ¦   ¦   °--6C2h                                                                                              
+338  ¦   ¦   ¦--Iron, Dithionite-Citrate Extraction II, Atomic Absorption III, moist                                  
+339  ¦   ¦   ¦   °--6C2i                                                                                              
+340  ¦   ¦   °--Iron, Dithionite-Citrate-Bicarbonate Extraction                                                       
+341  ¦   ¦       °--6C3                                                                                               
+342  ¦   °-- Unknown                                                                                                  
+343  ¦       °--Unknown                                                                                               
+344  ¦           °--NK                                                                                                
+345  ¦--aluminum_dc_extract_method                                                                                    
+346  ¦   ¦-- Dithionite-Citrate Extract                                                                               
+347  ¦   ¦   °--Cations, Dithionite-Citrate Extractable                                                               
+348  ¦   ¦       °--4G1                                                                                               
+349  ¦   ¦-- Dithionite-Citrate Extract, Al                                                                           
+350  ¦   ¦   ¦--Aluminum, Dithionite-Citrate Extraction, Atomic Absorption I                                          
+351  ¦   ¦   ¦   °--6G7a                                                                                              
+352  ¦   ¦   ¦--Aluminum, Dithionite-Citrate Extraction, Atomic Absorption II                                         
+353  ¦   ¦   ¦   °--6G7b                                                                                              
+354  ¦   ¦   ¦--Aluminum, Dithionite-Citrate Extraction I, Atomic Absorption I, moist                                 
+355  ¦   ¦   ¦   °--6G7c                                                                                              
+356  ¦   ¦   ¦--Aluminum, Dithionite-Citrate Extraction II, Atomic Absorption II                                      
+357  ¦   ¦   ¦   °--6G7e                                                                                              
+358  ¦   ¦   ¦--Aluminum, Dithionite-Citrate Extraction II, Atomic Absorption II, moist                               
+359  ¦   ¦   ¦   °--6G7f                                                                                              
+360  ¦   ¦   ¦--Aluminum, Dithionite-Citrate Extraction II, Atomic Absorption III                                     
+361  ¦   ¦   ¦   °--6G7g                                                                                              
+362  ¦   ¦   ¦--Aluminum, Dithionite-Citrate Extraction II, Atomic Absorption III, moist                              
+363  ¦   ¦   ¦   °--6G7h                                                                                              
+364  ¦   ¦   ¦--Aluminum, Dithionite-Citrate-Bicarbonate Extraction                                                   
+365  ¦   ¦   ¦   °--AL_DITH                                                                                           
+366  ¦   ¦   °--Aluminum, Dithionite-Citrate Extraction, Aluminon I                                                   
+367  ¦   ¦       °--AL_DITH                                                                                           
+368  ¦   °-- Unknown                                                                                                  
+369  ¦       °--Unknown                                                                                               
+370  ¦           °--NK                                                                                                
+371  ¦--manganese_dc_extract_method                                                                                   
+372  ¦   ¦-- Dithionite-Citrate Extract                                                                               
+373  ¦   ¦   °--Cations, Dithionite-Citrate Extractable                                                               
+374  ¦   ¦       °--4G1                                                                                               
+375  ¦   ¦-- Dithionite Extract, Mn                                                                                   
+376  ¦   ¦   °--Manganese, Dithionite Extraction, Permanganate Colorimetry                                            
+377  ¦   ¦       °--6D1a                                                                                              
+378  ¦   ¦-- Dithionite-Citrate Extract, Mn                                                                           
+379  ¦   ¦   ¦--Manganese, Dithionite-Citrate Extraction, Atomic Absorption I                                         
+380  ¦   ¦   ¦   °--6D2a                                                                                              
+381  ¦   ¦   ¦--Manganese, Dithionite-Citrate Extraction I, Atomic Absorption I, moist                                
+382  ¦   ¦   ¦   °--6D2c                                                                                              
+383  ¦   ¦   ¦--Manganese, Dithionite-Citrate Extraction II, Atomic Absorption II                                     
+384  ¦   ¦   ¦   °--6D2e                                                                                              
+385  ¦   ¦   ¦--Manganese, Dithionite-Citrate Extraction II, Atomic Absorption II, moist                              
+386  ¦   ¦   ¦   °--6D2f                                                                                              
+387  ¦   ¦   ¦--Manganese, Dithionite-Citrate Extraction II, Atomic Absorption III                                    
+388  ¦   ¦   ¦   °--6D2g                                                                                              
+389  ¦   ¦   °--Manganese, Dithionite-Citrate Extraction II, Atomic Absorption III, moist                             
+390  ¦   ¦       °--6D2h                                                                                              
+391  ¦   °-- Unknown                                                                                                  
+392  ¦       °--Unknown                                                                                               
+393  ¦           °--NK                                                                                                
+394  ¦--ammonium_ox_opt_dens_method                                                                                   
+395  ¦   ¦-- Acid Oxalate Extract                                                                                     
+396  ¦   ¦   °--Cations, Acid Oxalate Extractable                                                                     
+397  ¦   ¦       °--4G2                                                                                               
+398  ¦   °-- Acid Oxalate extraction                                                                                  
+399  ¦       °--Cations, Acid Oxalate Extractable, Optical Density                                                    
+400  ¦           ¦--8J                                                                                                
+401  ¦           ¦--8J1b                                                                                              
+402  ¦           °--8J1c                                                                                              
+403  ¦--iron_ammonium_oxalate_method                                                                                  
+404  ¦   ¦-- Acid Oxalate Extract                                                                                     
+405  ¦   ¦   °--Cations, Acid Oxalate Extractable                                                                     
+406  ¦   ¦       °--4G2                                                                                               
+407  ¦   °-- Acid Oxalate extraction                                                                                  
+408  ¦       ¦--Iron, Ammonium Oxalate Extraction, Atomic Absorption                                                  
+409  ¦       ¦   °--6C6A                                                                                              
+410  ¦       °--Cations, Acid Oxalate Extractable, Iron                                                               
+411  ¦           ¦--6C9a                                                                                              
+412  ¦           ¦--6C9b                                                                                              
+413  ¦           °--6C9c                                                                                              
+414  ¦--al_ammonium_oxalate_method                                                                                    
+415  ¦   ¦-- Acid Oxalate Extract                                                                                     
+416  ¦   ¦   °--Cations, Acid Oxalate Extractable                                                                     
+417  ¦   ¦       °--4G2                                                                                               
+418  ¦   °-- Acid Oxalate extraction                                                                                  
+419  ¦       ¦--Cations, Acid Oxalate Extractable, Aluminum                                                           
+420  ¦       ¦   ¦--6G12                                                                                              
+421  ¦       ¦   °--6G12b                                                                                             
+422  ¦       °--Aluminum, Ammonium Oxalate Extraction, Atomic Absorption                                              
+423  ¦           °--6G6a                                                                                              
+424  ¦--silica_ammonium_oxalate_method                                                                                
+425  ¦   ¦-- Acid Oxalate Extract                                                                                     
+426  ¦   ¦   °--Cations, Acid Oxalate Extractable                                                                     
+427  ¦   ¦       °--4G2                                                                                               
+428  ¦   °-- Acid Oxalate extraction                                                                                  
+429  ¦       °--Cations, Acid Oxalate Extractable, Silica                                                             
+430  ¦           ¦--6V2                                                                                               
+431  ¦           ¦--6V2b                                                                                              
+432  ¦           °--6V2c                                                                                              
+433  ¦--mn_ammonium_oxalate_method                                                                                    
+434  ¦   ¦-- Acid Oxalate Extract                                                                                     
+435  ¦   ¦   °--Cations, Acid Oxalate Extractable                                                                     
+436  ¦   ¦       °--4G2                                                                                               
+437  ¦   °-- Acid Oxalate extraction                                                                                  
+438  ¦       °--Cations, Acid Oxalate Extractable, Manganese                                                          
+439  ¦           °--6D5b                                                                                              
+440  ¦--c_na_pyro_phosphate_method                                                                                    
+441  ¦   °-- Na-Pyrophosphate Extract, C                                                                              
+442  ¦       °--Organic Carbon, Sodium Pyrophosphate Extraction II, Atomic Absorption                                 
+443  ¦           °--6A4a                                                                                              
+444  ¦--iron_na_pyro_phosphate_method                                                                                 
+445  ¦   ¦-- Na-Pyrophosphate Extract                                                                                 
+446  ¦   ¦   °--Cations, Pyrophosphate Extractable                                                                    
+447  ¦   ¦       °--4G3                                                                                               
+448  ¦   ¦-- Na-Pyrophosphate Extract, Fe                                                                             
+449  ¦   ¦   ¦--Iron, Sodium Pyrophosphate Extraction I, Atomic Absorption                                            
+450  ¦   ¦   ¦   °--6C5a                                                                                              
+451  ¦   ¦   ¦--Iron, Sodium Pyrophosphate Extraction II, Atomic Absorption                                           
+452  ¦   ¦   ¦   °--6C8a                                                                                              
+453  ¦   ¦   ¦--Iron, Sodium Pyrophosphate Extraction II, Atomic Absorption II                                        
+454  ¦   ¦   ¦   °--6C8c                                                                                              
+455  ¦   ¦   °--Iron, Sodium Pyrophosphate Extraction II, Atomic Absorption II, moist                                 
+456  ¦   ¦       °--6C8d                                                                                              
+457  ¦   °-- Unknown                                                                                                  
+458  ¦       °--Unknown                                                                                               
+459  ¦           °--NK                                                                                                
+460  ¦--aluminum_na_pyro_phosphate_met                                                                                
+461  ¦   ¦-- Na-Pyrophosphate Extract                                                                                 
+462  ¦   ¦   °--Cations, Pyrophosphate Extractable                                                                    
+463  ¦   ¦       °--4G3                                                                                               
+464  ¦   ¦-- Na-Pyrophosphate Extract, Al                                                                             
+465  ¦   ¦   ¦--Aluminum, Sodium Pyrophosphate Extraction II                                                          
+466  ¦   ¦   ¦   °--6G10                                                                                              
+467  ¦   ¦   ¦--Aluminum, Sodium Pyrophosphate Extraction II, Atomic Absorption II                                    
+468  ¦   ¦   ¦   °--6G10c                                                                                             
+469  ¦   ¦   ¦--Aluminum, Sodium Pyrophosphate Extraction II, Atomic Absorption II, moist                             
+470  ¦   ¦   ¦   °--6G10d                                                                                             
+471  ¦   ¦   °--Aluminum, Sodium Pyrophosphate Extraction I, Atomic Absorption                                        
+472  ¦   ¦       °--6G5a                                                                                              
+473  ¦   °-- Unknown                                                                                                  
+474  ¦       °--Unknown                                                                                               
+475  ¦           °--NK                                                                                                
+476  ¦--mn_na_pyro_phosphate_method                                                                                   
+477  ¦   °-- Na-Pyrophosphate Extract                                                                                 
+478  ¦       °--Cations, Pyrophosphate Extractable                                                                    
+479  ¦           °--4G3                                                                                               
+480  ¦--ph_kcl_method                                                                                                 
+481  ¦   ¦-- pH, KCl                                                                                                  
+482  ¦   ¦   ¦--pH, 1N KCl                                                                                            
+483  ¦   ¦   ¦   ¦--4C1a2a3                                                                                           
+484  ¦   ¦   ¦   °--8C1c                                                                                              
+485  ¦   ¦   °--pH, 1:1 1N KCl, moist                                                                                 
+486  ¦   ¦       °--8C1k                                                                                              
+487  ¦   °-- Unknown                                                                                                  
+488  ¦       °--Unknown                                                                                               
+489  ¦           °--NK                                                                                                
+490  ¦--ph_cacl2_method                                                                                               
+491  ¦   ¦-- pH, Routine                                                                                              
+492  ¦   ¦   ¦--pH, Routine, 1:1 Water and 1:2 0.01M CaCl2                                                            
+493  ¦   ¦   ¦   °--4C1a2a                                                                                            
+494  ¦   ¦   °--pH, Routine, 1:1 Water and 1:2 0.01M CaCl2, moist                                                     
+495  ¦   ¦       °--8C1j                                                                                              
+496  ¦   ¦-- pH, CaCl2                                                                                                
+497  ¦   ¦   °--pH,  1:2 0.01M CaCl2                                                                                  
+498  ¦   ¦       °--8C1e                                                                                              
+499  ¦   °-- Unknown                                                                                                  
+500  ¦       °--Unknown                                                                                               
+501  ¦           °--NK                                                                                                
+502  ¦--ph_h2o_method                                                                                                 
+503  ¦   ¦-- pH, Routine                                                                                              
+504  ¦   ¦   ¦--pH, Routine, 1:1 Water and 1:2 0.01M CaCl2                                                            
+505  ¦   ¦   ¦   °--4C1a2a                                                                                            
+506  ¦   ¦   °--pH, Routine, 1:1 Water and 1:2 0.01M CaCl2, moist                                                     
+507  ¦   ¦       °--8C1j                                                                                              
+508  ¦   ¦-- pH, H2O                                                                                                  
+509  ¦   ¦   °--pH, 1:1 Water                                                                                         
+510  ¦   ¦       °--8C1a                                                                                              
+511  ¦   ¦-- pH, 1:10 H2O                                                                                             
+512  ¦   ¦   °--pH, 1:10 Water                                                                                        
+513  ¦   ¦       °--8C1a                                                                                              
+514  ¦   °-- Unknown                                                                                                  
+515  ¦       °--Unknown                                                                                               
+516  ¦           °--NK                                                                                                
+517  ¦--ph_saturated_paste_method                                                                                     
+518  ¦   ¦-- Saturated Paste and Soluble Salts                                                                        
+519  ¦   ¦   °--Saturated Paste and Soluble Salts                                                                     
+520  ¦   ¦       °--4F2                                                                                               
+521  ¦   ¦-- Atterberg Limits, PL                                                                                     
+522  ¦   ¦   °--Plasticity Index, Plastic Limit                                                                       
+523  ¦   ¦       °--4F2                                                                                               
+524  ¦   ¦-- Saturated Paste and Soluble Salts, pH                                                                    
+525  ¦   ¦   °--Reaction (pH), Saturated Paste                                                                        
+526  ¦   ¦       °--8C1b                                                                                              
+527  ¦   °-- Unknown                                                                                                  
+528  ¦       °--Unknown                                                                                               
+529  ¦           °--NK                                                                                                
+530  ¦--ph_oxidized_method                                                                                            
+531  ¦   °-- pH, Oxidized                                                                                             
+532  ¦       °--pH, Oxidized                                                                                          
+533  ¦           °--4C1a1a3                                                                                           
+534  ¦--ph_naf_method                                                                                                 
+535  ¦   ¦-- pH, NaF                                                                                                  
+536  ¦   ¦   ¦--pH, 1N NaF                                                                                            
+537  ¦   ¦   ¦   °--4C1a1a1                                                                                           
+538  ¦   ¦   °--pH, 1N NaF, moist                                                                                     
+539  ¦   ¦       °--8C1i                                                                                              
+540  ¦   °-- Unknown                                                                                                  
+541  ¦       °--Unknown                                                                                               
+542  ¦           °--NK                                                                                                
+543  ¦--ph_water_extract_method                                                                                       
+544  ¦   °-- Elements, Water Extract                                                                                  
+545  ¦       °--Elements, Water Extract                                                                               
+546  ¦           °--4D2a2d1-22                                                                                        
+547  ¦--caco3_lt_2_mm_method                                                                                          
+548  ¦   ¦-- Calcium Carbonate Equivalent, <2mm                                                                       
+549  ¦   ¦   ¦--Calcium Carbonate Equivalent, HCl, <2mm                                                               
+550  ¦   ¦   ¦   ¦--4E1a1a1a1                                                                                         
+551  ¦   ¦   ¦   °--6E1h                                                                                              
+552  ¦   ¦   ¦--Calcium Carbonate, HCl Treatment                                                                      
+553  ¦   ¦   ¦   °--6E1                                                                                               
+554  ¦   ¦   ¦--Calcium Carbonate Equivalent, HCl, <2mm, manometric (6E1a)                                            
+555  ¦   ¦   ¦   °--6E1a                                                                                              
+556  ¦   ¦   ¦--Calcium Carbonate Equivalent, HCl, <2mm, manometer (6E1b)                                             
+557  ¦   ¦   ¦   °--6E1b                                                                                              
+558  ¦   ¦   ¦--Calcium Carbonate Equivalent, HCl, <2mm, weight loss (6E1c)                                           
+559  ¦   ¦   ¦   °--6E1c                                                                                              
+560  ¦   ¦   ¦--Calcium Carbonate Equivalent, HCl, <2mm, weight gain (6E1d)                                           
+561  ¦   ¦   ¦   °--6E1d                                                                                              
+562  ¦   ¦   ¦--Calcium Carbonate, HCl Treatment, Titrimetric                                                         
+563  ¦   ¦   ¦   °--6E1e                                                                                              
+564  ¦   ¦   ¦--Calcium Carbonate Equivalent, HCl, <2mm, manometer, electronic (6E1g)                                 
+565  ¦   ¦   ¦   °--6E1g                                                                                              
+566  ¦   ¦   ¦--Calcium Carbonate, Sensitive Qualitative Method, Visual, Gas Bubbles                                  
+567  ¦   ¦   ¦   °--6E2a                                                                                              
+568  ¦   ¦   °--Calcium Carbonate Equivalent, HCl, <2mm (23b Salinity Lab)                                            
+569  ¦   ¦       °--CACO3                                                                                             
+570  ¦   °-- Unknown                                                                                                  
+571  ¦       °--Unknown                                                                                               
+572  ¦           °--NK                                                                                                
+573  ¦--corrected_gyp_lt_2_mm_method                                                                                  
+574  ¦   ¦-- Gypsum, <2mm                                                                                             
+575  ¦   ¦   ¦--Gypsum, H2O Extraction, Acetone Precipitation, <2mm                                                   
+576  ¦   ¦   ¦   ¦--4E2a1a1a1                                                                                         
+577  ¦   ¦   ¦   °--6F1a                                                                                              
+578  ¦   ¦   ¦--Gypsum, ion chromatograph                                                                             
+579  ¦   ¦   ¦   °--6F1c                                                                                              
+580  ¦   ¦   °--Gypsum, weight loss                                                                                   
+581  ¦   ¦       °--6F2a                                                                                              
+582  ¦   °-- Unknown                                                                                                  
+583  ¦       °--Unknown                                                                                               
+584  ¦           °--NK                                                                                                
+585  ¦--resistivity_sp_method                                                                                         
+586  ¦   ¦-- Saturated Paste and Soluble Salts                                                                        
+587  ¦   ¦   °--Saturated Paste and Soluble Salts                                                                     
+588  ¦   ¦       °--4F2                                                                                               
+589  ¦   ¦-- Atterberg Limits, PL                                                                                     
+590  ¦   ¦   °--Plasticity Index, Plastic Limit                                                                       
+591  ¦   ¦       °--4F2                                                                                               
+592  ¦   ¦-- Saturated Paste and Soluble Salts, resistivity                                                           
+593  ¦   ¦   °--Soil Resistivity, Saturated Paste                                                                     
+594  ¦   ¦       °--8E1                                                                                               
+595  ¦   °-- Unknown                                                                                                  
+596  ¦       °--Unknown                                                                                               
+597  ¦           °--NK                                                                                                
+598  ¦--ca_satx_method                                                                                                
+599  ¦   ¦-- Saturated Paste and Soluble Salts                                                                        
+600  ¦   ¦   °--Saturated Paste and Soluble Salts                                                                     
+601  ¦   ¦       ¦--4F2                                                                                               
+602  ¦   ¦       °--SATP_TAMU                                                                                         
+603  ¦   ¦-- Atterberg Limits, PL                                                                                     
+604  ¦   ¦   °--Plasticity Index, Plastic Limit                                                                       
+605  ¦   ¦       °--4F2                                                                                               
+606  ¦   ¦-- Soluble Salts, Ca                                                                                        
+607  ¦   ¦   ¦--Calcium, Saturation Extraction, EDTA Titration                                                        
+608  ¦   ¦   ¦   °--6N1a                                                                                              
+609  ¦   ¦   ¦--Calcium, Saturation Extraction, Atomic Absorption I                                                   
+610  ¦   ¦   ¦   °--6N1b                                                                                              
+611  ¦   ¦   ¦--Calcium, Saturation Extraction, Atomic Absorption II                                                  
+612  ¦   ¦   ¦   °--6N1c                                                                                              
+613  ¦   ¦   °--Calcium, Saturation Extraction, Atomic Absorption III                                                 
+614  ¦   ¦       °--6N1d                                                                                              
+615  ¦   °-- Unknown                                                                                                  
+616  ¦       °--Unknown                                                                                               
+617  ¦           °--NK                                                                                                
+618  ¦--mg_satx_method                                                                                                
+619  ¦   ¦-- Saturated Paste and Soluble Salts                                                                        
+620  ¦   ¦   °--Saturated Paste and Soluble Salts                                                                     
+621  ¦   ¦       ¦--4F2                                                                                               
+622  ¦   ¦       °--SATP_TAMU                                                                                         
+623  ¦   ¦-- Atterberg Limits, PL                                                                                     
+624  ¦   ¦   °--Plasticity Index, Plastic Limit                                                                       
+625  ¦   ¦       °--4F2                                                                                               
+626  ¦   ¦-- Soluble Salts, Mg                                                                                        
+627  ¦   ¦   ¦--Magnesium, Saturation Extraction, EDTA Titration                                                      
+628  ¦   ¦   ¦   °--6O1a                                                                                              
+629  ¦   ¦   ¦--Magnesium, Saturation Extraction, Atomic Absorption I                                                 
+630  ¦   ¦   ¦   °--6O1b                                                                                              
+631  ¦   ¦   ¦--Magnesium, Saturation Extraction, Atomic Absorption II                                                
+632  ¦   ¦   ¦   °--6O1c                                                                                              
+633  ¦   ¦   °--Magnesium, Saturation Extraction, Atomic Absorption III                                               
+634  ¦   ¦       °--6O1d                                                                                              
+635  ¦   °-- Unknown                                                                                                  
+636  ¦       °--Unknown                                                                                               
+637  ¦           °--NK                                                                                                
+638  ¦--ca_plus_mg_satx_method                                                                                        
+639  ¦   °-- Unknown                                                                                                  
+640  ¦       °--Unknown                                                                                               
+641  ¦           °--NK                                                                                                
+642  ¦--na_satx_method                                                                                                
+643  ¦   ¦-- Saturated Paste and Soluble Salts                                                                        
+644  ¦   ¦   °--Saturated Paste and Soluble Salts                                                                     
+645  ¦   ¦       ¦--4F2                                                                                               
+646  ¦   ¦       °--SATP_TAMU                                                                                         
+647  ¦   ¦-- Atterberg Limits, PL                                                                                     
+648  ¦   ¦   °--Plasticity Index, Plastic Limit                                                                       
+649  ¦   ¦       °--4F2                                                                                               
+650  ¦   ¦-- Soluble Salts, Na                                                                                        
+651  ¦   ¦   ¦--Sodium, Saturation Extraction, Flame Photometry                                                       
+652  ¦   ¦   ¦   °--6P1a                                                                                              
+653  ¦   ¦   ¦--Sodium, Saturation Extraction, Atomic Absorption I                                                    
+654  ¦   ¦   ¦   °--6P1b                                                                                              
+655  ¦   ¦   ¦--Sodium, Saturation Extraction, Atomic Absorption II                                                   
+656  ¦   ¦   ¦   °--6P1c                                                                                              
+657  ¦   ¦   °--Sodium, Saturation Extraction, Atomic Absorption III                                                  
+658  ¦   ¦       °--6P1d                                                                                              
+659  ¦   °-- Unknown                                                                                                  
+660  ¦       °--Unknown                                                                                               
+661  ¦           °--NK                                                                                                
+662  ¦--k_satx_method                                                                                                 
+663  ¦   ¦-- Saturated Paste and Soluble Salts                                                                        
+664  ¦   ¦   °--Saturated Paste and Soluble Salts                                                                     
+665  ¦   ¦       ¦--4F2                                                                                               
+666  ¦   ¦       °--SATP_TAMU                                                                                         
+667  ¦   ¦-- Atterberg Limits, PL                                                                                     
+668  ¦   ¦   °--Plasticity Index, Plastic Limit                                                                       
+669  ¦   ¦       °--4F2                                                                                               
+670  ¦   ¦-- Soluble Salts, K                                                                                         
+671  ¦   ¦   ¦--Potassium, Saturation Extraction, Flame Photometry                                                    
+672  ¦   ¦   ¦   °--6Q1a                                                                                              
+673  ¦   ¦   ¦--Potassium, Saturation Extraction, Atomic Absorption I                                                 
+674  ¦   ¦   ¦   °--6Q1b                                                                                              
+675  ¦   ¦   ¦--Potassium, Saturation Extraction, Atomic Absorption II                                                
+676  ¦   ¦   ¦   °--6Q1c                                                                                              
+677  ¦   ¦   °--Potassium, Saturation Extraction, Atomic Absorption III                                               
+678  ¦   ¦       °--6Q1d                                                                                              
+679  ¦   °-- Unknown                                                                                                  
+680  ¦       °--Unknown                                                                                               
+681  ¦           °--NK                                                                                                
+682  ¦--co3_satx_method                                                                                               
+683  ¦   ¦-- Saturated Paste and Soluble Salts                                                                        
+684  ¦   ¦   °--Saturated Paste and Soluble Salts                                                                     
+685  ¦   ¦       °--4F2                                                                                               
+686  ¦   ¦-- Atterberg Limits, PL                                                                                     
+687  ¦   ¦   °--Plasticity Index, Plastic Limit                                                                       
+688  ¦   ¦       °--4F2                                                                                               
+689  ¦   ¦-- Soluble Anions, CO2                                                                                      
+690  ¦   ¦   °--Carbonate, Saturation Extraction, Acid Titration                                                      
+691  ¦   ¦       °--6I1a                                                                                              
+692  ¦   ¦-- Soluble Anions, CO3                                                                                      
+693  ¦   ¦   °--Carbonate, Saturated Paste and Soluble Salts, titration                                               
+694  ¦   ¦       °--6I1b                                                                                              
+695  ¦   °-- Unknown                                                                                                  
+696  ¦       °--Unknown                                                                                               
+697  ¦           °--NK                                                                                                
+698  ¦--hco3_satx_method                                                                                              
+699  ¦   ¦-- Saturated Paste and Soluble Salts                                                                        
+700  ¦   ¦   °--Saturated Paste and Soluble Salts                                                                     
+701  ¦   ¦       ¦--4F2                                                                                               
+702  ¦   ¦       °--SATP_TAMU                                                                                         
+703  ¦   ¦-- Atterberg Limits, PL                                                                                     
+704  ¦   ¦   °--Plasticity Index, Plastic Limit                                                                       
+705  ¦   ¦       °--4F2                                                                                               
+706  ¦   ¦-- Soluble Anions, HCO3                                                                                     
+707  ¦   ¦   ¦--Bicarbonate, Saturation Extraction, Acid Titration                                                    
+708  ¦   ¦   ¦   °--6J1a                                                                                              
+709  ¦   ¦   °--Bicarbonate, Saturation Extraction, Acid Titration, Automatic Extractor                               
+710  ¦   ¦       °--6J1b                                                                                              
+711  ¦   °-- Unknown                                                                                                  
+712  ¦       °--Unknown                                                                                               
+713  ¦           °--NK                                                                                                
+714  ¦--co3_plus_hco3_satx_method                                                                                     
+715  ¦   °-- Atterberg Limits, PI                                                                                     
+716  ¦       °--derived Plasticity Index                                                                              
+717  ¦           °--4F                                                                                                
+718  ¦--cl_satx_method                                                                                                
+719  ¦   ¦-- Saturated Paste and Soluble Salts                                                                        
+720  ¦   ¦   °--Saturated Paste and Soluble Salts                                                                     
+721  ¦   ¦       ¦--4F2                                                                                               
+722  ¦   ¦       °--SATP_TAMU                                                                                         
+723  ¦   ¦-- Atterberg Limits, PL                                                                                     
+724  ¦   ¦   °--Plasticity Index, Plastic Limit                                                                       
+725  ¦   ¦       °--4F2                                                                                               
+726  ¦   ¦-- Soluble Anions, Cl                                                                                       
+727  ¦   ¦   ¦--Chloride, Saturation Extraction, Mohr Titration                                                       
+728  ¦   ¦   ¦   °--6K1a                                                                                              
+729  ¦   ¦   °--Chloride, Saturation Extraction, Potentiometric Titration                                             
+730  ¦   ¦       °--6K1b                                                                                              
+731  ¦   ¦-- Soluble Anions                                                                                           
+732  ¦   ¦   ¦--Chloride, Saturation Extraction, Anion Chromatograph                                                  
+733  ¦   ¦   ¦   °--6K1c                                                                                              
+734  ¦   ¦   ¦--Chloride, Saturation Extraction, Anion Chromatograph, Ionic Suppressor                                
+735  ¦   ¦   ¦   °--6K1d                                                                                              
+736  ¦   ¦   ¦--Chloride, Saturation Extraction, Flow Injection, Automated Ion Analyzer                               
+737  ¦   ¦   ¦   °--6K1e                                                                                              
+738  ¦   ¦   °--Chloride, Saturation Extraction, Anion Chromatograph, Electronic Ion Suppressor                       
+739  ¦   ¦       °--6K1f                                                                                              
+740  ¦   °-- Unknown                                                                                                  
+741  ¦       °--Unknown                                                                                               
+742  ¦           °--NK                                                                                                
+743  ¦--f_satx_method                                                                                                 
+744  ¦   ¦-- Saturated Paste and Soluble Salts                                                                        
+745  ¦   ¦   °--Saturated Paste and Soluble Salts                                                                     
+746  ¦   ¦       °--4F2                                                                                               
+747  ¦   ¦-- Atterberg Limits, PL                                                                                     
+748  ¦   ¦   °--Plasticity Index, Plastic Limit                                                                       
+749  ¦   ¦       °--4F2                                                                                               
+750  ¦   °-- Soluble Anions, Fl                                                                                       
+751  ¦       ¦--Fluoride, Saturation Extraction, Anion Chromatograph                                                  
+752  ¦       ¦   °--6U1a                                                                                              
+753  ¦       ¦--Fluoride, Saturation Extraction, Anion Chromatograph, Ionic Suppressor                                
+754  ¦       ¦   °--6U1b                                                                                              
+755  ¦       ¦--Fluoride, Saturation Extraction, Flow Injection, Automated Ion Analyzer                               
+756  ¦       ¦   °--6U1c                                                                                              
+757  ¦       °--Fluoride, Saturation Extraction, Anion Chromatograph, Electronic Ion Suppressor                       
+758  ¦           °--6U1d                                                                                              
+759  ¦--po4_satx_method                                                                                               
+760  ¦   ¦-- Saturated Paste and Soluble Salts                                                                        
+761  ¦   ¦   °--Saturated Paste and Soluble Salts                                                                     
+762  ¦   ¦       °--4F2                                                                                               
+763  ¦   ¦-- Atterberg Limits, PL                                                                                     
+764  ¦   ¦   °--Plasticity Index, Plastic Limit                                                                       
+765  ¦   ¦       °--4F2                                                                                               
+766  ¦   °-- Soluble Anions, PO4                                                                                      
+767  ¦       °--Phosphate, Saturation Extraction, Anion Chromatograph, Electronic Ion Suppressor                      
+768  ¦           °--6S9a                                                                                              
+769  ¦--br_satx_method                                                                                                
+770  ¦   ¦-- Saturated Paste and Soluble Salts                                                                        
+771  ¦   ¦   °--Saturated Paste and Soluble Salts                                                                     
+772  ¦   ¦       °--4F2                                                                                               
+773  ¦   ¦-- Atterberg Limits, PL                                                                                     
+774  ¦   ¦   °--Plasticity Index, Plastic Limit                                                                       
+775  ¦   ¦       °--4F2                                                                                               
+776  ¦   °-- Soluble Anions, Br                                                                                       
+777  ¦       °--Bromide, Saturation Extraction, Anion Chromatograph, Electronic Ion Suppressor                        
+778  ¦           °--6X1a                                                                                              
+779  ¦--oac_satx_method                                                                                               
+780  ¦   ¦-- Saturated Paste and Soluble Salts                                                                        
+781  ¦   ¦   °--Saturated Paste and Soluble Salts                                                                     
+782  ¦   ¦       °--4F2                                                                                               
+783  ¦   ¦-- Atterberg Limits, PL                                                                                     
+784  ¦   ¦   °--Plasticity Index, Plastic Limit                                                                       
+785  ¦   ¦       °--4F2                                                                                               
+786  ¦   °-- Soluble Anions, OAc                                                                                      
+787  ¦       °--Acetate, Saturation Extraction, Anion Chromatograph, Electronic Ion Suppressor                        
+788  ¦           °--6Y1a                                                                                              
+789  ¦--so4_satx_method                                                                                               
+790  ¦   ¦-- Saturated Paste and Soluble Salts                                                                        
+791  ¦   ¦   °--Saturated Paste and Soluble Salts                                                                     
+792  ¦   ¦       ¦--4F2                                                                                               
+793  ¦   ¦       °--SATP_TAMU                                                                                         
+794  ¦   ¦-- Atterberg Limits, PL                                                                                     
+795  ¦   ¦   °--Plasticity Index, Plastic Limit                                                                       
+796  ¦   ¦       °--4F2                                                                                               
+797  ¦   ¦-- Soluble Anions, SO4                                                                                      
+798  ¦   ¦   ¦--Sulfate, Saturation Extraction, Gravimetric, BaSO4                                                    
+799  ¦   ¦   ¦   °--6L1a                                                                                              
+800  ¦   ¦   ¦--Sulfate, Saturation Extraction, EDTA Titration                                                        
+801  ¦   ¦   ¦   °--6L1b                                                                                              
+802  ¦   ¦   ¦--Sulfate, Saturation Extraction, Anion Chromatograph                                                   
+803  ¦   ¦   ¦   °--6L1c                                                                                              
+804  ¦   ¦   ¦--Sulfate, Saturation Extraction, Anion Chromatograph, Ionic Suppressor                                 
+805  ¦   ¦   ¦   °--6L1d                                                                                              
+806  ¦   ¦   ¦--Sulfate, Saturation Extraction, Flow Injection, Automated Ion Analyzer                                
+807  ¦   ¦   ¦   °--6L1e                                                                                              
+808  ¦   ¦   °--Sulfate, Saturation Extraction, Anion Chromatograph, Electronic Ion Suppressor                        
+809  ¦   ¦       °--6L1f                                                                                              
+810  ¦   °-- Unknown                                                                                                  
+811  ¦       °--Unknown                                                                                               
+812  ¦           °--NK                                                                                                
+813  ¦--no2_satx_method                                                                                               
+814  ¦   ¦-- Saturated Paste and Soluble Salts                                                                        
+815  ¦   ¦   °--Saturated Paste and Soluble Salts                                                                     
+816  ¦   ¦       °--4F2                                                                                               
+817  ¦   ¦-- Atterberg Limits, PL                                                                                     
+818  ¦   ¦   °--Plasticity Index, Plastic Limit                                                                       
+819  ¦   ¦       °--4F2                                                                                               
+820  ¦   ¦-- Soluble Anions, NO2                                                                                      
+821  ¦   ¦   ¦--Nitrite, Saturation Extraction, Anion Chromatograph                                                   
+822  ¦   ¦   ¦   °--6W1a                                                                                              
+823  ¦   ¦   ¦--Nitrite, Saturation Extraction, Anion Chromatograph, Ionic Suppressor                                 
+824  ¦   ¦   ¦   °--6W1b                                                                                              
+825  ¦   ¦   ¦--Nitrite, Saturation Extraction, Flow Injection, Automated Ion Analyzer                                
+826  ¦   ¦   ¦   °--6W1c                                                                                              
+827  ¦   ¦   °--Nitrite, Saturation Extraction, Anion Chromatograph, Electronic Ion Suppressor                        
+828  ¦   ¦       °--6W1d                                                                                              
+829  ¦   °-- Unknown                                                                                                  
+830  ¦       °--Unknown                                                                                               
+831  ¦           °--NK                                                                                                
+832  ¦--no3_satx_method                                                                                               
+833  ¦   ¦-- Saturated Paste and Soluble Salts                                                                        
+834  ¦   ¦   °--Saturated Paste and Soluble Salts                                                                     
+835  ¦   ¦       °--4F2                                                                                               
+836  ¦   ¦-- Atterberg Limits, PL                                                                                     
+837  ¦   ¦   °--Plasticity Index, Plastic Limit                                                                       
+838  ¦   ¦       °--4F2                                                                                               
+839  ¦   ¦-- Soluble Anions, NO3                                                                                      
+840  ¦   ¦   ¦--Nitrate, Saturation Extraction, Phenyldisulfonic (PDS) Acid Colorimetry                               
+841  ¦   ¦   ¦   °--6M1a                                                                                              
+842  ¦   ¦   ¦--Nitrate, Saturation Extraction, Anion Chromatograph                                                   
+843  ¦   ¦   ¦   °--6M1c                                                                                              
+844  ¦   ¦   ¦--Nitrate, Saturation Extraction, Anion Chromatograph, Ionic Suppressor                                 
+845  ¦   ¦   ¦   °--6M1d                                                                                              
+846  ¦   ¦   ¦--Nitrate, Saturation Extraction, Flow Injection, Automated Ion Analyzer                                
+847  ¦   ¦   ¦   °--6M1e                                                                                              
+848  ¦   ¦   °--Nitrate, Saturation Extraction, Anion Chromatograph, Electronic Ion Suppressor                        
+849  ¦   ¦       °--6M1f                                                                                              
+850  ¦   °-- Unknown                                                                                                  
+851  ¦       °--Unknown                                                                                               
+852  ¦           °--NK                                                                                                
+853  ¦--h20_satx_method                                                                                               
+854  ¦   ¦-- Saturated Paste and Soluble Salts                                                                        
+855  ¦   ¦   °--Saturated Paste and Soluble Salts                                                                     
+856  ¦   ¦       ¦--4F2                                                                                               
+857  ¦   ¦       °--SATP_TAMU                                                                                         
+858  ¦   ¦-- Atterberg Limits, PL                                                                                     
+859  ¦   ¦   °--Plasticity Index, Plastic Limit                                                                       
+860  ¦   ¦       °--4F2                                                                                               
+861  ¦   ¦-- Saturated Paste and Soluble Salts, H2O                                                                   
+862  ¦   ¦   °--Water Content, Saturated Paste                                                                        
+863  ¦   ¦       °--8A                                                                                                
+864  ¦   °-- Unknown                                                                                                  
+865  ¦       °--Unknown                                                                                               
+866  ¦           °--NK                                                                                                
+867  ¦--electrical_cond_satx_method                                                                                   
+868  ¦   ¦-- Saturated Paste and Soluble Salts                                                                        
+869  ¦   ¦   ¦--Saturated Paste and Soluble Salts                                                                     
+870  ¦   ¦   ¦   ¦--4F2                                                                                               
+871  ¦   ¦   ¦   °--SATP_TAMU                                                                                         
+872  ¦   ¦   °--Saturated Paste and Soluble Salts, EC cap rise                                                        
+873  ¦   ¦       °--8A1a                                                                                              
+874  ¦   ¦-- Atterberg Limits, PL                                                                                     
+875  ¦   ¦   °--Plasticity Index, Plastic Limit                                                                       
+876  ¦   ¦       °--4F2                                                                                               
+877  ¦   ¦-- Saturated Paste and Soluble Salts, EC                                                                    
+878  ¦   ¦   °--Saturated Paste, Mixed, Saturation Extract, Automatic Extractor Conductivity, Digital Bridge          
+879  ¦   ¦       °--8A3a                                                                                              
+880  ¦   °-- Unknown                                                                                                  
+881  ¦       °--Unknown                                                                                               
+882  ¦           °--NK                                                                                                
+883  ¦--ec_predict_one_to_two_method                                                                                  
+884  ¦   °-- Salt Predict                                                                                             
+885  ¦       °--Salt Prediction, 1:2 (w                                                                               
+886  ¦           °--v)                                                                                                
+887  ¦               °--4F1a1a1                                                                                       
+888  ¦--melanic_index_method                                                                                          
+889  ¦   °-- Melanic Index                                                                                            
+890  ¦       °--Melanic Index                                                                                         
+891  ¦           °--5D                                                                                                
+892  ¦--new_zealand_phos_retent_method                                                                                
+893  ¦   °-- New Zealand Phosphorus Retention                                                                         
+894  ¦       ¦--Phosphorus, New Zealand P Retention                                                                   
+895  ¦       ¦   °--4D8a1                                                                                             
+896  ¦       ¦--Phosphorus, New Zealand P Retention I                                                                 
+897  ¦       ¦   °--6S4                                                                                               
+898  ¦       ¦--Phosphorus, New Zealand P Retention II                                                                
+899  ¦       ¦   °--6S4b                                                                                              
+900  ¦       ¦--Phosphorus, New Zealand P Retention III                                                               
+901  ¦       ¦   °--6S4c                                                                                              
+902  ¦       ¦--Phosphorus, New Zealand P Retention IV                                                                
+903  ¦       ¦   °--6S4d                                                                                              
+904  ¦       °--Phosphorus, New Zealand P Retention V                                                                 
+905  ¦           °--6S4e                                                                                              
+906  ¦--phosphorus_ammonium_oxalate_method                                                                            
+907  ¦   ¦-- Acid Oxalate Extract                                                                                     
+908  ¦   ¦   °--Cations, Acid Oxalate Extractable                                                                     
+909  ¦   ¦       °--4G2                                                                                               
+910  ¦   °-- Acid Oxalate extraction                                                                                  
+911  ¦       °--Cations, Acid Oxalate Extractable, Phosphorus                                                         
+912  ¦           °--6S8a                                                                                              
+913  ¦--phosphorus_anion_resin_method                                                                                 
+914  ¦   ¦-- Phosphorus, Anion Resin Extractable                                                                      
+915  ¦   ¦   °--Anion Resin Extractable Phosphorus                                                                    
+916  ¦   ¦       °--4D1a1a1a                                                                                          
+917  ¦   °-- Phosphorus, Anion Resin Ground                                                                           
+918  ¦       °--Surface Water                                                                                         
+919  ¦           °--Anion Resin Water Phosphorus                                                                      
+920  ¦               °--4D1a1a1a                                                                                      
+921  ¦--phosphorus_bray1_method                                                                                       
+922  ¦   °-- Phosphorus, Bray 1                                                                                       
+923  ¦       ¦--Phosphorus, Bray 1                                                                                    
+924  ¦       ¦   ¦--4D3a1                                                                                             
+925  ¦       ¦   ¦--6S3b                                                                                              
+926  ¦       ¦   ¦--6S3d                                                                                              
+927  ¦       ¦   ¦--6S3e                                                                                              
+928  ¦       ¦   ¦--6S3f                                                                                              
+929  ¦       ¦   °--BRAYP                                                                                             
+930  ¦       °--Phosphorus, Bray P-1 Absorbed Phosphorus, Spectrophotometer                                           
+931  ¦           °--6S3                                                                                               
+932  ¦--phosphorus_citric_acid_method                                                                                 
+933  ¦   °-- Phosphorus, Citric Acid Extractable                                                                      
+934  ¦       °--Phosphorus, Citric Acid Extractable                                                                   
+935  ¦           °--4D7a1                                                                                             
+936  ¦--phosphorus_mehlich_3_method                                                                                   
+937  ¦   °-- Phosphorus, Mehlich III                                                                                  
+938  ¦       °--Phosphorus, Mehlich III                                                                               
+939  ¦           °--4D6a1                                                                                             
+940  ¦--phosphorus_olsen_method                                                                                       
+941  ¦   °-- Phosphorus, Olsen                                                                                        
+942  ¦       °--Phosphorus, Olsen                                                                                     
+943  ¦           °--4D5a1                                                                                             
+944  ¦--phosphorus_water_method                                                                                       
+945  ¦   °-- Phosphate, Water Soluble                                                                                 
+946  ¦       °--Phosphate, Water Soluble                                                                              
+947  ¦           °--4D2a1b1                                                                                           
+948  ¦--nitrate_1m_kcl_method                                                                                         
+949  ¦   °-- Nitrate, KCl Extractable                                                                                 
+950  ¦       °--Nitrate, 1 M KCl Extractable, FIA                                                                     
+951  ¦           °--4D9a1a                                                                                            
+952  ¦--water_extract_method                                                                                          
+953  ¦   °-- Elements, Water Extract                                                                                  
+954  ¦       °--Elements, Water Extract                                                                               
+955  ¦           °--4D2a2d1-22                                                                                        
+956  °--mehlich_3_extractable_method                                                                                  
+957      °-- Elements, Mehlich III                                                                                    
+958          °--Elements, Mehlich III                                                                                 
+959              °--4D6b                                                                                              

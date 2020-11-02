@@ -12,4 +12,6 @@ x <- SDA_query("SELECT distinct analyte_abbrev ;")
 x <- SDA_query("SELECT TOP 10 * FROM lab_chemical_properties ;")
 
 x <- SDA_query("SELECT TOP 10 * FROM lab_analysis_procedure ;")
-x
+
+# see proced_code --> links to methods in properties table
+x <- SDA_query("SELECT TOP 10 * FROM lab_method_code ;")
