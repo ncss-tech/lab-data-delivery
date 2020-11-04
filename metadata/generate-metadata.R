@@ -1,6 +1,4 @@
 
-## TODO: move this over to the "metadata" directory eventually
-
 
 library(DBI)
 library(RSQLite)
