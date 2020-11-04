@@ -42,16 +42,6 @@ dbGetQuery(db, "SELECT * from procedure limit 10;")
 
 
 
-
-## 
-
-
-
-
-## document -->
-
-
-
 # main interface
 MD <- function(tbl) {
   # REGEX for finding "method" columns
