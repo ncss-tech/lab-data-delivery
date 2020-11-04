@@ -20,27 +20,31 @@ library(data.tree)
 # connect
 db <- dbConnect(RSQLite::SQLite(), 'E:/NASIS-KSSL-LDM/LDM/LDM-compact.sqlite')
 
-# list tables
+# # list tables
 dbListTables(db)
 
-dbListFields(db, 'physical')
-dbListFields(db, 'analyte')
-dbListFields(db, 'method')
-dbListFields(db, 'procedure')
-
-dbGetQuery(db, "SELECT particle_size_method from physical limit 10 ;")
-
-dbGetQuery(db, "SELECT * from method where proced_code = '3A1a1a' ;")
+# 
+# dbListFields(db, 'physical')
+# dbListFields(db, 'analyte')
+# dbListFields(db, 'method')
+# dbListFields(db, 'procedure')
+# 
+# dbGetQuery(db, "SELECT particle_size_method from physical limit 10 ;")
+# 
+# dbGetQuery(db, "SELECT * from method where proced_code = '3A1a1a' ;")
 
 ## TODO: there is currently no way to use the analyte table
 # dbGetQuery(db, "SELECT * from analyte WHERE analyte_key = '53' ;")
 # 
 # dbGetQuery(db, "SELECT * from preparation limit 10;")
 
-## work out the "method column" finding REGEX
-nm <- dbListFields(db, 'physical')
-method.regex <- '(_m[^mm]?[e]?[t]?[h]?[o]?[d]?)$'
-nm[grep(method.regex, nm)]
+# ## work out the "method column" finding REGEX
+# nm <- dbListFields(db, 'physical')
+
+
+## 
+
+
 
 
 ## document -->
