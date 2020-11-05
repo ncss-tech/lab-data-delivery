@@ -4,6 +4,10 @@ library(DBI)
 library(RSQLite)
 library(soilDB)
 library(data.tree)
+library(stringr)
+
+## TODO: why is there leading white space in method.requested_anal_name ?
+
 
 ## programaticlly generate metadata by iterating over each 'method' column in relevant tables
 
@@ -86,6 +90,9 @@ getMetaData <- function(this.method, tbl) {
   is <- format_SQL_in_statement(x[[this.method]])
   qq <- sprintf("SELECT DISTINCT procedure_key, proced_abbrev, requested_anal_name, proced_name, proced_code, proced_desc FROM method WHERE proced_code IN %s ;", is)
   x <- dbGetQuery(db, qq) 
+  
+  # clean whitespace
+  x$requested_anal_name <- str_trim(x$requested_anal_name, side = 'left')
   
   ## TODO: why?
   # there could be no associated methods
