@@ -25,7 +25,7 @@ x$code_desc <- sprintf("%s (%s)", x$proced_code, x$proced_desc)
 x$method_group <- str_split_fixed(x$requested_anal_name, ",", 2)[, 1]
 
 # build DT path: [root] -> [method group] -> [analysis name] -> [procedure name] -> [procedure code + (description)]
-x$path <- sprintf("%s|%s|%s|%s|%s", 'KSSL', x$method_group, x$requested_anal_name, x$proced_name, x$code_desc)
+x$path <- sprintf("%s|%s|%s|%s|%s", 'NCSS Lab Methods', x$method_group, x$requested_anal_name, x$proced_name, x$code_desc)
 
 # init DT from path, attaching additional columns to leaves
 res <- as.Node(x, pathName = 'path', pathDelimiter = '|', 'procedure_key', 'proced_abbrev')
