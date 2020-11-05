@@ -4,16 +4,25 @@ library(soilDB)
 library(data.tree)
 library(stringr)
 
-## TODO: why is there leading white space in method.requested_anal_name ?
+
+## TODO: 
+# clean leading white space in method.requested_anal_name
+# where does the source data come from, static | dynamic?
+# make this into an interactive HTML widget with links to the SSIR 42PDF
+# integrate with a more fully parsed (Andrew?) version of SSIR 42
 
 
-## 
+
 
 # connect
 db <- dbConnect(RSQLite::SQLite(), 'E:/NASIS-KSSL-LDM/LDM/LDM-compact.sqlite')
 
 qq <- sprintf("SELECT DISTINCT procedure_key, proced_abbrev, requested_anal_name, proced_name, proced_code, proced_desc FROM method ;", is)
 x <- dbGetQuery(db, qq) 
+
+# done with connection
+dbDisconnect(db)
+
 
 # clean whitespace
 x$requested_anal_name <- str_trim(x$requested_anal_name, side = 'left')
@@ -29,6 +38,10 @@ x$path <- sprintf("%s|%s|%s|%s|%s", 'NCSS Lab Methods', x$method_group, x$reques
 
 # init DT from path, attaching additional columns to leaves
 res <- as.Node(x, pathName = 'path', pathDelimiter = '|', 'procedure_key', 'proced_abbrev')
+
+
+# demonstrate output for a single group of methods
+res$Sulfur
 
 
 # save to text files for review
