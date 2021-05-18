@@ -33,7 +33,22 @@ methodColumnFixUp <- function(tbl) {
   cat(sprintf("-----------------\n", tbl))
 }
 
+sink('method-column-truncation-fixes.txt')
+
 for(i in dbListTables(db)) {
   methodColumnFixUp(i)
 }
+
+sink()
+
+
+## try SDA: same results
+s <- SDA_query("SELECT TOP 10 * FROM lab_physical_properties ;")
+nm <- names(s)
+
+method.regex <- '(_m[^mm]?[e]?[t]?[h]?[o]?[d]?)$'
+x <- nm[grep(method.regex, nm)]
+x.sub <- x[grep('_method', x, invert = TRUE)]
+
+d <- data.frame(old = x.sub, new = x.sub, stringsAsFactors = FALSE)
 

@@ -1,0 +1,17 @@
+
+------- chemical -------
+old,new
+aluminum_na_pyro_phosphate_met,aluminum_na_pyro_phosphate_method
+
+
+------- physical -------
+old,new
+bulk_density_field_moist_metho,bulk_density_field_moist_method
+le_third_fifteen_lt2_metho,le_third_fifteen_lt2_method
+le_third_ovendry_lt_2_mm_metho,le_third_ovendry_lt_2_mm_method
+water_retention_10th_bar_meth,water_retention_10th_bar_method
+water_retention_thirdbar_metho,water_retention_thirdbar_method
+water_retention_field_state_me,water_retention_field_state_method
+aggregate_stability_05_2_metho,aggregate_stability_05_2_method
+-----------------
+
