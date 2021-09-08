@@ -45,20 +45,20 @@ bx <- dbGetQuery(db, qq)
 dbDisconnect(db)
 
 
-##
-## SDA Interface, this requires a network connection but otherwise it just WORKS!
-##
-qq <- "
-SELECT
+library(soilDB)
+
+# SDA Interface, this requires a network connection but otherwise it just WORKS!
+qq <- " SELECT
 hzn_top, hzn_bot, hzn_desgn, sand_total AS sand, silt_total AS silt, clay_total AS clay
 FROM lab_layer
 JOIN lab_physical_properties ON lab_layer.labsampnum = lab_physical_properties.labsampnum
-WHERE hzn_desgn LIKE 'B%x%' 
-;"
+WHERE hzn_desgn LIKE 'B%x%' ;"
 
 # run query
 bx <- SDA_query(qq)
 
+# ... continued at:
+# https://github.com/ncss-tech/lab-data-delivery/blob/master/manual/Bx-example.R
 
 ##
 ## summarize sand, silt, clay for Bx horizons  
