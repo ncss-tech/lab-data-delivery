@@ -77,7 +77,10 @@ makeSQLiteFromCSV <- function(type, base.path) {
 # f: full path to pipe-delim text file
 # table.name: new table name
 # d: delimeter
-writeTable <- function(f, table.name, d='|', dd=FALSE) {
+# errors: save parse errors
+# dd: emit data description for QA/QC
+# schema: emit SQL schema for evaluation
+writeTable <- function(f, table.name, d = '|', errors = TRUE, dd = FALSE, schema = TRUE) {
   
   # scaleable reading from txt
   # * typically pipe-delim
@@ -88,8 +91,10 @@ writeTable <- function(f, table.name, d='|', dd=FALSE) {
   x <- suppressWarnings(read_delim(f, delim = d, comment = '', guess_max = 1e6, escape_backslash = FALSE, escape_double = FALSE))
   
   # save problems for later review
-  p <- as.data.frame(problems(x))
-  write.csv(p, file=file.path('parse-errors', paste0(table.name, '.csv')), row.names = FALSE)
+  if(errors) {
+    p <- as.data.frame(problems(x))
+    write.csv(p, file=file.path('parse-errors', paste0(table.name, '.csv')), row.names = FALSE)
+  }
   
   # convert to DF
   x <- as.data.frame(x)
@@ -102,8 +107,11 @@ writeTable <- function(f, table.name, d='|', dd=FALSE) {
   dbWriteTable(db, name = table.name, value = x, row.names=FALSE, overwrite=TRUE)
   
   # write out schema for eval, sub-dir of calling code
-  schema.file <- file.path('schema', paste0(table.name, '.sql'))
-  cat(sqliteBuildTableDefinition(db, table.name, value=x[0,], row.names=FALSE), file = schema.file, sep = '\n')
+  if(schema) {
+    schema.file <- file.path('schema', paste0(table.name, '.sql'))
+    cat(sqliteBuildTableDefinition(db, table.name, value=x[0,], row.names=FALSE), file = schema.file, sep = '\n')
+  }
+  
   
   # write out summary of columns
   # save table description for QC
