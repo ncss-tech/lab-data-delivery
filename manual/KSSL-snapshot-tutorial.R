@@ -55,6 +55,16 @@ x.p[, c('labsampnum', 'prep_code', names(x.p)[grep('density', names(x.p))])]
 
 
 
+## priority columns
+x <- dbGetQuery(db, "SELECT * from nasis_ncss;")
+
+table(x$priority, x$priority2)
+
+table(x$labdatadescflag, x$priority2)
+table(x$labdatadescflag, x$priority)
+
+
+
 x <- dbGetQuery(db, "SELECT * FROM layer LIMIT 10 ;")
 
 
