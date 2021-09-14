@@ -39,3 +39,10 @@ str(x)
 # from NASIS
 x <- SDA_query("SELECT TOP 1 * FROM lab_combine_nasis_ncss ;")
 str(x)
+
+x <- SDA_query("SELECT site_obsdate FROM lab_combine_nasis_ncss ;")
+str(x)
+
+x <- as.Date(x$site_obsdate, format = "%m/%d/%y")
+
+range(x)

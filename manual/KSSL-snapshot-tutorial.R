@@ -30,6 +30,12 @@ dbGetQuery(db, "SELECT * from layer WHERE labsampnum = 'UCD03792' ;")
 x <- dbGetQuery(db, "SELECT * from physical WHERE labsampnum = '78P00891' ;")
 
 
+x <- dbGetQuery(db, "SELECT pedobjupdate FROM nasis_ncss; ")
+
+nrow(x)
+head(x)
+
+
 
 
 # none in here...
