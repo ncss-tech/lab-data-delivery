@@ -1,3 +1,5 @@
+library(progress)
+
 # from Jason, out of the MIR db
 mir <- read.csv('NE_MIR.csv')
 str(mir)
@@ -61,21 +63,40 @@ hist(rmse, breaks = 30)
 
 summary(rmse)
 
+# output
+dir.create(file.path('files', 'original'), recursive = TRUE)
+dir.create(file.path('files', 'resampled'), recursive = TRUE)
+
+pb <- progress_bar$new(
+  format = "  downloading [:bar] :percent eta: :eta",
+  total = nrow(mir), clear = FALSE, width= 60
+)
 
 # iterate over interpolated spectra / original file names
 for(i in 1:nrow(mir)) {
+  
+  # original
   d <- data.frame(
     w = w[[i]], 
-    a = a[[i]], 
+    a = a[[i]]
+  )
+  
+  fn <- file.path('files', 'original', sprintf("%s.csv", mir$filename[i]))
+  write.table(d, file = fn, row.names = FALSE, col.names = FALSE, sep = ',')
+  
+  # resampled
+  d <- data.frame(
     w.new = w.new,
     a.new = .interp(w[[i]], a[[i]])
   )
+
+  fn <- file.path('files', 'resampled', sprintf("%s.csv", mir$filename[i]))
+  write.table(d, file = fn, row.names = FALSE, col.names = FALSE, sep = ',')
   
-  fn <- file.path('files', sprintf("%s.csv", mir$filename[i]))
-  
-  write.csv(d, file = fn, row.names = FALSE)
+  pb$tick()
 }
 
+pb$terminate()
 
 
 
