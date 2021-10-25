@@ -1,39 +1,37 @@
-
+# from Jason, out of the MIR db
 mir <- read.csv('NE_MIR.csv')
 str(mir)
 
+# note wavenumber basis frequencies
+table(mir$d_wavelength_array_id)
+
+# unique basis found in the MIR library
 wv <- read.csv('Wavelength.csv')
 str(wv)
 
-# new basis
+# split strings
 wv <- strsplit(wv$wavelength_string, split = ',', fixed = TRUE)
 wv <- lapply(wv, as.numeric)
 
+# the differences are quite small
+summary(wv[[1]] - wv[[2]])
 
-w.new <- as.numeric(
-  strsplit(wv$wavelength_string[2], split = ',', fixed = TRUE)[[1]]
-)
-
-
-table(mir$d_wavelength_array_id)
+# use the second basis as our template
+w.new <- round(wv[[2]])
 
 
-
-
-
+# split all spectra text -> numeric vectors
 w <- strsplit(mir$wavelength_string, split = ',', fixed = TRUE)
 w <- lapply(w, as.numeric)
 
 a <- strsplit(mir$absorbance, split = ',', fixed = TRUE)
 a <- lapply(a, as.numeric)
 
-
+# all have the same dimensions
 table(sapply(w, length))
 
-w[[1]]
-
-
-a[[1]]
+# w[[1]]
+# a[[1]]
 
 
 .interp <- function(w, a) {
@@ -61,6 +59,25 @@ rmse <- sapply(1:ncol(a.mat), FUN = function(i) {
 
 hist(rmse, breaks = 30)
 
+summary(rmse)
+
+
+# iterate over interpolated spectra / original file names
+for(i in 1:nrow(mir)) {
+  d <- data.frame(
+    w = w[[i]], 
+    a = a[[i]], 
+    w.new = w.new,
+    a.new = .interp(w[[i]], a[[i]])
+  )
+  
+  fn <- file.path('files', sprintf("%s.csv", mir$filename[i]))
+  
+  write.csv(d, file = fn, row.names = FALSE)
+}
+
+
+
 
 
 i <- 50
@@ -82,12 +99,10 @@ lines(w.new[idx], a.new[idx], col = 2)
 
 
 data.frame(
-  wv_source = head(w[[1]], 10),
-  a_source = head(a[[1]], 10),
+  wv_source = head(w[[i]], 10),
+  a_source = head(a[[i]], 10),
   wv_interp = head(w.new, 10),
   a_interp = head(a.new, 10)
-  
-  
 )
 
 
