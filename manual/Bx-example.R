@@ -48,7 +48,7 @@ dbDisconnect(db)
 library(soilDB)
 
 # SDA Interface, this requires a network connection but otherwise it just WORKS!
-qq <- " SELECT
+qq <- "SELECT
 hzn_top, hzn_bot, hzn_desgn, sand_total AS sand, silt_total AS silt, clay_total AS clay
 FROM lab_layer
 JOIN lab_physical_properties ON lab_layer.labsampnum = lab_physical_properties.labsampnum
