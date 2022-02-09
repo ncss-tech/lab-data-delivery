@@ -17,6 +17,9 @@ output:
 
 ```{r setup, echo=FALSE, results='hide', warning=FALSE}
 library(knitr, quietly=TRUE)
+library(kableExtra, quietly = TRUE)
+library(soilDB, quietly = TRUE)
+library(DT, quietly = TRUE)
 
 opts_chunk$set(
   message = FALSE, 
@@ -50,25 +53,37 @@ install.packages('scales')
 
 # Tables / Keys
 
-Open in a new table for a larger version. [Interactive version](https://jneme910.github.io/Lab_Data_Mart_Documentation/Documents/SDA_KSSL_Data_model.html).
+Open in a new browser tab for a larger version. [Interactive version](https://jneme910.github.io/Lab_Data_Mart_Documentation/Documents/SDA_KSSL_Data_model.html).
 ![table relationships](static-images/LDM-snapshot-table-relation.png)
 
-
-   * lab_pedon -> lab_layer [pedon_key]
-   * lab_layer -> lab_physical_properties [labsampnum]
-
-## Table Preview
-
+## Table Descriptions
 
 ```{r echo = FALSE}
-library(knitr)
-library(kableExtra)
-library(soilDB)
+td <- read.csv('metadata/NCSS Table Description.csv')
+
+kable_styling(
+  kable(
+    td, 
+    row.names = FALSE, 
+    col.names = c('Table', 'Description'),
+    caption = ""),
+  font_size = 10
+)
 ```
 
-### lab_area
+## Column Descriptions
 
 ```{r echo = FALSE}
+cd <- read.csv('metadata/NCSS Columns Description.csv')
+
+formatStyle(
+  datatable(cd), columns = 1:ncol(cd), fontSize = '75%'
+)
+```
+
+
+
+```{r echo = FALSE, eval = FALSE}
 kable_styling(
   kable(
     SDA_query("SELECT TOP 1 * FROM lab_area WHERE area_type = 'ssa' ;"),
@@ -76,38 +91,6 @@ kable_styling(
   ), full_width = TRUE, font_size = 10
 )
 ```
-
-### lab_pedon
-```{r echo = FALSE}
-kable_styling(
-  kable(
-    SDA_query("SELECT TOP 1 * FROM lab_pedon ;"),
-    row.names = FALSE
-  ), full_width = FALSE, font_size = 10
-)
-```
-
-### lab_layer
-```{r echo = FALSE}
-kable_styling(
-  kable(
-    SDA_query("SELECT TOP 1 * FROM lab_layer ;"),
-    row.names = FALSE
-  ), full_width = FALSE, font_size = 10
-)
-```
-
-### lab_physical_properties
-```{r echo = FALSE}
-x <- SDA_query("SELECT TOP 1 * FROM lab_physical_properties ;")
-kable_styling(
-  kable(
-    x[, 1:15],
-    row.names = FALSE
-  ), full_width = FALSE, font_size = 10
-)
-```
-
 
 
 
@@ -150,6 +133,11 @@ mapview(pedons.sf)
 
 
 ## Layer / Physical / Chemical Properties
+
+  * lab_pedon -> lab_layer [pedon_key]
+  * lab_layer -> lab_physical_properties [labsampnum]
+
+
 ```{r}
 # make a quoted vector of pedon keys, for use in the next query
 pedon.keys <- format_SQL_in_statement(pedons$pedon_key)
