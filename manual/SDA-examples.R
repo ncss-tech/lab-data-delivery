@@ -9,7 +9,7 @@ x$analyte_algorithm
 x <- SDA_query("SELECT distinct analyte_abbrev ;")
 
 
-x <- SDA_query("SELECT TOP 10 * FROM lab_chemical_properties ;")
+x <- SDA_query("SELECT TOP 1 * FROM lab_chemical_properties ;")
 str(x)
 
 names(x)[grep('carbon', names(x), ignore.case = TRUE)]
@@ -35,6 +35,8 @@ str(x)
 
 x <- SDA_query("SELECT TOP 1 * FROM lab_pedon ;")
 str(x)
+
+
 
 # from NASIS
 x <- SDA_query("SELECT TOP 1 * FROM lab_combine_nasis_ncss ;")
