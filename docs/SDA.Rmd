@@ -1,6 +1,6 @@
 ---
 title: "NCSS Lab Data via Soil Data Access"
-author: "D.E. Beaudette"
+author: "D.E. Beaudette and Jason Nemecek"
 date: "`r Sys.Date()`"
 output:
   html_document:
