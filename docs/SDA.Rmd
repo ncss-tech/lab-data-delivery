@@ -48,6 +48,7 @@ install.packages('mapview')
 install.packages('sf')
 install.packages('soiltexture')
 install.packages('scales')
+install.packages('Hmisc')
 ```
 
 
