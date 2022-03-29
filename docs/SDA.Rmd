@@ -149,7 +149,8 @@ sql <- sprintf("
 SELECT
 l.pedon_key, l.labsampnum, hzn_top, hzn_bot, hzn_desgn,
 sand_total, silt_total, clay_total, particle_size_method,
-ph_h2o
+ph_h2o, ph_h2o_method,
+bulk_density_third_bar, bulk_density_third_bar_method
 FROM
 lab_layer AS l
 JOIN lab_physical_properties AS p ON l.labsampnum = p.labsampnum
