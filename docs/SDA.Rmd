@@ -128,7 +128,9 @@ head(pedons)
 library(mapview)
 library(sf)
 
-pedons.sf <- st_as_sf(pedons, coords = c('longitude_decimal_degrees', 'latitude_decimal_degrees'), crs = 4326)
+pedons.sub <- subset(pedons, subset = !is.na(longitude_decimal_degrees) & !is.na(latitude_decimal_degrees))
+
+pedons.sf <- st_as_sf(pedons.sub, coords = c('longitude_decimal_degrees', 'latitude_decimal_degrees'), crs = 4326)
 mapview(pedons.sf)
 ```
 
@@ -143,8 +145,7 @@ mapview(pedons.sf)
 # make a quoted vector of pedon keys, for use in the next query
 pedon.keys <- format_SQL_in_statement(pedons$pedon_key)
 
-
-## CA792 layer + physical properties
+## layer + physical properties
 sql <- sprintf("
 SELECT
 l.pedon_key, l.labsampnum, hzn_top, hzn_bot, hzn_desgn,
