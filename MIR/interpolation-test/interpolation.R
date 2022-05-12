@@ -127,3 +127,12 @@ data.frame(
 )
 
 
+
+## storing gzip-ed version of absorbance: 37% original size
+length(memCompress(mir$absorbance[1], type = 'gzip')) / length(memCompress(mir$absorbance[1], type = 'none'))
+
+
+
+
+
+

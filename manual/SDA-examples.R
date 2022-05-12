@@ -14,6 +14,12 @@ str(x)
 
 names(x)[grep('carbon', names(x), ignore.case = TRUE)]
 
+names(x)[grep('oxa', names(x), ignore.case = TRUE)]
+
+names(x)[grep('dithion', names(x), ignore.case = TRUE)]
+
+names(x)[grep('pyro', names(x), ignore.case = TRUE)]
+
 
 x <- SDA_query("SELECT TOP 10 * FROM lab_physical_properties ;")
 str(x)
@@ -35,6 +41,12 @@ str(x)
 
 x <- SDA_query("SELECT TOP 1 * FROM lab_pedon ;")
 str(x)
+
+x <- SDA_query("SELECT TOP 1 * FROM lab_area ;")
+str(x)
+
+
+SDA_query("SELECT * FROM lab_pedon WHERE pedon_key = '18827' ;")
 
 
 

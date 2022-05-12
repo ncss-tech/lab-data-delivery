@@ -1,0 +1,22 @@
+CREATE TABLE layer 
+( `lay_id` REAL,
+	`natural_key` TEXT,
+	`lay_rpt_seq_num` REAL,
+	`lay_type` TEXT,
+	`proj_id` REAL,
+	`lims_site_id` REAL,
+	`lims_pedon_id` REAL,
+	`lay_field_label1` TEXT,
+	`lay_field_label2` TEXT,
+	`lay_field_label3` TEXT,
+	`lay_depth_to_top` REAL,
+	`lay_depth_to_bottom` REAL,
+	`horizon_designation` TEXT,
+	`horz_desgn_discontinuity` REAL,
+	`horz_desgn_master` TEXT,
+	`horz_desgn_master_prime` TEXT,
+	`horz_desgn_vertical_subdvn` REAL,
+	`stratified_textures_flag` REAL,
+	`texture_description` TEXT,
+	`texture_desc_abbrev` TEXT 
+)
