@@ -1,6 +1,7 @@
 library(DBI)
 library(RSQLite)
 library(soilDB)
+library(scales)
 
 base.path <- 'E:/working-from-home-to-file/MIR/'
 db.file <- file.path(base.path, 'ncss_labdata.sqlite')
@@ -51,6 +52,44 @@ str(m)
 
 table(m$d_wavelength_array_id)
 
+
+## get wave number array, currently packed into a text field
+sql <- "SELECT * FROM lab_mir_wavelength WHERE d_wavelength_array_id = 1;"
+wv <- dbGetQuery(db, sql)
+
+# split wave number text -> vector of wave numbers
+wv <- strsplit(wv$wavelength_string, split = ',', fixed = TRUE)
+wv <- lapply(wv, as.numeric)
+wv <- unlist(wv)
+
+# ok
+str(wv)
+
+
+# get some example MIR spectra, only measured values, no wave numbers
+sql <- "SELECT * FROM lab_mir WHERE d_wavelength_array_id = 1 LIMIT 500;"
+mir <- dbGetQuery(db, sql)
+
+# split absorbance text -> list of absorbance vectors
+a <- strsplit(mir$absorbance, split = ',', fixed = TRUE)
+a <- lapply(a, as.numeric)
+
+# ok
+str(a)
+
+# graphical check
+par(mar = c(4.5, 4, 4, 1))
+
+plot(wv, a[[1]], type = 'n', las = 1, xlab = 'Wavenumber (1/cm)', ylab = 'Absorbance', main = 'Some Example MIR Spectra', ylim = c(0, 2.5))
+
+for(i in seq_along(a)) {
+  lines(wv, a[[i]], type = 'l', col = alpha('royalblue', 0.125))
+}
+
+
+## TODO: make some helper functions to do this work
+
+## TODO: add spectra -> soil color functions here
 
 
 
