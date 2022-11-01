@@ -11,6 +11,7 @@ library(RSQLite)
 
 ## TODO: cross-tabulate record IDs in KSSL snapshot vs. NASIS
 
+## TODO: special syntax required, rosetta table missing labsampnum... why?
 
 
 ##
@@ -18,7 +19,7 @@ library(RSQLite)
 ##
 
 # connect
-db <- dbConnect(RSQLite::SQLite(), 'E:/NASIS-KSSL-LDM/LDM/LDM-compact.sqlite')
+db <- dbConnect(RSQLite::SQLite(), 'E:/NASIS-KSSL-LDM/ncss_labdata.sqlite')
 
 # list tables
 dbListTables(db)
@@ -26,13 +27,15 @@ dbListTables(db)
 
 qq <- "
 SELECT 
-l.labsampnum AS layer_id, g.labsampnum AS geochem_id, x.labsampnum AS mineral_id, gl.labsampnum AS glass_id, p.labsampnum AS physical_id, c.labsampnum AS chemical_id
-FROM layer AS l
-LEFT JOIN physical AS p ON l.labsampnum = p.labsampnum
-LEFT JOIN chemical AS c ON l.labsampnum = c.labsampnum
-LEFT JOIN geochemical AS g ON l.labsampnum = g.labsampnum
-LEFT JOIN xray_thermal AS x ON l.labsampnum = x.labsampnum
-LEFT JOIN glass AS gl ON l.labsampnum = gl.labsampnum
+l.labsampnum AS layer_id, g.labsampnum AS geochem_id, x.labsampnum AS mineral_id, gl.labsampnum AS glass_id, p.labsampnum AS physical_id, c.labsampnum AS chemical_id,
+CASE WHEN rk.layer_key IS NOT NULL THEN l.labsampnum ELSE NULL END AS rosetta_id
+FROM lab_layer AS l
+LEFT JOIN lab_physical_properties AS p ON l.labsampnum = p.labsampnum
+LEFT JOIN lab_chemical_properties AS c ON l.labsampnum = c.labsampnum
+LEFT JOIN lab_major_and_trace_elements_and_oxides AS g ON l.labsampnum = g.labsampnum
+LEFT JOIN lab_xray_and_thermal AS x ON l.labsampnum = x.labsampnum
+LEFT JOIN lab_mineralogy_glass_count AS gl ON l.labsampnum = gl.labsampnum
+LEFT JOIN lab_rosetta_key AS rk ON l.layer_key = rk.layer_key
 ;"
 
 # run query
@@ -96,6 +99,32 @@ venn(l, ellipse = FALSE, ilcs = 0.85, sncs = 1, par = FALSE, zcolor = 'style', b
 title('KSSL Record Overlap')
 
 dev.off()
+
+
+
+
+
+## ROSETTA
+
+l <- list(
+  `Layers\n(samples)\n` = unique(na.omit(x$layer_id)),
+  `Physical\n(sand, silt, clay, Db, COLE, ...)` = unique(na.omit(x$physical_id)),
+  `ROSETTA` = unique(na.omit(x$rosetta_id))
+)
+
+
+png(file = 'KSSL-record-overlap-phys-chem-venn.png', width = 850, height = 800, res = 90, type = 'cairo', antialias = 'subpixel')
+
+par(mar = c(0, 0, 2, 0))
+venn(l, ellipse = FALSE, ilcs = 0.85, sncs = 1, par = FALSE, zcolor = 'style', box = FALSE)
+title('KSSL Record Overlap')
+
+dev.off()
+
+
+# cross-check ROSETTA record number
+# ~ 79,200
+SDA_query("SELECT COUNT(layer_key) FROM lab_rosetta_key;")
 
 
 
