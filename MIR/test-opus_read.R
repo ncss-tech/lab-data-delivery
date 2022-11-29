@@ -74,41 +74,41 @@ abline(h = 0, v = min((1/wn)*1e7), col = 'white')
 
 
 
-
-##
-## previous testing of original opusreader package
-##
-
-## files previously mis-read:
 # 
-# [1] "E:/working-from-home-to-file/MIR/example/C2001USCA048/26456XS03.0"
-# [1] "E:/working-from-home-to-file/MIR/example/C2001USCA048/26478XS01.0"
-# [1] "E:/working-from-home-to-file/MIR/example/C2001USCA048/26478XS02.0"
-# [1] "E:/working-from-home-to-file/MIR/example/C2001USCA048/26478XS03.0"
-
-
-
-
-wtf <- function(f) {
-  x <- read_opus(f, type = 'spec', simplify = TRUE, progress = FALSE)
-  x1 <- read_opus(f, type = 'sc_sample', simplify = TRUE, progress = FALSE)
-  x2 <- read_opus(f, type = 'sc_ref', simplify = TRUE, progress = FALSE)
-  
-  plot(0, 0, type = 'l', las = 1, xlim = c(0, 4000), ylim = c(0, 2), xlab = '', ylab = '')
-  lines(as.vector(x$spec), col = 1)
-  lines(as.vector(x1$sc_sample), col = 2)
-  lines(as.vector(x2$sc_ref), col = 3)
-  
-  legend('topleft', legend = c('Spectra (AB)', 'Sample Measurement', 'Reference'), lty = 1, col = 1:3, bty = 'n', cex = 0.8, horiz = TRUE)
-  
-  title(basename(f))
-}
-
-
-par(mar = c(3, 3, 3, 1), mfrow = c(2, 1))
-wtf('E:/working-from-home-to-file/MIR/example/C2001USCA048/26398XS01.0')
-
-wtf('E:/working-from-home-to-file/MIR/example/C2001USCA048/26456XS03.0')
+# ##
+# ## previous testing of original opusreader package
+# ##
+# 
+# ## files previously mis-read:
+# # 
+# # [1] "E:/working-from-home-to-file/MIR/example/C2001USCA048/26456XS03.0"
+# # [1] "E:/working-from-home-to-file/MIR/example/C2001USCA048/26478XS01.0"
+# # [1] "E:/working-from-home-to-file/MIR/example/C2001USCA048/26478XS02.0"
+# # [1] "E:/working-from-home-to-file/MIR/example/C2001USCA048/26478XS03.0"
+# 
+# 
+# 
+# 
+# wtf <- function(f) {
+#   x <- read_opus(f, type = 'spec', simplify = TRUE, progress = FALSE)
+#   x1 <- read_opus(f, type = 'sc_sample', simplify = TRUE, progress = FALSE)
+#   x2 <- read_opus(f, type = 'sc_ref', simplify = TRUE, progress = FALSE)
+#   
+#   plot(0, 0, type = 'l', las = 1, xlim = c(0, 4000), ylim = c(0, 2), xlab = '', ylab = '')
+#   lines(as.vector(x$spec), col = 1)
+#   lines(as.vector(x1$sc_sample), col = 2)
+#   lines(as.vector(x2$sc_ref), col = 3)
+#   
+#   legend('topleft', legend = c('Spectra (AB)', 'Sample Measurement', 'Reference'), lty = 1, col = 1:3, bty = 'n', cex = 0.8, horiz = TRUE)
+#   
+#   title(basename(f))
+# }
+# 
+# 
+# par(mar = c(3, 3, 3, 1), mfrow = c(2, 1))
+# wtf('E:/working-from-home-to-file/MIR/example/C2001USCA048/26398XS01.0')
+# 
+# wtf('E:/working-from-home-to-file/MIR/example/C2001USCA048/26456XS03.0')
 
 
 
