@@ -1,27 +1,116 @@
 
-# .collection: path to parent directory of single collection
-processOpusCollection <- function(.collection, compress = FALSE) {
-  
+# safely process a collection
+processOpusCollection <- function(.collection) {
   # get collection ID
-  .id <- basename(.collection)
+  .cID <- basename(.collection)
   
   # expand path to full set of files
-  f <- list.files(path = .collection, pattern = '\\.0', full.names = TRUE)
+  .files <- list.files(path = .collection, pattern = '\\.0', full.names = TRUE)
   
-  # read spectra
-  x <- opusreader2::read_opus(f, data_only = TRUE)
+  # spectra ID
+  .sID <- gsub(pattern = '.0', replacement = '', x = basename(.files), fixed = TRUE)
+  
+  # load all spectra objects in collection
+  # there may be cases with no usable data (why?)
+  # result is an empty list
+  x <- opusreader2::read_opus(.files, data_only = TRUE, parallel = FALSE, progress_bar = FALSE)
+  
+  # find bad spectra / parse error (?)
+  idx <- which(sapply(x, length) < 1)
+  if(length(idx) > 0) {
+    # remove spectra + sample ID
+    x <- x[-idx]
+    .sID <- .sID[-idx]
+    
+    # keep track / warn
+    .msg <- sprintf("unusable .0 file: %s [%s]", .sID[idx], .cID)
+    message(.msg)
+  }
+  
+  # keep track of sample IDs in the spectra list
+  names(x) <- .sID
+  
+  # pack results into list
+  .res <- list(
+    spec = x,
+    collection = .cID,
+    sample = .sID
+  )
+  
+  return(.res)
+}
+
+
+# x: results from opusreader2::read_opus(data_only = TRUE)
+#    NULL elements filtered
+flattenWaveNumbers <- function(x) {
+  # save integer wave numbers for each spectra
+  # these should always be the same, but there may be slight deviation
+  wn <- sapply(x, function(i) {
+    round(i$ab$wavenumbers)
+  })
+  
+  # flatten
+  wn <- apply(wn, 2, function(i) {
+    paste(i, collapse = ',')
+  })
+  
+  return(wn)
+}
+
+
+# .collection: path to parent directory of single collection
+wavenumberStats <- function(.collection) {
+  
+  # safely process collection
+  x <- processOpusCollection(.collection)
+  
+  # flatten integer wn sequences
+  # note access to `spec` list element
+  wn <- flattenWaveNumbers(x$spec)
+  
+  # reduce to unique set of wave number sequence
+  wn <- unique(wn)
+  
+  # pack into DF
+  .res <- data.frame(wn = wn)
+  
+  return(.res)
+}
+
+
+
+# .collection: path to parent directory of single collection
+collectSpectra <- function(.collection, compress = FALSE) {
+  
+  # safely process collection
+  x <- processOpusCollection(.collection)
+  
+  # flatten integer wn sequences
+  # note access to `spec` list element
+  wn <- flattenWaveNumbers(x$spec)
+  
+  # look-up matching WN base
+  ## TODO: using wn.lut from global env
+  wnID <- wn.lut$id[match(wn, wn.lut$wn)]
   
   # extract spectra from each object to list elements
-  s <- lapply(x, function(i) {i$ab$data[1, ]})
+  s <- lapply(x$spec, function(i) {i$ab$data[1, ]})
   
-  # sanity check:
-  # just to be sure, all WN should be the same
-  # wn <- t(sapply(x, function(i) {i$ab$wavenumbers}))
+  ## TODO: need original wave numbers for interpolation.. abstract to function
   
-  # interpolate to common set of wavenumbers
-  
-  # flatten absorbance
-  .txt <- paste0(as.vector(s[[1]]), collapse = ',')
+  # # interpolate spectra to integer WN
+  # ss <- lapply(s, function(i) {
+  #   
+  #   .wn <- wn.lut$wn[wnID]
+  #   .sf <- splinefun(x = w, y = a, method = 'natural')
+  #   
+  # })
+    
+  # flatten interpolated spectra
+  .txt <- sapply(s, function(i) {
+    paste(i, collapse = ',')
+  })
   
   ## todo: figure out how to cram this into an sqlite field
   # https://stackoverflow.com/questions/20547956/how-to-write-binary-data-into-sqlite-with-r-dbis-dbwritetable
@@ -35,10 +124,20 @@ processOpusCollection <- function(.collection, compress = FALSE) {
     
     # convert into data.frame with id
     # note special syntax to ensure writing BLOB
-    .res <- data.frame(id = .id, spec = I(list(spec = .gz)))
+    .res <- data.frame(
+      collection = x$collection, 
+      sample = x$sample,
+      spec = I(list(spec = .gz))
+      )
+    
   } else {
+    
     # convert into data.frame with id
-    .res <- data.frame(id = .id, spec = .txt)
+    .res <- data.frame(
+      collection = x$collection, 
+      sample = x$sample,
+      spec = .txt
+    )
   }
  
   return(.res)
@@ -103,7 +202,7 @@ makeSQLiteFromCSV <- function(type, base.path) {
     # dbWriteTable(db, name = this.table, value = x[0, ], row.names=FALSE, overwrite=TRUE)
     
     # note this flushes to disk at each iteration
-    # attemp to write all rows: OK
+    # attempt to write all rows: OK
     dbWriteTable(db, name = this.table, value = x, row.names=FALSE, overwrite=TRUE)
     
     # save schema for review:
