@@ -1,3 +1,50 @@
+
+# .collection: path to parent directory of single collection
+processOpusCollection <- function(.collection, compress = FALSE) {
+  
+  # get collection ID
+  .id <- basename(.collection)
+  
+  # expand path to full set of files
+  f <- list.files(path = .collection, pattern = '\\.0', full.names = TRUE)
+  
+  # read spectra
+  x <- opusreader2::read_opus(f, data_only = TRUE)
+  
+  # extract spectra from each object to list elements
+  s <- lapply(x, function(i) {i$ab$data[1, ]})
+  
+  # sanity check:
+  # just to be sure, all WN should be the same
+  # wn <- t(sapply(x, function(i) {i$ab$wavenumbers}))
+  
+  # interpolate to common set of wavenumbers
+  
+  # flatten absorbance
+  .txt <- paste0(as.vector(s[[1]]), collapse = ',')
+  
+  ## todo: figure out how to cram this into an sqlite field
+  # https://stackoverflow.com/questions/20547956/how-to-write-binary-data-into-sqlite-with-r-dbis-dbwritetable
+  # gzip
+  if(compress) {
+    .gz <- memCompress(from = .txt, type = 'gzip')
+    
+    # space savings
+    # print(length(.gz) / nchar(.txt))
+    
+    
+    # convert into data.frame with id
+    # note special syntax to ensure writing BLOB
+    .res <- data.frame(id = .id, spec = I(list(spec = .gz)))
+  } else {
+    # convert into data.frame with id
+    .res <- data.frame(id = .id, spec = .txt)
+  }
+ 
+  return(.res)
+}
+
+
 # proportion of non-NA records == 0
 propZero <- function(z) {
   z <- na.omit(z)
