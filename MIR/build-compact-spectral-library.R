@@ -16,6 +16,13 @@ source('../code/snapshot-preparation/snapshot-functions.R')
 # base path for first-cut of export, based on Jason's new SQL
 base.path <- 'E:/MIR'
 
+# working directory, cleaned each time
+wd.path <- 'E:/temp/MIR_work'
+proc.path <- file.path(wd.path, 'processed-collections')
+unlink(wd.path, recursive = TRUE, force = TRUE)
+dir.create(proc.path, recursive = TRUE)
+
+
 # output SQLite DB file name
 db.file <- file.path(base.path, 'MIR-compact.sqlite')
 
@@ -46,6 +53,25 @@ p <- list.dirs(file.path(base.path, 'MIR_Library'), recursive = TRUE, full.names
 
 # remove the top-level directory
 p <- p[-1]
+
+
+## pre-process OPUS files
+# result is a set of RDS files, by spectra collection
+# ~ 13 minutes
+# WD is the bottle-neck
+# files cannot be open in OPUS software
+
+# works as expected
+# processOpusCollection(p[1], .output = proc.path)
+
+plan(multisession)
+
+system.time(
+  .trash <- future_map(p, .progress = TRUE, .f = processOpusCollection, .output = proc.path)
+)
+
+plan(sequential)
+
 
 
 ## establish baseline wave numbers and LUT

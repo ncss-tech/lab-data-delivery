@@ -1,31 +1,25 @@
-library(opusreader2)
+
 library(furrr)
-library(purrr)
 
 ## functions waiting for an R package
 source('../code/snapshot-preparation/snapshot-functions.R')
 
-## base path for first-cut of export, based on Jason's new SQL
-base.path <- 'E:/MIR'
+## base path for processed OPUS spectra + raw wave numbers
+base.path <- 'E:/temp/MIR_work/processed-collections'
 
 ## paths to full collection
 # as of 2023-01-16 there are 1594 collections
-p <- list.dirs(file.path(base.path, 'MIR_Library'), recursive = TRUE, full.names = TRUE)
+p <- list.files(base.path, full.names = TRUE)
 
-# remove the top-level directory
-p <- p[-1]
+# 2023-01-07: 1594 collections
 length(p)
 
 ## testing
 # good
 # wavenumberStats(p[1])
 
-# unusable .0 file: 165527XN04 [I2011USNL084]
-# wavenumberStats(p[1284])
-
 ## establish baseline wave numbers and LUT
-# ~ 14 minutes
-# files cannot be open in OPUS software
+# ~ 2 minutes
 plan(multisession)
 
 system.time(
@@ -34,14 +28,11 @@ system.time(
 
 plan(sequential)
 
-
-# ## check for errors
-# .e <- lapply(z, '[[', 'error')
-# idx <- which(! sapply(.e, is.null))
-
-
+# flatten
 z <- do.call('rbind', z)
 z <- unique(z)
+nrow(z)
+
 
 ## what causes the differences in wn sequences?
 # alpha model

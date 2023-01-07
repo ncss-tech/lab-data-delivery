@@ -1,6 +1,6 @@
 
 # safely process a collection
-processOpusCollection <- function(.collection) {
+processOpusCollection <- function(.collection, .output) {
   # get collection ID
   .cID <- basename(.collection)
   
@@ -15,7 +15,7 @@ processOpusCollection <- function(.collection) {
   # result is an empty list
   x <- opusreader2::read_opus(.files, data_only = TRUE, parallel = FALSE, progress_bar = FALSE)
   
-  # find bad spectra / parse error (?)
+  # find bad files / parse error (?)
   idx <- which(sapply(x, length) < 1)
   if(length(idx) > 0) {
     # remove spectra + sample ID
@@ -27,17 +27,28 @@ processOpusCollection <- function(.collection) {
     message(.msg)
   }
   
+  # extract components from OPUS object
+  .res <- lapply(x, function(i) {
+    
+    list(
+      spec = as.vector(i$ab$data[1, ]),
+      wn = i$ab$wavenumbers
+    )
+    
+  })
+  
+  
   # keep track of sample IDs in the spectra list
-  names(x) <- .sID
+  names(.res) <- .sID
   
-  # pack results into list
-  .res <- list(
-    spec = x,
-    collection = .cID,
-    sample = .sID
-  )
+  # keep track of collection ID
+  attr(.res, 'collection') <- .cID
   
-  return(.res)
+  # save to RDS
+  .file <- sprintf('%s.rds', file.path(.output, .cID))
+  saveRDS(.res, file = .file)
+  
+  ## TODO: return error status
 }
 
 
@@ -47,7 +58,7 @@ flattenWaveNumbers <- function(x) {
   # save integer wave numbers for each spectra
   # these should always be the same, but there may be slight deviation
   wn <- sapply(x, function(i) {
-    round(i$ab$wavenumbers)
+    round(i$wn)
   })
   
   # flatten
@@ -59,15 +70,16 @@ flattenWaveNumbers <- function(x) {
 }
 
 
-# .collection: path to parent directory of single collection
-wavenumberStats <- function(.collection) {
+# .p path to pre-processed RDS of a single collection
+wavenumberStats <- function(.p) {
   
-  # safely process collection
-  x <- processOpusCollection(.collection)
+  # load
+  # list of lists
+  .x <- readRDS(.p)
   
   # flatten integer wn sequences
   # note access to `spec` list element
-  wn <- flattenWaveNumbers(x$spec)
+  wn <- flattenWaveNumbers(.x)
   
   # reduce to unique set of wave number sequence
   wn <- unique(wn)
