@@ -116,27 +116,35 @@ collectSpectra <- function(.collection, template, compress = FALSE) {
     paste(i, collapse = ',')
   })
   
-  ## todo: figure out how to cram this into an sqlite field
+  ## gzip compression of absorbance vector
   # https://stackoverflow.com/questions/20547956/how-to-write-binary-data-into-sqlite-with-r-dbis-dbwritetable
-  # gzip
   if(compress) {
-    .gz <- memCompress(from = .txt, type = 'gzip')
     
-    # space savings
-    # print(length(.gz) / nchar(.txt))
+    # note: must iterate over spectra, save to special DF, then flatten
     
-    ## TODO: vectorize this, each row needs its own list
+    # store results into a list of data.frames
+    .res <- list()
+    # sample IDs
+    .nm <- names(x)
     
-    # convert into data.frame with id
-    # note special syntax to ensure writing BLOB
-    .res <- data.frame(
-      sample = names(x),
-      spec = I(list(spec = .gz))
+    # iterate over spectra
+    for(i in seq_along(s)) {
+      .gz <- memCompress(from = .txt[i], type = 'gzip')
+      
+      # convert into data.frame with id
+      # note special syntax to ensure writing BLOB
+      .res[[i]] <- data.frame(
+        sample = .nm[i],
+        spec = I(list(spec = .gz))
       )
+    }
+    
+    # flatten
+    .res <- do.call('rbind', .res)
     
   } else {
     
-    # convert into data.frame with id
+    # store absorbance vector as comma-delim text 
     .res <- data.frame(
       sample = names(x),
       spec = .txt

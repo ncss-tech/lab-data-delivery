@@ -48,7 +48,7 @@ dbWriteTable(db, 'mir_wn_sequence', wn.lut)
 ## create empty spec table
 .sql <- "CREATE TABLE mir_spec (
 sample TEXT,
-spec TEXT
+spec BLOB
 );"
 dbExecute(db, .sql)
 
@@ -66,14 +66,19 @@ range(wnTemplate)
 # for now, use integer template [600, 4002] by 2
 wnTemplate <- seq(from = 4002, to = 600, by = -2)
 
+## TODO: add wnTemplate to the DB
+
+
+
 ## test: ok
 # z <- collectSpectra(.collection = f[1], template = wnTemplate, compress = FALSE)
-
+# z <- collectSpectra(.collection = f[1], template = wnTemplate, compress = TRUE)
 
 
 ## iterate over collections / write intermediate pieces to files
 ## parallel safe
-# 6 minutes
+# plain text: 6 minutes
+# gz compression: 6 minutes
 
 plan(multisession)
 
@@ -81,7 +86,7 @@ system.time(
   .trash <- future_map(f, .progress = TRUE, .f = function(i) {
     
     # single collection
-    z <- collectSpectra(.collection = i, template = wnTemplate, compress = FALSE)
+    z <- collectSpectra(.collection = i, template = wnTemplate, compress = TRUE)
     
     .file <- sprintf("%s__MIR.rds", file.path(staging.dir, basename(i)))
     saveRDS(z, file = .file)
@@ -94,7 +99,8 @@ plan(sequential)
 
 ## load intermediate files into DB table
 ## not likely safe to do in parallel
-# ~ 2 minutes
+# plain text: ~2 minutes
+# gz compressed: ~30 seconds
 
 .rds <- list.files(path = staging.dir, full.names = TRUE)
 .trash <- pblapply(.rds, function(i) {
@@ -124,41 +130,39 @@ dbExecute(db, 'VACUUM;')
 dbDisconnect(db)
 
 
-## check for errors
+## check results
 db <- dbConnect(RSQLite::SQLite(), db.file)
+
+# plaintext: OK
 str(x <- dbGetQuery(db, "SELECT * from mir_metadata WHERE collection = 'C2001USAK206';"))
-str(x <- dbGetQuery(db, "SELECT * from mir_spec WHERE sample = '32987XS02';"))
+str(x <- dbGetQuery(db, "SELECT * from mir_spec WHERE sample = '32987XS04';"))
 
-
-
-# check compressed data
+# compressed data: OK
 .txt <- memDecompress(x$spec[[1]], type = 'gzip', asChar = TRUE)
 .spec <- as.numeric(strsplit(.txt, ',', fixed = TRUE)[[1]])
-
-
-
-
-
-
+plot(wnTemplate, .spec, type = 'l')
 
 
 ## SQLite file stats
 # uncompressed / txt: 9.5GB
-# gzipped / txt: 4.2GB
+# gzipped / txt:      4.2GB
 
-# uncompressed / gz(txt): 
+# uncompressed / gz(txt): 4.5GB
 # gzipped / gz(txt): 
 
 
 # Dec 2022 MIR Library snapshot
 # 650,714 Files
-# * raw folders/files:  ~105GB
-# * single zip archive:  ~88Gb 
+# * raw folders/files:   105GB
+# * single zip archive:   88Gb 
 
 
 ## compress final sqlite DB
 # ~ 10 minutes
-R.utils::gzip(db.file, remove = FALSE, overwrite = TRUE)
+system.time(
+  R.utils::gzip(db.file, remove = FALSE, overwrite = TRUE)
+)
+
 
 ## cleanup
 unlink(staging.dir, recursive = TRUE)
