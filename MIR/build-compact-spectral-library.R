@@ -144,11 +144,11 @@ plot(wnTemplate, .spec, type = 'l')
 
 
 ## SQLite file stats
-# uncompressed / txt: 9.5GB
-# gzipped / txt:      4.2GB
+# uncompressed / txt:     9.5GB
+# gzipped / txt:          4.2GB
 
 # uncompressed / gz(txt): 4.5GB
-# gzipped / gz(txt): 
+# gzipped / gz(txt):      4.4GB
 
 
 # Dec 2022 MIR Library snapshot
