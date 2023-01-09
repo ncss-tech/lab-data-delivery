@@ -282,6 +282,6 @@ writeTable <- function(f, table.name, d = '|', errors = TRUE, dd = FALSE, schema
 # return code O -> success
 indexTable <- function(tbl, field) {
   index.query <- sprintf("CREATE INDEX IF NOT EXISTS %s_%s_idx ON %s (%s);", tbl, field, tbl, field)
-  sapply(index.query, dbExecute, conn=db)
+  sapply(index.query, dbExecute, conn = db)
 }
 

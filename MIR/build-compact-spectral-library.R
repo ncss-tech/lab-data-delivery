@@ -67,12 +67,13 @@ range(wnTemplate)
 wnTemplate <- seq(from = 4002, to = 600, by = -2)
 
 ## test: ok
-z <- collectSpectra(.collection = f[1], template = wnTemplate, compress = FALSE)
+# z <- collectSpectra(.collection = f[1], template = wnTemplate, compress = FALSE)
 
 
 
 ## iterate over collections / write intermediate pieces to files
 ## parallel safe
+# 6 minutes
 
 plan(multisession)
 
@@ -93,8 +94,9 @@ plan(sequential)
 
 ## load intermediate files into DB table
 ## not likely safe to do in parallel
+# ~ 2 minutes
 
-.rds <- list.files(path = td, pattern = '__MIR', full.names = TRUE)
+.rds <- list.files(path = staging.dir, full.names = TRUE)
 .trash <- pblapply(.rds, function(i) {
   z <- readRDS(i)
   .res <- dbAppendTable(db, name = 'mir_spec', z)
@@ -102,7 +104,70 @@ plan(sequential)
   return(.res)
 })
 
-# check for errors
+
+## check
+dbListTables(db)
+
+
+## index
+# note: using 'db' connection from global env
+indexTable('mir_metadata', c('collection', 'sample'))
+indexTable('mir_spec', 'sample')
+
+## cleanup
+# ~ 5 minutes
+dbExecute(db, 'VACUUM;')
+dbExecute(db, 'VACUUM;')
+
+
+## close DB connection / file lock
+dbDisconnect(db)
+
+
+## check for errors
+db <- dbConnect(RSQLite::SQLite(), db.file)
+str(x <- dbGetQuery(db, "SELECT * from mir_metadata WHERE collection = 'C2001USAK206';"))
+str(x <- dbGetQuery(db, "SELECT * from mir_spec WHERE sample = '32987XS02';"))
+
+
+
+# check compressed data
+.txt <- memDecompress(x$spec[[1]], type = 'gzip', asChar = TRUE)
+.spec <- as.numeric(strsplit(.txt, ',', fixed = TRUE)[[1]])
+
+
+
+
+
+
+
+
+## SQLite file stats
+# uncompressed / txt: 9.5GB
+# gzipped / txt: 4.2GB
+
+# uncompressed / gz(txt): 
+# gzipped / gz(txt): 
+
+
+# Dec 2022 MIR Library snapshot
+# 650,714 Files
+# * raw folders/files:  ~105GB
+# * single zip archive:  ~88Gb 
+
+
+## compress final sqlite DB
+# ~ 10 minutes
+R.utils::gzip(db.file, remove = FALSE, overwrite = TRUE)
+
+## cleanup
+unlink(staging.dir, recursive = TRUE)
+
+
+
+
+
+##################
 
 
 # testing
@@ -110,37 +175,4 @@ plan(sequential)
 
 # table defs
 # sqlCreateTable(db, 'spec', z[0, ], row.names = FALSE)
-
-
-# check
-str(x <- dbReadTable(db, 'mir_spec'))
-
-.txt <- memDecompress(x$spec[[1]], type = 'gzip', asChar = TRUE)
-.spec <- as.numeric(strsplit(.txt, ',', fixed = TRUE)[[1]])
-
-
-## index
-
-
-# check
-dbListTables(db)
-
-
-
-## close file
-dbDisconnect(db)
-
-
-
-
-
-
-
-## compress final sqlite DB
-R.utils::gzip(db.file, remove = FALSE, overwrite = TRUE)
-
-## cleanup
-unlink(td, recursive = TRUE)
-
-
 
