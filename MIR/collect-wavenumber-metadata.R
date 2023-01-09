@@ -57,6 +57,10 @@ write.csv(lut, file = 'results/wn-LUT.csv', row.names = FALSE)
 write.csv(z[, c('collection', 'sample', 'wnID')], file = gzfile('results/collection-metadata.csv.gz'), row.names = FALSE)
 
 
+## should we just use an integer sequence of 1 or 2 wn?
+wnTemplate <- as.numeric(strsplit(lut$wn[1], split = ',', fixed = TRUE)[[1]])
+# note that most intervals are 2, a few are 1
+table(diff(wnTemplate))
 
 
 ## what causes the differences in the 2 most frequent wn sequences?

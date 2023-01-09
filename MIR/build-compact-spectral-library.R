@@ -16,11 +16,13 @@ source('../code/snapshot-preparation/snapshot-functions.R')
 # base path for first-cut of export, based on Jason's new SQL
 base.path <- 'E:/MIR'
 
-# working directory, cleaned each time
-wd.path <- 'E:/temp/MIR_work'
-proc.path <- file.path(wd.path, 'processed-collections')
-unlink(wd.path, recursive = TRUE, force = TRUE)
-dir.create(proc.path, recursive = TRUE)
+# pre-processed collection RDS dir
+wd.path <- 'E:/temp/MIR_work/processed-collections'
+
+# staging dir for appending to DB
+staging.dir <- 'E:/temp/MIR_work/staging'
+unlink(staging.dir, recursive = TRUE, force = TRUE)
+dir.create(staging.dir, recursive = TRUE)
 
 
 # output SQLite DB file name
@@ -31,73 +33,60 @@ db.file <- file.path(base.path, 'MIR-compact.sqlite')
 unlink(db.file)
 db <- dbConnect(RSQLite::SQLite(), db.file)
 
-## create spec table
+
+## create MIR metadata table
+collection.metadata <- read.csv('results/collection-metadata.csv.gz')
+dbWriteTable(db, 'mir_metadata', collection.metadata)
+
+## create MIR wavenumber sequence table
+wn.lut <- read.csv('results/wn-LUT.csv')
+dbWriteTable(db, 'mir_wn_sequence', wn.lut)
+
+
+## TODO: add toggle for compress = TRUE (TYPE BLOB)
+
+## create empty spec table
 .sql <- "CREATE TABLE mir_spec (
-id TEXT,
-spec BLOB
+sample TEXT,
+spec TEXT
 );"
 dbExecute(db, .sql)
 
-## testing
-# # a couple of examples
-# f <- file.path(base.path, 'MIR_Library/C2001USCA048/26398XS01.0')
-# 
-# x <- read_opus(f, data_only = TRUE)
-# plot(x$ab$wavenumbers, x$ab$data[1, ])
-# plot((1/x$ab$wavenumbers)*1e7, x$ab$data[1, ], type = 'l', log = 'x')
 
+## iterate over pre-processed RDS
+f <- list.files(wd.path, full.names = TRUE)
 
-## paths to full collection
-# as of 2023-01-16 there are 1594 collections
-p <- list.dirs(file.path(base.path, 'MIR_Library'), recursive = TRUE, full.names = TRUE)
+# 2023-01-07: 1594 collections
+length(f)
 
-# remove the top-level directory
-p <- p[-1]
+## select a wavenumber template
+wnTemplate <- as.numeric(strsplit(wn.lut$wn[1], split = ',', fixed = TRUE)[[1]])
+range(wnTemplate)
 
+# for now, use integer template [600, 4002] by 2
+wnTemplate <- seq(from = 4002, to = 600, by = -2)
 
-## pre-process OPUS files
-# result is a set of RDS files, by spectra collection
-# ~ 13 minutes
-# WD is the bottle-neck
-# files cannot be open in OPUS software
-
-# works as expected
-# processOpusCollection(p[1], .output = proc.path)
-
-plan(multisession)
-
-system.time(
-  .trash <- future_map(p, .progress = TRUE, .f = processOpusCollection, .output = proc.path)
-)
-
-plan(sequential)
-
-
-
-## establish baseline wave numbers and LUT
-wn.lut <- read.csv('results/wn-LUT.csv')
-
-# test
-z <- collectSpectra(p[1])
+## test: ok
+z <- collectSpectra(.collection = f[1], template = wnTemplate, compress = FALSE)
 
 
 
 ## iterate over collections / write intermediate pieces to files
 ## parallel safe
-td <- tempdir()
 
 plan(multisession)
 
-.trash <- future_map(p[1:100], .progress = TRUE, .f = function(i) {
-  
-  # z <- collectSpectra(.collection = i)
-  z <- collectSpectra(.collection = i, compress = TRUE)
-  
-  .file <- sprintf("%s__MIR.rds", file.path(td, basename(i)))
-  saveRDS(z, file = .file)
-  
-  
-})
+system.time(
+  .trash <- future_map(f, .progress = TRUE, .f = function(i) {
+    
+    # single collection
+    z <- collectSpectra(.collection = i, template = wnTemplate, compress = FALSE)
+    
+    .file <- sprintf("%s__MIR.rds", file.path(staging.dir, basename(i)))
+    saveRDS(z, file = .file)
+    
+  })
+)
 
 plan(sequential)
 

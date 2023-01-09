@@ -93,32 +93,23 @@ wavenumberMetadata <- function(.p) {
 
 
 
-# .collection: path to parent directory of single collection
-collectSpectra <- function(.collection, compress = FALSE) {
+# .collection: path to saved RDS file
+collectSpectra <- function(.collection, template, compress = FALSE) {
   
-  # safely process collection
-  x <- processOpusCollection(.collection)
+  # load pre-processed collection
+  x <- readRDS(.collection)
   
-  # flatten integer wn sequences
-  # note access to `spec` list element
-  wn <- flattenWaveNumbers(x$spec)
-  
-  # look-up matching WN base
-  ## TODO: using wn.lut from global env
-  wnID <- wn.lut$id[match(wn, wn.lut$wn)]
-  
-  # extract spectra from each object to list elements
-  s <- lapply(x$spec, function(i) {i$ab$data[1, ]})
-  
-  ## TODO: need original wave numbers for interpolation.. abstract to function
-  
-  # # interpolate spectra to integer WN
-  # ss <- lapply(s, function(i) {
-  #   
-  #   .wn <- wn.lut$wn[wnID]
-  #   .sf <- splinefun(x = w, y = a, method = 'natural')
-  #   
-  # })
+  # interpolate spectra to integer WN
+  s <- lapply(x, function(i) {
+
+    # interpolator function
+    .sf <- splinefun(x = i$wn, y = i$spec, method = 'natural')
+    
+    # resample to template
+    .spec <- .sf(template)
+
+    return(.spec)
+  })
     
   # flatten interpolated spectra
   .txt <- sapply(s, function(i) {
@@ -134,12 +125,12 @@ collectSpectra <- function(.collection, compress = FALSE) {
     # space savings
     # print(length(.gz) / nchar(.txt))
     
+    ## TODO: vectorize this, each row needs its own list
     
     # convert into data.frame with id
     # note special syntax to ensure writing BLOB
     .res <- data.frame(
-      collection = x$collection, 
-      sample = x$sample,
+      sample = names(x),
       spec = I(list(spec = .gz))
       )
     
@@ -147,8 +138,7 @@ collectSpectra <- function(.collection, compress = FALSE) {
     
     # convert into data.frame with id
     .res <- data.frame(
-      collection = x$collection, 
-      sample = x$sample,
+      sample = names(x),
       spec = .txt
     )
   }
