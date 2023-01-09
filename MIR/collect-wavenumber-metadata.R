@@ -9,37 +9,61 @@ base.path <- 'E:/temp/MIR_work/processed-collections'
 
 ## paths to full collection
 # as of 2023-01-16 there are 1594 collections
-p <- list.files(base.path, full.names = TRUE)
+f <- list.files(base.path, full.names = TRUE)
 
 # 2023-01-07: 1594 collections
-length(p)
+length(f)
 
-## testing
-# good
-# wavenumberStats(p[1])
+## testing: ok
+# z <- wavenumberMetadata(f[1])
+# str(z)
 
-## establish baseline wave numbers and LUT
+
+## collection metadata by collection/sample/integer wn-sequence
 # ~ 2 minutes
 plan(multisession)
 
 system.time(
-  z <- future_map(p, .progress = TRUE, .f = wavenumberStats)
+  z <- future_map(f, .progress = TRUE, .f = wavenumberMetadata)
 )
 
 plan(sequential)
 
 # flatten
 z <- do.call('rbind', z)
-z <- unique(z)
+row.names(z) <- NULL
+
+## 2023-01-09: 325369 rows
 nrow(z)
+str(z)
+
+# id for simpler description
+z$wnID <- factor(z$wn, labels = 1:3)
+
+## frequency
+# 1      2          3 
+# 119871 205470     28 
+table(z$wnID)
 
 
-## what causes the differences in wn sequences?
+
+## save metadata
+
+# unique wn sequences
+lut <- unique(z[, c('wnID', 'wn')])
+write.csv(lut, file = 'results/wn-LUT.csv', row.names = FALSE)
+
+# collection/sample/wnID
+write.csv(z[, c('collection', 'sample', 'wnID')], file = gzfile('results/collection-metadata.csv.gz'), row.names = FALSE)
+
+
+
+
+## what causes the differences in the 2 most frequent wn sequences?
 # alpha model
 # vertex model
-# !!??: wn starting from 7498
 
-w <- strsplit(z$wn, split = ',', fixed = TRUE)
+w <- strsplit(lut$wn, split = ',', fixed = TRUE)
 str(w, 1)
 
 # List of 3
@@ -77,16 +101,17 @@ cbind(
 # [19,] "1902" "1901"
 
 
-## save LUT for later
-
-# add ID and move columns
-z$id <- 1:nrow(z)
-z <- z[, c('id', 'wn')]
-
-write.csv(z, file = 'results/wn-LUT.csv', row.names = FALSE)
 
 
-## TODO: figure out third wn possibility
+## what is going on with the strange sequence 600-7498?
+# 28 samples
+nrow(x <- z[z$wnID == 3, ])
+knitr::kable(x[, 1:2], row.names = FALSE)
+range(as.numeric(strsplit(x$wn[1], split = ',', fixed = TRUE)[[1]]))
+
+
+
+
 
 
 

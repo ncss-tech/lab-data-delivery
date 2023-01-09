@@ -71,7 +71,7 @@ flattenWaveNumbers <- function(x) {
 
 
 # .p path to pre-processed RDS of a single collection
-wavenumberStats <- function(.p) {
+wavenumberMetadata <- function(.p) {
   
   # load
   # list of lists
@@ -81,11 +81,12 @@ wavenumberStats <- function(.p) {
   # note access to `spec` list element
   wn <- flattenWaveNumbers(.x)
   
-  # reduce to unique set of wave number sequence
-  wn <- unique(wn)
-  
   # pack into DF
-  .res <- data.frame(wn = wn)
+  .res <- data.frame(
+    collection = attr(.x, 'collection'),
+    sample = names(.x),
+    wn = wn
+  )
   
   return(.res)
 }
