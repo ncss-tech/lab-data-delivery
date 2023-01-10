@@ -2,6 +2,13 @@
 # https://stackoverflow.com/questions/20547956/how-to-write-binary-data-into-sqlite-with-r-dbis-dbwritetable
 
 
+## from Rich Ferguson:
+# The KSSL collects IR spectra from 7500 - 600.  
+# Only the MIR region from 4000 - 600 is validated and shared with customers.  
+# The NIR region from 7500 to 4000 is not currently validated and not shared.
+
+
+
 library(DBI)
 library(RSQLite)
 library(opusreader2)
@@ -140,7 +147,13 @@ str(x <- dbGetQuery(db, "SELECT * from mir_spec WHERE sample = '32987XS04';"))
 # compressed data: OK
 .txt <- memDecompress(x$spec[[1]], type = 'gzip', asChar = TRUE)
 .spec <- as.numeric(strsplit(.txt, ',', fixed = TRUE)[[1]])
-plot(wnTemplate, .spec, type = 'l')
+
+plot(1e7/wnTemplate, .spec, type = 'l', xlab = 'Wavelength (nm)', ylab = 'Absorbance', las = 1)
+plot(wnTemplate, .spec, type = 'l', xlab = 'Wavenumber (1/cm)', ylab = 'Absorbance', las = 1)
+
+# done
+dbDisconnect(db)
+
 
 
 ## SQLite file stats
