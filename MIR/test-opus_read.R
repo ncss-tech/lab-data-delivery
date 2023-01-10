@@ -27,19 +27,22 @@ plot((1/x$ab$wavenumbers)*1e7, x$ab$data[1, ], type = 'l', log = 'x')
 ## try an entire collection
 f <- list.files(path = 'E:/MIR/MIR_Library/R2014USNY055', pattern = '\\.0', full.names = TRUE)
 
-# try loading sequentially: OK
-for(i in f) {
-  
-  res <- tryCatch(
-    read_opus(i, data_only = TRUE, progress = FALSE), 
-    error = function(e) e, 
-    warning = function(w) w
-  )
-  
-  if(length(res) == 2) {
-    print(i)
-  }
-}
+# mysterious samples
+# f <- list.files(path = 'E:/MIR/MIR_Library/C2019USNJ085', pattern = '\\.0', full.names = TRUE)
+
+# # try loading sequentially: OK
+# for(i in f) {
+#   
+#   res <- tryCatch(
+#     read_opus(i, data_only = TRUE, progress = FALSE), 
+#     error = function(e) e, 
+#     warning = function(w) w
+#   )
+#   
+#   if(length(res) == 2) {
+#     print(i)
+#   }
+# }
 
 
 ## try loading all at once: OK
@@ -65,27 +68,42 @@ wn <- x[[1]]$ab$wavenumbers
 # rows contain absorbance at a single WN, all files
 s <- sapply(s, '[')
 
+# check that all files are accounted for
+ncol(s) == length(f)
+
+
 # color based on distance from median spectra
 m <- apply(s, 1, FUN = median, na.rm = TRUE)
 d <- sweep(s, MARGIN = 1, STATS = m, FUN = '-')^2
 d <- sqrt(colSums(d))
 
+# base color palette
 cp <- viridis(n = 100, direction = 1)
-cf <- col_numeric(palette = cp, domain = range(d), alpha = TRUE)
-cols <- alpha(cf(d), alpha = 0.125)
+
+# color interpolator function
+cpf <- colorRamp(cp, space = 'Lab', interpolate = 'spline')
+
+# values -> color translation function
+cn <- col_numeric(palette = cpf, domain = range(d), alpha = FALSE)
+
+# convert values -> colors and apply transparency
+cols <- alpha(cn(d), alpha = 0.125)
 
 # white
 # cols <- rgb(1, 1, 1, alpha = 0.125)
 
-# check that all files are accounted for
-ncol(s) == length(f)
 
 par(mar = c(1, 1, 0, 0), bg = 'black', fg = 'white')
 matplot((1/wn)*1e7, s, lty = 1, type ='l', col = cols, las = 1, xlab = '', ylab = '', axes = FALSE)
 lines((1/wn)*1e7, m, lwd = 1, col = 'white')
-mtext('Absorbance', side = 2, line = -1, col = 'white')
-mtext('1/Wavenumber', side = 1, line = -1, col = 'white')
-abline(h = 0, v = min((1/wn)*1e7), col = 'white')
+mtext(expression(A), side = 2, line = -1, col = 'white', font = 2, cex = 1.5)
+mtext(expression(lambda), side = 1, line = -1, col = 'white', font = 2, cex = 1.5)
+abline(h = min(s), v = min((1/wn)*1e7), col = grey(0.8))
+
+# axis(side = 1, cex.axis = 0.66, col.axis = 'white', line = -4, at = pretty((1/wn)*1e7, n = 8))
+# mtext('Absorbance', side = 2, line = -1, col = 'white')
+# mtext('Wavelength', side = 1, line = -1, col = 'white')
+
 
 
 

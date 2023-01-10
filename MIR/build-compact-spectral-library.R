@@ -63,8 +63,8 @@ length(f)
 wnTemplate <- as.numeric(strsplit(wn.lut$wn[1], split = ',', fixed = TRUE)[[1]])
 range(wnTemplate)
 
-# for now, use integer template [600, 4002] by 2
-wnTemplate <- seq(from = 4002, to = 600, by = -2)
+# for now, use integer template [4000, 600] by 2
+wnTemplate <- seq(from = 4000, to = 600, by = -2)
 
 ## TODO: add wnTemplate to the DB
 
