@@ -77,7 +77,7 @@ abline(h = min(s), v = min((1/wn)*1e7), col = grey(0.8))
 ragg::agg_png(filename = 'pretty-spectra-dist-from-median.png', width = 2400, height = 1200, res = 150, scaling = 1.5)
 
 par(mar = c(0, 0, 0, 0), bg = 'black', fg = 'white')
-matplot(wn, s, lty = 1, type ='l', col = cols, las = 1, xlab = '', ylab = '', axes = FALSE, xlim = c(range(wn)))
+matplot(wn, s, lty = 1, type ='l', col = cols, las = 1, xlab = '', ylab = '', axes = FALSE, xlim = rev(range(wn)))
 lines(wn, m, lwd = 0.5, col = 'white')
 
 dev.off()

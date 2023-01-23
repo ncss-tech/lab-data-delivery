@@ -129,5 +129,36 @@ SDA_query("SELECT COUNT(layer_key) FROM lab_rosetta_key;")
 
 
 
+## water retention at various suctions
+
+.sql <- "SELECT COUNT(water_retention_10th_bar) FROM lab_physical_properties WHERE water_retention_10th_bar IS NOT NULL ;"
+.tenth <- SDA_query(.sql)$V1
+
+.sql <- "SELECT COUNT(water_retention_third_bar) FROM lab_physical_properties WHERE water_retention_third_bar IS NOT NULL ;"
+.third <- SDA_query(.sql)$V1
+
+.sql <- "SELECT COUNT(water_retention_15_bar) FROM lab_physical_properties WHERE water_retention_15_bar IS NOT NULL ;"
+.fifteen <- SDA_query(.sql)$V1
+
+.sql <- "SELECT COUNT(water_retention_0_bar_sieve) FROM lab_physical_properties WHERE water_retention_0_bar_sieve IS NOT NULL ;"
+.sat <- SDA_query(.sql)$V1
+
+
+
+x <- data.frame(
+  zerobar = .sat,
+  tenthbar = .tenth,
+  thirdbar = .third,
+  fifteen = .fifteen
+)
+
+knitr::kable(x)
+
+## 2023-01-20
+#  | zerobar| tenthbar| thirdbar| fifteen|
+#  |-------:|--------:|--------:|-------:|
+#  |      89|    17271|   105963|  222023|
+
+
 
 
