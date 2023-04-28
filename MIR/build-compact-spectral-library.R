@@ -140,6 +140,8 @@ dbDisconnect(db)
 ## check results
 db <- dbConnect(RSQLite::SQLite(), db.file)
 
+
+
 # plaintext: OK
 str(x <- dbGetQuery(db, "SELECT * from mir_metadata WHERE collection = 'C2001USAK206';"))
 str(x <- dbGetQuery(db, "SELECT * from mir_spec WHERE sample = '32987XS04';"))

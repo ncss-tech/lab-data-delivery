@@ -10,3 +10,17 @@
   * the field "upedonid" in lab_combine_nasis_ncss appears to be a *user site ID*
   
   
+## Pedon / Site records
+
+  * The lab_site table has 129650 observation each with a unique site_key. The lab_pedon table only has 67384 observations. The extra lab_site observations appear to be due to replicate entries that differ in the decimal degree fields.
+  
+  
+## internal IDs
+
+  * use `labsampnum` in all tables where possible (rosetta table?)
+  
+  
+# Documentation
+
+# compact MIR data?
+
