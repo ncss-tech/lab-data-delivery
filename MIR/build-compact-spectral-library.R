@@ -7,15 +7,21 @@
 # Only the MIR region from 4000 - 600 is validated and shared with customers.  
 # The NIR region from 7500 to 4000 is not currently validated and not shared.
 
-
-
 library(DBI)
 library(RSQLite)
 library(opusreader2)
 library(furrr)
-library(pbapply)
+library(purrr)
+
+## note: not worth it, buggy
+# # updated progress bar
+# library(progressr)
+# handlers(global = TRUE)
+# handlers("progress")
 
 
+## flag for embedding compressed spectra
+compressSpec <- TRUE
 
 # functions waiting for an R package
 source('../code/snapshot-preparation/snapshot-functions.R')
@@ -50,13 +56,19 @@ wn.lut <- read.csv('results/wn-LUT.csv')
 dbWriteTable(db, 'mir_wn_sequence', wn.lut)
 
 
-## TODO: add toggle for compress = TRUE (TYPE BLOB)
-
 ## create empty spec table
-.sql <- "CREATE TABLE mir_spec (
+if(compressSpec) {
+  .sql <- "CREATE TABLE mir_spec (
 sample TEXT,
 spec BLOB
 );"
+} else {
+  .sql <- "CREATE TABLE mir_spec (
+sample TEXT,
+spec TEXT
+);"
+}
+
 dbExecute(db, .sql)
 
 
@@ -90,14 +102,13 @@ wnTemplate <- seq(from = 4000, to = 600, by = -2)
 plan(multisession)
 
 system.time(
-  .trash <- future_map(f, .progress = TRUE, .f = function(i) {
+  future_walk(f, .progress = TRUE, .f = function(i) {
     
     # single collection
-    z <- collectSpectra(.collection = i, template = wnTemplate, compress = TRUE)
+    z <- collectSpectra(.collection = i, template = wnTemplate, compress = compressSpec)
     
     .file <- sprintf("%s__MIR.rds", file.path(staging.dir, basename(i)))
     saveRDS(z, file = .file)
-    
   })
 )
 
@@ -110,12 +121,14 @@ plan(sequential)
 # gz compressed: ~30 seconds
 
 .rds <- list.files(path = staging.dir, full.names = TRUE)
-.trash <- pblapply(.rds, function(i) {
+
+walk(.rds, .progress = TRUE, .f = function(i) {
   z <- readRDS(i)
   .res <- dbAppendTable(db, name = 'mir_spec', z)
   rm(z)
   return(.res)
 })
+
 
 
 ## check

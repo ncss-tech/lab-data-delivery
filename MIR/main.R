@@ -5,7 +5,7 @@
 
 
 # build a set of RDS, one per spectra collection
-# save to tempory folder for later use
+# save to temporary folder for later use
 source('pre-process-collections.R')
 
 # create collection/sample/integer wn-sequence table

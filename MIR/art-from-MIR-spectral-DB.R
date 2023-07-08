@@ -14,20 +14,18 @@ parseSpectra <- function(.txt, compressed = TRUE) {
   if(compressed) {
     # compressed spectra text
     # use list-column of raw values
-    
-    # un-compress
-    .u <- sapply(.txt, memDecompress, type = 'gzip', asChar = TRUE)
-    
-    # extract numeric vectors from text
-    # result is a matrix of character data
-    # rows -> full spectra (samples)
-    # columns -> absorbance by wn
-    .s <- stringi::stri_split_fixed(.u, pattern = ',', simplify = TRUE)
-    
-    # text -> numeric
-    # converts to numeric matrix
-    .res <- apply(.s, 1, as.numeric)
+    .txt <- sapply(.txt, memDecompress, type = 'gzip', asChar = TRUE)
   }
+  
+  # extract numeric vectors from text
+  # result is a matrix of character data
+  # rows -> full spectra (samples)
+  # columns -> absorbance by wn
+  .s <- stringi::stri_split_fixed(.txt, pattern = ',', simplify = TRUE)
+  
+  # text -> numeric
+  # converts to numeric matrix
+  .res <- apply(.s, 1, as.numeric)
   
   
   ## TODO: think about "right" form of matrix
@@ -39,13 +37,25 @@ parseSpectra <- function(.txt, compressed = TRUE) {
 
 
 base.path <- 'E:/MIR'
-db.file <- file.path(base.path, 'MIR-compact.sqlite')
+
+# compressed spectra
+db.file <- file.path(base.path, 'MIR-compact-gz.sqlite')
+
+# plain-text spectra
+db.file <- file.path(base.path, 'MIR-compact-text.sqlite')
+
 
 db <- dbConnect(RSQLite::SQLite(), db.file)
 
 dbListTables(db)
 dbListFields(db, 'mir_spec')
+dbListFields(db, 'mir_metadata')
+dbListFields(db, 'mir_wn_sequence')
 
+
+dbGetQuery(db, "SELECT * from mir_wn_sequence;")
+
+## TODO: this should be defined in the DB
 # define / get from DB
 wn <- seq(from = 4000, to = 600, by = -2)
 
@@ -60,10 +70,13 @@ str(x <- dbGetQuery(db, "SELECT * from mir_spec WHERE sample = '32987XS04';"))
 plot(wn, .spec, type = 'l', xlab = 'Wavenumber (1/cm)', ylab = 'Absorbance', las = 1)
 
 
-# 
+# 8000 random spectra
 x <- dbGetQuery(db, "SELECT * from mir_spec LIMIT 8000;")
 
-s <- parseSpectra(x$spec)
+# convenience function for converting 
+s <- parseSpectra(x$spec, compressed = TRUE)
+s <- parseSpectra(x$spec, compressed = FALSE)
+
 
 # matplot(wn, s, type = 'l', col = 1, lty = 1)
 
@@ -95,6 +108,6 @@ lines(wn, m, lwd = 0.5, col = 'white')
 
 dev.off()
 
-
+dbDisconnect(db)
 
 

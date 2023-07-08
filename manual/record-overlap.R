@@ -19,7 +19,7 @@ library(RSQLite)
 ##
 
 # connect
-db <- dbConnect(RSQLite::SQLite(), 'E:/NASIS-KSSL-LDM/ncss_labdata.sqlite')
+db <- dbConnect(RSQLite::SQLite(), 'E:/NASIS-KSSL-LDM/NCSSLabDataMartSQLite.sqlite3')
 
 # list tables
 dbListTables(db)
@@ -30,11 +30,11 @@ SELECT
 l.labsampnum AS layer_id, g.labsampnum AS geochem_id, x.labsampnum AS mineral_id, gl.labsampnum AS glass_id, p.labsampnum AS physical_id, c.labsampnum AS chemical_id,
 CASE WHEN rk.layer_key IS NOT NULL THEN l.labsampnum ELSE NULL END AS rosetta_id
 FROM lab_layer AS l
-LEFT JOIN lab_physical_properties AS p ON l.labsampnum = p.labsampnum
-LEFT JOIN lab_chemical_properties AS c ON l.labsampnum = c.labsampnum
-LEFT JOIN lab_major_and_trace_elements_and_oxides AS g ON l.labsampnum = g.labsampnum
-LEFT JOIN lab_xray_and_thermal AS x ON l.labsampnum = x.labsampnum
-LEFT JOIN lab_mineralogy_glass_count AS gl ON l.labsampnum = gl.labsampnum
+LEFT JOIN lab_physical_properties_vw AS p ON l.labsampnum = p.labsampnum
+LEFT JOIN lab_chemical_properties_vw AS c ON l.labsampnum = c.labsampnum
+LEFT JOIN lab_major_and_trace_elements_and_oxides_vw AS g ON l.labsampnum = g.labsampnum
+LEFT JOIN lab_xray_and_thermal_vw AS x ON l.labsampnum = x.labsampnum
+LEFT JOIN lab_mineralogy_glass_count_vw AS gl ON l.labsampnum = gl.labsampnum
 LEFT JOIN lab_rosetta_key AS rk ON l.layer_key = rk.layer_key
 ;"
 
@@ -68,11 +68,12 @@ dev.off()
 
 
 l <- list(
-  `Layers\n(samples)\n` = unique(na.omit(x$layer_id)),
+  # `Layers\n(samples)\n` = unique(na.omit(x$layer_id)),
   `Physical\n(PSD, Db, ...)\n` = unique(na.omit(x$physical_id)),
   `Chemical\n(pH, CEC, ...)\n` = unique(na.omit(x$chemical_id)),
   `Geochemical\n(elemental analysis)\n` = unique(na.omit(x$geochem_id)),
-  `Mineralogy\n(XRD or TGA)\n` = unique(na.omit(x$mineral_id))
+  `Mineralogy\n(XRD or TGA)\n` = unique(na.omit(x$mineral_id)), 
+  `Glass Counts\n(sand, silt fractions)\n` = unique(na.omit(x$glass_id))
 )
 
 png(file = 'KSSL-record-overlap-full-venn.png', width = 850, height = 800, res = 90, type = 'cairo', antialias = 'subpixel')
@@ -85,8 +86,12 @@ dev.off()
 
 
 
+
+
+
 l <- list(
-  `Layers\n(samples)\n` = unique(na.omit(x$layer_id)),
+  # `Layers\n(samples)\n` = unique(na.omit(x$layer_id)),
+  `Mineralogy\n(XRD or TGA)\n` = unique(na.omit(x$mineral_id)),
   `Physical\n(sand, silt, clay, Db, COLE, ...)` = unique(na.omit(x$physical_id)),
   `Chemical\n(pH, EC, CEC, ...)\n` = unique(na.omit(x$chemical_id))
 )
