@@ -36,10 +36,10 @@ options(width=100, stringsAsFactors=FALSE)
 ```
 
 # Introduction
-
+This document demonstrates querying Soil Data Access (SDA) for NCSS laboratory characterization data. A simplified, searchable interface to the associated metadata is included to assist with field names, units of measure, table names, and table linkages.
 
 # Setup
-
+The following R packages are used in this document.
 
 ```{r eval = FALSE}
 install.packages('soilDB')
@@ -52,7 +52,7 @@ install.packages('Hmisc')
 ```
 
 
-# Tables / Keys
+# Table Relationships
 
 Open in a new browser tab for a larger version. [Interactive version](https://jneme910.github.io/Lab_Data_Mart_Documentation/Documents/SDA_KSSL_Data_model.html).
 ![table relationships](static-images/LDM-snapshot-table-relation.png)
@@ -96,6 +96,7 @@ kable_styling(
 
 
 # Sequoia-Kings Canyon (CA792)
+This example demonstrates a 2-stage approach to identifying pedons that have been sampled for laboratory characterization by soil survey area symbol.
 
 ## Site/Pedon Data
 Load required libraries
@@ -183,20 +184,27 @@ textureTriangleSummary(ssc, cex = 0.5)
 ## Profile Sketches
 ```{r fig.width=12, fig.height=6}
 # make a copy and
-# init SoilProfileCollection
 x <- hz
 
+# init SoilProfileCollection
 depths(x) <- pedon_key ~ hzn_top + hzn_bot
 hzdesgnname(x) <- 'hzn_desgn'
 
 par(mar = c(0, 0, 3, 0))
-plotSPC(x, print.id = FALSE, name.style = 'center-center', width = 0.3, color = 'ph_h2o', cex.depth.axis = 0.85, axis.line.offset = -4)
+plotSPC(
+  x, 
+  print.id = FALSE, 
+  name.style = 'center-center', 
+  width = 0.33, 
+  color = 'ph_h2o', 
+  depth.axis = list(cex = 0.85, line = -4)
+)
 ```
 
 ## Join Pedon + Horizon Data
 
 
-# Bx Horizons
+# Investigate Bx Horizons
 ```{r fig.width=8, fig.height=8}
 library(soiltexture)
 library(scales)

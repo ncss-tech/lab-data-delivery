@@ -6,6 +6,8 @@ library(scales)
 library(viridisLite)
 library(stringi)
 
+library(MetBrewer)
+
 ## move to function library / soilDB
 ## TODO: slow for n > 1000
 
@@ -44,6 +46,9 @@ db.file <- file.path(base.path, 'MIR-compact-gz.sqlite')
 # plain-text spectra
 db.file <- file.path(base.path, 'MIR-compact-text.sqlite')
 
+# full
+db.file <- file.path(base.path, 'MIR-compact.sqlite')
+
 
 db <- dbConnect(RSQLite::SQLite(), db.file)
 
@@ -71,11 +76,11 @@ plot(wn, .spec, type = 'l', xlab = 'Wavenumber (1/cm)', ylab = 'Absorbance', las
 
 
 # 8000 random spectra
-x <- dbGetQuery(db, "SELECT * from mir_spec LIMIT 8000;")
+x <- dbGetQuery(db, "SELECT * from mir_spec LIMIT 2000;")
 
 # convenience function for converting 
 s <- parseSpectra(x$spec, compressed = TRUE)
-s <- parseSpectra(x$spec, compressed = FALSE)
+# s <- parseSpectra(x$spec, compressed = FALSE)
 
 
 # matplot(wn, s, type = 'l', col = 1, lty = 1)
@@ -107,6 +112,27 @@ matplot(wn, s, lty = 1, type ='l', col = cols, las = 1, xlab = '', ylab = '', ax
 lines(wn, m, lwd = 0.5, col = 'white')
 
 dev.off()
+
+
+cp <- rev(met.brewer('Hiroshige', n = 100))
+# color interpolator function
+cpf <- colorRamp(cp, space = 'Lab', interpolate = 'spline')
+
+# values -> color translation function
+cn <- col_numeric(palette = cpf, domain = range(d), alpha = FALSE)
+
+# convert values -> colors and apply transparency
+cols <- alpha(cn(d), alpha = 0.125)
+
+
+pdf(file = 'art-01.pdf', width = 24, height = 12)
+
+par(mar = c(0, 0, 0, 0))
+matplot(wn, s, lty = 1, type ='l', col = cols, las = 1, xlab = '', ylab = '', axes = FALSE, xlim = rev(range(wn)))
+lines(wn, m, lwd = 0.5, col = 'black')
+
+dev.off()
+
 
 dbDisconnect(db)
 
