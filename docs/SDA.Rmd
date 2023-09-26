@@ -94,18 +94,19 @@ kable_styling(
 ```
 
 
+# Manually Written Queries
 
-# Sequoia-Kings Canyon (CA792)
+## Sequoia-Kings Canyon (CA792)
 This example demonstrates a 2-stage approach to identifying pedons that have been sampled for laboratory characterization by soil survey area symbol.
 
-## Site/Pedon Data
+
 Load required libraries
 ```{r}
 library(soilDB)
 library(aqp)
 ```
 
-
+Querying by soil survey area code is useful for reviewing those data collected to support a new soil survey or to perform updates to an existing soil survey.
 ```{r}
 sql <- "
 SELECT
@@ -124,7 +125,7 @@ head(pedons)
 ```
 
 
-### Pedon Locations
+Review pedon locations with an interactive map.
 ```{r}
 library(mapview)
 library(sf)
@@ -136,11 +137,11 @@ mapview(pedons.sf)
 ```
 
 
-## Layer / Physical / Chemical Properties
+Connect physical and chemical properties to sampled "layers" (usually genetic soil horizons).
 
+Join conditions:
   * lab_pedon -> lab_layer [pedon_key]
   * lab_layer -> lab_physical_properties [labsampnum]
-
 
 ```{r}
 # make a quoted vector of pedon keys, for use in the next query
@@ -170,7 +171,7 @@ table(hz$particle_size_method)
 ```
 
 
-## Investigate Soil Texture
+Investigate soil texture.
 ```{r fig.width=8, fig.height=8}
 # remove missing values
 ssc <- na.omit(hz[, c('sand_total', 'silt_total', 'clay_total')])
@@ -181,7 +182,7 @@ names(ssc) <- c('SAND', 'SILT', 'CLAY')
 textureTriangleSummary(ssc, cex = 0.5)
 ```
 
-## Profile Sketches
+Review thematic (1:1 soil:water pH) soil profile sketches.
 ```{r fig.width=12, fig.height=6}
 # make a copy and
 x <- hz
@@ -201,10 +202,9 @@ plotSPC(
 )
 ```
 
-## Join Pedon + Horizon Data
 
 
-# Investigate Bx Horizons
+## Investigate Bx Horizons
 ```{r fig.width=8, fig.height=8}
 library(soiltexture)
 library(scales)
@@ -266,6 +266,14 @@ TT.plot(
 
 ```
 
+# Convenience Functions
+
+## fetchLDM()
+
+```{r eval=FALSE}
+x <- fetchLDM(what = 'pierre', bycol = 'corr_name')
+
+```
 
 
 
