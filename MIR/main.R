@@ -13,7 +13,7 @@ source('pre-process-collections.R')
 # flag samples with odd wn-sequence
 source('collect-wavenumber-metadata.R')
 
-
+# build a compact MIR library 
 source('build-compact-spectral-library.R')
 
 

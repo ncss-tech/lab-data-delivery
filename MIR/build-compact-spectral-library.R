@@ -13,14 +13,10 @@ library(opusreader2)
 library(furrr)
 library(purrr)
 
-## note: not worth it, buggy
-# # updated progress bar
-# library(progressr)
-# handlers(global = TRUE)
-# handlers("progress")
-
 
 ## flag for embedding compressed spectra
+# useful for stand-alone SQLite versions, not for SDA
+# requires a little more work when reading data out of the SQLite DB
 compressSpec <- TRUE
 
 # functions waiting for an R package
