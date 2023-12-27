@@ -9,20 +9,20 @@ SDA_query("SELECT COUNT(*) from lab_mir ;")
 
 
 # connect
-db <- dbConnect(RSQLite::SQLite(), 'E:/NASIS-KSSL-LDM/NCSSLabDataMartSQLite.sqlite3')
+db <- dbConnect(RSQLite::SQLite(), 'E:/NASIS-KSSL-LDM/ncss_labdata.sqlite')
 
 # list tables
 dbListTables(db)
 
 
-dbGetQuery(db, "SELECT COUNT(*) from lab_mir_vw ;")
+dbGetQuery(db, "SELECT COUNT(*) from lab_mir ;")
 
 
 x <- dbGetQuery(db, "SELECT * from lab_mir_vw limit 1 ;")
 str(x)
 
 
-x <- dbGetQuery(db, "SELECT * from lab_mir_wavelength_string_d ;")
+x <- dbGetQuery(db, "SELECT * from lab_mir_wavelength ;")
 str(x)
 
 ## check number of local OPUS files
