@@ -3,6 +3,8 @@
 ##
 
 
+# WD
+setwd('MIR')
 
 # build a set of RDS, one per spectra collection
 # save to temporary folder for later use

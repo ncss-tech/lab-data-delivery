@@ -8,26 +8,34 @@ source('../code/snapshot-preparation/snapshot-functions.R')
 base.path <- 'E:/temp/MIR_work/processed-collections'
 
 ## paths to full collection
-# as of 2023-01-16 there are 1594 collections
+# as of 2023-01-16 there are 1594 collections (including some non-public)
+# as of 2024-02-14: 1387 public collections
 f <- list.files(base.path, full.names = TRUE)
-
-# 2023-01-07: 1594 collections
-length(f)
 
 ## testing: ok
 # z <- wavenumberMetadata(f[1])
 # str(z)
 
+## TODO: not robust to NULL list elements
 
 ## collection metadata by collection/sample/integer wn-sequence
 # ~ 2 minutes
 plan(multisession)
 
 system.time(
-  z <- future_map(f, .progress = TRUE, .f = wavenumberMetadata)
+  z <- future_map(f, .progress = TRUE, .f = safely(wavenumberMetadata))
 )
 
 plan(sequential)
+
+# test for error conditions
+e <- whochsapply(z, '[', 'error')
+which(!sapply(e, is.null))
+
+f[1054]
+
+
+
 
 # flatten
 z <- do.call('rbind', z)
@@ -113,6 +121,9 @@ nrow(x <- z[z$wnID == 3, ])
 knitr::kable(x[, 1:2], row.names = FALSE)
 range(as.numeric(strsplit(x$wn[1], split = ',', fixed = TRUE)[[1]]))
 
+## cleanup
+rm(list = ls())
+gc(reset = TRUE)
 
 
 

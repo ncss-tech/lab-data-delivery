@@ -10,21 +10,45 @@ processOpusCollection <- function(.collection, .output) {
   # spectra ID
   .sID <- gsub(pattern = '.0', replacement = '', x = basename(.files), fixed = TRUE)
   
+  ## TODO: data_only = TRUE bug
+  ##       -> https://github.com/spectral-cockpit/opusreader2/issues/104
+  
+  ## TODO: warnings:
+  ##       -> In get_meta_utc_datetime(timestamp) : NAs introduced by coercion
+  
   # load all spectra objects in collection
   # there may be cases with no usable data (why?)
   # result is an empty list
-  x <- opusreader2::read_opus(.files, data_only = TRUE, parallel = FALSE, progress_bar = FALSE)
+  x <- opusreader2::read_opus(.files, data_only = FALSE, parallel = FALSE, progress_bar = FALSE)
+  
+  ## TODO: review with data_only = FALSE
+  ## TODO: something wrong with C2019USNJ085/*
   
   # find bad files / parse error (?)
   idx <- which(sapply(x, length) < 1)
   if(length(idx) > 0) {
-    # remove spectra + sample ID
-    x <- x[-idx]
-    .sID <- .sID[-idx]
-    
     # keep track / warn
     .msg <- sprintf("unusable .0 file: %s [%s]", .sID[idx], .cID)
     message(.msg)
+    
+    # remove spectra + sample ID
+    x <- x[-idx]
+    .sID <- .sID[-idx]
+  }
+  
+  # find spectra missing 'ab' element
+  idx <- which(sapply(x, function(i) {
+    is.null(i$ab)
+  }))
+  
+  if(length(idx) > 0) {
+    # keep track / warn
+    .msg <- sprintf("missing `ab` file: %s [%s]", .sID[idx], .cID)
+    message(paste(.msg, collapse = '\n'))
+    
+    # remove spectra + sample ID
+    x <- x[-idx]
+    .sID <- .sID[-idx]
   }
   
   # extract components from OPUS object
@@ -37,18 +61,29 @@ processOpusCollection <- function(.collection, .output) {
     
   })
   
+  # keep track of collection ID
+  attr(.res, 'collection') <- .cID
   
   # keep track of sample IDs in the spectra list
   names(.res) <- .sID
   
-  # keep track of collection ID
-  attr(.res, 'collection') <- .cID
+  # test for empty set
+  # all files in collection are invalid
+  # result is NULL
+  if(length(.res) < 1) {
+    .res <- NULL
+    
+    # return to collection ID to calling function
+    return(.cID)
+    
+    # do not save RDS
+  } else {
+    # everything is fine
+    # save to RDS
+    .file <- sprintf('%s.rds', file.path(.output, .cID))
+    saveRDS(.res, file = .file)
+  }
   
-  # save to RDS
-  .file <- sprintf('%s.rds', file.path(.output, .cID))
-  saveRDS(.res, file = .file)
-  
-  ## TODO: return error status
 }
 
 

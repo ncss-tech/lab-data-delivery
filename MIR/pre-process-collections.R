@@ -17,33 +17,41 @@ dir.create(proc.path, recursive = TRUE)
 
 
 ## paths to full collection
-# as of 2023-01-16 there are 1594 collections
+# as of 2023-01-16 there are 1594 collections (including some non-public)
+# as of 2024-02-14: 1387 public collections
 p <- list.dirs(file.path(base.path, 'MIR_Library'), recursive = TRUE, full.names = TRUE)
 
 # remove the top-level directory
-p <- p[-1]
+# also remove the _INSTRUCTIONS dir
+p <- p[-c(1:2)]
+
 
 
 ## pre-process OPUS files
 # result is a set of RDS files, by spectra collection
-# ~ 15 minutes
+# ~ 13 minutes
 # WD is the bottle-neck
-# files cannot be open in OPUS software
 
 # test working as expected: OK
 # processOpusCollection(p[1], .output = proc.path)
 
+# missing `ab` list element: 'e:/MIR/MIR_Library/C2019USNJ085/'
 
 plan(multisession)
 
-# writes RDS, no output here
+# writes RDS, result is a list of collections with no usable data
 system.time(
-  .trash <- future_map(p, .progress = TRUE, .f = processOpusCollection, .output = proc.path)
+  e <- future_map(p, .progress = TRUE, .f = processOpusCollection, .output = proc.path)
 )
 
 plan(sequential)
 
-# done
+# keep track of errors
+
+
+## cleanup
+rm(list = ls())
+gc(reset = TRUE)
 
 
 
