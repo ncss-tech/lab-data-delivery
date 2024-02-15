@@ -19,3 +19,9 @@ source('collect-wavenumber-metadata.R')
 source('build-compact-spectral-library.R')
 
 
+## TODO:
+## 1. create spectra -- sample LUT
+## 2. index
+## 3. simplify code if possible
+## 4. wrapper / helper functions
+

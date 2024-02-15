@@ -1,5 +1,6 @@
 
 library(furrr)
+library(purrr)
 
 ## functions waiting for an R package
 source('../code/snapshot-preparation/snapshot-functions.R')
@@ -29,28 +30,30 @@ system.time(
 plan(sequential)
 
 # test for error conditions
-e <- whochsapply(z, '[', 'error')
+e <- sapply(z, '[', 'error')
 which(!sapply(e, is.null))
 
-f[1054]
-
-
-
+# extract results
+z <- sapply(z, '[', 'result') 
 
 # flatten
 z <- do.call('rbind', z)
 row.names(z) <- NULL
 
 ## 2023-01-09: 325369 rows
+## 2024-02-14: 186893 rows
 nrow(z)
 str(z)
+
+# double check that there are three distinct WN sequences
+stopifnot(length(unique(z$wn)) == 3)
 
 # id for simpler description
 z$wnID <- factor(z$wn, labels = 1:3)
 
 ## frequency
-# 1      2          3 
-# 119871 205470     28 
+# 1      2      3 
+# 2472  55052 129369 
 table(z$wnID)
 
 
@@ -81,7 +84,7 @@ str(w, 1)
 # List of 3
 # $ : chr [1:1765] "4002" "4000" "3998" "3996" ...
 # $ : chr [1:1765] "4002" "4000" "3998" "3996" ...
-# $ : chr [1:3578] "7498" "7496" "7494" "7492" ...
+# $ : chr [1:1765] "4001" "4000" "3998" "3996" ...
 
 # ~ 19 elements in the integer wn sequence are off by 1
 idx <- which(w[[1]] != w[[2]])
@@ -114,11 +117,12 @@ cbind(
 
 
 
-
+## 2024-02-14: no longer a problem in public data
 ## what is going on with the strange sequence 600-7498?
 # 28 samples
-nrow(x <- z[z$wnID == 3, ])
-knitr::kable(x[, 1:2], row.names = FALSE)
+# nrow(x <- z[z$wnID == 3, ])
+# knitr::kable(x[, 1:2], row.names = FALSE)
+
 range(as.numeric(strsplit(x$wn[1], split = ',', fixed = TRUE)[[1]]))
 
 ## cleanup

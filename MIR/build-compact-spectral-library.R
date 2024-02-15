@@ -72,6 +72,7 @@ dbExecute(db, .sql)
 f <- list.files(wd.path, full.names = TRUE)
 
 # 2023-01-07: 1594 collections
+# 2024-02-14: 1386 collections
 length(f)
 
 ## select a wavenumber template
@@ -92,8 +93,8 @@ wnTemplate <- seq(from = 4000, to = 600, by = -2)
 
 ## iterate over collections / write intermediate pieces to files
 ## parallel safe
-# plain text: 6 minutes
-# gz compression: 6 minutes
+# plain text: 2 minutes
+# gz compression: 2 minutes
 
 plan(multisession)
 
@@ -114,7 +115,7 @@ plan(sequential)
 ## load intermediate files into DB table
 ## not likely safe to do in parallel
 # plain text: ~2 minutes
-# gz compressed: ~30 seconds
+# gz compressed: ~10 seconds
 
 .rds <- list.files(path = staging.dir, full.names = TRUE)
 
@@ -137,7 +138,7 @@ indexTable('mir_metadata', c('collection', 'sample'))
 indexTable('mir_spec', 'sample')
 
 ## cleanup
-# ~ 5 minutes
+# ~ 2 minutes
 dbExecute(db, 'VACUUM;')
 dbExecute(db, 'VACUUM;')
 
@@ -171,8 +172,8 @@ dbDisconnect(db)
 # uncompressed / txt:     9.5GB
 # gzipped / txt:          4.2GB
 
-# uncompressed / gz(txt): 4.5GB
-# gzipped / gz(txt):      4.4GB
+# uncompressed / gz(txt): 2.6GB
+# gzipped / gz(txt):      GB
 
 
 # Dec 2022 MIR Library snapshot
@@ -180,6 +181,9 @@ dbDisconnect(db)
 # * raw folders/files:   105GB
 # * single zip archive:   88Gb 
 
+# Feb 2024 Public MIR Library
+# 373,818 Files
+# * raw folders/files:    61GB
 
 ## compress final sqlite DB
 # ~ 10 minutes
@@ -191,6 +195,10 @@ system.time(
 ## cleanup
 unlink(staging.dir, recursive = TRUE)
 
+
+## cleanup
+rm(list = ls())
+gc(reset = TRUE)
 
 
 

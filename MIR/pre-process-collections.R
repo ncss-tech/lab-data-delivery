@@ -47,7 +47,7 @@ system.time(
 plan(sequential)
 
 # keep track of errors
-
+saveRDS(e, file = 'errors.rds')
 
 ## cleanup
 rm(list = ls())

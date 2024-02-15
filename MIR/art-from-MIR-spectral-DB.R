@@ -41,10 +41,10 @@ parseSpectra <- function(.txt, compressed = TRUE) {
 base.path <- 'E:/MIR'
 
 # compressed spectra
-db.file <- file.path(base.path, 'MIR-compact-gz.sqlite')
+# db.file <- file.path(base.path, 'MIR-compact-gz.sqlite')
 
 # plain-text spectra
-db.file <- file.path(base.path, 'MIR-compact-text.sqlite')
+# db.file <- file.path(base.path, 'MIR-compact-text.sqlite')
 
 # full
 db.file <- file.path(base.path, 'MIR-compact.sqlite')
