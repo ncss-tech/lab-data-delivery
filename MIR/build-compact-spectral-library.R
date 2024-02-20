@@ -17,7 +17,7 @@ library(purrr)
 ## flag for embedding compressed spectra
 # useful for stand-alone SQLite versions, not for SDA
 # requires a little more work when reading data out of the SQLite DB
-compressSpec <- TRUE
+compressSpec <- FALSE
 
 # functions waiting for an R package
 source('../code/snapshot-preparation/snapshot-functions.R')
@@ -169,8 +169,8 @@ dbDisconnect(db)
 
 
 ## SQLite file stats
-# uncompressed / txt:     9.5GB
-# gzipped / txt:          4.2GB
+# uncompressed / txt:     5.5GB
+# gzipped / txt:          GB
 
 # uncompressed / gz(txt): 2.6GB
 # gzipped / gz(txt):      GB
