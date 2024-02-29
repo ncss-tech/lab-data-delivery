@@ -268,11 +268,40 @@ TT.plot(
 
 # Convenience Functions
 
-## fetchLDM()
+## fetchLDM() via SDA
 
-```{r eval=FALSE}
-x <- fetchLDM(what = 'pierre', bycol = 'corr_name')
 
+Safely iterate over soil series names, querying "correlated as" when present, otherwise "sampled as" when NULL.
+```{r, fig.width=8, fig.height=5.5}
+# useful for iteration with progress bar
+library(purrr)
+
+getData <- function(i) {
+  
+  # formulate WHERE clause for series 'i'
+  .where <- sprintf("CASE WHEN corr_name IS NOT NULL THEN LOWER(corr_name) ELSE LOWER(samp_name) END = '%s' ", i)
+  
+  # query SDA
+  lab <- fetchLDM(
+    WHERE = .where, 
+  )
+  
+  # return results
+  return(lab)
+}
+
+# series names to iterate over
+taxa <- c('pierre', 'lucy', 'zook')
+
+# result is a list of SoilProfileCollection objects
+s <- map(taxa, .f = getData, .progress = TRUE)
+
+# flatten into a single SoilProfileCollection
+s <- combine(s)
+
+# graphicaly check a couple
+par(mar = c(1, 1, 3, 3))
+plotSPC(s[1:10, ], color = 'clay_total', width = 0.33, name.style = 'center-center', max.depth = 150)
 ```
 
 
