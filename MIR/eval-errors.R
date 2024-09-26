@@ -12,3 +12,4 @@ x <- x[idx]
 ## 2024-02-14 errors:
 ## C2019USNJ085
 
+z <- read_opus('E:/MIR/MIR_Library/C2019USNJ085/291505XS01.0', data_only = TRUE)

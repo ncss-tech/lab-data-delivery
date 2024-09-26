@@ -2,14 +2,14 @@ library(DBI)
 library(RSQLite)
 
 # connect
-db <- dbConnect(RSQLite::SQLite(), 'E:/NASIS-KSSL-LDM/LDM/LDM-compact.sqlite')
+db <- dbConnect(RSQLite::SQLite(), 'E:/NASIS-KSSL-LDM/ncss_labdata.sqlite')
 
 # list tables
 dbListTables(db)
 
 # list fields
-dbListFields(db, 'nasis_ncss')
-dbListFields(db, 'physical')
+dbListFields(db, 'lab_combine_nasis_ncss')
+dbListFields(db, 'lab_physical_properties')
 
 
 # get data

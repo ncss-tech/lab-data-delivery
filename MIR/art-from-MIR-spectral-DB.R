@@ -43,11 +43,8 @@ base.path <- 'E:/MIR'
 # compressed spectra
 db.file <- file.path(base.path, 'MIR-compact-compressed.sqlite')
 
-# plain-text spectra
-# db.file <- file.path(base.path, 'MIR-compact-text.sqlite')
-
-# full
-# db.file <- file.path(base.path, 'MIR-compact.sqlite')
+# plain text
+db.file <- file.path(base.path, 'MIR-compact.sqlite')
 
 
 db <- dbConnect(RSQLite::SQLite(), db.file)
@@ -58,7 +55,10 @@ dbListFields(db, 'mir_metadata')
 dbListFields(db, 'mir_wn_sequence')
 
 
-dbGetQuery(db, "SELECT * from mir_wn_sequence;")
+# dbGetQuery(db, "SELECT * from mir_wn_sequence;")
+dbGetQuery(db, "SELECT COUNT(*) from mir_spec;")
+
+
 
 ## TODO: this should be defined in the DB
 # define / get from DB
