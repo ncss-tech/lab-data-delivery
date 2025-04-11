@@ -17,6 +17,7 @@ library(officer)
 fp <- "D:/geodata/soils/NCSS-SCD"
 scd_dd <- readRDS(file.path(fp, "scd_dd.rds"))
 scd_dd <- scd_dd[order(scd_dd$`Table Name`), ]
+scd_dd <- scd_dd[!duplicated(scd_dd), ]
 scd_dd <- cbind(Line = 1:nrow(scd_dd), scd_dd)
 
 # scd_dd |> head() |> flextable() |> border_remove() |> border_inner() |> border_outer() |> fontsize(size = 10, part = "all")
