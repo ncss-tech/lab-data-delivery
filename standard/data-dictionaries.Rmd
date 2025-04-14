@@ -27,7 +27,8 @@ nm <- names(test)
 
 lapply(nm, function(x) {
 
-  y <- test[[x]][-2]
+  y <- test[[x]][c(-2, -3)]
+  z <- test[[x]][1, 2]
   # row.names(y) <- 1:nrow(y)
   # test <- kable(y, caption = paste("Table X - Data dictionary for", x), row.names = FALSE)
   # print(test)
@@ -40,7 +41,10 @@ lapply(nm, function(x) {
     fontsize(size = 10, part = "all") |>
     align(align = c("left", "left", "left", "center", "center", "left", "left"), part = "body") |>
     align(align = c("center"), part = "header") |>
-    set_caption(caption = paste("Table X - Data dictionary for", x)) |>
+    set_caption(caption = paste(
+      "Data dictionary for", x, "\n", 
+      z, "\n",
+      "Table X - Data dictionary for", x, "\n")) |>
     flextable_to_rmd()
     
   cat("\n")

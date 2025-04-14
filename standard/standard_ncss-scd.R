@@ -52,7 +52,9 @@ dom <- dom[!duplicated(dom), ]
 ## nasis data model ----
 dd <- soilDB::dbQueryNASIS(
   soilDB::dbConnectNASIS(), 
-  " SELECT sysnm, tablecollectname, tabphynm, tablognm, tablab, attlognm, attphynm, attlabel, attoffdef, attlogdattyp, uomunits, uomsym, attributeid
+  " SELECT sysnm, tablecollectname, tabphynm, tablognm, tablab, tabdesc, tabhelptext,
+  attributeid, attlognm, attphynm, attlabel, attoffdef, attlogdattyp, 
+  uomunits, uomsym
   
   FROM 
   system                                                        INNER JOIN 
@@ -80,17 +82,17 @@ dd <- within(dd, {
 })
 
 # replicate missing data attributes
-vars <- c("choice", "ChoiceObsolete", "choicesequence")
-dd_sub  <- subset(dd, attphynm %in% vars)
-dd_sub  <- lapply(vars, function(i) {
-  x <- dd_sub
-  x[, "attphynm"] <- i
-  x$sysnm <- "METADATA"
-  return(x)
-})
-dd_sub <- do.call("rbind", dd_sub)
-
-dd <- rbind(dd, dd_sub)
+# vars <- c("choice", "choicesequence") # "ChoiceObsolete", 
+# dd_sub  <- subset(dd, attphynm %in% vars)
+# dd_sub  <- lapply(vars, function(i) {
+#   x <- dd_sub
+#   x[, "attphynm"] <- i
+#   x$sysnm <- "METADATA"
+#   return(x)
+# })
+# dd_sub <- do.call("rbind", dd_sub)
+# 
+# dd <- rbind(dd, dd_sub)
 
 
 ## static data model ----
@@ -689,12 +691,12 @@ View(scd_dd[
 # scd_dd$attoffdef <- ifelse(is.na(scd_dd$attoffdef), scd_dd$column_description, scd_dd$attoffdef)
 
 # calculate Obligation/Condition
-scd_dom <- c("lab_preparation", "lab_method_code", "lab_area", "lab_analyte", "lab_analysis_procedure", "lab_rosetta_key")
+scd_dom <- c("labpreparation", "labmethodcode", "labarea", "labanalyte", "labanalysisprocedure", "labrosetta_key")
 
 scd_dd <- within(scd_dd, {
   n_na = ifelse(
     n_na == 1 
-    | scd_dd$tbname %in% c("lab_analyte", "lab_analysis_procedure", "lab_preparation", "lab_area", "MetadataCardinality", "MetadataColumnLookup", "MetadataDomainDetail", "MetadataIndexDetail", "MetadataRelationshipDetail", "MetadataRelationshipMaster", "MetadataTable", "MetadataTableColumn"), 
+    | scd_dd$tbname %in% c("labanalyte", "labanalysisprocedure", "labpreparation", "labarea", "MetadataCardinality", "MetadataColumnLookup", "MetadataDomainDetail", "MetadataIndexDetail", "MetadataRelationshipDetail", "MetadataRelationshipMaster", "MetadataTable", "MetadataTableColumn"), 
     "M", 
     "O")
   ChoiceList = ifelse(ChoiceList == TRUE | !is.na(lookup), TRUE, FALSE)
@@ -721,16 +723,16 @@ scd_dd <- within(scd_dd, {
 # })
 
 # vars <- c("tbname", "var", "attoffdef", "n_na", "attlogdattyp")
-vars <- c("tbname", "var", "attoffdef", "n_na", "Data Type")
+vars <- c("tabhelptext", "tbname", "var", "attoffdef", "n_na", "Data Type")
 scd_dd <- scd_dd[vars]
 
 vars <- c("Table Name", "Name/Role Name", "Definition", paste0("Obligation/", "\n", "Condition"), "Data Type")
-names(scd_dd) <- vars
+names(scd_dd)[2:ncol(scd_dd)] <- vars
 
 scd_dd$`Maximum Occurrence` <- "*"
 scd_dd$`Domain` <- "Unrestricted"
 
-vars <- c("Table Name", "Name/Role Name", "Definition", paste0("Obligation/", "\n", "Condition"), "Maximum Occurrence", "Data Type", "Domain")
+vars <- c("tabhelptext", "Table Name", "Name/Role Name", "Definition", paste0("Obligation/", "\n", "Condition"), "Maximum Occurrence", "Data Type", "Domain")
 idx <- grepl("^object", scd_dd$`Name/Role Name`, ignore.case = TRUE)
 scd_dd <- scd_dd[!idx, vars]
 

@@ -71,6 +71,8 @@ mdd_sub <- mdd_sub[!duplicated(mdd_sub), ]
 #   flextable_to_rmd()
   
 scd_new$labarea[-c(1:2)] |>
+  subset(areatype == "county") |>
+  head(n = 5) |>
   flextable() |>
   border_remove() |>
   border_inner() |>
