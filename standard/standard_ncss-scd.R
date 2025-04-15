@@ -326,7 +326,6 @@ names(scd_new) <- scd_new_nms
 
 # saveRDS(scd_new, file.path(fp, "ncss_labdata_phynames.rds"))
 scd_new <- readRDS(file.path(fp, "ncss_labdata_phynames.rds"))
-write.csv(scd_new$labmethodcode, "")
 
 
 # estimate completeness ----
@@ -699,6 +698,28 @@ scd_dd <- within(scd_dd, {
     | scd_dd$tbname %in% c("labanalyte", "labanalysisprocedure", "labpreparation", "labarea", "MetadataCardinality", "MetadataColumnLookup", "MetadataDomainDetail", "MetadataIndexDetail", "MetadataRelationshipDetail", "MetadataRelationshipMaster", "MetadataTable", "MetadataTableColumn"), 
     "M", 
     "O")
+  n_na = ifelse(
+    n_na == "O" & grepl("key$|^apid$|^wmiid$|^mcid$|^smp_id$|dwavelengtharrayid|siteobsdate|^areacode$|^layertype$", var), 
+    "M", 
+    n_na)
+  n_na = ifelse(
+    n_na == "O" & grepl("method$", var), 
+    "C/if the matching measure is NOT NULL", 
+    n_na)
+  n_na = ifelse(
+    n_na == "O" & grepl("^peiid$|^siteiid$", var), 
+    "C/if present in NASIS", 
+    n_na)
+  n_na = ifelse(
+    n_na == "O" & grepl("^pedlabsampnum$|^labsampnum$", var), 
+    "C/if present in LIMS", 
+    n_na)
+  n_na = ifelse(
+    var  %in% c("resultsourcekey", "parentarekey", "parentorgkey", "countrykey", "statekey", "countykey", "mlrakey", "ssakeynforestkey") 
+    & tbname != "labchemicalproperties", 
+    "O", 
+    n_na
+    )
   ChoiceList = ifelse(ChoiceList == TRUE | !is.na(lookup), TRUE, FALSE)
   `Data Type` = ifelse(
     `Data Type` != "sfc_Point", 
