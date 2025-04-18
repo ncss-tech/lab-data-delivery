@@ -46,6 +46,40 @@ scd_new$labcombinenasisncss$shape <- NULL
 
 
 scd_dm <- new_dm(scd_new)
+
+# create fake method code to draw foreign key relationship
+scd_dm <- scd_dm |> 
+  dm_zoom_to(labphysicalproperties) |> 
+  mutate(`method*` = NA) |>
+  dm_insert_zoomed(new_tbl_name = "new_labphysicalproperties") |>
+  dm_select_tbl(-labphysicalproperties) |>
+  dm_rename_tbl(labphysicalproperties = new_labphysicalproperties)
+scd_dm <- scd_dm |> 
+  dm_zoom_to(labchemicalproperties) |> 
+  mutate(`method*` = NA) |>
+  dm_insert_zoomed(new_tbl_name = "new_labchemicalproperties") |>
+  dm_select_tbl(-labchemicalproperties) |>
+  dm_rename_tbl(labchemicalproperties = new_labchemicalproperties)
+scd_dm <- scd_dm |> 
+  dm_zoom_to(labmajortrelementsoxides) |> 
+  mutate(`method*` = NA) |>
+  dm_insert_zoomed(new_tbl_name = "new_labmajortrelementsoxides") |>
+  dm_select_tbl(-labmajortrelementsoxides) |>
+  dm_rename_tbl(labmajortrelementsoxides = new_labmajortrelementsoxides)
+scd_dm <- scd_dm |> 
+  dm_zoom_to(labxrayandthermal) |> 
+  mutate(`method*` = NA) |>
+  dm_insert_zoomed(new_tbl_name = "new_labxrayandthermal") |>
+  dm_select_tbl(-labxrayandthermal) |>
+  dm_rename_tbl(labxrayandthermal = new_labxrayandthermal)
+scd_dm <- scd_dm |> 
+  dm_zoom_to(labmineralogyglasscount) |> 
+  mutate(`method*` = NA) |>
+  dm_insert_zoomed(new_tbl_name = "new_labmineralogyglasscount") |>
+  dm_select_tbl(-labmineralogyglasscount) |>
+  dm_rename_tbl(labmineralogyglasscount = new_labmineralogyglasscount)
+
+
 scd_dm <- scd_dm |>
   # primary keys ----
   dm_add_pk(labanalysisprocedure, columns = apid,    autoincrement = TRUE) |>
@@ -59,7 +93,7 @@ scd_dm <- scd_dm |>
   dm_add_pk(labpedon,             columns = c(pedonkey #,
                                               # pedlabsampnum
                                               )) |>
-  dm_add_pk(labpreparation,       columns = prepkey, autoincrement = TRUE) |>
+  dm_add_pk(labpreparation,       columns = c(prepkey), autoincrement = TRUE) |>
   dm_add_pk(labsite,              columns = sitekey, autoincrement = TRUE) |>
   dm_add_pk(labmir,               columns = id) |> # missing from NASIS
   dm_add_pk(labmirwavelength,     columns = dwavelengtharrayid) |> # missing from NASIS
@@ -78,29 +112,58 @@ scd_dm <- scd_dm |>
 
   # foreign keys ----
 scd_dm <- scd_dm |>
-    dm_add_fk(labcalculationsandestimates, columns = c(layerkey #,
+  dm_add_fk(labcalculationsandestimates, columns = c(layerkey #,
                                                        # labsampnum
                                                        ),
-              ref_table = lablayer,        ref_columns = c(layerkey #,
+            ref_table = lablayer,        ref_columns = c(layerkey #,
                                                            # labsampnum
                                                            )) |>
-    dm_add_fk(labchemicalproperties,       columns = c(layerkey #,
+  dm_add_fk(labchemicalproperties,       columns = c(layerkey #,
                                                        #absampnum
                                                        ),
-              ref_table = lablayer,        ref_columns = c(layerkey #,
+            ref_table = lablayer,        ref_columns = c(layerkey #,
                                                            #labsampnum
                                                            )) |>
-    dm_add_fk(labcombinenasisncss,         columns = c(pedonkey #,
+  dm_add_fk(labcombinenasisncss,         columns = c(pedonkey #,
                                                        #pedlabsampnum
                                                        # sitekey,
                                                        # peiid
                                                        ),
-              ref_table = labpedon,        ref_columns = c(pedonkey #,
+            ref_table = labpedon,        ref_columns = c(pedonkey #,
                                                            #pedlabsampnum
                                                            )) |>
-    dm_add_fk(labcombinenasisncss,         columns = sitekey,
-              ref_table = labsite,         ref_columns = sitekey) |>
-    dm_add_fk(lablayer,                    columns = c(pedonkey,
+  dm_add_fk(labcombinenasisncss,         columns = sitekey,
+            ref_table = labsite,         ref_columns = sitekey) |>
+  # areakeys  these aren't unique (i.e. valid) therefore they won't export via copy_dm_to()
+  dm_add_fk(labcombinenasisncss,         columns     = countrykey,
+            ref_table = labarea,         ref_columns = areakey) |>
+  dm_add_fk(labcombinenasisncss,         columns     = statekey,
+            ref_table = labarea,         ref_columns = areakey) |>
+  dm_add_fk(labcombinenasisncss,         columns     = countykey,
+            ref_table = labarea,         ref_columns = areakey) |>
+  dm_add_fk(labcombinenasisncss,         columns     = mlrakey,
+            ref_table = labarea,         ref_columns = areakey) |>
+  dm_add_fk(labcombinenasisncss,         columns     = ssakey,
+            ref_table = labarea,         ref_columns = areakey) |>
+  dm_add_fk(labcombinenasisncss,         columns     = nparkkey,
+            ref_table = labarea,         ref_columns = areakey) |>
+  dm_add_fk(labcombinenasisncss,         columns     = nforestkey,
+            ref_table = labarea,         ref_columns = areakey) |>
+  # prepcodes these aren't unique (i.e. valid) therefore they won't export via copy_dm_to()
+  dm_add_fk(labcalculationsandestimates,  columns     = prepcode,
+            ref_table = labpreparation,  ref_columns = prepcode) |>
+  dm_add_fk(labchemicalproperties,       columns     = prepcode,
+            ref_table = labpreparation,  ref_columns = prepcode) |>
+  dm_add_fk(labmajortrelementsoxides,    columns     = prepcode,
+            ref_table = labpreparation,  ref_columns = prepcode) |>
+  dm_add_fk(labmineralogyglasscount,     columns     = prepcode,
+            ref_table = labpreparation,  ref_columns = prepcode) |>
+  dm_add_fk(labphysicalproperties,       columns     = prepcode,
+            ref_table = labpreparation,  ref_columns = prepcode) |>
+  dm_add_fk(labxrayandthermal,           columns     = prepcode,
+            ref_table = labpreparation,  ref_columns = prepcode) |>
+  
+  dm_add_fk(lablayer,                    columns = c(pedonkey,
                                                      # projectkey,
                                                      # sitekey,
                                                      ),
@@ -111,7 +174,6 @@ scd_dm <- scd_dm |>
               ref_table = lablayer,      ref_columns = c(layerkey #,
                                                          #labsampnum
                                                          )) |>
-  # dm_add_pk(labmajortrelementsoxides,    columns = layerkey) |>
     dm_add_fk(labmajortrelementsoxides,    columns = c(layerkey #,
                                                        #labsampnum
                                                        # resourcesourcekey
@@ -126,10 +188,10 @@ scd_dm <- scd_dm |>
             ref_table = lablayer,        ref_columns = c(layerkey #,
                                                          #labsampnum
                                                          )) |>
-  # dm_add_fk(labmethodcode,               columns = c(procedurekey,
-  #                                                    # sourcesystemkey
-  #                                                    ),
-  # ref_table = labanalysisprocedure, ref_columns = c(procedurekey)) |>
+  dm_add_fk(labmethodcode,               columns = c(procedurekey,
+                                                     # sourcesystemkey
+                                                     ),
+            ref_table = labanalysisprocedure, ref_columns = c(procedurekey)) |>
   dm_add_fk(labmir,                      columns = c(layerkey #,
                                                      #labsampnum
                                                      ),
@@ -144,8 +206,6 @@ scd_dm <- scd_dm |>
                                                      # resultsourcekey
                                                      ),
             ref_table = lablayer,        ref_columns = layerkey) |>
-  # dm_add_fk(labsite,                     columns = c(countykey),
-  #           ref_table = labarea,         ref_columns = c(countykey = areakey)) |>
   dm_add_fk(labxrayandthermal,           columns = c(layerkey #,
                                                      # labsampnum #,
                                                      # resultsourcekey
@@ -159,23 +219,43 @@ scd_dm <- scd_dm |>
             ref_table = labpedon,        ref_columns = c(pedonkey,
                                                          # pedlabsampnum
                                                          )) |>
-  dm_add_fk(MetadataTableColumn,               columns = TableID,
+  # fake .method foreign key relationship
+  dm_add_fk(labphysicalproperties,        columns    = `method*`,
+            ref_table = labmethodcode,   ref_columns = procedcode) |>
+  dm_add_fk(labchemicalproperties,        columns    = `method*`,
+            ref_table = labmethodcode,   ref_columns = procedcode) |>
+  dm_add_fk(labmajortrelementsoxides,     columns    = `method*`,
+            ref_table = labmethodcode,   ref_columns = procedcode) |>
+  dm_add_fk(labxrayandthermal,            columns    = `method*`,
+            ref_table = labmethodcode,   ref_columns = procedcode) |>
+  dm_add_fk(labmineralogyglasscount,        columns  = `method*`,
+            ref_table = labmethodcode,   ref_columns = procedcode) |>
+  
+  # Metadata tables
+  dm_add_fk(MetadataTableColumn,               columns     = TableID,
             ref_table = MetadataTable,         ref_columns = TableID) |>
-  # dm_add_fk(MetadataTableColumn,               columns = DomainID,
-  #           ref_table = MetadataDomainDetail, ref_columns = DomainID) |>
-  dm_add_fk(MetadataColumnLookup,        columns = c(ColumnID),
-            ref_table = MetadataTableColumn,   ref_column = ColumnID) |>
-  dm_add_fk(MetadataIndexDetail,               columns = ColumnID,
-            ref_table = MetadataTableColumn,   ref_columns = ColumnID) #|>
-  # dm_add_fk(MetadataRelationshipMaster,        columns = c(LeftTableID,
-  #                                                          RightTableID),
-  #           ref_table = MetadataRelationshipDetail, ref_columns = c(LeftTableID,
-  #                                                                   RightTableID)) |>
-  # dm_add_fk(MetadataRelationshipMaster,        columns = RelationshipID,
-  #           ref_table = MetadataColumnLookup,  ref_columns = RelationshipID)
+  dm_add_fk(MetadataTableColumn,               columns     = DomainID,
+            ref_table = MetadataDomainDetail,  ref_columns = DomainID) |>
+  dm_add_fk(MetadataColumnLookup,              columns     = c(ColumnID),
+            ref_table = MetadataTableColumn,   ref_column  = ColumnID) |>
+  dm_add_fk(MetadataIndexDetail,               columns     = ColumnID,
+            ref_table = MetadataTableColumn,   ref_columns = ColumnID) |>
+  dm_add_fk(MetadataRelationshipMaster,        columns     = RelationshipID,
+            ref_table = MetadataColumnLookup,  ref_columns = RelationshipID) |>
+  dm_add_fk(MetadataCardinality,               columns =   Cardinality,
+            ref_table = MetadataRelationshipMaster, ref_columns = Cardinality) |>
+  dm_add_fk(MetadataRelationshipMaster,        columns     = c(LeftTableID,
+                                                               RightTableID),
+            ref_table = MetadataRelationshipDetail, ref_columns = c(LeftTableID,
+                                                                    RightTableID))
+  
+  
 
-  
-  
+scd_dm |> dm_select_tbl(!starts_with("Metadata")) |>
+  dm_draw(column_types = TRUE, rankdir = "RL")
+scd_dm |> dm_select_tbl(starts_with("Metadata")) |>
+  dm_draw(column_types = TRUE)
+
 dm_draw(scd_dm, column_types = TRUE)
 test <- dm_draw(scd_dm)
 test |> 
@@ -187,7 +267,7 @@ test |> htmltools::HTML() |> htmltools::html_print()
 scd_dm2 <- dm_select_tbl(scd_dm, labanalysisprocedure, labsite, labpreparation)
 
 
-destination_db <- DBI::dbConnect(RSQLite::SQLite(), bigint = "integer64", dbname = "ncss_labdata_relationships.sqlite")
+destination_db <- DBI::dbConnect(RSQLite::SQLite(), bigint = "integer64", dbname = "ncss_labdata_relationships2.sqlite")
 copy_dm_to(
   destination_db, 
   scd_dm, 
@@ -197,7 +277,7 @@ copy_dm_to(
 
 template_db <- DBI::dbConnect(RSQLite::SQLite(), bigint = "integer64", dbname = "ncss-scd_template_db.sqlite")
 
-tmp1 <- dm_ddl_pre(scd_dm, template_db, temporary = FALSE)
+tmp1 <- dm_ddl_pre(scd_dm, template_db, temporary = TRUE)
 tmp2 <- dm_ddl_post(scd_dm, template_db, temporary = FALSE)
 
 lapply(tmp1, write, "test.txt", append = TRUE)

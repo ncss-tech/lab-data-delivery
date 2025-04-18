@@ -8,6 +8,7 @@ library(dplyr)
 # Tabular and Spatial GPKG add in the metadata tables from a download
 fp <- "D:/geodata/soils/NCSS-SCD"
 dsn <- file.path(fp, "ncss_labdata.gpkg")
+con  <- DBI::dbConnect(RSQLite::SQLite(), dbname = dsn)
 lyrs <- st_layers(dsn) |> as.data.frame()
 
 dsn2  <- file.path(fp, "NASIS_Morphological_09142021.sqlite")
@@ -16,6 +17,10 @@ lyrs2 <- DBI::dbListTables(con2)
 lyrs2 <- lyrs2[grepl("Metadata", lyrs2)]
 
 # read in data ----
+## dm ----
+test <- dm_from_con(con)
+
+
 ## NASIS ----
 # query
 
