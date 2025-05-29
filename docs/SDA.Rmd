@@ -91,6 +91,19 @@ kable_styling(
     row.names = FALSE
   ), full_width = TRUE, font_size = 10
 )
+
+
+kable_styling(
+  kable(
+    SDA_query("SELECT TOP 1 labsampnum, ph_h2o, ph_h2o_method FROM lab_chemical_properties WHERE ph_h2o_method IS NOT NULL;"),
+    row.names = FALSE
+  ), full_width = TRUE, font_size = 10
+)
+
+SDA_query("SELECT * from lab_method_code WHERE proced_code = '4C1a2a' ;")
+
+SDA_query("SELECT * FROM lab_analysis_procedure WHERE procedure_key = '38' ;")
+
 ```
 
 
