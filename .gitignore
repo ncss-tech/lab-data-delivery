@@ -1,3 +1,5 @@
 *.sqlite
 .Rproj.user
 lab-data-delivery.Rproj
+standard/data-dictionaries.docx
+standard/code-lists.docx

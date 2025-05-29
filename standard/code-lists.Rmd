@@ -1,0 +1,100 @@
+---
+title: "NCSS-SCD Domains"
+output:
+  word_document: default
+  html_document: default
+date: "2025-02-28"
+editor_options:
+  chunk_output_type: console
+---
+
+
+```{r pressure, echo=FALSE, results='asis', out.width=11}
+library(knitr)
+library(flextable)
+library(officer)
+
+
+## domains ----
+dom <- soilDB::dbQueryNASIS(
+  soilDB::dbConnectNASIS(), 
+  "SELECT mtc.DomainID, DomainName, DomainRanked, ColumnPhysicalName, ColumnLogicalName, ColumnLabel, ColumnDescription, UnitsofMeasureUnabbreviated, UnitsofMeasureAbbreviated, ChoiceSequence, ChoiceValue, ChoiceName, ChoiceLabel, ChoiceDescription, ChoiceObsolete
+  
+  FROM
+  MetadataTableColumn  mtc INNER JOIN
+  MetadataDomainMaster mdm ON mdm.DomainID = mtc.DomainID INNER JOIN
+  MetadataDomainDetail mdd ON mdd.DomainID = mdm.DomainID ---- INNER JOIN
+  ---- domaingroup          dg  ON dg.grpiidref = mdm.grpiidref
+  
+  ---- WHERE domgrpname = 'Current NASIS/SSURGO Domains'
+  "
+  )
+dom <- dom[!duplicated(dom), ]
+nms <- c("DomainID", "ChoiceSequence", "ChoiceValue", "ChoiceName", 
+"ChoiceLabel", "ChoiceDescription", "ChoiceObsolete")
+
+
+fp <- "D:/geodata/soils/NCSS-SCD"
+scd_new <- readRDS(file.path(fp, "ncss_labdata_phynames.rds"))
+scd_lookup <- readRDS(file.path(fp, "scd_lookup.rds"))
+
+
+labmethodcode <- scd_new$labmethodcode[-c(1:2)]
+labmethodcode <- labmethodcode[!duplicated(labmethodcode), ]
+
+labarea <- scd_new$labarea[-c(1:2)]
+labarea <- labarea[!duplicated(labarea), ]
+
+scd_lookup$var <- gsub("^samp|^corr|^ssl", "", scd_lookup$var)
+mdd_sub <- merge(
+  scd_lookup[scd_lookup$lookup == "MetadataDomainDetail", ],
+  dom,
+  by.x = c("var", "value"),
+  by.y = c("ColumnPhysicalName", "ChoiceName"),
+  all = FALSE
+)
+names(mdd_sub)[2] <- "ChoiceName"
+
+mdd_sub <- mdd_sub[nms]
+mdd_sub <- mdd_sub[!duplicated(mdd_sub), ]
+
+
+# scd_new$labmethodcode[-c(1:2)] |>
+#   flextable() |> 
+#   border_remove() |> 
+#   border_inner() |> 
+#   border_outer() |> 
+#   fontsize(size = 10, part = "all") |>
+#   # align(align = c("left", "left", "left", "center", "center", "left", "left"), part = "body") |>
+#   align(align = c("center"), part = "header") |>
+#   set_caption(caption = paste("Table X - CodeList for", "labmethodcode")) |>
+#   flextable_to_rmd()
+  
+scd_new$labarea[-c(1:2)] |>
+  subset(areatype == "county") |>
+  head(n = 5) |>
+  flextable() |>
+  border_remove() |>
+  border_inner() |>
+  border_outer() |>
+  fontsize(size = 10, part = "all") |>
+  # align(align = c("left", "left", "left", "center", "center", "left", "left"), part = "body") |>
+  align(align = c("center"), part = "header") |>
+  set_caption(caption = paste("Table X - CodeList for", "labarea")) |>
+  flextable_to_rmd()
+
+
+# mdd_sub |>
+#   flextable() |> 
+#   border_remove() |> 
+#   border_inner() |> 
+#   border_outer() |> 
+#   fontsize(size = 10, part = "all") |>
+#   # align(align = c("left", "left", "left", "center", "center", "left", "left"), part = "body") |>
+#   align(align = c("center"), part = "header") |>
+#   set_caption(caption = paste("Table X - CodeList for", "labmethodcode")) |>
+#   flextable_to_rmd()
+
+
+```
+
