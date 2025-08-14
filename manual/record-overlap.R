@@ -19,7 +19,7 @@ library(RSQLite)
 ##
 
 # connect
-db <- dbConnect(RSQLite::SQLite(), 'E:/NASIS-KSSL-LDM/NCSSLabDataMartSQLite.sqlite3')
+db <- dbConnect(RSQLite::SQLite(), 'E:/NASIS-KSSL-LDM/ncss_labdata-2023.sqlite')
 
 # list tables
 dbListTables(db)
@@ -30,11 +30,11 @@ SELECT
 l.labsampnum AS layer_id, g.labsampnum AS geochem_id, x.labsampnum AS mineral_id, gl.labsampnum AS glass_id, p.labsampnum AS physical_id, c.labsampnum AS chemical_id,
 CASE WHEN rk.layer_key IS NOT NULL THEN l.labsampnum ELSE NULL END AS rosetta_id
 FROM lab_layer AS l
-LEFT JOIN lab_physical_properties_vw AS p ON l.labsampnum = p.labsampnum
-LEFT JOIN lab_chemical_properties_vw AS c ON l.labsampnum = c.labsampnum
-LEFT JOIN lab_major_and_trace_elements_and_oxides_vw AS g ON l.labsampnum = g.labsampnum
-LEFT JOIN lab_xray_and_thermal_vw AS x ON l.labsampnum = x.labsampnum
-LEFT JOIN lab_mineralogy_glass_count_vw AS gl ON l.labsampnum = gl.labsampnum
+LEFT JOIN lab_physical_properties AS p ON l.labsampnum = p.labsampnum
+LEFT JOIN lab_chemical_properties AS c ON l.labsampnum = c.labsampnum
+LEFT JOIN lab_major_and_trace_elements_and_oxides AS g ON l.labsampnum = g.labsampnum
+LEFT JOIN lab_xray_and_thermal AS x ON l.labsampnum = x.labsampnum
+LEFT JOIN lab_mineralogy_glass_count AS gl ON l.labsampnum = gl.labsampnum
 LEFT JOIN lab_rosetta_key AS rk ON l.layer_key = rk.layer_key
 ;"
 
@@ -58,7 +58,7 @@ l <- list(
 png(file = 'KSSL-record-overlap-venn.png', width = 850, height = 800, res = 90, type = 'cairo', antialias = 'subpixel')
 
 par(mar = c(0, 0, 2, 0))
-venn(l, ellipse = TRUE, ilcs = 0.85, sncs = 0.85, par = FALSE, zcolor = 'style', box = FALSE)
+venn(l, ilabels = 'counts', ellipse = TRUE, ilcs = 0.85, sncs = 0.85, par = FALSE, zcolor = 'style', box = FALSE)
 title('KSSL Record Overlap')
 
 text(x = 730, y = 130, 'Intersections describe overlap in record availability.\n\nThere are 342,199 records missing geochemical, \nminerology, or glass count data. There are 10,621\nrecords with all data.', cex = 0.66, adj = 0)
@@ -79,7 +79,7 @@ l <- list(
 png(file = 'KSSL-record-overlap-full-venn.png', width = 850, height = 800, res = 90, type = 'cairo', antialias = 'subpixel')
 
 par(mar = c(0, 0, 2, 0))
-venn(l, ellipse = TRUE, ilcs = 0.85, sncs = 0.85, par = FALSE, zcolor = 'style', box = FALSE)
+venn(l, ilabels = 'counts', ellipse = TRUE, ilcs = 0.85, sncs = 0.85, par = FALSE, zcolor = 'style', box = FALSE)
 title('KSSL Record Overlap')
 
 dev.off()
@@ -100,7 +100,7 @@ l <- list(
 png(file = 'KSSL-record-overlap-phys-chem-venn.png', width = 850, height = 800, res = 90, type = 'cairo', antialias = 'subpixel')
 
 par(mar = c(0, 0, 2, 0))
-venn(l, ellipse = FALSE, ilcs = 0.85, sncs = 1, par = FALSE, zcolor = 'style', box = FALSE)
+venn(l, ilabels = 'counts', ellipse = FALSE, ilcs = 0.85, sncs = 1, par = FALSE, zcolor = 'style', box = FALSE)
 title('KSSL Record Overlap')
 
 dev.off()
@@ -118,17 +118,17 @@ l <- list(
 )
 
 
-png(file = 'KSSL-record-overlap-phys-chem-venn.png', width = 850, height = 800, res = 90, type = 'cairo', antialias = 'subpixel')
+png(file = 'KSSL-record-overlap-ROSETTA.png', width = 850, height = 800, res = 90, type = 'cairo', antialias = 'subpixel')
 
 par(mar = c(0, 0, 2, 0))
-venn(l, ellipse = FALSE, ilcs = 0.85, sncs = 1, par = FALSE, zcolor = 'style', box = FALSE)
+venn(l, ilabels = 'counts', ellipse = FALSE, ilcs = 0.85, sncs = 1, par = FALSE, zcolor = 'style', box = FALSE)
 title('KSSL Record Overlap')
 
 dev.off()
 
 
 # cross-check ROSETTA record number
-# ~ 79,200
+# ~ 79,211
 SDA_query("SELECT COUNT(layer_key) FROM lab_rosetta_key;")
 
 
@@ -164,6 +164,48 @@ knitr::kable(x)
 #  |-------:|--------:|--------:|-------:|
 #  |      89|    17271|   105963|  222023|
 
+## 2025-08-14
+#  | zerobar| tenthbar| thirdbar| fifteen|
+#  |-------:|--------:|--------:|-------:|
+#  |      89|    17290|   107135|  225823|
 
 
+## selective dissolution
 
+# connect
+db <- dbConnect(RSQLite::SQLite(), 'E:/NASIS-KSSL-LDM/ncss_labdata-2023.sqlite')
+
+
+.sql <- "SELECT 
+labsampnum,
+aluminum_ammonium_oxalate, fe_ammoniumoxalate_extractable, silica_ammonium_oxalate,
+aluminum_na_pyro_phosphate, iron_sodium_pyro_phosphate, manganese_na_pyro_phosphate,
+aluminum_dithionite_citrate, fe_dithionite_citrate_extractable, manganese_dithionite_citrate
+FROM lab_chemical_properties;
+"
+
+# nm <- dbListFields(db, 'lab_chemical_properties')
+# nm[grep('dithionite', nm)]
+
+# run query
+x <- dbGetQuery(db, .sql)
+
+# close connection
+dbDisconnect(db)
+
+str(x)
+
+# vector indices of non-NA cells
+z <- list(
+  Al = which(!is.na(x$aluminum_ammonium_oxalate)),
+  Fe = which(!is.na(x$fe_ammoniumoxalate_extractable)),
+  Si = which(!is.na(x$silica_ammonium_oxalate))
+)
+
+
+par(mar = c(0, 0, 2, 0))
+venn(z, ilabels = 'counts', ellipse = FALSE, ilcs = 0.85, sncs = 1, par = FALSE, zcolor = 'style', box = FALSE)
+title('Acid Ammonium Oxalate')
+
+
+cor(x[, -1], use = 'complete.obs')
