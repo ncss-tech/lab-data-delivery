@@ -84,16 +84,16 @@ scd_new$labarea[-c(1:2)] |>
   flextable_to_rmd()
 
 
-# mdd_sub |>
-#   flextable() |> 
-#   border_remove() |> 
-#   border_inner() |> 
-#   border_outer() |> 
-#   fontsize(size = 10, part = "all") |>
-#   # align(align = c("left", "left", "left", "center", "center", "left", "left"), part = "body") |>
-#   align(align = c("center"), part = "header") |>
-#   set_caption(caption = paste("Table X - CodeList for", "labmethodcode")) |>
-#   flextable_to_rmd()
+mdd_sub |>
+  flextable() |>
+  border_remove() |>
+  border_inner() |>
+  border_outer() |>
+  fontsize(size = 10, part = "all") |>
+  # align(align = c("left", "left", "left", "center", "center", "left", "left"), part = "body") |>
+  align(align = c("center"), part = "header") |>
+  set_caption(caption = paste("Table X - CodeList for", "labmethodcode")) |>
+  flextable_to_rmd()
 
 
 ```

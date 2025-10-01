@@ -2,6 +2,7 @@
 library(soilDB)
 library(sf)
 library(dplyr)
+library(dm)
 
 
 # include the link to the webpage so we know which version we're talking about
@@ -28,7 +29,8 @@ test <- dm_from_con(con)
 ## domains ----
 dom <- soilDB::dbQueryNASIS(
   soilDB::dbConnectNASIS(), 
-  "SELECT DomainName, DomainRanked, ColumnPhysicalName, ColumnLogicalName, ColumnLabel, ColumnDescription, UnitsofMeasureUnabbreviated, UnitsofMeasureAbbreviated, ChoiceSequence, ChoiceValue, ChoiceName, ChoiceLabel, ChoiceDescription
+  "SELECT 
+  mdm.DomainID, ChoiceObsolete, DomainName, DomainRanked, ColumnPhysicalName, ColumnLogicalName, ColumnLabel, ColumnDescription, UnitsofMeasureUnabbreviated, UnitsofMeasureAbbreviated, ChoiceSequence, ChoiceValue, ChoiceName, ChoiceLabel, ChoiceDescription
   
   FROM
   MetadataTableColumn  mtc INNER JOIN
@@ -75,7 +77,7 @@ dd <- soilDB::dbQueryNASIS(
 
 lev <- dom |> 
   subset(DomainName == "logical_data_type_nasis", select = c(ChoiceValue, ChoiceLabel)) |>
-  arrange(ChoiceValue)
+  dplyr::arrange(ChoiceValue)
 lev <- lev[lev$ChoiceValue %in% unique(dd$attlogdattyp), ]
 
 dd <- within(dd, {

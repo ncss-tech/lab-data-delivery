@@ -1,6 +1,7 @@
 
 library(dm)
 
+
 fp <- "D:/geodata/soils/NCSS-SCD"
 dsn <- file.path(fp, "ncss_labdata.gpkg")
 con <- DBI::dbConnect(RSQLite::SQLite(), dbname = dsn)
@@ -50,34 +51,40 @@ scd_dm <- new_dm(scd_new)
 # create fake method code to draw foreign key relationship
 scd_dm <- scd_dm |> 
   dm_zoom_to(labphysicalproperties) |> 
-  mutate(`method*` = NA) |>
+  mutate(`method*` = NA_character_) |>
   dm_insert_zoomed(new_tbl_name = "new_labphysicalproperties") |>
   dm_select_tbl(-labphysicalproperties) |>
   dm_rename_tbl(labphysicalproperties = new_labphysicalproperties)
 scd_dm <- scd_dm |> 
   dm_zoom_to(labchemicalproperties) |> 
-  mutate(`method*` = NA) |>
+  mutate(`method*` = NA_character_) |>
   dm_insert_zoomed(new_tbl_name = "new_labchemicalproperties") |>
   dm_select_tbl(-labchemicalproperties) |>
   dm_rename_tbl(labchemicalproperties = new_labchemicalproperties)
 scd_dm <- scd_dm |> 
   dm_zoom_to(labmajortrelementsoxides) |> 
-  mutate(`method*` = NA) |>
+  mutate(`method*` = NA_character_) |>
   dm_insert_zoomed(new_tbl_name = "new_labmajortrelementsoxides") |>
   dm_select_tbl(-labmajortrelementsoxides) |>
   dm_rename_tbl(labmajortrelementsoxides = new_labmajortrelementsoxides)
 scd_dm <- scd_dm |> 
   dm_zoom_to(labxrayandthermal) |> 
-  mutate(`method*` = NA) |>
+  mutate(`method*` = NA_character_) |>
   dm_insert_zoomed(new_tbl_name = "new_labxrayandthermal") |>
   dm_select_tbl(-labxrayandthermal) |>
   dm_rename_tbl(labxrayandthermal = new_labxrayandthermal)
 scd_dm <- scd_dm |> 
   dm_zoom_to(labmineralogyglasscount) |> 
-  mutate(`method*` = NA) |>
+  mutate(`method*` = NA_character_) |>
   dm_insert_zoomed(new_tbl_name = "new_labmineralogyglasscount") |>
   dm_select_tbl(-labmineralogyglasscount) |>
   dm_rename_tbl(labmineralogyglasscount = new_labmineralogyglasscount)
+scd_dm <- scd_dm |> 
+  dm_zoom_to(labcombinenasisncss) |> 
+  mutate(`taxa*` = NA_character_) |>
+  dm_insert_zoomed(new_tbl_name = "new_labcombinenasisncss") |>
+  dm_select_tbl(-labcombinenasisncss) |>
+  dm_rename_tbl(labcombinenasisncss = new_labcombinenasisncss)
 
 
 scd_dm <- scd_dm |>
@@ -149,6 +156,8 @@ scd_dm <- scd_dm |>
             ref_table = labarea,         ref_columns = areakey) |>
   dm_add_fk(labcombinenasisncss,         columns     = nforestkey,
             ref_table = labarea,         ref_columns = areakey) |>
+  dm_add_fk(labcombinenasisncss,         columns     = `taxa*`,
+            ref_table = MetadataDomainDetail, ref_columns = ChoiceLabel) |>
   # prepcodes these aren't unique (i.e. valid) therefore they won't export via copy_dm_to()
   dm_add_fk(labcalculationsandestimates,  columns     = prepcode,
             ref_table = labpreparation,  ref_columns = prepcode) |>
@@ -229,9 +238,10 @@ scd_dm <- scd_dm |>
   dm_add_fk(labxrayandthermal,            columns    = `method*`,
             ref_table = labmethodcode,   ref_columns = procedcode) |>
   dm_add_fk(labmineralogyglasscount,        columns  = `method*`,
-            ref_table = labmethodcode,   ref_columns = procedcode) |>
+            ref_table = labmethodcode,   ref_columns = procedcode)
   
-  # Metadata tables
+  ## Metadata tables ----
+scd_dm <- scd_dm |>
   dm_add_fk(MetadataTableColumn,               columns     = TableID,
             ref_table = MetadataTable,         ref_columns = TableID) |>
   dm_add_fk(MetadataTableColumn,               columns     = DomainID,
@@ -251,7 +261,7 @@ scd_dm <- scd_dm |>
   
   
 
-scd_dm |> dm_select_tbl(!starts_with("Metadata")) |>
+scd_dm |> dm_select_tbl(!starts_with("Metadata") | contains("MetadataDomainDetail")) |>
   dm_draw(column_types = TRUE, rankdir = "RL")
 scd_dm |> dm_select_tbl(starts_with("Metadata")) |>
   dm_draw(column_types = TRUE)
