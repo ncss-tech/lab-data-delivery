@@ -109,15 +109,51 @@ SDA_query("SELECT * FROM lab_analysis_procedure WHERE procedure_key = '38' ;")
 
 # Manually Written Queries
 
-## Sequoia-Kings Canyon (CA792)
-This example demonstrates a 2-stage approach to identifying pedons that have been sampled for laboratory characterization by soil survey area symbol.
-
-
-Load required libraries
+Load required libraries.
 ```{r}
 library(soilDB)
 library(aqp)
 ```
+
+
+## Using Area "Overlap" Information
+
+```{r eval=FALSE}
+# get a listing of the available area types
+SDA_query("SELECT DISTINCT area_type FROM lab_area;")
+
+# get a listing of the MLRA codes
+x <- SDA_query("SELECT DISTINCT area_code FROM lab_area WHERE area_type = 'mlra' ;")
+```
+
+
+
+## Query Lab Pedons by MLRA
+Query record IDs and WGS84 coordinates for MLRA '130B'. Note the use of "mlra_key" from the lab_combine_nasis_ncss table for specification of the JOIN constraint.
+```{r}
+sql <- "
+SELECT
+pedon_key, pedlabsampnum, pedoniid, upedonid, longitude_decimal_degrees, latitude_decimal_degrees,
+area_code
+FROM
+lab_combine_nasis_ncss
+JOIN
+lab_area ON area_key = mlra_key AND area_type = 'mlra'
+WHERE area_code = '130B'
+;"
+
+pedons <- SDA_query(sql)
+nrow(pedons)
+head(pedons)
+```
+
+
+
+## Sequoia-Kings Canyon (CA792)
+This example demonstrates a 2-stage approach to identifying pedons that have been sampled for laboratory characterization by soil survey area symbol.
+
+
+
 
 Querying by soil survey area code is useful for reviewing those data collected to support a new soil survey or to perform updates to an existing soil survey.
 ```{r}
